@@ -1,0 +1,2096 @@
+{
+  "capture_path": "C:\\Users\\eduar\\AppData\\Local\\Temp\\kilo\\ef-investigation\\capture-batch1.json",
+  "capture_sha256": "338c6cff7ca6f8f0499539d06c2a52d53f8e209b861546191b2519a317e2502c",
+  "capture_kind": "browser-scenario",
+  "source_evidence_id": "ev_3b3f77795b19a6c762a8451ac053a2d2af71e8d71c0ef4817b34e4f8a60b4635",
+  "capture_completeness": {
+    "status": "incomplete",
+    "equality_eligible": false,
+    "missing_sections": [
+      "events"
+    ],
+    "truncated_sections": []
+  },
+  "output_directory": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-batch1",
+  "analysis_input": {
+    "input_path": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-batch1\\files",
+    "format": "directory"
+  },
+  "scripts": [
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-3",
+        "request_sequence": 6,
+        "response_sequence": 20,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-5",
+        "request_sequence": 10,
+        "response_sequence": 17,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-2-c58c57b569794dc33af59525d8c733459bd937ea3e7b618c716700b3cb1c341a.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-6",
+        "request_sequence": 25,
+        "response_sequence": 55,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-9",
+        "request_sequence": 31,
+        "response_sequence": 34,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-4-6e5a7162825262c1bc0c3dccf0d13bc59dafd50d4673c4c1eab479363ce0927b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-14",
+        "request_sequence": 62,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-15",
+        "request_sequence": 64,
+        "response_sequence": 201,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-mobile-layout-B9xEXdHq.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-16",
+        "request_sequence": 66,
+        "response_sequence": 199,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-17",
+        "request_sequence": 68,
+        "response_sequence": 227,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-18",
+        "request_sequence": 70,
+        "response_sequence": 211,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-19",
+        "request_sequence": 72,
+        "response_sequence": 229,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-CzDzHSWx.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-20",
+        "request_sequence": 74,
+        "response_sequence": 223,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/chevron-down-ocqYOrK5.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-21",
+        "request_sequence": 76,
+        "response_sequence": 213,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/popover-CVs1NQbu.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-22",
+        "request_sequence": 78,
+        "response_sequence": 245,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/globe-ji___Or_.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-23",
+        "request_sequence": 80,
+        "response_sequence": 205,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Chphq-AR.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-24",
+        "request_sequence": 82,
+        "response_sequence": 235,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/users-CBE3qzDq.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-25",
+        "request_sequence": 84,
+        "response_sequence": 259,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/pencil-C-1BkcyX.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-26",
+        "request_sequence": 86,
+        "response_sequence": 249,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sparkles-BtHya149.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-27",
+        "request_sequence": 88,
+        "response_sequence": 239,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shield-D5a8xnL-.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-28",
+        "request_sequence": 90,
+        "response_sequence": 255,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-29",
+        "request_sequence": 92,
+        "response_sequence": 253,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/image-C7RnMoTw.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-30",
+        "request_sequence": 94,
+        "response_sequence": 237,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shopping-cart-BvYgWGZP.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-31",
+        "request_sequence": 96,
+        "response_sequence": 219,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-B-yBwrYx.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-32",
+        "request_sequence": 98,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/use-exports-stream-D1YJPQTk.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-33",
+        "request_sequence": 100,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/slider-DapZNGHt.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-34",
+        "request_sequence": 102,
+        "response_sequence": 267,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-vqte5ySJ.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-35",
+        "request_sequence": 104,
+        "response_sequence": 215,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/color-picker-CpeB0PH0.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-36",
+        "request_sequence": 106,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/palette-CyO5CJ0c.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-37",
+        "request_sequence": 108,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/maximize-2-BFX2JRIw.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-38",
+        "request_sequence": 110,
+        "response_sequence": 197,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/rotate-ccw-B_oUXfBK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-39",
+        "request_sequence": 112,
+        "response_sequence": 209,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-DlvIMfpu.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-40",
+        "request_sequence": 114,
+        "response_sequence": 203,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/formats-list-RieW1rzz.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-41",
+        "request_sequence": 116,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/service-CmufRMLl.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-42",
+        "request_sequence": 118,
+        "response_sequence": 231,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/file-text-DeVsQn9s.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-43",
+        "request_sequence": 120,
+        "response_sequence": 265,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/smartphone-DWawRyBj.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-44",
+        "request_sequence": 122,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/monitor-BOfZcPUp.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-45",
+        "request_sequence": 124,
+        "response_sequence": 207,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-simple-query-BIlIpFhF.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-46",
+        "request_sequence": 126,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/useQuery-D12Y0UPZ.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-47",
+        "request_sequence": 128,
+        "response_sequence": 217,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useBaseQuery-DNtSj8JH.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-48",
+        "request_sequence": 130,
+        "response_sequence": 233,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-constants-hqx0foTB.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-49",
+        "request_sequence": 132,
+        "response_sequence": 225,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-keys-DamezY8H.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-50",
+        "request_sequence": 134,
+        "response_sequence": 221,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-states-BBlai7xS.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-51",
+        "request_sequence": 136,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/service-cCDUhbQQ.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-52",
+        "request_sequence": 138,
+        "response_sequence": 263,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/calendar-days-CiywsBpM.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-53",
+        "request_sequence": 140,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/trash-2-yP0FfCte.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-54",
+        "request_sequence": 142,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/shared-selection-controls-OlU5v_M1.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-55",
+        "request_sequence": 144,
+        "response_sequence": 272,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/settings-DWdAwwLJ.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-56",
+        "request_sequence": 146,
+        "response_sequence": 241,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/copy-COwhmbsu.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-57",
+        "request_sequence": 148,
+        "response_sequence": 251,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/download-B9mtF3CU.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-58",
+        "request_sequence": 150,
+        "response_sequence": 247,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/share-2-Ce5EcWai.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-59",
+        "request_sequence": 152,
+        "response_sequence": 261,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Dc47qpQA.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-60",
+        "request_sequence": 154,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-effects-BONRtD59.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-61",
+        "request_sequence": 156,
+        "response_sequence": 257,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/currency-DM9Y_laS.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-62",
+        "request_sequence": 158,
+        "response_sequence": 243,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/price-types-B5DfVFbR.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-63",
+        "request_sequence": 160,
+        "response_sequence": 269,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/map-pin-N_EkvcAm.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-read-failed",
+        "message": "response.body: Protocol error (Network.getResponseBody): No resource with given identifier found"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-64",
+        "request_sequence": 162,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/phone-Dl-Kb7UP.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-65",
+        "request_sequence": 164,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/package-BwJ_7uce.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-66",
+        "request_sequence": 166,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/plus-nkgdgBzR.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-67",
+        "request_sequence": 168,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/minus-DxpgJsKj.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-68",
+        "request_sequence": 170,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/zoom-in-AUbiIL7j.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-69",
+        "request_sequence": 172,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-70",
+        "request_sequence": 174,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/initial-flyer-Cc6BwAmp.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-71",
+        "request_sequence": 176,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/service-DQzaU991.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-72",
+        "request_sequence": 178,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-triangle-7jjD0zs3.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-73",
+        "request_sequence": 180,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/send-B_xYLiBE.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-74",
+        "request_sequence": 182,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/ban-B8FNZ9Ak.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-75",
+        "request_sequence": 184,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-76",
+        "request_sequence": 186,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/check-circle-2-tK7RMpCv.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-77",
+        "request_sequence": 188,
+        "response_sequence": null,
+        "status": null
+      },
+      "url": "https://editor.encartefacil.com/assets/clock-Bx04y7UN.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-82",
+        "request_sequence": 306,
+        "response_sequence": 307,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-84",
+        "request_sequence": 312,
+        "response_sequence": 313,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-70-92d911743a523de2cf04680a5bf137c8b631dd4fdd0aaea611bc3939c849aede.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-85",
+        "request_sequence": 364,
+        "response_sequence": 366,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-88",
+        "request_sequence": 372,
+        "response_sequence": 374,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-72-a82b40454cc61c00f5c09dfcd16b46657c89bcba12a91f0da79abd84373030c8.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-101",
+        "request_sequence": 440,
+        "response_sequence": 442,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-103",
+        "request_sequence": 448,
+        "response_sequence": 450,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-74-ace2e3a98b5a5a27d07fcf38c84302f2a86dc1f0e4eb3afeb487707d1bfd7ffa.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-104",
+        "request_sequence": 457,
+        "response_sequence": 459,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-107",
+        "request_sequence": 465,
+        "response_sequence": 467,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-76-30553ef9f933805fde6a702106916c371f6ca90de207f5ea328d727d3521fd9c.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-119",
+        "request_sequence": 528,
+        "response_sequence": 530,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-121",
+        "request_sequence": 536,
+        "response_sequence": 538,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-78-137a16cecbf0c2b2e92f790b81f58916678b3de7a8f6cfb18904df3daa46496e.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-122",
+        "request_sequence": 545,
+        "response_sequence": 547,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-125",
+        "request_sequence": 553,
+        "response_sequence": 555,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-80-1ce97213c252cee976d3ca8910d431b8d3b82c28e7d5930b1141aa9b0593f315.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-137",
+        "request_sequence": 616,
+        "response_sequence": 618,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-139",
+        "request_sequence": 624,
+        "response_sequence": 626,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-82-a4491b6e4e70f3aaa71177fb771d256e6de61434d81524aa92613398db99a8b3.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-140",
+        "request_sequence": 633,
+        "response_sequence": 635,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-143",
+        "request_sequence": 641,
+        "response_sequence": 643,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-84-8043a39f2e5a6ff781c8a6de55d4284f44ef3f7335c0f503b44808b1130dff17.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-155",
+        "request_sequence": 704,
+        "response_sequence": 706,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-157",
+        "request_sequence": 712,
+        "response_sequence": 714,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-86-fdfca1849610914afcded30a3288609128c2657fad26e2569bc9ef83b03e8b46.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-158",
+        "request_sequence": 721,
+        "response_sequence": 723,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-161",
+        "request_sequence": 729,
+        "response_sequence": 731,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-88-c324ecb5207680372564f2301fc96df8d65159d4ea6582c610a25ba27ae7cdc4.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-173",
+        "request_sequence": 792,
+        "response_sequence": 794,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-175",
+        "request_sequence": 800,
+        "response_sequence": 802,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-176",
+        "request_sequence": 809,
+        "response_sequence": 811,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-179",
+        "request_sequence": 817,
+        "response_sequence": 819,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    }
+  ],
+  "limitations": [
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Captured response-body bytes are the result of Playwright's Response.body() API. Playwright may satisfy that API with a credentialed follow-up load of the request URL when CDP has no body, so transaction and event links do not verify that retained bytes came from the original network transaction.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Non-cookie storage seeds use CDP pre-script instrumentation; only pauses in the scenario's private seed script are resumed by this observer.",
+    "Some selected network content was unavailable; per-transaction content states retain the reason.",
+    "Network response metadata was omitted for request-187 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-188 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-188 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-189 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-189 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-190 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-190 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-190 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-191 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-191 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-191 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-192 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-192 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-192 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-193 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-193 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-193 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-188 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-194 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-194 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-194 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-195 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-196 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-197 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-197 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-197 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-198 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-199 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-199 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-199 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-196 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-198 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-198 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-196 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-200 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-201 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-202 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-195 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-195 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-200 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-200 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-203 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-201 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-201 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-202 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-202 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-203 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-203 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-204 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-205 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-204 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-204 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-205 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-205 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-206 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-206 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-207 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-207 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-208 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-208 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-208 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-209 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-209 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-209 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-210 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-210 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-210 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-211 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-211 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-211 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-206 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-212 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-212 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-212 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-213 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-214 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-215 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-215 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-215 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-216 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-217 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-217 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-217 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-216 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-216 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-213 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-213 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-214 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-214 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-218 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-219 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-218 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-218 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-220 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-219 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-219 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-220 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-220 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-221 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-222 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-223 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-223 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-223 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-224 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-225 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-226 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-226 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-226 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-227 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-227 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-227 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-228 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-228 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-228 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-229 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-229 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-229 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-230 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-231 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-232 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-233 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-234 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-235 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-236 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-236 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-236 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-222 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-222 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-225 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-225 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-224 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-224 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-232 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-232 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-233 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-233 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-234 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-234 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-235 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-235 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-231 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-231 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-230 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-230 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-221 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-221 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-237 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-238 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-239 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-240 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-241 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-241 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-238 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-238 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-242 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-243 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-244 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-245 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-246 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-247 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-248 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-249 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-250 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-251 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-252 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-253 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-254 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-255 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-256 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-257 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-258 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-259 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-260 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-261 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-240 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-240 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-239 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-237 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-239 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-237 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-249 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-249 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-251 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-251 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-248 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-248 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-243 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-243 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-247 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-247 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-250 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-250 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-245 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-245 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-246 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-244 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-244 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-246 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-252 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-252 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-255 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-255 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-257 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-257 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-260 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-260 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-242 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-256 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-256 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-242 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-258 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-258 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-253 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-253 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-259 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-259 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-254 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-254 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-261 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-261 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-262 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-262 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-263 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-241 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-263 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-264 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-264 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-264 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-265 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-265 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-265 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-266 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-266 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-266 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-267 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-267 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-267 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-262 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-268 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-268 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-268 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-269 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-270 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-271 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-271 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-271 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-272 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-273 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-273 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-273 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-272 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-272 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-270 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-270 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-274 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-275 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-269 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-269 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-274 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-274 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-276 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-275 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-275 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-276 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-276 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-277 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-278 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-278 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-278 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-279 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-280 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-280 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-280 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-281 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-282 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-282 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-282 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-283 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-283 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-283 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-284 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-284 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-284 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-285 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-286 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-279 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-279 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-281 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-281 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-286 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-286 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-277 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-277 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-285 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-285 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-287 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-288 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-289 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-290 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-290 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-287 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-290 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-287 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-288 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-288 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-289 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-289 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-291 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-291 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-292 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-292 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-293 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-293 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-293 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-294 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-294 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-294 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-295 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-295 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-295 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-296 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-296 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-296 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-291 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-297 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-297 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-297 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-298 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-299 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-300 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-300 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-300 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-301 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-302 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-302 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-302 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-299 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-299 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-301 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-301 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-303 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-304 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-298 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-305 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-298 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-305 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-305 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-304 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-304 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-303 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-303 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-306 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-306 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-306 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-307 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-308 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-308 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-308 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-307 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-307 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-309 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-309 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-310 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-310 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-311 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-311 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-311 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-312 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-312 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-312 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-313 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-313 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-313 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-314 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-314 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-314 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-309 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-315 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-315 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-315 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-316 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-317 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-318 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-318 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-318 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-319 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-320 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-320 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-320 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-317 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-317 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-321 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-322 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-319 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-319 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-323 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-316 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-316 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-321 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-321 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-324 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-322 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-322 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-323 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-323 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-324 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-324 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-325 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-326 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-325 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-325 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-326 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-326 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-327 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-327 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-328 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-328 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-329 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-329 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-329 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-330 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-330 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-330 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-331 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-331 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-331 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-332 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-332 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-332 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-327 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-333 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-333 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-333 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-334 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-335 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-336 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-336 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-336 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-337 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-338 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-338 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-338 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-335 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-335 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-337 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-337 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-339 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-334 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-334 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-failed metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-339 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-339 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-188 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-190 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-191 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-192 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-193 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-194 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-196 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-197 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-198 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-199 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-200 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-201 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-203 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-204 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-205 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-206 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-208 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-209 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-210 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-211 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-212 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-214 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-215 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-216 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-217 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-218 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-219 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-220 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-221 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-222 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-223 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-224 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-225 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-226 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-227 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-228 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-229 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-230 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-231 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-232 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-233 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-234 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-235 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-236 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-237 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-238 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-239 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-240 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-242 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-243 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-244 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-245 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-246 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-247 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-248 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-249 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-250 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-251 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-252 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-253 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-254 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-255 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-256 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-257 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-258 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-259 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-260 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-261 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-262 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-264 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-265 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-266 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-267 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-268 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-270 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-271 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-272 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-273 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-274 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-275 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-276 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-277 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-278 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-279 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-280 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-281 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-282 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-283 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-284 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-285 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-286 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-287 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-288 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-289 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-290 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-291 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-293 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-294 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-295 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-296 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-297 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-299 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-300 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-301 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-302 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-303 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-304 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-306 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-307 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-308 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-309 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-311 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-312 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-313 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-314 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-315 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-317 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-318 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-319 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-320 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-321 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-322 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-324 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-325 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-326 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-327 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-329 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-330 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-331 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-332 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-333 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-335 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-336 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-337 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-338 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-339 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Browser event collection reached a selected resource budget; per-kind omissions and affected network transaction IDs are listed in events.omissions, and event coverage is incomplete.",
+    "Only script bytes retained in this capture are exported. Sources are not refetched or executed, and a response or Debugger source does not prove execution.",
+    "Ordinary unambiguous URL paths preserve relative module layouts by origin, including case-distinct spellings. Query variants, exact path collisions, file/directory prefixes, inline sources, and unrepresentable paths are isolated. A case-distinct pair is isolated only when the destination filesystem cannot store both spellings; the record names that pair. Browser module relationships of isolated paths remain unknown.",
+    "Local JavaScript analysis does not implement browser import maps, root-relative URL resolution, remote URL loading, or browser runtime behavior. It may strip import queries and fragments; isolated variants are not canonical targets.",
+    "Source-map declarations are retained as metadata. No source maps or missing dependencies are fetched or reconstructed.",
+    "Scenario response bytes preserve the output of Playwright's Response.body() API; any source-body provenance caveat from the capture is retained in this manifest. Debugger sources are the exposed text encoded as UTF-8. Redacted bytes are exported exactly as retained, and may no longer parse as JavaScript."
+  ]
+}

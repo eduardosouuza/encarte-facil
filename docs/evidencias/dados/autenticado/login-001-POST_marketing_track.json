@@ -1,0 +1,30 @@
+{
+  "metodo": "POST",
+  "url": "https://api-v2.encartefacil.com/marketing/track",
+  "status": 204,
+  "resource_type": "fetch",
+  "passos": [
+    0
+  ],
+  "request_body": {
+    "eventType": "landing.viewed",
+    "eventId": "05192a01-71c6-4e3d-b4d7-ca7cadb6fc60",
+    "eventData": {
+      "path": "/login",
+      "page_type": "auth"
+    },
+    "visitorId": "76b67f4b-0873-4163-91c2-122e24d31e49",
+    "sessionId": "s_1792504669539_5ovy1t2k",
+    "pageUrl": "https://editor.encartefacil.com/login",
+    "attribution": {
+      "first": {
+        "lp": "/login",
+        "ts": "1792504669539"
+      }
+    },
+    "clickIds": {
+      "fbp": "fb.1.1792504669540.3009848099"
+    }
+  },
+  "response_body": null
+}

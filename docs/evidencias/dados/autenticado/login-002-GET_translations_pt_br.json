@@ -1,0 +1,11 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/translations/pt-br",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    0
+  ],
+  "request_body": null,
+  "response_body": null
+}

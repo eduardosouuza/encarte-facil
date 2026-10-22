@@ -1,0 +1,192 @@
+[
+  {
+    "step_id": "scenario_start",
+    "action": "goto_start",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1,
+      432
+    ]
+  },
+  {
+    "step_id": "abrir-editor",
+    "action": "goto",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      433,
+      590
+    ]
+  },
+  {
+    "step_id": "esperar-editor",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      591,
+      1404
+    ]
+  },
+  {
+    "step_id": "pular-tutorial",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1405,
+      1404
+    ]
+  },
+  {
+    "step_id": "esperar-pos-tutorial",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1405,
+      1404
+    ]
+  },
+  {
+    "step_id": "aba-0-temas",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1405,
+      1404
+    ]
+  },
+  {
+    "step_id": "aba-0-temas-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1405,
+      1404
+    ]
+  },
+  {
+    "step_id": "aba-1-produtos",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1405,
+      1424
+    ]
+  },
+  {
+    "step_id": "aba-1-produtos-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1425,
+      1454
+    ]
+  },
+  {
+    "step_id": "aba-2-elementos",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1455,
+      1466
+    ]
+  },
+  {
+    "step_id": "aba-2-elementos-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1467,
+      1584
+    ]
+  },
+  {
+    "step_id": "aba-3-tags",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1585,
+      1586
+    ]
+  },
+  {
+    "step_id": "aba-3-tags-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1587,
+      1589
+    ]
+  },
+  {
+    "step_id": "aba-4-formatos",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1590,
+      1593
+    ]
+  },
+  {
+    "step_id": "aba-4-formatos-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1594,
+      1599
+    ]
+  },
+  {
+    "step_id": "aba-5-marca",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1600,
+      1609
+    ]
+  },
+  {
+    "step_id": "aba-5-marca-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1610,
+      1634
+    ]
+  },
+  {
+    "step_id": "aba-6-encartes",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1635,
+      1636
+    ]
+  },
+  {
+    "step_id": "aba-6-encartes-carga",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      1637,
+      1714
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+const a=["background","decorative","icons","shapes","photos","lines","effects","tag","3d","arrows","blob","frames","ribbons","splash","stickers","paper"];function e(s,r="medium"){return s.assetUrls&&(s.assetUrls[r]||s.assetUrls.high||s.assetUrls.medium||s.assetUrls.low)||""}export{a as e,e as g};

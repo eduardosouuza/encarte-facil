@@ -1,0 +1,33 @@
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Banco de dados local e artefatos de execucao
+data/
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+server/.e2e-data/
+web/test-results/
+web/playwright-report/
+web/.playwright/
+.work/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Arquivo do usuario com credenciais da conta original: nunca versionar.
+loginencartefacil.md
+
+# Editores e sistema operacional
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+npm-debug.log*

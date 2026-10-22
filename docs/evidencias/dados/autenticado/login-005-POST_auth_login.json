@@ -1,0 +1,61 @@
+{
+  "metodo": "POST",
+  "url": "https://api-v2.encartefacil.com/auth/login",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    3,
+    4
+  ],
+  "request_body": {
+    "email": "[REDACTED:ef_email]",
+    "password": "[REDACTED:ef_password]"
+  },
+  "response_body": {
+    "success": true,
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjdXNfNWIzMGVMUjB1cEdIbjNrYTZxVGRSUldOIiwicGFydG5lcklkIjoiQjBuMlVMWk9lWWpST3NhWENRbHNlIiwiZW1haWwiOiJjYXBAc3VwZXJwZWRyYWxsaS5jb20uYnIiLCJuYW1lIjoiY2FwQHN1cGVycGVkcmFsbGkuY29tLmJyIiwicm9sZSI6ImN1c3RvbWVyIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzkyNTA0NjY5LCJleHAiOjE3OTUwOTY2Njl9.YXuuNMuE6qyQtQ2UGFXdYDuNgYvfHGeF0VUHl_NO0nw",
+    "user": {
+      "id": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "email": "[REDACTED:ef_email]",
+      "name": "[REDACTED:ef_email]",
+      "role": "customer",
+      "partnerId": "B0n2ULZOeYjROsaXCQlse",
+      "partner": {
+        "name": "Encartefacil",
+        "config": {
+          "product": {
+            "name": "Encartefacil",
+            "description": "Criador de encartes digitais",
+            "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+          },
+          "app": {
+            "name": "Encartefacil",
+            "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+            "domain": "encartefacil.com"
+          },
+          "email": {
+            "sender": "suporte@encartefacil.com"
+          },
+          "logo": {
+            "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+            "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+            "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+            "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png"
+          },
+          "colors": {
+            "light": {
+              "primary": "#19e19e",
+              "secondary": "#f5f5f5",
+              "background": "#ffffff"
+            },
+            "dark": {
+              "primary": "#29d39d",
+              "secondary": "#262626",
+              "background": "#0a0a0a"
+            }
+          }
+        }
+      }
+    }
+  }
+}

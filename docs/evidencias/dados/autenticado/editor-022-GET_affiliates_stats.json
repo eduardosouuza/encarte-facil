@@ -1,0 +1,26 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/affiliates/stats",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    2
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "stats": {
+      "totalReferrals": 0,
+      "activeReferrals": 0,
+      "claimedMilestones": [],
+      "nextMilestone": {
+        "target": 5,
+        "rewardCredits": 5,
+        "label": "Bronze"
+      },
+      "progress": 0,
+      "totalCreditsEarned": 0
+    },
+    "referralCode": "ref_XWI5bjm9GnjxSwvbYJhfVFiltXyJgcvV"
+  }
+}

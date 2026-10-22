@@ -1,0 +1,277 @@
+{
+  "capture_path": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scenario-login.json",
+  "capture_sha256": "c7de7e81577c6946c163ead864145692a426984355700226ff0e5a7b50da54ea",
+  "capture_kind": "browser-scenario",
+  "source_evidence_id": "ev_974da02524186a98d0c4c317a3d6ec17444146acdc52ad88c90c6dd2f3a4e4ec",
+  "capture_completeness": {
+    "status": "incomplete",
+    "equality_eligible": false,
+    "missing_sections": [
+      "events"
+    ],
+    "truncated_sections": []
+  },
+  "output_directory": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-raw-full",
+  "analysis_input": null,
+  "scripts": [
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-3",
+        "request_sequence": 5,
+        "response_sequence": 15,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-5",
+        "request_sequence": 7,
+        "response_sequence": 13,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-6",
+        "request_sequence": 17,
+        "response_sequence": 23,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-9",
+        "request_sequence": 20,
+        "response_sequence": 21,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-13",
+        "request_sequence": 34,
+        "response_sequence": 51,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BMGestSM.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-14",
+        "request_sequence": 35,
+        "response_sequence": 55,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/card-rpQINIaS.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-15",
+        "request_sequence": 36,
+        "response_sequence": 61,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-16",
+        "request_sequence": 37,
+        "response_sequence": 59,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-17",
+        "request_sequence": 38,
+        "response_sequence": 53,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-18",
+        "request_sequence": 39,
+        "response_sequence": 57,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-19",
+        "request_sequence": 40,
+        "response_sequence": 63,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/register-tracking-WT6OGiwx.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-20",
+        "request_sequence": 41,
+        "response_sequence": 71,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-21",
+        "request_sequence": 42,
+        "response_sequence": 65,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-off-lhBkE3VE.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-22",
+        "request_sequence": 43,
+        "response_sequence": 67,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-V8dxXWjI.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-23",
+        "request_sequence": 44,
+        "response_sequence": 69,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/password-DLagbhNK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-24",
+        "request_sequence": 45,
+        "response_sequence": 73,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    }
+  ],
+  "limitations": [
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Shared-context network capture excludes requests without a known root or descendant Page frame.",
+    "Some network requests had not completed when capture ended; later activity is unknown.",
+    "CDP attachment cannot recover pre-attach events or guarantee launch-time context options.",
+    "Attached locale en-US applies to Intl formatting only; navigator.language(s) and Accept-Language remain caller-controlled. Use launch mode for matching page and request languages.",
+    "Detaching a CDP page session may clear caller-owned navigator.platform emulation. REA cannot snapshot the caller's complete user-agent/client-hint state before attachment; use launch mode to avoid mutating that external browser.",
+    "Only script bytes retained in this capture are exported. Sources are not refetched or executed, and a response or Debugger source does not prove execution.",
+    "Ordinary unambiguous URL paths preserve relative module layouts by origin, including case-distinct spellings. Query variants, exact path collisions, file/directory prefixes, inline sources, and unrepresentable paths are isolated. A case-distinct pair is isolated only when the destination filesystem cannot store both spellings; the record names that pair. Browser module relationships of isolated paths remain unknown.",
+    "Local JavaScript analysis does not implement browser import maps, root-relative URL resolution, remote URL loading, or browser runtime behavior. It may strip import queries and fragments; isolated variants are not canonical targets.",
+    "Source-map declarations are retained as metadata. No source maps or missing dependencies are fetched or reconstructed.",
+    "Scenario response bytes preserve the output of Playwright's Response.body() API; any source-body provenance caveat from the capture is retained in this manifest. Debugger sources are the exposed text encoded as UTF-8. Redacted bytes are exported exactly as retained, and may no longer parse as JavaScript.",
+    "No script bytes were exportable. Include script sources in inspect_web_page or select response_body in capture_browser_scenario, then capture again."
+  ]
+}

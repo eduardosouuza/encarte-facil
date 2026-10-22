@@ -1,0 +1,354 @@
+{
+  "capture_path": "C:\\Users\\eduar\\AppData\\Local\\Temp\\kilo\\ef-investigation\\capture-login2.json",
+  "capture_sha256": "1a6b3064c3df303d0607a6e0ec1c50a77cdefe8c9f3a56581359093d78ba1932",
+  "capture_kind": "browser-scenario",
+  "source_evidence_id": "ev_5d6fbf2ff049681962130070bcdf4731bb9118fd02e9dba9d09c5a73877a196b",
+  "capture_completeness": {
+    "status": "incomplete",
+    "equality_eligible": false,
+    "missing_sections": [
+      "events"
+    ],
+    "truncated_sections": []
+  },
+  "output_directory": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-login-falha2",
+  "analysis_input": {
+    "input_path": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-login-falha2\\files",
+    "format": "directory"
+  },
+  "scripts": [
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-3",
+        "request_sequence": 5,
+        "response_sequence": 18,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-5",
+        "request_sequence": 7,
+        "response_sequence": 13,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-2-ca0149f280e4ecc83329f5a9c6aa029e9f69cd0c8d4b90c065321d1a243a2c83.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-6",
+        "request_sequence": 25,
+        "response_sequence": 118,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-9",
+        "request_sequence": 28,
+        "response_sequence": 30,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-allocation-limit",
+        "message": "Body redaction exceeds the selected network body allocation budget."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-11",
+        "request_sequence": 39,
+        "response_sequence": 59,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BMGestSM.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-BMGestSM.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "eb44f1b449be2abf323f00ca93f6f60f94b04c815b08c764f7c16c6df976fc69",
+        "bytes": 18995,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-12",
+        "request_sequence": 40,
+        "response_sequence": 92,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/card-rpQINIaS.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/card-rpQINIaS.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "3202e7d5ddf485fdb394fa71e93c4ec2df69b45a69b6c1ac134d50a8fcddbbab",
+        "bytes": 975,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-13",
+        "request_sequence": 41,
+        "response_sequence": 68,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/logo-Dr-8dK1w.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "ebf12fa8b24ec3883562c74b16ff7096ccdb533619b3bc2ac73c5eb516255ef9",
+        "bytes": 824,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-14",
+        "request_sequence": 42,
+        "response_sequence": 77,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/switch-BtSwe9Ih.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "c2c21650250164c7c7d254adf6c9eb984312089bf399f88e7eb2208e527d8cc6",
+        "bytes": 2490,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-15",
+        "request_sequence": 43,
+        "response_sequence": 80,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-CEpZmkQp.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "5ff10ffd14084d7053bb39872b3950df314a0b6bfda2b34c75b8152b9aad9902",
+        "bytes": 232,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-16",
+        "request_sequence": 44,
+        "response_sequence": 71,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/sun-e27cUWGn.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "134366d57331cc6d83d8f4bda24526072a1819b4b955331aab6b8bdec878cd54",
+        "bytes": 903,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-17",
+        "request_sequence": 45,
+        "response_sequence": 83,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/register-tracking-WT6OGiwx.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/register-tracking-WT6OGiwx.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "2099a3dd1abae9af936fbba7f082535a58d8441fc0d7605044925703cf2aac3f",
+        "bytes": 201,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-18",
+        "request_sequence": 46,
+        "response_sequence": 62,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/progress-B2aPl7Uu.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "1ef72c7ac17f48311efbc8d82df702dd3d2c910760f9271168d35ba46c45dbf3",
+        "bytes": 5061,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-19",
+        "request_sequence": 47,
+        "response_sequence": 56,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-off-lhBkE3VE.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/eye-off-lhBkE3VE.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "ae6ec742c0ca7f24da185f6ec94ee699b56a1fa2beb10a24c4c9e44a080ab755",
+        "bytes": 567,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-20",
+        "request_sequence": 48,
+        "response_sequence": 74,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-V8dxXWjI.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/eye-V8dxXWjI.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "4ac93ddef39112e12d4e24b55ebfbce547de6cb9f566aedc56b982acc8ceb1a2",
+        "bytes": 363,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-21",
+        "request_sequence": 49,
+        "response_sequence": 95,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/password-DLagbhNK.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/password-DLagbhNK.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "7f6ec4238cbce020a2af336b05e93134ba9155a010a05d6f1404a61914548420",
+        "bytes": 712,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-22",
+        "request_sequence": 50,
+        "response_sequence": 89,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/alert-circle-B6r4nISY.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "4724e6640e3dac9ba46ff54069b7156911abc15d627f7de3958600dd155536eb",
+        "bytes": 418,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    }
+  ],
+  "limitations": [
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Captured response-body bytes are the result of Playwright's Response.body() API. Playwright may satisfy that API with a credentialed follow-up load of the request URL when CDP has no body, so transaction and event links do not verify that retained bytes came from the original network transaction.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Some selected network content was unavailable; per-transaction content states retain the reason.",
+    "Only script bytes retained in this capture are exported. Sources are not refetched or executed, and a response or Debugger source does not prove execution.",
+    "Ordinary unambiguous URL paths preserve relative module layouts by origin, including case-distinct spellings. Query variants, exact path collisions, file/directory prefixes, inline sources, and unrepresentable paths are isolated. A case-distinct pair is isolated only when the destination filesystem cannot store both spellings; the record names that pair. Browser module relationships of isolated paths remain unknown.",
+    "Local JavaScript analysis does not implement browser import maps, root-relative URL resolution, remote URL loading, or browser runtime behavior. It may strip import queries and fragments; isolated variants are not canonical targets.",
+    "Source-map declarations are retained as metadata. No source maps or missing dependencies are fetched or reconstructed.",
+    "Scenario response bytes preserve the output of Playwright's Response.body() API; any source-body provenance caveat from the capture is retained in this manifest. Debugger sources are the exposed text encoded as UTF-8. Redacted bytes are exported exactly as retained, and may no longer parse as JavaScript."
+  ]
+}

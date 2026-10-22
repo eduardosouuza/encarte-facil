@@ -1,0 +1,1202 @@
+{
+  "missing": [
+    "admin-route-IOWFK9U3.js",
+    "bulk-nKorVO5W.js",
+    "chat-page-sXQLYrOf.js",
+    "checkout-page-Z5ZnzTs3.js",
+    "color-thief-D_PhdqOd.js",
+    "comps-list-DiMn7nL6.js",
+    "editor-C_G0UypU.js",
+    "exports-page-CATFaBKl.js",
+    "flyers-B4rLVYUf.js",
+    "generate-uGBXj2EA.js",
+    "inbox-page-BwfPJNci.js",
+    "index-BWsW9flj.js",
+    "index-BehZtlK7.js",
+    "index-Bri8j3Ot.js",
+    "index-C8Se_WUH.js",
+    "index-C8ygs8b0.js",
+    "index-CDHbdXkF.js",
+    "index-CKGpbnMo.js",
+    "index-CwNwWR_E.js",
+    "index-Dcs6KTkN.js",
+    "index-DzXvaxmD.js",
+    "index-MqiCARZ_.js",
+    "index-NdTqfVHP.js",
+    "layout-rgrbKY06.js",
+    "list-BANlmtTu.js",
+    "list-Bifj8scx.js",
+    "list-C5LigiU1.js",
+    "list-CX9hnMdw.js",
+    "list-CXKHdjuZ.js",
+    "list-CXobAHpR.js",
+    "list-CZ0QRowV.js",
+    "list-D2qJ1TMH.js",
+    "list-D41tS_4y.js",
+    "list-D79pWSgp.js",
+    "list-DxHQktZq.js",
+    "list-XFvKs-CJ.js",
+    "list-_Pezqj2x.js",
+    "list-vLvGbrCr.js",
+    "logs-Bhi2Sf4U.js",
+    "online-users-dashboard-tG9x8Iwf.js",
+    "page-B6i9_e-4.js",
+    "pay-link-page-BKD6Wiyg.js",
+    "plans-dialog-BO1TRfJi.js"
+  ],
+  "chunks": [
+    {
+      "file": "alert-circle-B6r4nISY.js",
+      "bytes": 418,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "alert-triangle-7jjD0zs3.js",
+      "bytes": 434,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "arrow-left-CVS5Z2VI.js",
+      "bytes": 333,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "ban-B8FNZ9Ak.js",
+      "bytes": 338,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "calendar-days-CiywsBpM.js",
+      "bytes": 662,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "card-rpQINIaS.js",
+      "bytes": 975,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "check-circle-2-tK7RMpCv.js",
+      "bytes": 342,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "chevron-down-ocqYOrK5.js",
+      "bytes": 296,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "clock-Bx04y7UN.js",
+      "bytes": 347,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "color-picker-CpeB0PH0.js",
+      "bytes": 8787,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "popover-CVs1NQbu.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "copy-COwhmbsu.js",
+      "bytes": 400,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "currency-DM9Y_laS.js",
+      "bytes": 1135,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "download-B9mtF3CU.js",
+      "bytes": 431,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "entities-CtIIzVdg.js",
+      "bytes": 236,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "entities-CzDzHSWx.js",
+      "bytes": 113,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "entities-DlvIMfpu.js",
+      "bytes": 772,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "eye-off-lhBkE3VE.js",
+      "bytes": 567,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "eye-V8dxXWjI.js",
+      "bytes": 363,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "file-text-DeVsQn9s.js",
+      "bytes": 501,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "formats-list-RieW1rzz.js",
+      "bytes": 7572,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "service-CmufRMLl.js",
+        "entities-DlvIMfpu.js",
+        "use-mobile-layout-B9xEXdHq.js",
+        "file-text-DeVsQn9s.js",
+        "smartphone-DWawRyBj.js",
+        "monitor-BOfZcPUp.js",
+        "use-simple-query-BIlIpFhF.js",
+        "query-keys-DamezY8H.js",
+        "query-states-BBlai7xS.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "globe-ji___Or_.js",
+      "bytes": 411,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "image-C7RnMoTw.js",
+      "bytes": 438,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "index-BLLrK9Mc.js",
+      "bytes": 204100,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "use-mobile-layout-B9xEXdHq.js",
+        "use-exports-stream-D1YJPQTk.js",
+        "popover-CVs1NQbu.js",
+        "switch-BtSwe9Ih.js",
+        "chevron-down-ocqYOrK5.js",
+        "slider-DapZNGHt.js",
+        "color-picker-CpeB0PH0.js",
+        "palette-CyO5CJ0c.js",
+        "maximize-2-BFX2JRIw.js",
+        "rotate-ccw-B_oUXfBK.js",
+        "entities-DlvIMfpu.js",
+        "formats-list-RieW1rzz.js",
+        "service-cCDUhbQQ.js",
+        "calendar-days-CiywsBpM.js",
+        "trash-2-yP0FfCte.js",
+        "shared-selection-controls-OlU5v_M1.js",
+        "download-B9mtF3CU.js",
+        "file-text-DeVsQn9s.js",
+        "share-2-Ce5EcWai.js",
+        "service-Dc47qpQA.js",
+        "tag-effects-BONRtD59.js",
+        "currency-DM9Y_laS.js",
+        "price-types-B5DfVFbR.js",
+        "use-simple-query-BIlIpFhF.js",
+        "query-keys-DamezY8H.js",
+        "map-pin-N_EkvcAm.js",
+        "phone-Dl-Kb7UP.js",
+        "globe-ji___Or_.js",
+        "package-BwJ_7uce.js",
+        "plus-nkgdgBzR.js",
+        "minus-DxpgJsKj.js",
+        "zoom-in-AUbiIL7j.js",
+        "index-vqte5ySJ.js",
+        "progress-B2aPl7Uu.js",
+        "image-C7RnMoTw.js",
+        "shopping-cart-BvYgWGZP.js",
+        "initial-flyer-Cc6BwAmp.js",
+        "alert-triangle-7jjD0zs3.js",
+        "send-B_xYLiBE.js",
+        "ban-B8FNZ9Ak.js",
+        "alert-circle-B6r4nISY.js",
+        "check-circle-2-tK7RMpCv.js",
+        "clock-Bx04y7UN.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "index-BMGestSM.js",
+      "bytes": 18995,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "card-rpQINIaS.js",
+        "logo-Dr-8dK1w.js",
+        "switch-BtSwe9Ih.js",
+        "sun-e27cUWGn.js",
+        "register-tracking-WT6OGiwx.js",
+        "progress-B2aPl7Uu.js",
+        "eye-off-lhBkE3VE.js",
+        "eye-V8dxXWjI.js",
+        "password-DLagbhNK.js",
+        "alert-circle-B6r4nISY.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "index-CEpZmkQp.js",
+      "bytes": 232,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "index-Dz0tekWN.js",
+      "bytes": 12715,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "service-DQzaU991.js",
+        "entities-CtIIzVdg.js",
+        "pencil-C-1BkcyX.js",
+        "infinite-scroll-CrghhgUG.js",
+        "use-infinite-list-CMBvctj2.js",
+        "query-keys-DamezY8H.js",
+        "query-states-BBlai7xS.js",
+        "arrow-left-CVS5Z2VI.js",
+        "useMutation-BPirSAry.js",
+        "use-simple-query-BIlIpFhF.js",
+        "image-C7RnMoTw.js",
+        "search-ri_QLxhz.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "bytes": 868456,
+      "imports": [
+        "color-thief-D_PhdqOd.js",
+        "index-CKGpbnMo.js",
+        "index-Bri8j3Ot.js",
+        "index-VDyxRd0o.js",
+        "index-BMGestSM.js",
+        "pay-link-page-BKD6Wiyg.js",
+        "checkout-page-Z5ZnzTs3.js",
+        "chat-page-sXQLYrOf.js",
+        "index-BLLrK9Mc.js",
+        "plans-dialog-BO1TRfJi.js",
+        "admin-route-IOWFK9U3.js",
+        "layout-rgrbKY06.js",
+        "list-CZ0QRowV.js",
+        "list-CXobAHpR.js",
+        "comps-list-DiMn7nL6.js",
+        "list-C5LigiU1.js",
+        "list-CX9hnMdw.js",
+        "bulk-nKorVO5W.js",
+        "generate-uGBXj2EA.js",
+        "list-D2qJ1TMH.js",
+        "list-BANlmtTu.js",
+        "index-CwNwWR_E.js",
+        "list-_Pezqj2x.js",
+        "list-D79pWSgp.js",
+        "list-D41tS_4y.js",
+        "list-CXKHdjuZ.js",
+        "list-Bifj8scx.js",
+        "list-XFvKs-CJ.js",
+        "index-CDHbdXkF.js",
+        "logs-Bhi2Sf4U.js",
+        "online-users-dashboard-tG9x8Iwf.js",
+        "index-DzXvaxmD.js",
+        "list-DxHQktZq.js",
+        "index-C8Se_WUH.js",
+        "index-NdTqfVHP.js",
+        "inbox-page-BwfPJNci.js",
+        "list-vLvGbrCr.js",
+        "editor-C_G0UypU.js",
+        "page-B6i9_e-4.js",
+        "exports-page-CATFaBKl.js"
+      ],
+      "apiPaths": [
+        "/auth/login",
+        "/auth/register",
+        "/auth/me",
+        "/auth/verify",
+        "/admin/impersonation/${t}",
+        "/admin/impersonation/stop",
+        "/auth/capabilities",
+        "/auth/forgot-password",
+        "/auth/reset-password",
+        "/partners/current",
+        "/partners/${t}",
+        "/partners",
+        "/partners/stats/active",
+        "/partners/${t}/domain",
+        "/partners/${t}/domain/validate",
+        "/partners/${t}/domain/retry-ssl",
+        "/subscriptions/me",
+        "/prices",
+        "/billing/checkout",
+        "/billing/overview",
+        "/billing/card",
+        "/billing/card/default",
+        "/billing/card/remove",
+        "/billing/fiscal",
+        "/billing/card/stripe/session",
+        "/billing/card/stripe/confirm",
+        "/subscriptions/cancel",
+        "/billing/pix-recurring/cancel",
+        "/subscriptions/resume",
+        "/stripe/portal",
+        "/customers/me",
+        "/customers/me/phone/send-code",
+        "/customers/me/phone/verify",
+        "/public/market",
+        "/flyers",
+        "/flyers/${t}",
+        "/flyers/${t}/duplicate",
+        "/flyers/${t}/whatsapp",
+        "/flyers/${t}/email",
+        "/translations/${e}"
+      ],
+      "hasRouter": true,
+      "hasTracking": true,
+      "hasReactVendor": true,
+      "lucide": true
+    },
+    {
+      "file": "index-VDyxRd0o.js",
+      "bytes": 57062,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "index-vqte5ySJ.js",
+      "bytes": 356,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "infinite-scroll-CrghhgUG.js",
+      "bytes": 587,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "initial-flyer-Cc6BwAmp.js",
+      "bytes": 849,
+      "imports": [
+        "service-DQzaU991.js",
+        "service-CmufRMLl.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "logo-Dr-8dK1w.js",
+      "bytes": 824,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "map-pin-N_EkvcAm.js",
+      "bytes": 368,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "maximize-2-BFX2JRIw.js",
+      "bytes": 467,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "minus-DxpgJsKj.js",
+      "bytes": 286,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "monitor-BOfZcPUp.js",
+      "bytes": 428,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "package-BwJ_7uce.js",
+      "bytes": 528,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "palette-CyO5CJ0c.js",
+      "bytes": 779,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "password-DLagbhNK.js",
+      "bytes": 712,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "pencil-C-1BkcyX.js",
+      "bytes": 365,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "phone-Dl-Kb7UP.js",
+      "bytes": 563,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "plus-nkgdgBzR.js",
+      "bytes": 322,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "popover-CVs1NQbu.js",
+      "bytes": 5308,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "price-types-B5DfVFbR.js",
+      "bytes": 3137,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "progress-B2aPl7Uu.js",
+      "bytes": 5061,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "query-constants-hqx0foTB.js",
+      "bytes": 99,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "query-keys-DamezY8H.js",
+      "bytes": 489,
+      "imports": [],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "query-states-BBlai7xS.js",
+      "bytes": 794,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "register-tracking-WT6OGiwx.js",
+      "bytes": 201,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "rotate-ccw-B_oUXfBK.js",
+      "bytes": 368,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "search-ri_QLxhz.js",
+      "bytes": 336,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "send-B_xYLiBE.js",
+      "bytes": 336,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "service-cCDUhbQQ.js",
+      "bytes": 3253,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/brandkits/me",
+        "/brandkits/${t}"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "service-Chphq-AR.js",
+      "bytes": 860,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/affiliates/stats",
+        "/affiliates/referrals",
+        "/affiliates/claim-reward",
+        "/admin/affiliates"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "service-CmufRMLl.js",
+      "bytes": 1016,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/formats",
+        "/formats/${s}"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "service-Dc47qpQA.js",
+      "bytes": 4994,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/assets",
+        "/assets/upload",
+        "/assets/remove-background",
+        "/assets/batch",
+        "/assets/${r}",
+        "/assets/stats/count",
+        "/assets/stats/partner-count"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "bytes": 1981,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/designs",
+        "/designs/${s}",
+        "/designs/by-theme",
+        "/designs/${s}/approve",
+        "/designs/${s}/reject",
+        "/designs/${s}/render",
+        "/designs/${s}/preview",
+        "/customer-designs",
+        "/customer-designs/${s}",
+        "/designs/${s}/metadata/generate"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "settings-DWdAwwLJ.js",
+      "bytes": 894,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "share-2-Ce5EcWai.js",
+      "bytes": 520,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "shared-selection-controls-OlU5v_M1.js",
+      "bytes": 12554,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "settings-DWdAwwLJ.js",
+        "copy-COwhmbsu.js",
+        "trash-2-yP0FfCte.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "shield-D5a8xnL-.js",
+      "bytes": 321,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "shopping-cart-BvYgWGZP.js",
+      "bytes": 930,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "slider-DapZNGHt.js",
+      "bytes": 8310,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "index-vqte5ySJ.js",
+        "index-CEpZmkQp.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "smartphone-DWawRyBj.js",
+      "bytes": 366,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "sparkles-BtHya149.js",
+      "bytes": 590,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "sun-e27cUWGn.js",
+      "bytes": 903,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "switch-BtSwe9Ih.js",
+      "bytes": 2490,
+      "imports": [
+        "index-KJ2_zNqK.js",
+        "index-CEpZmkQp.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "tag-B-yBwrYx.js",
+      "bytes": 495,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "tag-effects-BONRtD59.js",
+      "bytes": 5215,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "trash-2-yP0FfCte.js",
+      "bytes": 526,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "use-exports-stream-D1YJPQTk.js",
+      "bytes": 7509,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [
+        "/exports${r}",
+        "/exports",
+        "/exports/${e}/cancel",
+        "/exports/${e}/retry",
+        "/exports/${e}/share",
+        "/deliveries/${e}"
+      ],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "use-infinite-list-CMBvctj2.js",
+      "bytes": 1573,
+      "imports": [
+        "useBaseQuery-DNtSj8JH.js",
+        "index-KJ2_zNqK.js",
+        "query-constants-hqx0foTB.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "use-mobile-layout-B9xEXdHq.js",
+      "bytes": 22880,
+      "imports": [
+        "index-Dz0tekWN.js",
+        "index-MqiCARZ_.js",
+        "index-Dcs6KTkN.js",
+        "index-BehZtlK7.js",
+        "index-BWsW9flj.js",
+        "index-C8ygs8b0.js",
+        "flyers-B4rLVYUf.js",
+        "index-KJ2_zNqK.js",
+        "logo-Dr-8dK1w.js",
+        "switch-BtSwe9Ih.js",
+        "entities-CzDzHSWx.js",
+        "chevron-down-ocqYOrK5.js",
+        "globe-ji___Or_.js",
+        "service-Chphq-AR.js",
+        "users-CBE3qzDq.js",
+        "pencil-C-1BkcyX.js",
+        "sparkles-BtHya149.js",
+        "shield-D5a8xnL-.js",
+        "sun-e27cUWGn.js",
+        "image-C7RnMoTw.js",
+        "shopping-cart-BvYgWGZP.js",
+        "tag-B-yBwrYx.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "use-simple-query-BIlIpFhF.js",
+      "bytes": 241,
+      "imports": [
+        "useQuery-D12Y0UPZ.js",
+        "query-constants-hqx0foTB.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "useBaseQuery-DNtSj8JH.js",
+      "bytes": 10418,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "useMutation-BPirSAry.js",
+      "bytes": 3105,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "useQuery-D12Y0UPZ.js",
+      "bytes": 100,
+      "imports": [
+        "useBaseQuery-DNtSj8JH.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": false
+    },
+    {
+      "file": "users-CBE3qzDq.js",
+      "bytes": 473,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    },
+    {
+      "file": "zoom-in-AUbiIL7j.js",
+      "bytes": 470,
+      "imports": [
+        "index-KJ2_zNqK.js"
+      ],
+      "apiPaths": [],
+      "hasRouter": false,
+      "hasTracking": false,
+      "hasReactVendor": false,
+      "lucide": true
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "baseUrls": [
+    "http://localhost",
+    "http://www.w3.org",
+    "https://api-v2.encartefacil.com",
+    "https://cdn.encartefacil.com",
+    "https://d1rde4gbc24xn7.cloudfront.net",
+    "https://editor.encartefacil.com",
+    "https://efacil-dev.s3.sa-east-1.amazonaws.com",
+    "https://fonts.googleapis.com",
+    "https://locize.com",
+    "https://radix-ui.com",
+    "https://reactjs.org",
+    "https://tanstack.com",
+    "https://wa.me",
+    "https://www.googletagmanager.com",
+    "https://www.i18next.com"
+  ],
+  "httpCalls": [
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "Location"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "content-length"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/auth/login"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/auth/register"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/auth/me"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/auth/verify"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/admin/impersonation/${t}"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/admin/impersonation/stop"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/auth/capabilities"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/auth/forgot-password"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/auth/reset-password"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/partners/current"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/partners/${t}"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/partners"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "PUT",
+      "path": "/partners/${t}"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "DELETE",
+      "path": "/partners/${t}"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/partners/stats/active"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/partners"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "PUT",
+      "path": "/partners/${t}/domain"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "DELETE",
+      "path": "/partners/${t}/domain"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/partners/${t}/domain/validate"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/partners/${t}/domain/retry-ssl"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/subscriptions/me"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/prices"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/checkout"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/billing/overview"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/card"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/card/default"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/card/remove"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/fiscal"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/card/stripe/session"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/card/stripe/confirm"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/subscriptions/cancel"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/billing/pix-recurring/cancel"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/subscriptions/resume"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/stripe/portal"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/customers/me"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "PUT",
+      "path": "/customers/me"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/customers/me/phone/send-code"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "POST",
+      "path": "/customers/me/phone/verify"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "card_setup"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "manage"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "DELETE",
+      "path": "card_setup"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "DELETE",
+      "path": "manage"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "checkout"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "DELETE",
+      "path": "checkout"
+    },
+    {
+      "file": "index-KJ2_zNqK.js",
+      "method": "GET",
+      "path": "/public/market"
+    },
+    {
+      "file": "service-cCDUhbQQ.js",
+      "method": "GET",
+      "path": "/brandkits/me"
+    },
+    {
+      "file": "service-cCDUhbQQ.js",
+      "method": "GET",
+      "path": "/brandkits/${t}"
+    },
+    {
+      "file": "service-cCDUhbQQ.js",
+      "method": "PUT",
+      "path": "/brandkits/${t}"
+    },
+    {
+      "file": "service-Chphq-AR.js",
+      "method": "GET",
+      "path": "/affiliates/stats"
+    },
+    {
+      "file": "service-Chphq-AR.js",
+      "method": "GET",
+      "path": "/affiliates/referrals"
+    },
+    {
+      "file": "service-Chphq-AR.js",
+      "method": "POST",
+      "path": "/affiliates/claim-reward"
+    },
+    {
+      "file": "service-Chphq-AR.js",
+      "method": "GET",
+      "path": "/admin/affiliates"
+    },
+    {
+      "file": "service-CmufRMLl.js",
+      "method": "GET",
+      "path": "/formats"
+    },
+    {
+      "file": "service-CmufRMLl.js",
+      "method": "GET",
+      "path": "/formats/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "GET",
+      "path": "/designs"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "GET",
+      "path": "/designs/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "GET",
+      "path": "/designs/by-theme"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs/${s}/approve"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs/${s}/reject"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "PUT",
+      "path": "/designs/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "DELETE",
+      "path": "/designs/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs/${s}/render"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs/${s}/preview"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "GET",
+      "path": "/customer-designs"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "PUT",
+      "path": "/customer-designs/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "DELETE",
+      "path": "/customer-designs/${s}"
+    },
+    {
+      "file": "service-DQzaU991.js",
+      "method": "POST",
+      "path": "/designs/${s}/metadata/generate"
+    }
+  ],
+  "classDefs": [],
+  "storageKeys": [
+    "\"@encartefacil:location-state-code\"",
+    "\"admin-selected-partner-id\"",
+    "\"ef_lead_prefill\"",
+    "\"locale\"",
+    "\"theme\""
+  ],
+  "rtkEndpoints": [],
+  "externalHosts": {}
+}

@@ -1,0 +1,10 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
+const base = "C:/Users/eduar/AppData/Local/Temp/kilo/ef-investigation/exported-scripts/files/origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets";
+const src = readFileSync(path.join(base, "index-KJ2_zNqK.js"), "utf8");
+const seg = src.slice(270000, 284000);
+const themes = [...seg.matchAll(/\{id:"([^"]+)",name:"([^"]+)"/g)].map((m) => `${m[1]} | ${m[2]}`);
+console.log("themes:", themes.length);
+console.log(themes.join("\n"));
+const i = seg.indexOf("zF=");
+console.log("\n--- context ---\n", seg.slice(Math.max(0, i - 300), i + 400).replace(/\s+/g, " "));

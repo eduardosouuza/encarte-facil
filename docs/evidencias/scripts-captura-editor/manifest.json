@@ -1,0 +1,3736 @@
+{
+  "capture_path": "C:\\Users\\eduar\\AppData\\Local\\Temp\\kilo\\ef-investigation\\capture-editor.json",
+  "capture_sha256": "9b40b057bdf26ecb570e3af2f5d8f2e90e259dc8aff94bcfc990d7359c6ec9ce",
+  "capture_kind": "browser-scenario",
+  "source_evidence_id": "ev_7d8da329b925a4d48c1a258e57286b5851a3dbd50bf18905d290b3307e48c74b",
+  "capture_completeness": {
+    "status": "incomplete",
+    "equality_eligible": false,
+    "missing_sections": [
+      "events"
+    ],
+    "truncated_sections": []
+  },
+  "output_directory": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-editor",
+  "analysis_input": {
+    "input_path": "C:\\Users\\eduar\\OneDrive\\Documentos\\Projetos-web\\encarte facil\\docs\\evidencias\\scripts-captura-editor\\files",
+    "format": "directory"
+  },
+  "scripts": [
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-3",
+        "request_sequence": 6,
+        "response_sequence": 20,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-5",
+        "request_sequence": 10,
+        "response_sequence": 17,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-2-c58c57b569794dc33af59525d8c733459bd937ea3e7b618c716700b3cb1c341a.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-6",
+        "request_sequence": 25,
+        "response_sequence": 204,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-9",
+        "request_sequence": 31,
+        "response_sequence": 34,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-4-6e5a7162825262c1bc0c3dccf0d13bc59dafd50d4673c4c1eab479363ce0927b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-13",
+        "request_sequence": 57,
+        "response_sequence": 315,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-14",
+        "request_sequence": 59,
+        "response_sequence": 244,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-mobile-layout-B9xEXdHq.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-6-1e3f0caa86e7ef54e7ee6b565b75cb94a3f9972fc36ad20658e5a6fe6d323aa6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6f8213c167770ff1d5785a4e7c1dcddd0a4011bc5abf3f223f5d6ec7d3a091c3",
+        "bytes": 22880,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-15",
+        "request_sequence": 61,
+        "response_sequence": 189,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-7-893b524af8b660ce6afb4c2a07783863fdc0bbad949a0bf6c4b34bfda7d7f8f5.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ebf12fa8b24ec3883562c74b16ff7096ccdb533619b3bc2ac73c5eb516255ef9",
+        "bytes": 824,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-16",
+        "request_sequence": 63,
+        "response_sequence": 269,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-8-2777152702196680ddf54200bf5bd3bc84e21bf4387f6c27b011c63d514a1c7e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c2c21650250164c7c7d254adf6c9eb984312089bf399f88e7eb2208e527d8cc6",
+        "bytes": 2490,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-17",
+        "request_sequence": 65,
+        "response_sequence": 186,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-9-a79b244bcbecde8cd7dc72f3674b5a6abbcdd3512cb7422e80ea657452ff4e55.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "5ff10ffd14084d7053bb39872b3950df314a0b6bfda2b34c75b8152b9aad9902",
+        "bytes": 232,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-18",
+        "request_sequence": 67,
+        "response_sequence": 209,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-CzDzHSWx.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-10-72f830a211220004994919f77af9e949ef4398d76cee35f6140379fe4b05f25a.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6d546447c758f6ec3f1a7e87ec2b0adeac0ccf53bfafd4437b791e9efe3da2d0",
+        "bytes": 113,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-19",
+        "request_sequence": 69,
+        "response_sequence": 273,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/chevron-down-ocqYOrK5.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-11-258d504ca8c662267502008188061dc5798424f982e1aa96952032f7a924202b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6074a428fdea7c8ddd281478b4bf489754f18b34e4b2411f269489d883313a1f",
+        "bytes": 296,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-20",
+        "request_sequence": 71,
+        "response_sequence": 192,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/popover-CVs1NQbu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-12-e195468ccd5b828544412abaa5476ebee86e006126ba2b24d93653bc6b475a38.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b022328034f5966653c410c01a635d634e6b3c3be16898ac157c70ff4803978a",
+        "bytes": 5308,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-21",
+        "request_sequence": 73,
+        "response_sequence": 340,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/globe-ji___Or_.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-13-970a5fecfcfd421b33e4261a864e757fbf1dbd7f7d29165c5ab8f2c7957bb611.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "1e819e54d8191bf1ab5bd9bbb7ff7767f61b1bcdebd7e5f0450af9151eb661cd",
+        "bytes": 411,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-22",
+        "request_sequence": 75,
+        "response_sequence": 251,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Chphq-AR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-14-cd4d098a2d4d1e43a303573af08e8f67db56e55e26ee698b19f653e829f49b24.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "133b79b69bae6d410c049a59d87c960481473a56b1355e5f189640c58ba52dc5",
+        "bytes": 860,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-23",
+        "request_sequence": 77,
+        "response_sequence": 255,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/users-CBE3qzDq.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-15-79a47aff951985b4368cb07e63b5687123e34cd782f2120f7e27da9c7ddbbea6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "8986825c17eae4313eddaa375530ab79fbf1a3b2ac371755a954ef8ca4d95870",
+        "bytes": 473,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-24",
+        "request_sequence": 79,
+        "response_sequence": 197,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/pencil-C-1BkcyX.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-16-fc34d11d40051007f890c40bc5d505bd2dfa240ef921fb42a628fd5e9c286ee1.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "af15d3c64f418eccb0c2d380aa7d8804ddbc34c1b941633e8f278ceb4929723c",
+        "bytes": 365,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-25",
+        "request_sequence": 81,
+        "response_sequence": 275,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sparkles-BtHya149.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-17-5f442db1174db792213555921a1c6591a6cbdee73dab79977119358d5a4a69d0.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b56c6e6eb192bc2e91221303e1ff06476b4ee999df5f1d79ebc6951a4c54941d",
+        "bytes": 590,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-26",
+        "request_sequence": 83,
+        "response_sequence": 238,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shield-D5a8xnL-.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-18-07b715429cb08737835da78c99972d33fe09fc86c719172b12ce5b79bb9a809e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "0d8c35b32a58178894645f8a769d424c3aeb6ba5b7003926f63db79d8617e06c",
+        "bytes": 321,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-27",
+        "request_sequence": 85,
+        "response_sequence": 217,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-19-731b749212e5fa262d08d40fe863e785eec97cd4ce154e21af10ab7280da9e31.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "134366d57331cc6d83d8f4bda24526072a1819b4b955331aab6b8bdec878cd54",
+        "bytes": 903,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-28",
+        "request_sequence": 87,
+        "response_sequence": 195,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/image-C7RnMoTw.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-20-7a0031e9ddfe9b751ef75412a9f15cd8684649dca362b90994cda283ba59d27b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "382e5c933e771a231024d1539942fdba2dfb7ddd3c86031d7aaaf268b79a3206",
+        "bytes": 438,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-29",
+        "request_sequence": 89,
+        "response_sequence": 267,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shopping-cart-BvYgWGZP.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-21-0715a926235ac5cef4c23400631404eecdafeb04334aa76020322883675aaf02.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "e2f9abcd5d36d705d2661c22017aa719269b57ad9a778394fccbf81b5ab49939",
+        "bytes": 930,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-30",
+        "request_sequence": 91,
+        "response_sequence": 301,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-B-yBwrYx.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-22-d47153102a5031c19a548e2cd1b814afb365663e03d153f45650ea8afd02d914.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6ae8b1607a2dda4656924d9ae1b843e6bcf87a3084b483f6a6b4b5d7788e40cf",
+        "bytes": 495,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-31",
+        "request_sequence": 93,
+        "response_sequence": 342,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-exports-stream-D1YJPQTk.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-23-dfc69b4285eb4532047e980d4a5b7ee2040ce71cb650f52af83cfc1c9e2f4cf6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ff8887968212252e8ab53d3e0b93a92e1035518d93787f90e86ddd2bf04e7e32",
+        "bytes": 7509,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-32",
+        "request_sequence": 95,
+        "response_sequence": 303,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/slider-DapZNGHt.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-24-133e60d0cbd23f76fbd91b703a141a0a118feaa5ee4dd9a3cce42c2a95ff7c76.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "177d53d1044ce675e296b94f99b1731591339e25736d3a1cdc501aa5fee01fa2",
+        "bytes": 8310,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-33",
+        "request_sequence": 97,
+        "response_sequence": 328,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-vqte5ySJ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-25-c0fbabf6a0f9064c54a8b414d2db6108f613f1ba8044ab167f4a637317451088.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ea849353cf8892b3573dae0edad4cc43de6e84f13cd9698e7e6d9ded13dab821",
+        "bytes": 356,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-34",
+        "request_sequence": 99,
+        "response_sequence": 223,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/color-picker-CpeB0PH0.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-26-bf91fe904cb691c564e4da15f3c9567017ae9e700b52982e711226a2855690bd.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2f0a9f61903892fd6b7511da70473be180a7d432f8492cac639bc71fa98728ac",
+        "bytes": 8787,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-35",
+        "request_sequence": 101,
+        "response_sequence": 265,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/palette-CyO5CJ0c.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-27-ea357d56d088dc3bf51f0838fee382ce9208f6c56ddcd80aa29e7f91e40423db.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c8738e95a46ad30abe4d25dc4f63502bbb7cd581c577ef1c3a937943853b7ac7",
+        "bytes": 779,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-36",
+        "request_sequence": 103,
+        "response_sequence": 283,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/maximize-2-BFX2JRIw.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-28-4680fe7e5401d902e8baf9707e7d674534c3a302d4b35b15bc74b3bb814a22e7.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b7f87bc34ff43d9a07eb8f9832414c61f1a912e9bd61a8344456e9a6899a9633",
+        "bytes": 467,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-37",
+        "request_sequence": 105,
+        "response_sequence": 199,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/rotate-ccw-B_oUXfBK.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-29-63e60f0f4c867b4d95f1c01d8dbfb6f9c520b43a9502ef6f9f2f118257a51ae6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4da82e59f31d1221b6cc2603ba23b9380a4457963e611e68cbd4ef9225f949c7",
+        "bytes": 368,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-38",
+        "request_sequence": 107,
+        "response_sequence": 326,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-DlvIMfpu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-30-d108ccdbf7128e72c5679357c2efcf596b51736eaed31720dff2fd71b38b697d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "015aacf1f99e83e238230acf02dc72f361ae569387073ddfb2bbf3d426dca914",
+        "bytes": 772,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-39",
+        "request_sequence": 109,
+        "response_sequence": 287,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/formats-list-RieW1rzz.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-31-7aa95a8da6e9899953480f7698afcb17ab54b17d38ae12c63b05d60a1417b829.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "e7ae70f1ec7d5b629f6789718a78622f60ea31743477a30df0437e79b72bfdd1",
+        "bytes": 7572,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-40",
+        "request_sequence": 111,
+        "response_sequence": 202,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-CmufRMLl.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-32-85269ccc6588c29fa9dfb37bc03592956639aa733e6e48325066987f4d96f54f.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "dfa1f01b2d05f8fe1d78027fb345f8eb2833a6634fa8414a8afca7d40602b183",
+        "bytes": 1016,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-41",
+        "request_sequence": 113,
+        "response_sequence": 281,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/file-text-DeVsQn9s.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-33-162bca24419ad9386b21bbdd4cce35cf5eec7efa358bd7c141b5e734c98155db.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c446498f755a1fe43d0f8a7c783aecba9d28315a4ed331c21abbd1e4b66713b4",
+        "bytes": 501,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-42",
+        "request_sequence": 115,
+        "response_sequence": 234,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/smartphone-DWawRyBj.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-34-88c13c04b68f035ac77404391756f1eb6ac90c8593f20cb8c86dc865a8edc3e4.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "5334fb915229977d7c2d9778bc411992d4faf7b4c1ae74bf30aa0b6e1e121d28",
+        "bytes": 366,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-43",
+        "request_sequence": 117,
+        "response_sequence": 211,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/monitor-BOfZcPUp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-35-a491a0e5a15603649a8dcc88ca71625201df90ddd24f84e73774e0dfed4a1907.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4c49225c4964cfb78165c7f8c7011d00c0d97d69ec0a4550bef496c956ac88b0",
+        "bytes": 428,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-44",
+        "request_sequence": 119,
+        "response_sequence": 330,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-simple-query-BIlIpFhF.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-36-22ebe361e77c6bfc1e2a1050a3930b17748676992eae2fb499e70bc08baa6912.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a97ba7dc2e776b1aff2f38ce9f298928c01d153685a413df904a0e3b6e9e0ec8",
+        "bytes": 241,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-45",
+        "request_sequence": 121,
+        "response_sequence": 253,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useQuery-D12Y0UPZ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-37-fb7abb67b88c0227e10306fa7c4afa2eb7dfa7fef40c2f7e4c3d22f54d418ae4.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "55106ba81cf8484de460095258abeefc553a5ec07aeae78bb3f9d9c848c18d65",
+        "bytes": 100,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-46",
+        "request_sequence": 123,
+        "response_sequence": 297,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useBaseQuery-DNtSj8JH.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-38-af6063a69084280112ec9da214e235eedf5fea25250d9e4807746404949b9fc1.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b29f5b8ad2dfc881438a0d7dc76fca36050663171a1b30ba390e970446c1702a",
+        "bytes": 10418,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-47",
+        "request_sequence": 125,
+        "response_sequence": 338,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-constants-hqx0foTB.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-39-b23336529b3fc574d9f8b9702d467f00eb7b1dfe09f32e72e3981002fc267b2d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "740621c2734fa4e427a83847291e02ed126ea200fc509f7941d1e607e4f265d1",
+        "bytes": 99,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-48",
+        "request_sequence": 127,
+        "response_sequence": 271,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-keys-DamezY8H.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-40-617984c41d9cfc8e1c5553150294b0d96386f2e9296d0cdf3c9196f50d41b013.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ac3cbf463db4f33f2eca19f7f0944fb0f80fc45a2c9af3d94823c8c2542a907c",
+        "bytes": 489,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-49",
+        "request_sequence": 129,
+        "response_sequence": 215,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-states-BBlai7xS.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-41-ac14bb684046802a88670928b707464cb0ede6907c7dfd286594af19e9368063.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "129732facca14c4f44965e5ac91681dc34b797243ced96cadd9418163877f0dd",
+        "bytes": 794,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-50",
+        "request_sequence": 131,
+        "response_sequence": 293,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-cCDUhbQQ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-42-459ab1c9e00aeab104ac60eab9fd3cf8a38d5ff68d7b968911dca67bdb1a6556.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4d29f3d41c8564e4ccb8414bdc12488ae4fb25d11cfe8dc900dd7c00c27364f2",
+        "bytes": 3253,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-51",
+        "request_sequence": 133,
+        "response_sequence": 295,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/calendar-days-CiywsBpM.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-43-9e37589f5f88979b3530a9587cd4c362cc8908508391608b84de8bb6b0480e8b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "f7806db40c73114f5c955c6732842980adf9f51e06f12118ad00399c107ad175",
+        "bytes": 662,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-52",
+        "request_sequence": 135,
+        "response_sequence": 334,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/trash-2-yP0FfCte.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-44-45dbead3a887f0a629063b127341947fe38de38ca93afb2a98d2f9b524302c85.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4a93b76c610fdd9152e42039ecf607a3e313abd6926d5049018f013c7230194e",
+        "bytes": 526,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-53",
+        "request_sequence": 137,
+        "response_sequence": 213,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shared-selection-controls-OlU5v_M1.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-45-a168580d15574e7de1f1fe68bb5db996c2e142581d2af6ae363fe2fcb77e1abf.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c59504ece772aa294e630a8cfd7f26f9f9aedc384e69804cd4615254062b4039",
+        "bytes": 12554,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-54",
+        "request_sequence": 139,
+        "response_sequence": 336,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/settings-DWdAwwLJ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-46-67dc0c505953b2032b9cdbb2c6c61a3b9b57436579d57a4efbb4d859a0fc3e21.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "579cb3063708cd291ac04fc87324ead35c2040605cd06739537fd4455dbe9fb7",
+        "bytes": 894,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-55",
+        "request_sequence": 141,
+        "response_sequence": 219,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/copy-COwhmbsu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-47-88e8fdd5e6ad47c662b9283fa33bac801e6cdbfa2c9c1b9efcc1da45fb809cbb.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "cd3357d15a7b68af87c6040866526ec43ba7a98df39b4889cc33e66cf6884e30",
+        "bytes": 400,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-56",
+        "request_sequence": 143,
+        "response_sequence": 305,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/download-B9mtF3CU.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-48-70ca5eaa35a2667b6acf1df6652f445e57a105ef528335670643943067272cd8.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6fee6c14ddc422438e8dfbafc27295638741b63098117e3a83a9f46819139e11",
+        "bytes": 431,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-57",
+        "request_sequence": 145,
+        "response_sequence": 285,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/share-2-Ce5EcWai.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-49-754bf60b9186dff8389e9bed3eb4dba1c6c410800089430124f8721942db39de.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2ed513945719658225196084067e8b6f9532bf6e0c9c198780f59fe151cff5db",
+        "bytes": 520,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-58",
+        "request_sequence": 147,
+        "response_sequence": 242,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Dc47qpQA.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-50-8e8e0ced5d5b966f0235e8c32e6535c619866602e1c74dbd9d73f7f6a89f4ec0.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "10eabf3abe81b5e4de7d387f5d25fb1aad8abee3f8af2c1ed864b8cc9c425c27",
+        "bytes": 4994,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-59",
+        "request_sequence": 149,
+        "response_sequence": 221,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-effects-BONRtD59.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-51-02b95f1942c37ee177aac003fd13bc1ffbd10b05c9748073e0cf7fba812a0c47.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2d849ba058dcfcbcb2f63eab7a6a3c12e30f651d284aa5577cff0e9af2bb2f43",
+        "bytes": 5215,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-60",
+        "request_sequence": 151,
+        "response_sequence": 299,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/currency-DM9Y_laS.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-52-01b3b138d2208e809669e179122b30ea8fe791c92e96f62f67eb14140ff78981.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "fb04ccd4c102162cc1fed0e32f6b701619401ea7095915e2225ded3991957fc3",
+        "bytes": 1135,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-61",
+        "request_sequence": 153,
+        "response_sequence": 332,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/price-types-B5DfVFbR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-53-05bfba85b053c2c9e4aed1be3367ea449bfa7f71526ac4820629e2b68d5b79ab.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "cd18c4fb222fb41d02b38bcbc9799924ae9c1e63183d6c288974d22dbfebbf49",
+        "bytes": 3137,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-62",
+        "request_sequence": 155,
+        "response_sequence": 249,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/map-pin-N_EkvcAm.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-54-802de5ce8568e290a545f42b625142bb806123c49a9cdcf048e79d06469ae1f9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "7d7dcd7b8a79a818b5188c097ef75cd0f92c13151ad0e32eae1a59df13c75355",
+        "bytes": 368,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-63",
+        "request_sequence": 157,
+        "response_sequence": 240,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/phone-Dl-Kb7UP.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-55-2e53a4b9aee01da445f88a52af3f3caf42b607218b93aa79306b7b65f736d834.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "190ac85c499ada1c4d77fea61a046fb16c363edc836fcfb1de5b7694708ddf3b",
+        "bytes": 563,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-64",
+        "request_sequence": 159,
+        "response_sequence": 291,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/package-BwJ_7uce.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-56-852e94be4fad8d86f95ae21db52a66c744e1cf90b02ed369ec009937dc8c667d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "97165f1af7b4e05bc6a87bfa2924375666b25ea46f671d2031a096bee91b27fa",
+        "bytes": 528,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-65",
+        "request_sequence": 161,
+        "response_sequence": 261,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/plus-nkgdgBzR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-57-43663f8880aaf94dc71474bc0b04c456cdca5c866ec4e2bce57982c4546bf5ad.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "99e85015db3244f9fab81ac64e9811be80a7326e6a75ee2f8ef2c9cbd6eb9977",
+        "bytes": 322,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-66",
+        "request_sequence": 163,
+        "response_sequence": 247,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/minus-DxpgJsKj.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-58-0ff756c8ef6f20660813e909d8ec7df905b7da30c35d11432beee95caffe1b81.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b6e0352c172f7b5b827b2fd03bd6960e7c0ebe2105c83b75f5acb04c017ff2d8",
+        "bytes": 286,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-67",
+        "request_sequence": 165,
+        "response_sequence": 228,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/zoom-in-AUbiIL7j.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-59-bb9a5ec6567cd5f295b9f48b03f8b32cfaf51fb38438c6209018181f934d0780.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "022da29c5870a7171fceea6ee9b1b45d4ffd67158aefdcb9310a213ad4f08601",
+        "bytes": 470,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-68",
+        "request_sequence": 167,
+        "response_sequence": 279,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-60-150845676012f43aa00303c4710fd4aebf521d924377e27dc61152b74fc04872.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "1ef72c7ac17f48311efbc8d82df702dd3d2c910760f9271168d35ba46c45dbf3",
+        "bytes": 5061,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-69",
+        "request_sequence": 169,
+        "response_sequence": 263,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/initial-flyer-Cc6BwAmp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-61-3b30b4ce1252fa937f585b362ed1c1c1f5f37bd9e3ca55475b91c6863ac34971.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a5a34ec1e8af1385bad2d802e21bbdf1d923e71609bd80306197018099642356",
+        "bytes": 849,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-70",
+        "request_sequence": 171,
+        "response_sequence": 257,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-DQzaU991.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-62-3b0142591b15a9366a045c9b5daa1bf5777429878b8506e5686804da7f3731ed.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "092839dcbaa0ca920ae030a2744fef9676bdc5199a0c7c9f61680f44d758975c",
+        "bytes": 1981,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-71",
+        "request_sequence": 173,
+        "response_sequence": 259,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-triangle-7jjD0zs3.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-63-d949b337b4b692a6b4e93abda9030a8503a48207fff0073ea8e870ff45b14749.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "bae831d0ad9ce22cd4fc0ee592ff60a8d74aaa1cd31801812abd5f7ab6bac58f",
+        "bytes": 434,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-72",
+        "request_sequence": 175,
+        "response_sequence": 230,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/send-B_xYLiBE.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-64-3433a916971f47fb0f70a41a4181aefd6a81db1af96c957655b9f87474c5afcb.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a960b5340e88b0a76c3ccf2b3e14bd6dd0f98ae789c35e8c9d15470d7ad818fb",
+        "bytes": 336,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-73",
+        "request_sequence": 177,
+        "response_sequence": 236,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/ban-B8FNZ9Ak.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-65-1a183501c4b7d0c9b964e83ad5b8afc3c91f62d53a0bca872049fd1f9cf4df7a.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6a03c8716d7bcaafa029c63d448e83d31e648dd6f63fa0f41394a3f91a1c8e81",
+        "bytes": 338,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-74",
+        "request_sequence": 179,
+        "response_sequence": 277,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-66-ac3a7c26aa2f7e2bef3faf1324c813ecd45fb511c8cbd4d54ce6df67f2cf055e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4724e6640e3dac9ba46ff54069b7156911abc15d627f7de3958600dd155536eb",
+        "bytes": 418,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-75",
+        "request_sequence": 181,
+        "response_sequence": 289,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/check-circle-2-tK7RMpCv.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-67-0486d01d43a13cff4b3de97ea446af2f4187027ae9f68c049b1a0925b01d3f5f.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "bc72529afc2b498865f93e8616eb0aa1f809e2bb92ea30415223fc0282a0100e",
+        "bytes": 342,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-76",
+        "request_sequence": 183,
+        "response_sequence": 232,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/clock-Bx04y7UN.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-68-538038133b7c91ca627f3a3528791e79b72c49a7c0121cdbf769957b7315687e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "341104d46991564fabb0ab48792b83bb7668bd8dbbe05230a2108b320947e307",
+        "bytes": 347,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-79",
+        "request_sequence": 344,
+        "response_sequence": 377,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-Dz0tekWN.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-69-a295b66ad28f7831afe788f9b9ce44fa96e121e4d21c144ee772041c7c645148.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "7ed11c2b7891a840cb514d679bd3f246827e14f27006d7b99eae01b97b2be36f",
+        "bytes": 12715,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-80",
+        "request_sequence": 345,
+        "response_sequence": 388,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-CtIIzVdg.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-70-dd5aefba869dbf781787b46ff83e3f07d3957a0e3363d593365b807ae4a11184.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "d09ecbd52e46b01866811377010b76e9276624c496229a5478c1ab44b2b9ec6e",
+        "bytes": 236,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-81",
+        "request_sequence": 346,
+        "response_sequence": 386,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/infinite-scroll-CrghhgUG.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-71-264de8421b53785f5b61af5c43733d3d86c8dda21618fc51fc1ee2961d77e7c0.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "10bd39ea9705fbd1d0b624093bbef03f843a5e48259d5c59893b1ae00a3ddf37",
+        "bytes": 587,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-82",
+        "request_sequence": 347,
+        "response_sequence": 379,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-infinite-list-CMBvctj2.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-72-6360e5622e1982495ee44bba7c7d81e1222b39598fae6f89d5b34e7cb1af3973.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c740528f8ff8dcd2f2c055764a388247626647962372c84e29ba9bd9d85af747",
+        "bytes": 1573,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-83",
+        "request_sequence": 348,
+        "response_sequence": 384,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/arrow-left-CVS5Z2VI.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-73-e2ef983401086ffdcc331b0c2fea12043d16cd8a7ad124069db3a304a20027dc.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "d8741c570083cbecbf45cd3ba4bdb6752fd275d008a1d4c4ec474cab97983a63",
+        "bytes": 333,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-84",
+        "request_sequence": 349,
+        "response_sequence": 381,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useMutation-BPirSAry.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-74-c621fe2aec6bd2af0e88acbc1645a9ea70dc96f3ead66b5e8c6ae30a8686b074.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "9c90117a6f9f5cafdf4af6e90f81a3208e057dd9e8c1d0365c35b26764063513",
+        "bytes": 3105,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-85",
+        "request_sequence": 350,
+        "response_sequence": 390,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/search-ri_QLxhz.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-75-d4d48ce76ce33cbcea5045b42a6a69b337c398f3b6daf3eabda41064ea18479e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6fd1629e61ef441adca80f504f0ffd6388076b89ad17fae3d712658f7eccc038",
+        "bytes": 336,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-119",
+        "request_sequence": 533,
+        "response_sequence": 535,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-121",
+        "request_sequence": 541,
+        "response_sequence": 543,
+        "status": 200
+      },
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-77-ccf924a4f8d2dbe62a36de70902749d5c97aa13ac52a9f868a4fcab5d51439e6.js",
+        "layout": "isolated",
+        "layout_reason": "URL path is not an ordinary portable JavaScript module path.",
+        "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+        "bytes": 31853,
+        "media_type": "text/javascript;charset=UTF-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-122",
+        "request_sequence": 556,
+        "response_sequence": 558,
+        "status": 200
+      },
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-125",
+        "request_sequence": 564,
+        "response_sequence": 566,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-79-9c213b2abc680ca85b5f85cc07c2dcd169d08acc53775f3ae310d28086af022c.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+        "bytes": 57062,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-131",
+        "request_sequence": 598,
+        "response_sequence": 600,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-132",
+        "request_sequence": 602,
+        "response_sequence": 604,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-mobile-layout-B9xEXdHq.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-81-9e0a21d44bb66bb33d79e5ae3d0c38b8a752d5b33953dffa813ec118d058795d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6f8213c167770ff1d5785a4e7c1dcddd0a4011bc5abf3f223f5d6ec7d3a091c3",
+        "bytes": 22880,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-133",
+        "request_sequence": 606,
+        "response_sequence": 608,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-82-9cf5904a9340256923e699edd94685fd14aa246f4098fc851de3dc708845363b.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ebf12fa8b24ec3883562c74b16ff7096ccdb533619b3bc2ac73c5eb516255ef9",
+        "bytes": 824,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-134",
+        "request_sequence": 610,
+        "response_sequence": 612,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-83-7cd50ced4a2e28b6995a6588dde8f1d1d362a7bcf72557bd7da81b52ac41f3b5.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c2c21650250164c7c7d254adf6c9eb984312089bf399f88e7eb2208e527d8cc6",
+        "bytes": 2490,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-135",
+        "request_sequence": 614,
+        "response_sequence": 616,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-84-850ce850f19fb7442a933c14d0fc429e7d46e89b5e4c77b645e93bdebafcf3b4.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "5ff10ffd14084d7053bb39872b3950df314a0b6bfda2b34c75b8152b9aad9902",
+        "bytes": 232,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-136",
+        "request_sequence": 618,
+        "response_sequence": 620,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-CzDzHSWx.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-85-14d86826a95f0ca9b43f927a9f4f80877b3d2ad26f41ab83d37933875f814d28.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6d546447c758f6ec3f1a7e87ec2b0adeac0ccf53bfafd4437b791e9efe3da2d0",
+        "bytes": 113,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-137",
+        "request_sequence": 622,
+        "response_sequence": 624,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/chevron-down-ocqYOrK5.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-86-7b16d464f4a86d7c19e57c06deee7778c2489efbf1b9fa35c52cb2997de74743.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6074a428fdea7c8ddd281478b4bf489754f18b34e4b2411f269489d883313a1f",
+        "bytes": 296,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-138",
+        "request_sequence": 626,
+        "response_sequence": 628,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/popover-CVs1NQbu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-87-0d4c2f9cb69cee4a328a5e4a9c529ca3a57ca6fa87ca30e74bdc2313ca3083e9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b022328034f5966653c410c01a635d634e6b3c3be16898ac157c70ff4803978a",
+        "bytes": 5308,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-139",
+        "request_sequence": 630,
+        "response_sequence": 632,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/globe-ji___Or_.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-88-b3bc0fa77b080112237593b868e57237ce6efaba2c762915e9c6af7876a85a42.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "1e819e54d8191bf1ab5bd9bbb7ff7767f61b1bcdebd7e5f0450af9151eb661cd",
+        "bytes": 411,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-140",
+        "request_sequence": 634,
+        "response_sequence": 636,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Chphq-AR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-89-e4a610566f949189d10262e9d6f8478371636ac91883aa9d426f1bb19e8305fb.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "133b79b69bae6d410c049a59d87c960481473a56b1355e5f189640c58ba52dc5",
+        "bytes": 860,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-141",
+        "request_sequence": 638,
+        "response_sequence": 640,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/users-CBE3qzDq.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-90-1b56726f34a858d127bffef2a6b42dc8b703c29acc75055a0472396410176ace.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "8986825c17eae4313eddaa375530ab79fbf1a3b2ac371755a954ef8ca4d95870",
+        "bytes": 473,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-142",
+        "request_sequence": 642,
+        "response_sequence": 644,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/pencil-C-1BkcyX.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-91-1bd2ed5a108d89aab42fbc21b0330bdc4d60e7fdf3606ac07385ef61180baf19.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "af15d3c64f418eccb0c2d380aa7d8804ddbc34c1b941633e8f278ceb4929723c",
+        "bytes": 365,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-143",
+        "request_sequence": 646,
+        "response_sequence": 648,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sparkles-BtHya149.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-92-685c2c56d658e30cfde2faf464c89e369953cf5b151af3e8d11fa987d100a7c9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b56c6e6eb192bc2e91221303e1ff06476b4ee999df5f1d79ebc6951a4c54941d",
+        "bytes": 590,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-144",
+        "request_sequence": 650,
+        "response_sequence": 652,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shield-D5a8xnL-.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-93-e349ed29f96c61d113ce28a9a0c2b5e7d8c63736766e92d2a422d7a3a12978d2.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "0d8c35b32a58178894645f8a769d424c3aeb6ba5b7003926f63db79d8617e06c",
+        "bytes": 321,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-145",
+        "request_sequence": 654,
+        "response_sequence": 656,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-94-3ccf75e69952ffecf3b213d7a3edd8f7d273ff32f7877f909415768dcdec1767.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "134366d57331cc6d83d8f4bda24526072a1819b4b955331aab6b8bdec878cd54",
+        "bytes": 903,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-146",
+        "request_sequence": 658,
+        "response_sequence": 659,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/image-C7RnMoTw.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-95-1c07841de84159a5e2edcb62c1c3efb83bcb59ab2b824efd494f8da35c4929f9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "382e5c933e771a231024d1539942fdba2dfb7ddd3c86031d7aaaf268b79a3206",
+        "bytes": 438,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-147",
+        "request_sequence": 661,
+        "response_sequence": 662,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shopping-cart-BvYgWGZP.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-96-2a76edf5ed74f17f2d048ea0fd5fe2d2fdd2bba474ee124c74fa46702e2f9ec6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "e2f9abcd5d36d705d2661c22017aa719269b57ad9a778394fccbf81b5ab49939",
+        "bytes": 930,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-148",
+        "request_sequence": 664,
+        "response_sequence": 665,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-B-yBwrYx.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-97-f0b811c9a77f515535733245ae370aed8fc2a41a6340430706121d1d24a43ef2.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6ae8b1607a2dda4656924d9ae1b843e6bcf87a3084b483f6a6b4b5d7788e40cf",
+        "bytes": 495,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-149",
+        "request_sequence": 667,
+        "response_sequence": 668,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-exports-stream-D1YJPQTk.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-98-6d919cc33b273390d7a1a1abc5c8258340cbb10b18dccb7129fcd890ffbc26b2.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ff8887968212252e8ab53d3e0b93a92e1035518d93787f90e86ddd2bf04e7e32",
+        "bytes": 7509,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-150",
+        "request_sequence": 670,
+        "response_sequence": 671,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/slider-DapZNGHt.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-99-7248e89a8e76245144400118367e6c202d111106876f4592321a8c582ddd2944.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "177d53d1044ce675e296b94f99b1731591339e25736d3a1cdc501aa5fee01fa2",
+        "bytes": 8310,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-151",
+        "request_sequence": 673,
+        "response_sequence": 674,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-vqte5ySJ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-100-a9780b149dbff3665c2ed7a8a6762dfd5be08f72cada662f319a1fc7762714a0.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ea849353cf8892b3573dae0edad4cc43de6e84f13cd9698e7e6d9ded13dab821",
+        "bytes": 356,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-152",
+        "request_sequence": 676,
+        "response_sequence": 677,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/color-picker-CpeB0PH0.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-101-c7d9cec2429d67acc896c40a10050ad9516a3d3d3f172fe21cb13ac40119e783.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2f0a9f61903892fd6b7511da70473be180a7d432f8492cac639bc71fa98728ac",
+        "bytes": 8787,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-153",
+        "request_sequence": 679,
+        "response_sequence": 680,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/palette-CyO5CJ0c.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-102-3ee7a88173eb6762c27fd197d4a1cb27bdf78e7a185196bf8a650ab370803f35.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c8738e95a46ad30abe4d25dc4f63502bbb7cd581c577ef1c3a937943853b7ac7",
+        "bytes": 779,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-154",
+        "request_sequence": 682,
+        "response_sequence": 683,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/maximize-2-BFX2JRIw.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-103-f1959a31dcc00e0015ca9b48117ec6333e37ebddd10de447ed0affd4e250a1ff.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b7f87bc34ff43d9a07eb8f9832414c61f1a912e9bd61a8344456e9a6899a9633",
+        "bytes": 467,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-155",
+        "request_sequence": 685,
+        "response_sequence": 686,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/rotate-ccw-B_oUXfBK.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-104-7823045d69d6cf1917640fe73f3158c442eee71771c742411098a7c15ec5cc4e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4da82e59f31d1221b6cc2603ba23b9380a4457963e611e68cbd4ef9225f949c7",
+        "bytes": 368,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-156",
+        "request_sequence": 688,
+        "response_sequence": 689,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-DlvIMfpu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-105-dd73be0cf89e4350dcb55eac291655242ed5572b04952d84075c9348465545e9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "015aacf1f99e83e238230acf02dc72f361ae569387073ddfb2bbf3d426dca914",
+        "bytes": 772,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-157",
+        "request_sequence": 691,
+        "response_sequence": 692,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/formats-list-RieW1rzz.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-106-efc9ad117209bc62c9d33906f6261dc82404676e1ffed7174ba0dd9d7acba74e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "e7ae70f1ec7d5b629f6789718a78622f60ea31743477a30df0437e79b72bfdd1",
+        "bytes": 7572,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-158",
+        "request_sequence": 694,
+        "response_sequence": 695,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-CmufRMLl.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-107-15d1ef3c1ab36377ad722884d0a3d6d9aaccf42649ab4dc415d3a28820363071.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "dfa1f01b2d05f8fe1d78027fb345f8eb2833a6634fa8414a8afca7d40602b183",
+        "bytes": 1016,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-159",
+        "request_sequence": 697,
+        "response_sequence": 698,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/file-text-DeVsQn9s.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-108-e9093c0410cdd9733fe65ab4d2b2310380e8e2c0b10d87fb6de089bbdd7525a9.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c446498f755a1fe43d0f8a7c783aecba9d28315a4ed331c21abbd1e4b66713b4",
+        "bytes": 501,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-160",
+        "request_sequence": 700,
+        "response_sequence": 701,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/smartphone-DWawRyBj.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-109-50a82e8797c62c6b5ee279c4c1eb0084b7f1cc307a586f1a6c44d49d80d4cc71.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "5334fb915229977d7c2d9778bc411992d4faf7b4c1ae74bf30aa0b6e1e121d28",
+        "bytes": 366,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-161",
+        "request_sequence": 703,
+        "response_sequence": 704,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/monitor-BOfZcPUp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-110-cb9ca67241b512e11713bb4dd78fe5023785f2e61dfcb6d73340a382bb41a489.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4c49225c4964cfb78165c7f8c7011d00c0d97d69ec0a4550bef496c956ac88b0",
+        "bytes": 428,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-162",
+        "request_sequence": 706,
+        "response_sequence": 707,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-simple-query-BIlIpFhF.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-111-3c6c5e8e4055917289f410186b3c8f7d2e51db7133d0c66d43d1af5a8591bcfb.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a97ba7dc2e776b1aff2f38ce9f298928c01d153685a413df904a0e3b6e9e0ec8",
+        "bytes": 241,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-163",
+        "request_sequence": 709,
+        "response_sequence": 710,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useQuery-D12Y0UPZ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-112-96b17806751c2f4a2b18f724c96dfa9cc263c5073a9f2ab2ca2cfc8dd2ad608e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "55106ba81cf8484de460095258abeefc553a5ec07aeae78bb3f9d9c848c18d65",
+        "bytes": 100,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-164",
+        "request_sequence": 712,
+        "response_sequence": 713,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useBaseQuery-DNtSj8JH.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-113-a467535578b8966588e0877d0700d0658c4c657799bda5342c290e1e7b7393da.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b29f5b8ad2dfc881438a0d7dc76fca36050663171a1b30ba390e970446c1702a",
+        "bytes": 10418,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-165",
+        "request_sequence": 715,
+        "response_sequence": 716,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-constants-hqx0foTB.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-114-a675cfce54b185379838f793b6e82a73d500e00d53df79484865803f2c4d48d8.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "740621c2734fa4e427a83847291e02ed126ea200fc509f7941d1e607e4f265d1",
+        "bytes": 99,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-166",
+        "request_sequence": 718,
+        "response_sequence": 719,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-keys-DamezY8H.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-115-837e2373f8dc3f2b0d9e75568d1415da7e0f91aae53c97190750e7d8bcca2859.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "ac3cbf463db4f33f2eca19f7f0944fb0f80fc45a2c9af3d94823c8c2542a907c",
+        "bytes": 489,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-167",
+        "request_sequence": 721,
+        "response_sequence": 722,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/query-states-BBlai7xS.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-116-79bb239be8594d817fae5b99aa435c59cb671dce773985a6ab85f1e3bdc687c7.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "129732facca14c4f44965e5ac91681dc34b797243ced96cadd9418163877f0dd",
+        "bytes": 794,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-168",
+        "request_sequence": 724,
+        "response_sequence": 725,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-cCDUhbQQ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-117-3d5f7c9e40c3bc3491771e80da5fc3acc184f21373596188482e23f75551e930.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4d29f3d41c8564e4ccb8414bdc12488ae4fb25d11cfe8dc900dd7c00c27364f2",
+        "bytes": 3253,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-169",
+        "request_sequence": 727,
+        "response_sequence": 728,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/calendar-days-CiywsBpM.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-118-50928218aa9633651fc898816c9e79ac020e28f22bbd4e18cf7cc015e0fa4767.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "f7806db40c73114f5c955c6732842980adf9f51e06f12118ad00399c107ad175",
+        "bytes": 662,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-170",
+        "request_sequence": 730,
+        "response_sequence": 731,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/trash-2-yP0FfCte.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-119-f39fab381fe9ad75425c8833eed9f03e2b46dffa09166332ab3a4f9a2e399dec.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4a93b76c610fdd9152e42039ecf607a3e313abd6926d5049018f013c7230194e",
+        "bytes": 526,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-171",
+        "request_sequence": 733,
+        "response_sequence": 734,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/shared-selection-controls-OlU5v_M1.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-120-464f4ddc1422cb4aa711065dd3f303fcef673a3e64a3a9baa62c2a1b9de43e2f.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c59504ece772aa294e630a8cfd7f26f9f9aedc384e69804cd4615254062b4039",
+        "bytes": 12554,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-172",
+        "request_sequence": 736,
+        "response_sequence": 737,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/settings-DWdAwwLJ.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-121-985a0f7f2997a75613d3db30a47254b6a9a56a5ab6f8638055192a54cf1f4c6d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "579cb3063708cd291ac04fc87324ead35c2040605cd06739537fd4455dbe9fb7",
+        "bytes": 894,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-173",
+        "request_sequence": 739,
+        "response_sequence": 740,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/copy-COwhmbsu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-122-ea5c66cf548897e6c6f31fa14c73edd7e1b099520f932af9004857b74b70f161.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "cd3357d15a7b68af87c6040866526ec43ba7a98df39b4889cc33e66cf6884e30",
+        "bytes": 400,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-174",
+        "request_sequence": 742,
+        "response_sequence": 743,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/download-B9mtF3CU.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-123-e8c3507c9d493dbb638cbbac022e568400c86338c1f06b5515a06e94e83a0184.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6fee6c14ddc422438e8dfbafc27295638741b63098117e3a83a9f46819139e11",
+        "bytes": 431,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-175",
+        "request_sequence": 745,
+        "response_sequence": 746,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/share-2-Ce5EcWai.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-124-1f251411f0a4d7151838c435696cf7e9e69e6330d72908ca405ebd7af036e747.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2ed513945719658225196084067e8b6f9532bf6e0c9c198780f59fe151cff5db",
+        "bytes": 520,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-176",
+        "request_sequence": 748,
+        "response_sequence": 749,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-Dc47qpQA.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-125-0b04be631f3fbb1c1ab69c4f50576c95cf89f9f849439667ef66e896d18c3799.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "10eabf3abe81b5e4de7d387f5d25fb1aad8abee3f8af2c1ed864b8cc9c425c27",
+        "bytes": 4994,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-177",
+        "request_sequence": 751,
+        "response_sequence": 752,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tag-effects-BONRtD59.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-126-85f8e0b8aedaf997a77c2c0436c0d0b26739fe7917a0439f0bc67f1395558a0e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "2d849ba058dcfcbcb2f63eab7a6a3c12e30f651d284aa5577cff0e9af2bb2f43",
+        "bytes": 5215,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-178",
+        "request_sequence": 754,
+        "response_sequence": 755,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/currency-DM9Y_laS.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-127-0af0a24823ec3bd702f89bfe7e464af44b78b18857d89a48fa9484d7bb847b01.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "fb04ccd4c102162cc1fed0e32f6b701619401ea7095915e2225ded3991957fc3",
+        "bytes": 1135,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-179",
+        "request_sequence": 757,
+        "response_sequence": 758,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/price-types-B5DfVFbR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-128-f3cc46c1ff2a09f05f1afc1cfa5d2b9cc814eb841039514cbd0b20ef1654d570.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "cd18c4fb222fb41d02b38bcbc9799924ae9c1e63183d6c288974d22dbfebbf49",
+        "bytes": 3137,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-180",
+        "request_sequence": 760,
+        "response_sequence": 761,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/map-pin-N_EkvcAm.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-129-d45618161cd8de4ca152580cd830d64efa55db4439bc95dc47c6cec3fd9fbc5c.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "7d7dcd7b8a79a818b5188c097ef75cd0f92c13151ad0e32eae1a59df13c75355",
+        "bytes": 368,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-181",
+        "request_sequence": 763,
+        "response_sequence": 764,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/phone-Dl-Kb7UP.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-130-0ab3d7d1fccc8846b208e06e9eaa23665b0b1bf65389f17983228a10f73a3aac.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "190ac85c499ada1c4d77fea61a046fb16c363edc836fcfb1de5b7694708ddf3b",
+        "bytes": 563,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-182",
+        "request_sequence": 766,
+        "response_sequence": 767,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/package-BwJ_7uce.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-131-93608035f96da526d557c9cf8823ad92b16ab7864467d3ac163978daa4c3861e.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "97165f1af7b4e05bc6a87bfa2924375666b25ea46f671d2031a096bee91b27fa",
+        "bytes": 528,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-183",
+        "request_sequence": 769,
+        "response_sequence": 770,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/plus-nkgdgBzR.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-132-d62d82ece8b86514865a7fc8b07ca272c586d46bdee324e4c06ef0e2cfe99677.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "99e85015db3244f9fab81ac64e9811be80a7326e6a75ee2f8ef2c9cbd6eb9977",
+        "bytes": 322,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-184",
+        "request_sequence": 772,
+        "response_sequence": 773,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/minus-DxpgJsKj.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-133-45f028de4e243002ff973373769d15dd971df54408eb28c422e0f39d53413980.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "b6e0352c172f7b5b827b2fd03bd6960e7c0ebe2105c83b75f5acb04c017ff2d8",
+        "bytes": 286,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-185",
+        "request_sequence": 775,
+        "response_sequence": 776,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/zoom-in-AUbiIL7j.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-134-5dae908c4491333abb01491b265a2f744b79b7388e4ed1b8a849381b6ff097fe.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "022da29c5870a7171fceea6ee9b1b45d4ffd67158aefdcb9310a213ad4f08601",
+        "bytes": 470,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-186",
+        "request_sequence": 778,
+        "response_sequence": 779,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-135-64004719b34608f6efd5d9e28159ea711a601a90d7783db082c88d0560a06d02.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "1ef72c7ac17f48311efbc8d82df702dd3d2c910760f9271168d35ba46c45dbf3",
+        "bytes": 5061,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-187",
+        "request_sequence": 781,
+        "response_sequence": 782,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/initial-flyer-Cc6BwAmp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-136-518a4ac7c2b520655c664cc94ec0499ebca588b42b2947d2d5b98c7d0c525ced.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a5a34ec1e8af1385bad2d802e21bbdf1d923e71609bd80306197018099642356",
+        "bytes": 849,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-188",
+        "request_sequence": 784,
+        "response_sequence": 785,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-DQzaU991.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-137-f1b731a3f40819e4834ae9e926422a413ddf846dd813e7875605f3330585f783.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "092839dcbaa0ca920ae030a2744fef9676bdc5199a0c7c9f61680f44d758975c",
+        "bytes": 1981,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-189",
+        "request_sequence": 787,
+        "response_sequence": 788,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-triangle-7jjD0zs3.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-138-1e01439a1a13ca1fd43f41961bb516ff53630cbb2f7ab9f188d09925d6e2887a.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "bae831d0ad9ce22cd4fc0ee592ff60a8d74aaa1cd31801812abd5f7ab6bac58f",
+        "bytes": 434,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-190",
+        "request_sequence": 790,
+        "response_sequence": 791,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/send-B_xYLiBE.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-139-0041a4476df4806ad73bb00f77c1f790f2315648844a7f743ba70b06de7e9da6.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "a960b5340e88b0a76c3ccf2b3e14bd6dd0f98ae789c35e8c9d15470d7ad818fb",
+        "bytes": 336,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-191",
+        "request_sequence": 793,
+        "response_sequence": 794,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/ban-B8FNZ9Ak.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-140-39f9019e52dbd85c75809b0ed7a622f8d738d4cc5f14bff85af4fe024e4037c7.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6a03c8716d7bcaafa029c63d448e83d31e648dd6f63fa0f41394a3f91a1c8e81",
+        "bytes": 338,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-192",
+        "request_sequence": 796,
+        "response_sequence": 797,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-141-f308470360d80a32f53027985ee604417cf05d67fd0d1a2d43def33e78dcfdff.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "4724e6640e3dac9ba46ff54069b7156911abc15d627f7de3958600dd155536eb",
+        "bytes": 418,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-193",
+        "request_sequence": 799,
+        "response_sequence": 800,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/check-circle-2-tK7RMpCv.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-142-9e72ea4c8f93a09295d828acf5f8c89a26ae8bcd72875d939af82f9f0ea8a926.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "bc72529afc2b498865f93e8616eb0aa1f809e2bb92ea30415223fc0282a0100e",
+        "bytes": 342,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-194",
+        "request_sequence": 802,
+        "response_sequence": 803,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/clock-Bx04y7UN.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-143-b13660c7475148c2ca0106ba30d917d39f1fb5a2447f18a76ac7512edeac37a0.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "341104d46991564fabb0ab48792b83bb7668bd8dbbe05230a2108b320947e307",
+        "bytes": 347,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-196",
+        "request_sequence": 812,
+        "response_sequence": 813,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-Dz0tekWN.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-144-4097eeb4dcb952ba19c4ea9f77ff5d25d6a024691c9568762655c2fefd69b13d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "7ed11c2b7891a840cb514d679bd3f246827e14f27006d7b99eae01b97b2be36f",
+        "bytes": 12715,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-197",
+        "request_sequence": 815,
+        "response_sequence": 816,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-CtIIzVdg.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-145-a50d0093854d32f89212474cb52bfb9081a4376cd7dcc694d7f1ca6c3dbe6325.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "d09ecbd52e46b01866811377010b76e9276624c496229a5478c1ab44b2b9ec6e",
+        "bytes": 236,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-198",
+        "request_sequence": 818,
+        "response_sequence": 819,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/infinite-scroll-CrghhgUG.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-146-5019ad9efb8364387bce3922bf5aba5c86603167d99201476d9de0cd7543337a.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "10bd39ea9705fbd1d0b624093bbef03f843a5e48259d5c59893b1ae00a3ddf37",
+        "bytes": 587,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-199",
+        "request_sequence": 821,
+        "response_sequence": 822,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/use-infinite-list-CMBvctj2.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-147-71d11a97f5df6fce7f36c30b4cc273073dda2850512cb8fa4e06e5270a55e2bc.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "c740528f8ff8dcd2f2c055764a388247626647962372c84e29ba9bd9d85af747",
+        "bytes": 1573,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-200",
+        "request_sequence": 824,
+        "response_sequence": 825,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/arrow-left-CVS5Z2VI.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-148-620f5ad5e879711ddd8b03ff0efbb462291c2be81eceb33c14efa8894fabd149.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "d8741c570083cbecbf45cd3ba4bdb6752fd275d008a1d4c4ec474cab97983a63",
+        "bytes": 333,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-201",
+        "request_sequence": 827,
+        "response_sequence": 828,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/useMutation-BPirSAry.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-149-3dcc974c32d003232403744bfe6f0c6e4f214fd52b5ff6b3638eae0ea93658bf.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "9c90117a6f9f5cafdf4af6e90f81a3208e057dd9e8c1d0365c35b26764063513",
+        "bytes": 3105,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-202",
+        "request_sequence": 830,
+        "response_sequence": 831,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/search-ri_QLxhz.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "isolated/source-150-41acca7715a9a9bbd9163bf940d4dc2f517e68e4da44703f75e0de5d5ed05f3d.js",
+        "layout": "isolated",
+        "layout_reason": "Captured paths collide by content version or file/directory prefix.",
+        "sha256": "6fd1629e61ef441adca80f504f0ffd6388076b89ad17fae3d712658f7eccc038",
+        "bytes": 336,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-292",
+        "request_sequence": 1405,
+        "response_sequence": 1450,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-MqiCARZ_.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "body-size-limit",
+        "message": "Playwright materialized the body before its 65536-byte retained-body budget was checked."
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-293",
+        "request_sequence": 1407,
+        "response_sequence": 1425,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/sse-Wner9QKd.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/sse-Wner9QKd.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "674ae91b3bfa4d2287d0f28743753d20d20975c9cc7b60c811854c890723798e",
+        "bytes": 1792,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-294",
+        "request_sequence": 1409,
+        "response_sequence": 1444,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/upload-DB8x8xbC.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/upload-DB8x8xbC.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "b7e7a03001068669957bffcfaaf49a05e71aeb2eb025cb6d96c49ef48690a7b1",
+        "bytes": 426,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-295",
+        "request_sequence": 1411,
+        "response_sequence": 1428,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/wand-2-DPBi2UDd.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/wand-2-DPBi2UDd.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "dba561908a3fe51e79512469681b3f344c2d84daee1abec2c2c5c5a5c17f5c19",
+        "bytes": 675,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-296",
+        "request_sequence": 1413,
+        "response_sequence": 1447,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/select-DYWJc9e8.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/select-DYWJc9e8.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "b583eda3b8e5eb52e79211ab462a26bb31a9346665d3ef71a3cff5054924c622",
+        "bytes": 21077,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-297",
+        "request_sequence": 1415,
+        "response_sequence": 1442,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/more-vertical-DOlxXc-G.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/more-vertical-DOlxXc-G.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "55a7cf4700a38c473e802f7042fc9835e26bc2c61916b950ad51c3466b4c0c14",
+        "bytes": 394,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-298",
+        "request_sequence": 1417,
+        "response_sequence": 1433,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/star-Cq-3OBPo.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/star-Cq-3OBPo.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "2c7662b25097d0328611c64b341b1bca2f0efbccf6e2f763a3432a3aa0caf070",
+        "bytes": 379,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-299",
+        "request_sequence": 1419,
+        "response_sequence": 1439,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/tab-styles-DIrmai5o.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/tab-styles-DIrmai5o.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "6a88d7ecf508ccf852dfb68b6db37c59b592289f47905110542edc872118576d",
+        "bytes": 404,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-300",
+        "request_sequence": 1421,
+        "response_sequence": 1437,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/image-off-Dtydrk9k.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/image-off-Dtydrk9k.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "e80f841784a4266c20b6996e496a0bf8d9861f86d92c54ffb0d51f1aeb3cee05",
+        "bytes": 639,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-301",
+        "request_sequence": 1423,
+        "response_sequence": 1431,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/package-open-sQ0PK2h-.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/package-open-sQ0PK2h-.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "81e68d285aa122c977ea76599a9241031d1f536e7db3426f40774b70226e3575",
+        "bytes": 785,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-302",
+        "request_sequence": 1455,
+        "response_sequence": 1477,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-Dcs6KTkN.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-Dcs6KTkN.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "f0de2eb5f85df63c8d8ad2f16b43f56ac739816b51868739ecd79ef63893ce5a",
+        "bytes": 16612,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-303",
+        "request_sequence": 1457,
+        "response_sequence": 1467,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/search-input-532GjSZC.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/search-input-532GjSZC.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "8224db95812021698be4679ff0da5c7fd7e9d78155f9511938979a85910f772e",
+        "bytes": 792,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-304",
+        "request_sequence": 1459,
+        "response_sequence": 1471,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/service-BZ15meZL.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/service-BZ15meZL.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "61aa9dbd2fbaa311f70e0ab3b31bd1969bd9c210694bd9e984a7a307f0aa4079",
+        "bytes": 1084,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-305",
+        "request_sequence": 1461,
+        "response_sequence": 1469,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/entities-B4X3g8e5.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/entities-B4X3g8e5.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "aa12d92f94b3cb7561f2ff86049f79b13bf6a77a2cbb42f79182d20eaead5273",
+        "bytes": 298,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-306",
+        "request_sequence": 1463,
+        "response_sequence": 1482,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/x-circle-DxnLoz68.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/x-circle-DxnLoz68.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "5c6d7ef4e2b10f0ce10be07022bb895c169e9f63e461245486a02a77c3f029de",
+        "bytes": 370,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-307",
+        "request_sequence": 1465,
+        "response_sequence": 1473,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/asset-utils-hOwn4Uhp.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/asset-utils-hOwn4Uhp.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "8284038e0b09dc5d1cc5942ed7319d3aeb5d47e120126945436c0d5bda4e4597",
+        "bytes": 144,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-328",
+        "request_sequence": 1585,
+        "response_sequence": 1587,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BehZtlK7.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-BehZtlK7.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "c5d716238c72b6aa9fc1818d2c166f306e9abf2350ab18ae339cae6dbbddae2d",
+        "bytes": 29093,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-329",
+        "request_sequence": 1590,
+        "response_sequence": 1594,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-BWsW9flj.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-BWsW9flj.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "91b4bb11e0141212ce7e9e726635442218c6d640cd48bee7471dda2004199aab",
+        "bytes": 20874,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-330",
+        "request_sequence": 1592,
+        "response_sequence": 1596,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/zap-Ds_Tw9NB.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/zap-Ds_Tw9NB.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "c7bc1471b7076d18533049a010156423526cb4106df17fb318532a4d1a305aa1",
+        "bytes": 322,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-331",
+        "request_sequence": 1600,
+        "response_sequence": 1614,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/index-C8ygs8b0.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/index-C8ygs8b0.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "6ef9631ffa52bc405da0e64327c8fc4fb9bde1693f94fcf1899fa5070325b4da",
+        "bytes": 15378,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-332",
+        "request_sequence": 1602,
+        "response_sequence": 1621,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/refresh-cw-579W-ZcP.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/refresh-cw-579W-ZcP.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "1a351bfb5511ae05ed1d9f9ce2aa4e9b1bfe4be919803cfa8a9a45afa99f3c8f",
+        "bytes": 489,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-333",
+        "request_sequence": 1604,
+        "response_sequence": 1610,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-V8dxXWjI.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/eye-V8dxXWjI.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "4ac93ddef39112e12d4e24b55ebfbce547de6cb9f566aedc56b982acc8ceb1a2",
+        "bytes": 363,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-334",
+        "request_sequence": 1606,
+        "response_sequence": 1612,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/eye-off-lhBkE3VE.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/eye-off-lhBkE3VE.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "ae6ec742c0ca7f24da185f6ec94ee699b56a1fa2beb10a24c4c9e44a080ab755",
+        "bytes": 567,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-335",
+        "request_sequence": 1608,
+        "response_sequence": 1619,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/building-2-DrV2WNat.js",
+      "content": {
+        "state": "exported",
+        "relative_path": "origins/3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f/assets/building-2-DrV2WNat.js",
+        "layout": "url-path",
+        "layout_reason": null,
+        "sha256": "3fe9603ea91d07657ee6e74cbb46b985fdc9ae972c197ce5d3c88abf650466c6",
+        "bytes": 607,
+        "media_type": "application/javascript; charset=utf-8",
+        "redacted": false,
+        "representation": "playwright-response-body-bytes"
+      }
+    },
+    {
+      "source": {
+        "kind": "scenario-response",
+        "transaction_id": "request-338",
+        "request_sequence": 1635,
+        "response_sequence": 1637,
+        "status": 200
+      },
+      "url": "https://editor.encartefacil.com/assets/flyers-B4rLVYUf.js",
+      "content": {
+        "state": "unavailable",
+        "reason": "response-content-not-retained",
+        "message": "No selected, completed script response bytes were retained for this request."
+      }
+    }
+  ],
+  "limitations": [
+    "Event sequence records provider receipt order; simultaneous browser causality is not inferred.",
+    "Network content is retained only when selected; Playwright response-body bytes are API results and are not guaranteed to match wire bytes.",
+    "Request bytes are limited to what Playwright exposes; not_exposed does not establish body absence or multipart file coverage.",
+    "Network content reads settle within 5 seconds each and the observer does not request bodies from unfinished responses.",
+    "Captured response-body bytes are the result of Playwright's Response.body() API. Playwright may satisfy that API with a credentialed follow-up load of the request URL when CDP has no body, so transaction and event links do not verify that retained bytes came from the original network transaction.",
+    "Playwright scenario events do not expose request initiator stacks; receipt order does not prove causality.",
+    "Storage values are hashed only after declared-secret redaction.",
+    "Non-cookie storage seeds use CDP pre-script instrumentation; only pauses in the scenario's private seed script are resumed by this observer.",
+    "Some selected network content was unavailable; per-transaction content states retain the reason.",
+    "Network request metadata was omitted for request-350 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-351 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-352 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-353 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-354 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-355 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-356 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-357 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-358 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request metadata was omitted for request-359 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-351 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-351 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-354 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-354 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-352 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-352 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-349 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-349 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-353 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-353 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-350 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-350 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-345 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-346 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-345 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-347 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-347 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-355 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-355 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-348 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-348 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-346 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-356 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-356 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-358 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-358 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-359 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-359 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network response metadata was omitted for request-357 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-finished metadata was omitted for request-357 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-209 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-340 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-341 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-342 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-343 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-344 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-345 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-346 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-347 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-348 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-349 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-350 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-351 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-352 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-353 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-354 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-355 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-356 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-357 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-358 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Network request-unfinished metadata was omitted for request-359 because max-total-event-allocation-bytes was reached; network coverage is incomplete.",
+    "Browser event collection reached a selected resource budget; per-kind omissions and affected network transaction IDs are listed in events.omissions, and event coverage is incomplete.",
+    "Only script bytes retained in this capture are exported. Sources are not refetched or executed, and a response or Debugger source does not prove execution.",
+    "Ordinary unambiguous URL paths preserve relative module layouts by origin, including case-distinct spellings. Query variants, exact path collisions, file/directory prefixes, inline sources, and unrepresentable paths are isolated. A case-distinct pair is isolated only when the destination filesystem cannot store both spellings; the record names that pair. Browser module relationships of isolated paths remain unknown.",
+    "Local JavaScript analysis does not implement browser import maps, root-relative URL resolution, remote URL loading, or browser runtime behavior. It may strip import queries and fragments; isolated variants are not canonical targets.",
+    "Source-map declarations are retained as metadata. No source maps or missing dependencies are fetched or reconstructed.",
+    "Scenario response bytes preserve the output of Playwright's Response.body() API; any source-body provenance caveat from the capture is retained in this manifest. Debugger sources are the exposed text encoded as UTF-8. Redacted bytes are exported exactly as retained, and may no longer parse as JavaScript."
+  ]
+}

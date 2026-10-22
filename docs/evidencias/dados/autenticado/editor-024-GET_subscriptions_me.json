@@ -1,0 +1,61 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/subscriptions/me",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    2
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "subscription": {
+      "_key": "sub_VBqXlO9hvKxz4gAtRPQSX3Xd",
+      "_id": "subscriptions/sub_VBqXlO9hvKxz4gAtRPQSX3Xd",
+      "_rev": "_lpfd2Ju--c",
+      "partner": "B0n2ULZOeYjROsaXCQlse",
+      "customer": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "status": "active",
+      "price": "VHLduW16A0MP2XO4txSuYtr2",
+      "priceAmount": 118800,
+      "stripeSubId": "sub_1TETo8DRLpD2PNusLOfMRQ2n",
+      "stripePriceId": "price_1S9qFpDRLpD2PNusB2cBEUci",
+      "lastRefillAt": "2026-03-24T12:11:40.000Z",
+      "nextRefillAt": "2027-03-24T12:11:40.000Z",
+      "affiliatePartner": null,
+      "referredByCode": null,
+      "hasIssuedReferralReward": false,
+      "features": {
+        "accessAllElements": true,
+        "backgroundRemoval": true,
+        "downloadFlyer": true,
+        "downloadPoster": true,
+        "downloadVideo": true,
+        "editDesign": true,
+        "editProduct": true,
+        "logoLimit": 6,
+        "logos": 2,
+        "premiumFormats": true,
+        "socialSharing": true,
+        "customElementsUpload": true
+      },
+      "previousPriceAmount": 82800,
+      "createdAt": "2024-10-21T17:00:54.650Z",
+      "updatedAt": "2026-06-11T20:29:11.702Z"
+    },
+    "features": {
+      "downloadFlyer": true,
+      "downloadPoster": true,
+      "downloadVideo": true,
+      "editDesign": true,
+      "editProduct": true,
+      "socialSharing": true,
+      "backgroundRemoval": true,
+      "premiumFormats": true,
+      "accessAllElements": true,
+      "customElementsUpload": true,
+      "logoLimit": 6,
+      "logos": 2
+    }
+  }
+}

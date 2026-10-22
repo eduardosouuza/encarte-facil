@@ -1,0 +1,12 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/exports/stream?token=[REDACTED:ef_token]",
+  "status": 200,
+  "resource_type": "eventsource",
+  "passos": [
+    0,
+    1
+  ],
+  "request_body": null,
+  "response_body": null
+}

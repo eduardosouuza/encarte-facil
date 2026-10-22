@@ -1,0 +1,2426 @@
+{
+  "resumo": {
+    "gerado_em": "2026-10-20T22:20:05.874Z",
+    "capturas": {
+      "login-ok": {
+        "scripts": 81,
+        "exportados": 77,
+        "indisponiveis": 4,
+        "urls_exclusivas": 0
+      },
+      "login-falha": {
+        "scripts": 16,
+        "exportados": 13,
+        "indisponiveis": 3,
+        "urls_exclusivas": 0
+      },
+      "login-falha2": {
+        "scripts": 16,
+        "exportados": 13,
+        "indisponiveis": 3,
+        "urls_exclusivas": 0
+      },
+      "editor": {
+        "scripts": 175,
+        "exportados": 167,
+        "indisponiveis": 8,
+        "urls_exclusivas": 21
+      },
+      "batch1": {
+        "scripts": 92,
+        "exportados": 12,
+        "indisponiveis": 80,
+        "urls_exclusivas": 0
+      }
+    },
+    "urls_unicas_com_script": 99,
+    "entradas_exportadas": 282,
+    "entradas_indisponiveis": 98,
+    "motivos_indisponivel": {
+      "body-size-limit": 28,
+      "body-allocation-limit": 3,
+      "response-content-not-retained": 29,
+      "body-read-failed": 38
+    },
+    "bundle_publico": 181,
+    "urls_com_script_fora_do_bundle_publico": 1,
+    "arquivos_do_bundle_publico_sem_captura": 83,
+    "total_de_arquivos_unicos": 182
+  },
+  "scripts": [
+    {
+      "captura": "login-ok",
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "arquivo": "vce701823e78c4301a35b7e07294d87301792088814092",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "637381256384554e1cc3309a62fb238a51b83e7f10b2a56d8ba15dbc73ca762e",
+      "bytes": 31853,
+      "caminho": "scripts-captura-login-ok\\isolated\\source-2-29b35b7b3002ecde2313ac08e44b581f621bf292ceeb1629e5546d7175b05477.js",
+      "layout": "isolated",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-5",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor",
+        "batch1"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-BMGestSM.js",
+      "arquivo": "index-BMGestSM.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "eb44f1b449be2abf323f00ca93f6f60f94b04c815b08c764f7c16c6df976fc69",
+      "bytes": 18995,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-BMGestSM.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-11",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/card-rpQINIaS.js",
+      "arquivo": "card-rpQINIaS.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "3202e7d5ddf485fdb394fa71e93c4ec2df69b45a69b6c1ac134d50a8fcddbbab",
+      "bytes": 975,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\card-rpQINIaS.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-12",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "arquivo": "logo-Dr-8dK1w.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "ebf12fa8b24ec3883562c74b16ff7096ccdb533619b3bc2ac73c5eb516255ef9",
+      "bytes": 824,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\logo-Dr-8dK1w.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-13",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "arquivo": "switch-BtSwe9Ih.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c2c21650250164c7c7d254adf6c9eb984312089bf399f88e7eb2208e527d8cc6",
+      "bytes": 2490,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\switch-BtSwe9Ih.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-14",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "arquivo": "index-CEpZmkQp.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "5ff10ffd14084d7053bb39872b3950df314a0b6bfda2b34c75b8152b9aad9902",
+      "bytes": 232,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-CEpZmkQp.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-15",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "arquivo": "sun-e27cUWGn.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "134366d57331cc6d83d8f4bda24526072a1819b4b955331aab6b8bdec878cd54",
+      "bytes": 903,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\sun-e27cUWGn.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-16",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/register-tracking-WT6OGiwx.js",
+      "arquivo": "register-tracking-WT6OGiwx.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "2099a3dd1abae9af936fbba7f082535a58d8441fc0d7605044925703cf2aac3f",
+      "bytes": 201,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\register-tracking-WT6OGiwx.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-17",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "arquivo": "progress-B2aPl7Uu.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "1ef72c7ac17f48311efbc8d82df702dd3d2c910760f9271168d35ba46c45dbf3",
+      "bytes": 5061,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\progress-B2aPl7Uu.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-18",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/eye-off-lhBkE3VE.js",
+      "arquivo": "eye-off-lhBkE3VE.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "ae6ec742c0ca7f24da185f6ec94ee699b56a1fa2beb10a24c4c9e44a080ab755",
+      "bytes": 567,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\eye-off-lhBkE3VE.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-19",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/eye-V8dxXWjI.js",
+      "arquivo": "eye-V8dxXWjI.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4ac93ddef39112e12d4e24b55ebfbce547de6cb9f566aedc56b982acc8ceb1a2",
+      "bytes": 363,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\eye-V8dxXWjI.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-20",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/password-DLagbhNK.js",
+      "arquivo": "password-DLagbhNK.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "7f6ec4238cbce020a2af336b05e93134ba9155a010a05d6f1404a61914548420",
+      "bytes": 712,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\password-DLagbhNK.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-21",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "arquivo": "alert-circle-B6r4nISY.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4724e6640e3dac9ba46ff54069b7156911abc15d627f7de3958600dd155536eb",
+      "bytes": 418,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\alert-circle-B6r4nISY.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-22",
+      "capturas": [
+        "login-ok",
+        "login-falha",
+        "login-falha2",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/use-mobile-layout-B9xEXdHq.js",
+      "arquivo": "use-mobile-layout-B9xEXdHq.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6f8213c167770ff1d5785a4e7c1dcddd0a4011bc5abf3f223f5d6ec7d3a091c3",
+      "bytes": 22880,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\use-mobile-layout-B9xEXdHq.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-34",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/entities-CzDzHSWx.js",
+      "arquivo": "entities-CzDzHSWx.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6d546447c758f6ec3f1a7e87ec2b0adeac0ccf53bfafd4437b791e9efe3da2d0",
+      "bytes": 113,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\entities-CzDzHSWx.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-35",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/chevron-down-ocqYOrK5.js",
+      "arquivo": "chevron-down-ocqYOrK5.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6074a428fdea7c8ddd281478b4bf489754f18b34e4b2411f269489d883313a1f",
+      "bytes": 296,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\chevron-down-ocqYOrK5.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-36",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/popover-CVs1NQbu.js",
+      "arquivo": "popover-CVs1NQbu.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b022328034f5966653c410c01a635d634e6b3c3be16898ac157c70ff4803978a",
+      "bytes": 5308,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\popover-CVs1NQbu.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-37",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/globe-ji___Or_.js",
+      "arquivo": "globe-ji___Or_.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "1e819e54d8191bf1ab5bd9bbb7ff7767f61b1bcdebd7e5f0450af9151eb661cd",
+      "bytes": 411,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\globe-ji___Or_.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-38",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/service-Chphq-AR.js",
+      "arquivo": "service-Chphq-AR.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "133b79b69bae6d410c049a59d87c960481473a56b1355e5f189640c58ba52dc5",
+      "bytes": 860,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-Chphq-AR.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-39",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/users-CBE3qzDq.js",
+      "arquivo": "users-CBE3qzDq.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "8986825c17eae4313eddaa375530ab79fbf1a3b2ac371755a954ef8ca4d95870",
+      "bytes": 473,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\users-CBE3qzDq.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-40",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/pencil-C-1BkcyX.js",
+      "arquivo": "pencil-C-1BkcyX.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "af15d3c64f418eccb0c2d380aa7d8804ddbc34c1b941633e8f278ceb4929723c",
+      "bytes": 365,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\pencil-C-1BkcyX.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-41",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/sparkles-BtHya149.js",
+      "arquivo": "sparkles-BtHya149.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b56c6e6eb192bc2e91221303e1ff06476b4ee999df5f1d79ebc6951a4c54941d",
+      "bytes": 590,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\sparkles-BtHya149.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-42",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/shield-D5a8xnL-.js",
+      "arquivo": "shield-D5a8xnL-.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "0d8c35b32a58178894645f8a769d424c3aeb6ba5b7003926f63db79d8617e06c",
+      "bytes": 321,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\shield-D5a8xnL-.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-43",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/image-C7RnMoTw.js",
+      "arquivo": "image-C7RnMoTw.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "382e5c933e771a231024d1539942fdba2dfb7ddd3c86031d7aaaf268b79a3206",
+      "bytes": 438,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\image-C7RnMoTw.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-44",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/shopping-cart-BvYgWGZP.js",
+      "arquivo": "shopping-cart-BvYgWGZP.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "e2f9abcd5d36d705d2661c22017aa719269b57ad9a778394fccbf81b5ab49939",
+      "bytes": 930,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\shopping-cart-BvYgWGZP.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-45",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/tag-B-yBwrYx.js",
+      "arquivo": "tag-B-yBwrYx.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6ae8b1607a2dda4656924d9ae1b843e6bcf87a3084b483f6a6b4b5d7788e40cf",
+      "bytes": 495,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\tag-B-yBwrYx.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-46",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/use-exports-stream-D1YJPQTk.js",
+      "arquivo": "use-exports-stream-D1YJPQTk.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "ff8887968212252e8ab53d3e0b93a92e1035518d93787f90e86ddd2bf04e7e32",
+      "bytes": 7509,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\use-exports-stream-D1YJPQTk.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-47",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/slider-DapZNGHt.js",
+      "arquivo": "slider-DapZNGHt.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "177d53d1044ce675e296b94f99b1731591339e25736d3a1cdc501aa5fee01fa2",
+      "bytes": 8310,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\slider-DapZNGHt.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-48",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-vqte5ySJ.js",
+      "arquivo": "index-vqte5ySJ.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "ea849353cf8892b3573dae0edad4cc43de6e84f13cd9698e7e6d9ded13dab821",
+      "bytes": 356,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-vqte5ySJ.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-49",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/color-picker-CpeB0PH0.js",
+      "arquivo": "color-picker-CpeB0PH0.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "2f0a9f61903892fd6b7511da70473be180a7d432f8492cac639bc71fa98728ac",
+      "bytes": 8787,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\color-picker-CpeB0PH0.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-50",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/palette-CyO5CJ0c.js",
+      "arquivo": "palette-CyO5CJ0c.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c8738e95a46ad30abe4d25dc4f63502bbb7cd581c577ef1c3a937943853b7ac7",
+      "bytes": 779,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\palette-CyO5CJ0c.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-51",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/maximize-2-BFX2JRIw.js",
+      "arquivo": "maximize-2-BFX2JRIw.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b7f87bc34ff43d9a07eb8f9832414c61f1a912e9bd61a8344456e9a6899a9633",
+      "bytes": 467,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\maximize-2-BFX2JRIw.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-52",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/rotate-ccw-B_oUXfBK.js",
+      "arquivo": "rotate-ccw-B_oUXfBK.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4da82e59f31d1221b6cc2603ba23b9380a4457963e611e68cbd4ef9225f949c7",
+      "bytes": 368,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\rotate-ccw-B_oUXfBK.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-53",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/entities-DlvIMfpu.js",
+      "arquivo": "entities-DlvIMfpu.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "015aacf1f99e83e238230acf02dc72f361ae569387073ddfb2bbf3d426dca914",
+      "bytes": 772,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\entities-DlvIMfpu.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-54",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/formats-list-RieW1rzz.js",
+      "arquivo": "formats-list-RieW1rzz.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "e7ae70f1ec7d5b629f6789718a78622f60ea31743477a30df0437e79b72bfdd1",
+      "bytes": 7572,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\formats-list-RieW1rzz.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-55",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/service-CmufRMLl.js",
+      "arquivo": "service-CmufRMLl.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "dfa1f01b2d05f8fe1d78027fb345f8eb2833a6634fa8414a8afca7d40602b183",
+      "bytes": 1016,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-CmufRMLl.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-56",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/file-text-DeVsQn9s.js",
+      "arquivo": "file-text-DeVsQn9s.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c446498f755a1fe43d0f8a7c783aecba9d28315a4ed331c21abbd1e4b66713b4",
+      "bytes": 501,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\file-text-DeVsQn9s.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-57",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/smartphone-DWawRyBj.js",
+      "arquivo": "smartphone-DWawRyBj.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "5334fb915229977d7c2d9778bc411992d4faf7b4c1ae74bf30aa0b6e1e121d28",
+      "bytes": 366,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\smartphone-DWawRyBj.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-58",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/monitor-BOfZcPUp.js",
+      "arquivo": "monitor-BOfZcPUp.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4c49225c4964cfb78165c7f8c7011d00c0d97d69ec0a4550bef496c956ac88b0",
+      "bytes": 428,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\monitor-BOfZcPUp.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-59",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/use-simple-query-BIlIpFhF.js",
+      "arquivo": "use-simple-query-BIlIpFhF.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "a97ba7dc2e776b1aff2f38ce9f298928c01d153685a413df904a0e3b6e9e0ec8",
+      "bytes": 241,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\use-simple-query-BIlIpFhF.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-60",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/useQuery-D12Y0UPZ.js",
+      "arquivo": "useQuery-D12Y0UPZ.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "55106ba81cf8484de460095258abeefc553a5ec07aeae78bb3f9d9c848c18d65",
+      "bytes": 100,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\useQuery-D12Y0UPZ.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-61",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/useBaseQuery-DNtSj8JH.js",
+      "arquivo": "useBaseQuery-DNtSj8JH.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b29f5b8ad2dfc881438a0d7dc76fca36050663171a1b30ba390e970446c1702a",
+      "bytes": 10418,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\useBaseQuery-DNtSj8JH.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-62",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/query-constants-hqx0foTB.js",
+      "arquivo": "query-constants-hqx0foTB.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "740621c2734fa4e427a83847291e02ed126ea200fc509f7941d1e607e4f265d1",
+      "bytes": 99,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\query-constants-hqx0foTB.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-63",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/query-keys-DamezY8H.js",
+      "arquivo": "query-keys-DamezY8H.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "ac3cbf463db4f33f2eca19f7f0944fb0f80fc45a2c9af3d94823c8c2542a907c",
+      "bytes": 489,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\query-keys-DamezY8H.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-64",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/query-states-BBlai7xS.js",
+      "arquivo": "query-states-BBlai7xS.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "129732facca14c4f44965e5ac91681dc34b797243ced96cadd9418163877f0dd",
+      "bytes": 794,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\query-states-BBlai7xS.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-65",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/service-cCDUhbQQ.js",
+      "arquivo": "service-cCDUhbQQ.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4d29f3d41c8564e4ccb8414bdc12488ae4fb25d11cfe8dc900dd7c00c27364f2",
+      "bytes": 3253,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-cCDUhbQQ.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-66",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/calendar-days-CiywsBpM.js",
+      "arquivo": "calendar-days-CiywsBpM.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "f7806db40c73114f5c955c6732842980adf9f51e06f12118ad00399c107ad175",
+      "bytes": 662,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\calendar-days-CiywsBpM.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-67",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/trash-2-yP0FfCte.js",
+      "arquivo": "trash-2-yP0FfCte.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "4a93b76c610fdd9152e42039ecf607a3e313abd6926d5049018f013c7230194e",
+      "bytes": 526,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\trash-2-yP0FfCte.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-68",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/shared-selection-controls-OlU5v_M1.js",
+      "arquivo": "shared-selection-controls-OlU5v_M1.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c59504ece772aa294e630a8cfd7f26f9f9aedc384e69804cd4615254062b4039",
+      "bytes": 12554,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\shared-selection-controls-OlU5v_M1.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-69",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/settings-DWdAwwLJ.js",
+      "arquivo": "settings-DWdAwwLJ.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "579cb3063708cd291ac04fc87324ead35c2040605cd06739537fd4455dbe9fb7",
+      "bytes": 894,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\settings-DWdAwwLJ.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-70",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/copy-COwhmbsu.js",
+      "arquivo": "copy-COwhmbsu.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "cd3357d15a7b68af87c6040866526ec43ba7a98df39b4889cc33e66cf6884e30",
+      "bytes": 400,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\copy-COwhmbsu.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-71",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/download-B9mtF3CU.js",
+      "arquivo": "download-B9mtF3CU.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6fee6c14ddc422438e8dfbafc27295638741b63098117e3a83a9f46819139e11",
+      "bytes": 431,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\download-B9mtF3CU.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-72",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/share-2-Ce5EcWai.js",
+      "arquivo": "share-2-Ce5EcWai.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "2ed513945719658225196084067e8b6f9532bf6e0c9c198780f59fe151cff5db",
+      "bytes": 520,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\share-2-Ce5EcWai.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-73",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/service-Dc47qpQA.js",
+      "arquivo": "service-Dc47qpQA.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "10eabf3abe81b5e4de7d387f5d25fb1aad8abee3f8af2c1ed864b8cc9c425c27",
+      "bytes": 4994,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-Dc47qpQA.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-74",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/tag-effects-BONRtD59.js",
+      "arquivo": "tag-effects-BONRtD59.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "2d849ba058dcfcbcb2f63eab7a6a3c12e30f651d284aa5577cff0e9af2bb2f43",
+      "bytes": 5215,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\tag-effects-BONRtD59.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-75",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/currency-DM9Y_laS.js",
+      "arquivo": "currency-DM9Y_laS.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "fb04ccd4c102162cc1fed0e32f6b701619401ea7095915e2225ded3991957fc3",
+      "bytes": 1135,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\currency-DM9Y_laS.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-76",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/price-types-B5DfVFbR.js",
+      "arquivo": "price-types-B5DfVFbR.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "cd18c4fb222fb41d02b38bcbc9799924ae9c1e63183d6c288974d22dbfebbf49",
+      "bytes": 3137,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\price-types-B5DfVFbR.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-77",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/map-pin-N_EkvcAm.js",
+      "arquivo": "map-pin-N_EkvcAm.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "7d7dcd7b8a79a818b5188c097ef75cd0f92c13151ad0e32eae1a59df13c75355",
+      "bytes": 368,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\map-pin-N_EkvcAm.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-78",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/phone-Dl-Kb7UP.js",
+      "arquivo": "phone-Dl-Kb7UP.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "190ac85c499ada1c4d77fea61a046fb16c363edc836fcfb1de5b7694708ddf3b",
+      "bytes": 563,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\phone-Dl-Kb7UP.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-79",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/package-BwJ_7uce.js",
+      "arquivo": "package-BwJ_7uce.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "97165f1af7b4e05bc6a87bfa2924375666b25ea46f671d2031a096bee91b27fa",
+      "bytes": 528,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\package-BwJ_7uce.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-80",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/plus-nkgdgBzR.js",
+      "arquivo": "plus-nkgdgBzR.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "99e85015db3244f9fab81ac64e9811be80a7326e6a75ee2f8ef2c9cbd6eb9977",
+      "bytes": 322,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\plus-nkgdgBzR.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-81",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/minus-DxpgJsKj.js",
+      "arquivo": "minus-DxpgJsKj.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b6e0352c172f7b5b827b2fd03bd6960e7c0ebe2105c83b75f5acb04c017ff2d8",
+      "bytes": 286,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\minus-DxpgJsKj.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-82",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/zoom-in-AUbiIL7j.js",
+      "arquivo": "zoom-in-AUbiIL7j.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "022da29c5870a7171fceea6ee9b1b45d4ffd67158aefdcb9310a213ad4f08601",
+      "bytes": 470,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\zoom-in-AUbiIL7j.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-83",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/initial-flyer-Cc6BwAmp.js",
+      "arquivo": "initial-flyer-Cc6BwAmp.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "a5a34ec1e8af1385bad2d802e21bbdf1d923e71609bd80306197018099642356",
+      "bytes": 849,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\initial-flyer-Cc6BwAmp.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-84",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/service-DQzaU991.js",
+      "arquivo": "service-DQzaU991.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "092839dcbaa0ca920ae030a2744fef9676bdc5199a0c7c9f61680f44d758975c",
+      "bytes": 1981,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-DQzaU991.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-85",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/alert-triangle-7jjD0zs3.js",
+      "arquivo": "alert-triangle-7jjD0zs3.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "bae831d0ad9ce22cd4fc0ee592ff60a8d74aaa1cd31801812abd5f7ab6bac58f",
+      "bytes": 434,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\alert-triangle-7jjD0zs3.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-86",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/send-B_xYLiBE.js",
+      "arquivo": "send-B_xYLiBE.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "a960b5340e88b0a76c3ccf2b3e14bd6dd0f98ae789c35e8c9d15470d7ad818fb",
+      "bytes": 336,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\send-B_xYLiBE.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-87",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/ban-B8FNZ9Ak.js",
+      "arquivo": "ban-B8FNZ9Ak.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6a03c8716d7bcaafa029c63d448e83d31e648dd6f63fa0f41394a3f91a1c8e81",
+      "bytes": 338,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\ban-B8FNZ9Ak.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-88",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/check-circle-2-tK7RMpCv.js",
+      "arquivo": "check-circle-2-tK7RMpCv.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "bc72529afc2b498865f93e8616eb0aa1f809e2bb92ea30415223fc0282a0100e",
+      "bytes": 342,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\check-circle-2-tK7RMpCv.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-89",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/clock-Bx04y7UN.js",
+      "arquivo": "clock-Bx04y7UN.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "341104d46991564fabb0ab48792b83bb7668bd8dbbe05230a2108b320947e307",
+      "bytes": 347,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\clock-Bx04y7UN.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-90",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-Dz0tekWN.js",
+      "arquivo": "index-Dz0tekWN.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "7ed11c2b7891a840cb514d679bd3f246827e14f27006d7b99eae01b97b2be36f",
+      "bytes": 12715,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-Dz0tekWN.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-94",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/entities-CtIIzVdg.js",
+      "arquivo": "entities-CtIIzVdg.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "d09ecbd52e46b01866811377010b76e9276624c496229a5478c1ab44b2b9ec6e",
+      "bytes": 236,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\entities-CtIIzVdg.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-95",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/infinite-scroll-CrghhgUG.js",
+      "arquivo": "infinite-scroll-CrghhgUG.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "10bd39ea9705fbd1d0b624093bbef03f843a5e48259d5c59893b1ae00a3ddf37",
+      "bytes": 587,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\infinite-scroll-CrghhgUG.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-96",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/use-infinite-list-CMBvctj2.js",
+      "arquivo": "use-infinite-list-CMBvctj2.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c740528f8ff8dcd2f2c055764a388247626647962372c84e29ba9bd9d85af747",
+      "bytes": 1573,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\use-infinite-list-CMBvctj2.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-97",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/arrow-left-CVS5Z2VI.js",
+      "arquivo": "arrow-left-CVS5Z2VI.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "d8741c570083cbecbf45cd3ba4bdb6752fd275d008a1d4c4ec474cab97983a63",
+      "bytes": 333,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\arrow-left-CVS5Z2VI.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-98",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/useMutation-BPirSAry.js",
+      "arquivo": "useMutation-BPirSAry.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "9c90117a6f9f5cafdf4af6e90f81a3208e057dd9e8c1d0365c35b26764063513",
+      "bytes": 3105,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\useMutation-BPirSAry.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-99",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/search-ri_QLxhz.js",
+      "arquivo": "search-ri_QLxhz.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6fd1629e61ef441adca80f504f0ffd6388076b89ad17fae3d712658f7eccc038",
+      "bytes": 336,
+      "caminho": "scripts-captura-login-ok\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\search-ri_QLxhz.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-100",
+      "capturas": [
+        "login-ok",
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "arquivo": "index-VDyxRd0o.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "05a1223f500b188a126675c960161163c4cbe8f94c2a9ed7ad8b11acea3b6039",
+      "bytes": 57062,
+      "caminho": "scripts-captura-editor\\isolated\\source-4-6e5a7162825262c1bc0c3dccf0d13bc59dafd50d4673c4c1eab479363ce0927b.js",
+      "layout": "isolated",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-9",
+      "capturas": [
+        "editor",
+        "batch1"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/sse-Wner9QKd.js",
+      "arquivo": "sse-Wner9QKd.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "674ae91b3bfa4d2287d0f28743753d20d20975c9cc7b60c811854c890723798e",
+      "bytes": 1792,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\sse-Wner9QKd.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-293",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/upload-DB8x8xbC.js",
+      "arquivo": "upload-DB8x8xbC.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b7e7a03001068669957bffcfaaf49a05e71aeb2eb025cb6d96c49ef48690a7b1",
+      "bytes": 426,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\upload-DB8x8xbC.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-294",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/wand-2-DPBi2UDd.js",
+      "arquivo": "wand-2-DPBi2UDd.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "dba561908a3fe51e79512469681b3f344c2d84daee1abec2c2c5c5a5c17f5c19",
+      "bytes": 675,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\wand-2-DPBi2UDd.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-295",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/select-DYWJc9e8.js",
+      "arquivo": "select-DYWJc9e8.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "b583eda3b8e5eb52e79211ab462a26bb31a9346665d3ef71a3cff5054924c622",
+      "bytes": 21077,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\select-DYWJc9e8.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-296",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/more-vertical-DOlxXc-G.js",
+      "arquivo": "more-vertical-DOlxXc-G.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "55a7cf4700a38c473e802f7042fc9835e26bc2c61916b950ad51c3466b4c0c14",
+      "bytes": 394,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\more-vertical-DOlxXc-G.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-297",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/star-Cq-3OBPo.js",
+      "arquivo": "star-Cq-3OBPo.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "2c7662b25097d0328611c64b341b1bca2f0efbccf6e2f763a3432a3aa0caf070",
+      "bytes": 379,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\star-Cq-3OBPo.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-298",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/tab-styles-DIrmai5o.js",
+      "arquivo": "tab-styles-DIrmai5o.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6a88d7ecf508ccf852dfb68b6db37c59b592289f47905110542edc872118576d",
+      "bytes": 404,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\tab-styles-DIrmai5o.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-299",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/image-off-Dtydrk9k.js",
+      "arquivo": "image-off-Dtydrk9k.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "e80f841784a4266c20b6996e496a0bf8d9861f86d92c54ffb0d51f1aeb3cee05",
+      "bytes": 639,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\image-off-Dtydrk9k.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-300",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/package-open-sQ0PK2h-.js",
+      "arquivo": "package-open-sQ0PK2h-.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "81e68d285aa122c977ea76599a9241031d1f536e7db3426f40774b70226e3575",
+      "bytes": 785,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\package-open-sQ0PK2h-.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-301",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-Dcs6KTkN.js",
+      "arquivo": "index-Dcs6KTkN.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "f0de2eb5f85df63c8d8ad2f16b43f56ac739816b51868739ecd79ef63893ce5a",
+      "bytes": 16612,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-Dcs6KTkN.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-302",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/search-input-532GjSZC.js",
+      "arquivo": "search-input-532GjSZC.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "8224db95812021698be4679ff0da5c7fd7e9d78155f9511938979a85910f772e",
+      "bytes": 792,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\search-input-532GjSZC.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-303",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/service-BZ15meZL.js",
+      "arquivo": "service-BZ15meZL.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "61aa9dbd2fbaa311f70e0ab3b31bd1969bd9c210694bd9e984a7a307f0aa4079",
+      "bytes": 1084,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\service-BZ15meZL.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-304",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/entities-B4X3g8e5.js",
+      "arquivo": "entities-B4X3g8e5.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "aa12d92f94b3cb7561f2ff86049f79b13bf6a77a2cbb42f79182d20eaead5273",
+      "bytes": 298,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\entities-B4X3g8e5.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-305",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/x-circle-DxnLoz68.js",
+      "arquivo": "x-circle-DxnLoz68.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "5c6d7ef4e2b10f0ce10be07022bb895c169e9f63e461245486a02a77c3f029de",
+      "bytes": 370,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\x-circle-DxnLoz68.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-306",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/asset-utils-hOwn4Uhp.js",
+      "arquivo": "asset-utils-hOwn4Uhp.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "8284038e0b09dc5d1cc5942ed7319d3aeb5d47e120126945436c0d5bda4e4597",
+      "bytes": 144,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\asset-utils-hOwn4Uhp.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-307",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-BehZtlK7.js",
+      "arquivo": "index-BehZtlK7.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c5d716238c72b6aa9fc1818d2c166f306e9abf2350ab18ae339cae6dbbddae2d",
+      "bytes": 29093,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-BehZtlK7.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-328",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-BWsW9flj.js",
+      "arquivo": "index-BWsW9flj.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "91b4bb11e0141212ce7e9e726635442218c6d640cd48bee7471dda2004199aab",
+      "bytes": 20874,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-BWsW9flj.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-329",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/zap-Ds_Tw9NB.js",
+      "arquivo": "zap-Ds_Tw9NB.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "c7bc1471b7076d18533049a010156423526cb4106df17fb318532a4d1a305aa1",
+      "bytes": 322,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\zap-Ds_Tw9NB.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-330",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-C8ygs8b0.js",
+      "arquivo": "index-C8ygs8b0.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "6ef9631ffa52bc405da0e64327c8fc4fb9bde1693f94fcf1899fa5070325b4da",
+      "bytes": 15378,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\index-C8ygs8b0.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-331",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/refresh-cw-579W-ZcP.js",
+      "arquivo": "refresh-cw-579W-ZcP.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "1a351bfb5511ae05ed1d9f9ce2aa4e9b1bfe4be919803cfa8a9a45afa99f3c8f",
+      "bytes": 489,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\refresh-cw-579W-ZcP.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-332",
+      "capturas": [
+        "editor"
+      ]
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/building-2-DrV2WNat.js",
+      "arquivo": "building-2-DrV2WNat.js",
+      "status": "exported",
+      "motivo": null,
+      "sha256": "3fe9603ea91d07657ee6e74cbb46b985fdc9ae972c197ce5d3c88abf650466c6",
+      "bytes": 607,
+      "caminho": "scripts-captura-editor\\origins\\3d7e1848aff28af09a4619c8447b982f428e543b2003539e9e12fe47038c583f\\assets\\building-2-DrV2WNat.js",
+      "layout": "url-path",
+      "redigido": false,
+      "http": 200,
+      "transacao": "request-335",
+      "capturas": [
+        "editor"
+      ]
+    }
+  ],
+  "indisponiveis": [
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "motivo": "body-allocation-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-ok",
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-falha",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-falha",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "login-falha",
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "motivo": "body-allocation-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-falha2",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "login-falha2",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "login-falha2",
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "motivo": "body-allocation-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/index-MqiCARZ_.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "editor",
+      "url": "https://editor.encartefacil.com/assets/flyers-B4rLVYUf.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-BLLrK9Mc.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/use-mobile-layout-B9xEXdHq.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/logo-Dr-8dK1w.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/switch-BtSwe9Ih.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-CEpZmkQp.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/entities-CzDzHSWx.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/chevron-down-ocqYOrK5.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/popover-CVs1NQbu.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/globe-ji___Or_.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/service-Chphq-AR.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/users-CBE3qzDq.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/pencil-C-1BkcyX.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/sparkles-BtHya149.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/shield-D5a8xnL-.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/sun-e27cUWGn.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/image-C7RnMoTw.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/shopping-cart-BvYgWGZP.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/tag-B-yBwrYx.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/use-exports-stream-D1YJPQTk.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/slider-DapZNGHt.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-vqte5ySJ.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/color-picker-CpeB0PH0.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/palette-CyO5CJ0c.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/maximize-2-BFX2JRIw.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/rotate-ccw-B_oUXfBK.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/entities-DlvIMfpu.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/formats-list-RieW1rzz.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/service-CmufRMLl.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/file-text-DeVsQn9s.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/smartphone-DWawRyBj.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/monitor-BOfZcPUp.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/use-simple-query-BIlIpFhF.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/useQuery-D12Y0UPZ.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/useBaseQuery-DNtSj8JH.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/query-constants-hqx0foTB.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/query-keys-DamezY8H.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/query-states-BBlai7xS.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/service-cCDUhbQQ.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/calendar-days-CiywsBpM.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/trash-2-yP0FfCte.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/shared-selection-controls-OlU5v_M1.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/settings-DWdAwwLJ.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/copy-COwhmbsu.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/download-B9mtF3CU.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/share-2-Ce5EcWai.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/service-Dc47qpQA.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/tag-effects-BONRtD59.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/currency-DM9Y_laS.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/price-types-B5DfVFbR.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/map-pin-N_EkvcAm.js",
+      "motivo": "body-read-failed",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/phone-Dl-Kb7UP.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/package-BwJ_7uce.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/plus-nkgdgBzR.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/minus-DxpgJsKj.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/zoom-in-AUbiIL7j.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/progress-B2aPl7Uu.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/initial-flyer-Cc6BwAmp.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/service-DQzaU991.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/alert-triangle-7jjD0zs3.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/send-B_xYLiBE.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/ban-B8FNZ9Ak.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/alert-circle-B6r4nISY.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/check-circle-2-tK7RMpCv.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/clock-Bx04y7UN.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-KJ2_zNqK.js",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": true
+    },
+    {
+      "captura": "batch1",
+      "url": "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://www.googletagmanager.com/gtag/js?id=G-CZM9JW4K6G",
+      "motivo": "body-size-limit",
+      "coberto_pelo_bundle_publico": false
+    },
+    {
+      "captura": "batch1",
+      "url": "https://editor.encartefacil.com/assets/index-VDyxRd0o.js",
+      "motivo": "response-content-not-retained",
+      "coberto_pelo_bundle_publico": true
+    }
+  ]
+}

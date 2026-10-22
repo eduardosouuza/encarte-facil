@@ -1,0 +1,1 @@
+import{u as m}from"./useQuery-D12Y0UPZ.js";import{S as o}from"./query-constants-hqx0foTB.js";function i({queryKey:e,queryFn:r,staleTimeType:u="default",enabled:t=!0}){return m({queryKey:e,queryFn:r,staleTime:o[u],enabled:t})}export{i as u};

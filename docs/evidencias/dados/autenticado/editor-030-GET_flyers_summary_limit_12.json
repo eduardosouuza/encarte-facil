@@ -1,0 +1,11 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/flyers/summary?limit=12",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    18
+  ],
+  "request_body": null,
+  "response_body": null
+}

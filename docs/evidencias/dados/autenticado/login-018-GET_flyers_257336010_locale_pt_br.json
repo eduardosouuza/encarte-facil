@@ -1,0 +1,1122 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/flyers/257336010?locale=pt-br",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    4
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "flyer": {
+      "_id": "flyers/257336010",
+      "_key": "257336010",
+      "_rev": "_mTV_5k6---",
+      "content": "flyer",
+      "createdAt": "2026-09-18T01:20:06.013Z",
+      "customPaperSize": null,
+      "customerId": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "defaultTagShape": "rounded",
+      "design": "93AK7uoFC2TQxI3VxmKc",
+      "elements": [
+        {
+          "asset": {
+            "_key": "HbWgWZYJIvZ_ya-DyvVU",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/95Kgq5Ze7KV0n2dOiyOzCamS30pd-6c0fQ1NiZq8XTOg5L0t.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/95Kgq5Ze7KV0n2dOiyOzCamS30pd-6c0fQ1NiZq8XTOg5L0t.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/khr8o_uCGg0ST-NO0vh7dH6UaVhOK1Ebw7NH8VCoy2MiiOBr.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/T7Nh4g9t33qXWAgVuNS3omuM9o6iD4uxOe_swnqvD-vsocdv.png"
+            }
+          },
+          "category": "3d",
+          "cropHeight": 613.9999999999999,
+          "cropPos": "center-top",
+          "cropWidth": 1163,
+          "elementId": "Qay-IVt-gudItwRqbv48",
+          "height": 817.9093078311382,
+          "id": "O5hXZLXQowN8DnS8TY6X",
+          "offsetX": 0,
+          "offsetY": 0,
+          "palette": [
+            "#674e31",
+            "#a2de47",
+            "#e5e6e5",
+            "#1f3809",
+            "#679436",
+            "#a5a5a1",
+            "#797671",
+            "#b7b9b5",
+            "#9c7652"
+          ],
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "skewX": 0,
+          "skewY": 0,
+          "width": 1549.2321254195667,
+          "x": 3890,
+          "y": 269,
+          "zIndex": 1000,
+          "sourceElement": {
+            "_id": "elements/Qay-IVt-gudItwRqbv48",
+            "_key": "Qay-IVt-gudItwRqbv48",
+            "_rev": "_loIa_pS--_",
+            "asset": "HbWgWZYJIvZ_ya-DyvVU",
+            "category": "3d",
+            "createdAt": "2023-05-10T14:30:25.021Z",
+            "description": "Logotipo com a frase \"Fim de Semana da Horta\" sobre um fundo que imita uma textura de madeira.",
+            "industries": [
+              "r0uDHnC1p7FDpbO11nE3x2nkKFdrs9tXln6k"
+            ],
+            "keywords": [
+              "horta",
+              "fim de semana",
+              "logotipo",
+              "madeira",
+              "texto",
+              "verde",
+              "evento"
+            ],
+            "name": "Fim de Semana da Horta",
+            "premium": true,
+            "public": true,
+            "template": true,
+            "themes": [
+              "BaOLPOg0OpVLGpfugAkF7D1JqLyeSW4yGosI"
+            ],
+            "updatedAt": "2023-05-10T18:02:39.025Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "VG0kQBjYwh-_JI0EfjuF",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/UjExSCcAyedf7izIqeH1WFnM1Lav91zQTZNe461x5_OU4i_4.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/UjExSCcAyedf7izIqeH1WFnM1Lav91zQTZNe461x5_OU4i_4.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/SJxkCNU4890e1_oVC3oecwtAZxZz1cCbaGKrIS-JBRjp7Xtv.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/jKf4__8d1fonqG7NS6TPlEGrcsdooVBlzOYSD48iz0HCmS0d.png"
+            }
+          },
+          "category": "background",
+          "cropHeight": 474.074074074074,
+          "cropPos": "center-top",
+          "cropWidth": 1280,
+          "elementId": "HFt_wkYqa4VgBHfNqjxN",
+          "height": 4961,
+          "id": "O34QEIprviRG4CGW2Z7x",
+          "offsetX": 0,
+          "offsetY": 0,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "skewX": 0,
+          "skewY": 0,
+          "width": 3508,
+          "x": 0,
+          "y": 0,
+          "zIndex": 0,
+          "sourceElement": {
+            "_id": "elements/HFt_wkYqa4VgBHfNqjxN",
+            "_key": "HFt_wkYqa4VgBHfNqjxN",
+            "_rev": "_loIaA0O--_",
+            "asset": "VG0kQBjYwh-_JI0EfjuF",
+            "category": "background",
+            "createdAt": "2023-02-24T04:21:54.124Z",
+            "description": "Uma plataforma de petróleo com o sol se pondo ao fundo, criando um céu alaranjado.",
+            "industries": [
+              "fyeEAXm4x4S1USOBDTx8iKrkHlrbhNtwpUJE"
+            ],
+            "keywords": [
+              "plataforma de petróleo",
+              "pôr do sol",
+              "céu alaranjado",
+              "indústria",
+              "energia",
+              "paisagem"
+            ],
+            "name": "Imagem de uma Plataforma de Petróleo ao Pôr do Sol",
+            "premium": false,
+            "public": true,
+            "template": true,
+            "themes": [],
+            "updatedAt": "2023-02-24T13:36:49.066Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "dLxLydPgv9z2LyQBWFGy",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/tIDnbSq0bGNFqpNUAHEZA64Ex1I6HcDvyCr4hrXRcL73vk9_.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/tIDnbSq0bGNFqpNUAHEZA64Ex1I6HcDvyCr4hrXRcL73vk9_.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/7v3vNGKMbw5hto0t_Rr7M8iVrmOptyTKCG0VtWQl4bTKfwup.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/cl9vR17kmd8h5QWJzOmZclANzIDXjstQv8qK76_aZSlOqJPk.png"
+            }
+          },
+          "category": "photos",
+          "cropHeight": 614.2105263157932,
+          "cropPos": "center-top",
+          "cropWidth": 639,
+          "elementId": "fHF55cPuFbuHf3QNn7rl",
+          "height": 1291.8172789685461,
+          "id": "cniUlZYl5PbvX9dQr0JK",
+          "offsetX": 0,
+          "offsetY": 0,
+          "palette": [
+            "#25382c",
+            "#d7ac75",
+            "#b3a21a",
+            "#e1c3ba",
+            "#9b3e1e",
+            "#a7653f",
+            "#7d9b5f",
+            "#cede76",
+            "#5c9c36"
+          ],
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "skewX": 0,
+          "skewY": 0,
+          "width": 750.4284011462737,
+          "x": 2647,
+          "y": 168,
+          "zIndex": 20,
+          "sourceElement": {
+            "_id": "elements/fHF55cPuFbuHf3QNn7rl",
+            "_key": "fHF55cPuFbuHf3QNn7rl",
+            "_rev": "_loIa_rK--_",
+            "asset": "dLxLydPgv9z2LyQBWFGy",
+            "category": "photos",
+            "createdAt": "2023-04-27T19:54:47.450Z",
+            "description": "Uma mulher usando boné e camiseta amarelos, sorrindo e olhando para o lado, segurando um saco de papel cheio de vegetais frescos.",
+            "industries": [
+              "r0uDHnC1p7FDpbO11nE3x2nkKFdrs9tXln6k"
+            ],
+            "keywords": [
+              "mulher",
+              "entregadora",
+              "boné",
+              "camiseta amarela",
+              "sorriso",
+              "vegetais",
+              "saco de papel",
+              "comida saudável",
+              "entrega de alimentos",
+              "alface",
+              "tomate",
+              "brócolis",
+              "cenoura",
+              "estilo de vida saudável"
+            ],
+            "name": "Entregadora de alimentos sorridente",
+            "premium": true,
+            "public": true,
+            "template": true,
+            "themes": [],
+            "updatedAt": "2023-05-10T18:02:32.004Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "Pamz6P8tMD2DoGkzaeFg",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/WxF0fbzY_x7GFCMadZf8LV1TGi44JdzuLQ06gMyiUD2LqhhZ.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/WxF0fbzY_x7GFCMadZf8LV1TGi44JdzuLQ06gMyiUD2LqhhZ.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/eBwkswAEvN6Wu5OWGmqZW_p4PMPtFsaVW8bF4IaudtvNJyRC.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/Wzd34Rbk22ZrqoxBMGt3Qb70F_BFbTBEcNdXvYyRR65kvPLB.png"
+            }
+          },
+          "category": "decorative",
+          "cropHeight": 331,
+          "cropPos": "center-top",
+          "cropWidth": 472,
+          "elementId": "4LNokCJSUMBQybKcWPZs",
+          "height": 254.6986589983241,
+          "id": "J3yuOjLsS4Xs8zheGcXK",
+          "offsetX": 0,
+          "offsetY": 0,
+          "palette": [
+            "#4c7f24",
+            "#7eac61",
+            "#8dbf64",
+            "#70a84a",
+            "#85b14e",
+            "#6d9748",
+            "#619046",
+            "#355a10",
+            "#346610"
+          ],
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "skewX": 0,
+          "skewY": 0,
+          "width": 363.19567083748944,
+          "x": 621,
+          "y": 330,
+          "zIndex": 13,
+          "sourceElement": {
+            "_id": "elements/4LNokCJSUMBQybKcWPZs",
+            "_key": "4LNokCJSUMBQybKcWPZs",
+            "_rev": "_loIa_sS--A",
+            "asset": "Pamz6P8tMD2DoGkzaeFg",
+            "category": "decorative",
+            "createdAt": "2023-04-26T18:53:50.105Z",
+            "description": "Imagem de uma folha verde brilhante com fundo transparente.",
+            "industries": [],
+            "keywords": [
+              "folha",
+              "verde",
+              "planta",
+              "natureza",
+              "fundo transparente",
+              "brilhante",
+              "isolada"
+            ],
+            "name": "Folha verde isolada",
+            "premium": true,
+            "public": true,
+            "template": true,
+            "themes": [],
+            "updatedAt": "2023-04-27T12:38:41.928Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "Pamz6P8tMD2DoGkzaeFg",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/WxF0fbzY_x7GFCMadZf8LV1TGi44JdzuLQ06gMyiUD2LqhhZ.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/WxF0fbzY_x7GFCMadZf8LV1TGi44JdzuLQ06gMyiUD2LqhhZ.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/eBwkswAEvN6Wu5OWGmqZW_p4PMPtFsaVW8bF4IaudtvNJyRC.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/Wzd34Rbk22ZrqoxBMGt3Qb70F_BFbTBEcNdXvYyRR65kvPLB.png"
+            }
+          },
+          "category": "decorative",
+          "cropHeight": 331,
+          "cropPos": "center-top",
+          "cropWidth": 471.99999999999886,
+          "elementId": "4LNokCJSUMBQybKcWPZs",
+          "height": 112.68252978195484,
+          "id": "4wJhkdhLvBANr49pixKm",
+          "offsetX": 0,
+          "offsetY": 0,
+          "palette": [
+            "#4c7f24",
+            "#7eac61",
+            "#8dbf64",
+            "#70a84a",
+            "#85b14e",
+            "#6d9748",
+            "#619046",
+            "#355a10",
+            "#346610"
+          ],
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "skewX": 0,
+          "skewY": 0,
+          "width": 160.6832448854458,
+          "x": 464.0206417652104,
+          "y": 82.22823081495306,
+          "zIndex": 19,
+          "sourceElement": {
+            "_id": "elements/4LNokCJSUMBQybKcWPZs",
+            "_key": "4LNokCJSUMBQybKcWPZs",
+            "_rev": "_loIa_sS--A",
+            "asset": "Pamz6P8tMD2DoGkzaeFg",
+            "category": "decorative",
+            "createdAt": "2023-04-26T18:53:50.105Z",
+            "description": "Imagem de uma folha verde brilhante com fundo transparente.",
+            "industries": [],
+            "keywords": [
+              "folha",
+              "verde",
+              "planta",
+              "natureza",
+              "fundo transparente",
+              "brilhante",
+              "isolada"
+            ],
+            "name": "Folha verde isolada",
+            "premium": true,
+            "public": true,
+            "template": true,
+            "themes": [],
+            "updatedAt": "2023-04-27T12:38:41.928Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "222507454",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png"
+            }
+          },
+          "category": "logo",
+          "height": 186.49092102312292,
+          "id": "logo-1789904952786-ckqulb",
+          "logoBackground": {
+            "enabled": false,
+            "color": "#FFFFFF",
+            "padding": 0,
+            "borderRadius": 0,
+            "shadow": false
+          },
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "width": 829.0757894736842,
+          "x": 152,
+          "y": 1101,
+          "zIndex": 1,
+          "sourceElement": null
+        },
+        {
+          "asset": {
+            "_key": "255250143",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/2804962a-ed2e-4de7-84c5-e6d1504f8c95.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/2804962a-ed2e-4de7-84c5-e6d1504f8c95.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/2804962a-ed2e-4de7-84c5-e6d1504f8c95.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/2804962a-ed2e-4de7-84c5-e6d1504f8c95.png"
+            }
+          },
+          "category": "3d",
+          "elementId": "ele_mGhEhhKPJ3wiqnXislHFsJkd",
+          "height": 1004.7615190822881,
+          "id": "element-1791977436340-e48yi",
+          "opacity": 1,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "width": 1207.5365195320016,
+          "x": -1392,
+          "y": 130,
+          "zIndex": 1001,
+          "sourceElement": {
+            "_id": "elements/ele_mGhEhhKPJ3wiqnXislHFsJkd",
+            "_key": "ele_mGhEhhKPJ3wiqnXislHFsJkd",
+            "_rev": "_mHzhxgW---",
+            "asset": "255250143",
+            "category": "3d",
+            "createdAt": "2025-11-23T22:19:04.089Z",
+            "description": "Promoção Verde",
+            "industries": [],
+            "keywords": [
+              "selo",
+              "personalizado",
+              "3d"
+            ],
+            "name": "Selo Personalizado",
+            "palette": [],
+            "public": true,
+            "template": false,
+            "themes": [],
+            "updatedAt": "2026-09-14T00:49:18.885Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "ass_RvT8Eh0NByb4R0MNDKsydX7f",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/Y0b2rYpEHZJW2sV9MjEoQ.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/Y0b2rYpEHZJW2sV9MjEoQ.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/xKGrA5D_DBG4oeXReTjSd.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/8uwbs0QGmBaJTxYgDq_XJ.png"
+            }
+          },
+          "category": "3d",
+          "elementId": "ele_pTMLjWxCUopYVVEPMyIdf9gV",
+          "height": 772.1365084999832,
+          "id": "element-1791977481791-1vm5mh",
+          "opacity": 1,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "width": 1591.904814602238,
+          "x": 4100,
+          "y": 829,
+          "zIndex": 1002,
+          "sourceElement": {
+            "_id": "elements/ele_pTMLjWxCUopYVVEPMyIdf9gV",
+            "_key": "ele_pTMLjWxCUopYVVEPMyIdf9gV",
+            "_rev": "_loIaCjC--_",
+            "asset": "ass_RvT8Eh0NByb4R0MNDKsydX7f",
+            "category": "3d",
+            "createdAt": "2024-10-01T14:04:37.756Z",
+            "description": "Imagem com o texto \"Quarta Verde\" em letras verdes e brancas sobre um fundo de madeira.",
+            "externalSource": "ai",
+            "industries": [
+              "r0uDHnC1p7FDpbO11nE3x2nkKFdrs9tXln6k"
+            ],
+            "keywords": [
+              "Quarta Verde",
+              "texto",
+              "letras verdes",
+              "fundo de madeira",
+              "promoção",
+              "dia da semana"
+            ],
+            "name": "Quarta Verde",
+            "palette": [],
+            "public": true,
+            "suggestions": "I'm sorry, but I need the specific logo description you want a design description for. Could you please provide that information?",
+            "template": true,
+            "themes": [
+              "Anan17sJWwVTaoei5IJ31ZI30ftsilHkZLSL"
+            ],
+            "updatedAt": "2024-11-12T21:37:28.734Z"
+          }
+        },
+        {
+          "asset": {
+            "_key": "255250071",
+            "partner": "",
+            "customer": "",
+            "contentType": "image",
+            "extension": null,
+            "size": 0,
+            "processed": true,
+            "createdAt": "2026-10-20T13:57:49.785Z",
+            "urls": {
+              "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+              "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+              "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+              "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png"
+            }
+          },
+          "category": "3d",
+          "elementId": "ele_t2AwmChgM1q7HhzCxmRenosQ",
+          "height": 1145.876331276117,
+          "id": "element-1792439958465-d1j5ga",
+          "opacity": 1,
+          "rotation": 0,
+          "scaleX": 1,
+          "scaleY": 1,
+          "width": 1396.6179774623877,
+          "x": 1046,
+          "y": 89,
+          "zIndex": 1003,
+          "sourceElement": {
+            "_id": "elements/ele_t2AwmChgM1q7HhzCxmRenosQ",
+            "_key": "ele_t2AwmChgM1q7HhzCxmRenosQ",
+            "_rev": "_mHzhowe---",
+            "asset": "255250071",
+            "category": "3d",
+            "createdAt": "2025-12-01T19:32:51.218Z",
+            "description": "texto escrever TERÇA FEIRÃO",
+            "industries": [],
+            "keywords": [
+              "selo",
+              "personalizado",
+              "3d"
+            ],
+            "name": "Selo Personalizado",
+            "palette": [],
+            "public": true,
+            "template": false,
+            "themes": [],
+            "updatedAt": "2026-09-14T00:49:09.925Z"
+          }
+        }
+      ],
+      "endAt": "2026-10-20",
+      "footer": {
+        "elements": [
+          "validity"
+        ],
+        "backgroundColor": "#b17717",
+        "textColor": "#1A1A1A"
+      },
+      "format": {
+        "_key": "46YVNFWWvAJPip1rYjZAn7Pq",
+        "premium": true,
+        "createdAt": "2022-03-10T20:56:43.751Z",
+        "uses": [
+          "Impressão"
+        ],
+        "asset": "jPgOhEs3qeyGGD7XNnUaia3LySqmKm02SP6i2gG_FQAsPZxC",
+        "code": "a3_vertical",
+        "updatedAt": "2022-10-14T20:03:19.641Z",
+        "maxProducts": 30,
+        "title": "A3 Vertical",
+        "_rev": "_loIaOxu--F",
+        "published": true,
+        "dimension": {
+          "height": 4961,
+          "unit": "px",
+          "width": 3508,
+          "ppi": 72
+        },
+        "_id": "formats/46YVNFWWvAJPip1rYjZAn7Pq"
+      },
+      "grid": 9,
+      "gridLayouts": {
+        "0": "3x4:h[0,0,2,2]"
+      },
+      "logo": "222507454",
+      "name": "Criar novo encarte",
+      "palette": [
+        "#eca126",
+        "#e32c27",
+        "#b17717",
+        "#f8f7f7"
+      ],
+      "partnerId": "B0n2ULZOeYjROsaXCQlse",
+      "posterTemplate": "poster-triangle-green",
+      "products": [
+        {
+          "height": 0,
+          "id": "product-1792439928463-2ckuen",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/RS2YPYLvSA8XW7yqKqtMr.png",
+          "name": "Maçã Fuji",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_G9LxwjZmqvWTRzBvGDc4lsRG",
+          "rotation": 0,
+          "salePrice": 6.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_Xj5sFdkZySsgHYNAdhKomuxb",
+            "_id": "assets/ass_Xj5sFdkZySsgHYNAdhKomuxb",
+            "_rev": "_loIZ07C-_v",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/png",
+            "extension": "png",
+            "files": {
+              "high": "RS2YPYLvSA8XW7yqKqtMr.png",
+              "low": "qVMnl4Gsf_WSzMWM5ZKj2.png",
+              "medium": "sKJwN1GaBph3_IO5f_KvE.png"
+            },
+            "createdAt": "2024-02-20T12:14:47.269Z",
+            "updatedAt": "2026-04-29T11:53:38.312Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/RS2YPYLvSA8XW7yqKqtMr.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/RS2YPYLvSA8XW7yqKqtMr.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/RS2YPYLvSA8XW7yqKqtMr.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/RS2YPYLvSA8XW7yqKqtMr.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928527-atqln",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/P1_rD6MGTgUjCxO7nm2wC.png",
+          "imageTransform": {
+            "x": 6.3995361328125,
+            "y": -128.00018310546875,
+            "scaleX": 1,
+            "scaleY": 1
+          },
+          "name": "Mamão Formosa",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_8XK8ctIWbEtfCB7GllTrk33O",
+          "rotation": 0,
+          "salePrice": 7.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_HZiAPebR1yycs7Qn7RYViXFm",
+            "_id": "assets/ass_HZiAPebR1yycs7Qn7RYViXFm",
+            "_rev": "_loIZwu--__",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/png",
+            "extension": "png",
+            "files": {
+              "high": "P1_rD6MGTgUjCxO7nm2wC.png",
+              "low": "LleLmsCWIOREkHoRgQUpX.png",
+              "medium": "CGNc41TFSvJNVkGVE4VCK.png"
+            },
+            "createdAt": "2024-02-23T17:33:43.041Z",
+            "updatedAt": "2024-06-30T21:22:43.242Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/P1_rD6MGTgUjCxO7nm2wC.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/P1_rD6MGTgUjCxO7nm2wC.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/P1_rD6MGTgUjCxO7nm2wC.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/P1_rD6MGTgUjCxO7nm2wC.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928596-cvl9td",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/IYP6-QZgTBeZIwSOFn6qU.png",
+          "name": "Uva Sem Semente",
+          "notes": "un",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "cZlVeQaucoA6rStTm8VY",
+          "rotation": 0,
+          "salePrice": 9.9,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "un",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_N7vKVVSi1sTtW7YUyY8aGb4O",
+            "_id": "assets/ass_N7vKVVSi1sTtW7YUyY8aGb4O",
+            "_rev": "_loIZ0gu-_e",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/png",
+            "extension": "png",
+            "files": {
+              "high": "IYP6-QZgTBeZIwSOFn6qU.png",
+              "low": "MAla64SRR0_KsbF7nwUC1.png",
+              "medium": "aZFdTE_8pRJcyOn_YpxCM.png"
+            },
+            "createdAt": "2026-05-07T17:18:21.074Z",
+            "updatedAt": "2026-05-22T20:17:55.023Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/IYP6-QZgTBeZIwSOFn6qU.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/IYP6-QZgTBeZIwSOFn6qU.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/IYP6-QZgTBeZIwSOFn6qU.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/IYP6-QZgTBeZIwSOFn6qU.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928680-ry0pnn",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png",
+          "name": "Cenoura pacote",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "207721446",
+          "rotation": 0,
+          "salePrice": 6.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "280431686",
+            "_id": "assets/280431686",
+            "_rev": "_mTTjJa----",
+            "partner": "B0n2ULZOeYjROsaXCQlse",
+            "customer": "cus_UjETEqeZtQWErYYY",
+            "contentType": "image/png",
+            "extension": "png",
+            "size": 130018,
+            "processed": false,
+            "files": {
+              "high": "products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png"
+            },
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "palette": [],
+            "removed": false,
+            "createdAt": "2026-10-19T18:20:56.639Z",
+            "updatedAt": "2026-10-19T18:20:56.639Z"
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d9e695d6-7293-4d2c-9142-711fff3b65a7.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928773-i8y40o",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/Erh_DgsevcsIi8A2Dodjo.png",
+          "imageTransform": {
+            "x": -32.0001220703125,
+            "y": -38.39996337890625,
+            "scaleX": 1,
+            "scaleY": 1
+          },
+          "name": "Batata Doce Branca",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_coDjizPuOPqHWXk11bHOQIz0",
+          "rotation": 0,
+          "salePrice": 4.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_AaiXhK123vQxKRAMSFz8Bta5",
+            "_id": "assets/ass_AaiXhK123vQxKRAMSFz8Bta5",
+            "_rev": "_loIZzCG--1",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/jpeg",
+            "extension": "jpg",
+            "files": {
+              "high": "Erh_DgsevcsIi8A2Dodjo.png",
+              "medium": "DKBkVKshlmzyrxgc7Y58x.png",
+              "low": "KzvS4rQMYmn-PXaVpzHV5.png"
+            },
+            "createdAt": "2025-04-22T16:47:42.674Z",
+            "updatedAt": "2025-04-22T16:47:42.674Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/Erh_DgsevcsIi8A2Dodjo.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/Erh_DgsevcsIi8A2Dodjo.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/Erh_DgsevcsIi8A2Dodjo.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/Erh_DgsevcsIi8A2Dodjo.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928867-8jn8no",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/ycyQQcI0lLMQsbjS-_lPP.png",
+          "imageTransform": {
+            "x": -15.9991455078125,
+            "y": -72.16074065872544,
+            "scaleX": 0.8521926029976136,
+            "scaleY": 0.8521926029976137
+          },
+          "name": "Bergamota Montenegrina",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_Diduk8sWQntHFlrZdlWTnXQQ",
+          "rotation": 0,
+          "salePrice": 6.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_AoVb1oCeX2VbBMw9vURaRUp7",
+            "_id": "assets/ass_AoVb1oCeX2VbBMw9vURaRUp7",
+            "_rev": "_loIZzd6-_0",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/png",
+            "extension": "png",
+            "files": {
+              "high": "ycyQQcI0lLMQsbjS-_lPP.png",
+              "low": "EWm91r-pnWaDMSGmmGVjL.png",
+              "medium": "vJrVX6TvbVmI15ChHgwp3.png"
+            },
+            "createdAt": "2024-08-27T11:16:08.438Z",
+            "updatedAt": "2025-08-20T01:34:55.962Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/ycyQQcI0lLMQsbjS-_lPP.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/ycyQQcI0lLMQsbjS-_lPP.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/ycyQQcI0lLMQsbjS-_lPP.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/ycyQQcI0lLMQsbjS-_lPP.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439928964-71mgxwr",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/WZ1u-wpb923qloCXQBR1N.png",
+          "name": "Ovos Brancos 20un",
+          "notes": "bd",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_wvMkWKj2U80WkdkEmXJGjZPU",
+          "rotation": 0,
+          "salePrice": 9.85,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "bd",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "ass_4lnwLnv6OIQG6PWG5wYSztUG",
+            "_id": "assets/ass_4lnwLnv6OIQG6PWG5wYSztUG",
+            "_rev": "_loIZznS--W",
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "contentType": "image/jpeg",
+            "extension": "",
+            "files": {
+              "high": "WZ1u-wpb923qloCXQBR1N.png",
+              "low": "VbfTjtX8O-NDKSNLbzRtT.png",
+              "medium": "Z5Xj26eEVH1NgofhV5C4e.png"
+            },
+            "createdAt": "2025-03-19T12:14:31.752Z",
+            "updatedAt": "2025-06-25T12:39:33.151Z",
+            "partner": "",
+            "customer": "",
+            "processed": true
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/WZ1u-wpb923qloCXQBR1N.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/WZ1u-wpb923qloCXQBR1N.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/WZ1u-wpb923qloCXQBR1N.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/WZ1u-wpb923qloCXQBR1N.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439929063-3b4hh2p",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a400e479-99de-4f33-9928-09fbf5d188fb.png",
+          "imageTransform": {
+            "x": 67.20001220703125,
+            "y": -102.86589466441728,
+            "scaleX": 0.8100511895605338,
+            "scaleY": 0.8100511895605339
+          },
+          "name": "Tomate Italiano Bandeja ",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "pro_7QmM0RNVBi5d6Hu4MLBWejtH",
+          "rotation": 0,
+          "salePrice": 8.95,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "228528254",
+            "_id": "assets/228528254",
+            "_rev": "_l0z-8eS---",
+            "partner": "B0n2ULZOeYjROsaXCQlse",
+            "customer": "cus_S1GTtyI8yqApg9Z2",
+            "contentType": "image/png",
+            "extension": "png",
+            "size": 47769,
+            "processed": false,
+            "files": {
+              "high": "products/a400e479-99de-4f33-9928-09fbf5d188fb.png"
+            },
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "palette": [],
+            "removed": false,
+            "createdAt": "2026-07-16T23:26:42.688Z",
+            "updatedAt": "2026-07-16T23:26:42.688Z"
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a400e479-99de-4f33-9928-09fbf5d188fb.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a400e479-99de-4f33-9928-09fbf5d188fb.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a400e479-99de-4f33-9928-09fbf5d188fb.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a400e479-99de-4f33-9928-09fbf5d188fb.png"
+          }
+        },
+        {
+          "height": 0,
+          "id": "product-1792439929168-2eku9j",
+          "image": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/13551654-4bbf-413c-8720-b7aa60ba3631.png",
+          "name": "Batata Branca",
+          "notes": "kg",
+          "price": 0,
+          "priceType": "simple",
+          "productId": "224364801",
+          "rotation": 0,
+          "salePrice": 4.99,
+          "scaleX": 1,
+          "scaleY": 1,
+          "unit": "kg",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "asset": {
+            "_key": "265404699",
+            "_id": "assets/265404699",
+            "_rev": "_mNGGTri---",
+            "partner": "B0n2ULZOeYjROsaXCQlse",
+            "customer": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+            "contentType": "image/png",
+            "extension": "png",
+            "size": 195657,
+            "processed": false,
+            "files": {
+              "high": "products/13551654-4bbf-413c-8720-b7aa60ba3631.png"
+            },
+            "bucket": "efacil-public",
+            "region": "sa-east-1",
+            "palette": [],
+            "removed": false,
+            "createdAt": "2026-09-30T11:17:07.927Z",
+            "updatedAt": "2026-09-30T11:17:07.927Z"
+          },
+          "imageUrls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/13551654-4bbf-413c-8720-b7aa60ba3631.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/13551654-4bbf-413c-8720-b7aa60ba3631.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/13551654-4bbf-413c-8720-b7aa60ba3631.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/13551654-4bbf-413c-8720-b7aa60ba3631.png"
+          }
+        }
+      ],
+      "settings": {
+        "fonts": {
+          "useGlobalFont": true,
+          "global": {
+            "family": "Oswald",
+            "weight": 700
+          },
+          "productName": {
+            "family": "Oswald",
+            "weight": 700
+          },
+          "price": {
+            "family": "Anton",
+            "weight": 400
+          },
+          "footer": {
+            "family": "Oswald",
+            "weight": 500
+          },
+          "description": {
+            "family": "Oswald",
+            "weight": 500
+          }
+        },
+        "colors": {
+          "background": "#f8f7f7",
+          "productBox": "#eca126",
+          "productName": "#1A1A1A",
+          "footer": "#b17717",
+          "footerText": "#1A1A1A",
+          "tag": "#e32c27"
+        },
+        "scale": {
+          "productImage": 1,
+          "price": 1,
+          "description": 1,
+          "footer": 1
+        },
+        "tagEffects": {
+          "gradient": {
+            "enabled": true,
+            "type": "linear",
+            "angle": 180,
+            "colors": [
+              "#eb6a66",
+              "#e32c27",
+              "#a31915"
+            ],
+            "stops": [
+              0,
+              0.5,
+              1
+            ],
+            "_autoColors": true
+          },
+          "glow": {
+            "enabled": true,
+            "color": "rgba(255, 255, 255, 0.22)",
+            "blur": 6
+          }
+        },
+        "hideBackgroundImage": false
+      },
+      "shelfLabelRows": 12,
+      "shelfLabelTemplate": "shelf-gondola",
+      "startAt": "2026-10-20",
+      "status": "draft",
+      "template": false,
+      "updatedAt": "2026-10-19T20:02:15.277Z",
+      "logoUrls": {
+        "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+        "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+        "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+        "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/affiliates/stats",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    0,
+    1
+  ],
+  "request_body": null,
+  "response_body": null
+}

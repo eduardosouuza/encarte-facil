@@ -1,0 +1,22 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/public/market",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    0
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "ipCountry": "BR",
+    "prompt": {
+      "ask": false,
+      "reason": "signals_agree",
+      "guess": {
+        "market": "BR",
+        "locale": "pt-br"
+      }
+    }
+  }
+}

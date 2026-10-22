@@ -1,0 +1,209 @@
+{
+  "routes": [
+    {
+      "path": "/login",
+      "component": "aH",
+      "index": 677825
+    },
+    {
+      "path": "/register",
+      "component": "lH",
+      "index": 677882
+    },
+    {
+      "path": "/esqueci-senha",
+      "component": "cH",
+      "index": 677942
+    },
+    {
+      "path": "/redefinir-senha",
+      "component": "uH",
+      "index": 678007
+    },
+    {
+      "path": "/pagar/$token",
+      "component": "dH",
+      "index": 678074
+    },
+    {
+      "path": "/editor/$flyerKey",
+      "component": "hH",
+      "index": 678422
+    },
+    {
+      "path": "/admin",
+      "component": "gH",
+      "index": 678699
+    },
+    {
+      "path": "/customers",
+      "component": "yH",
+      "index": 678756
+    },
+    {
+      "path": "/subscribers",
+      "component": "vH",
+      "index": 678817
+    },
+    {
+      "path": "/cortesias",
+      "component": "xH",
+      "index": 678880
+    },
+    {
+      "path": "/cobrancas",
+      "component": "wH",
+      "index": 678941
+    },
+    {
+      "path": "/checkouts",
+      "component": "bH",
+      "index": 679002
+    },
+    {
+      "path": "/campanhas",
+      "component": "SH",
+      "index": 679063
+    },
+    {
+      "path": "/headers",
+      "component": "CH",
+      "index": 679124
+    },
+    {
+      "path": "/products",
+      "component": "EH",
+      "index": 679183
+    },
+    {
+      "path": "/themes",
+      "component": "PH",
+      "index": 679243
+    },
+    {
+      "path": "/designs",
+      "component": "TH",
+      "index": 679301
+    },
+    {
+      "path": "/designs/new",
+      "component": "M_",
+      "index": 679360
+    },
+    {
+      "path": "/designs/$designId/edit",
+      "component": "M_",
+      "index": 679423
+    },
+    {
+      "path": "/partners",
+      "component": "kH",
+      "index": 679497
+    },
+    {
+      "path": "/formats",
+      "component": "RH",
+      "index": 679557
+    },
+    {
+      "path": "/prices",
+      "component": "_H",
+      "index": 679616
+    },
+    {
+      "path": "/elements",
+      "component": "MH",
+      "index": 679674
+    },
+    {
+      "path": "/industries",
+      "component": "OH",
+      "index": 679734
+    },
+    {
+      "path": "/promotions",
+      "component": "LH",
+      "index": 679796
+    },
+    {
+      "path": "/dashboard",
+      "component": "NH",
+      "index": 679858
+    },
+    {
+      "path": "/logs",
+      "component": "AH",
+      "index": 679919
+    },
+    {
+      "path": "/logs/list",
+      "component": "IH",
+      "index": 679975
+    },
+    {
+      "path": "/online-users",
+      "component": "DH",
+      "index": 680036
+    },
+    {
+      "path": "/affiliates",
+      "component": "FH",
+      "index": 680100
+    },
+    {
+      "path": "/events",
+      "component": "jH",
+      "index": 680162
+    },
+    {
+      "path": "/seo",
+      "component": "$H",
+      "index": 680220
+    },
+    {
+      "path": "/emails",
+      "component": "VH",
+      "index": 680275
+    },
+    {
+      "path": "/inbox",
+      "component": "zH",
+      "index": 680333
+    },
+    {
+      "path": "/blog",
+      "component": "BH",
+      "index": 680390
+    },
+    {
+      "path": "/blog/new",
+      "component": "O_",
+      "index": 680446
+    },
+    {
+      "path": "/blog/$id/edit",
+      "component": "O_",
+      "index": 680506
+    },
+    {
+      "path": "/affiliates",
+      "component": "UH",
+      "index": 680571
+    },
+    {
+      "path": "/exports",
+      "component": "HH",
+      "index": 680633
+    },
+    {
+      "path": "/chat",
+      "component": "__",
+      "index": 680692
+    },
+    {
+      "path": "/chat/$sessionId",
+      "component": "__",
+      "index": 680748
+    }
+  ]
+}

@@ -1,0 +1,554 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/elements?category=3d&locale=pt-br&limit=20&offset=0",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    10
+  ],
+  "request_body": null,
+  "response_body": {
+    "elements": [
+      {
+        "_key": "ele_k05k46PfL57KJXmUsQP87P5T",
+        "_id": "elements/ele_k05k46PfL57KJXmUsQP87P5T",
+        "_rev": "_mHzgPOm---",
+        "name": "Selo Personalizado",
+        "description": "FILÉ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249349",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-06-04T20:38:56.248Z",
+        "updatedAt": "2026-09-14T00:47:38.249Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/73430da6-7ab9-4233-8cbe-1fc74e1ccd33.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/73430da6-7ab9-4233-8cbe-1fc74e1ccd33.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/73430da6-7ab9-4233-8cbe-1fc74e1ccd33.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/73430da6-7ab9-4233-8cbe-1fc74e1ccd33.png"
+        }
+      },
+      {
+        "_key": "ele_wFSsLO7cgG7qmuQViCLytTUj",
+        "_id": "elements/ele_wFSsLO7cgG7qmuQViCLytTUj",
+        "_rev": "_mHzgSJq---",
+        "name": "Selo Personalizado",
+        "description": "🎨TERÇA DO FRANGO Paleta de Cores Amarelo dourado: utilizado no fundo circular e no texto \"FRANGO\", transmitindo calor, destaque e sensação de alimento fresco. Vermelho intenso: presente no contorno do círculo, na crista da galinha e nas sombras das letras, simbolizando energia, promoção e atração visual. Branco: aplicado na galinha e na palavra \"TERÇA\", trazendo contraste, limpeza e fácil leitura. Laranja vibrante: aparece no bico da galinha e em detalhes do fundo, reforçando a sensação de sabor e aconchego. Marrom avermelhado escuro: usado nos contornos e sombras, proporcionando profundidade e destaque aos elementos. 🐔 Elementos Visuais Galinha caricata sorridente no centro superior da logo. A galinha faz um gesto de joinha (👍), transmitindo aprovação e qualidade. Fundo circular amarelo com borda vermelha, criando destaque e fácil identificação. Tipografia grande e robusta com efeito de pincelada, reforçando o aspecto promocional e descontraído. 🎯 Sensação Transmitida  A combinação de amarelo, vermelho e laranja cria uma identidade visual que remete a:  Promoção especial de restaurante ou lanchonete; Frango assado ou frito; Ambiente familiar e acolhedor; Oferta de terça-feira com preço especial.  Resumo das cores principais:  Vermelho (#C20A00 aproximadamente) Amarelo Ouro (#FFC107 aproximadamente) Laranja (#FF8C00 aproximadamente) Branco (#FFFFFF) Marrom Escuro (#5A1E00 aproximadamente)",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249367",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-06-01T20:21:46.877Z",
+        "updatedAt": "2026-09-14T00:47:41.242Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/992f8d88-235a-4827-bed3-d3714f8911b5.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/992f8d88-235a-4827-bed3-d3714f8911b5.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/992f8d88-235a-4827-bed3-d3714f8911b5.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/992f8d88-235a-4827-bed3-d3714f8911b5.png"
+        }
+      },
+      {
+        "_key": "ele_fjRIMD1I6t756y2Cht5ThmaJ",
+        "_id": "elements/ele_fjRIMD1I6t756y2Cht5ThmaJ",
+        "_rev": "_loIaDCu---",
+        "name": "Selo Personalizado",
+        "description": "Ofertas Arrasadoras",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_Ux9rpzqwQo67Epca5RpxXFrA",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-05-20T17:02:14.223Z",
+        "updatedAt": "2026-05-20T17:02:14.223Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/zDFjGrhxqcCBcrhukQDOl.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/zDFjGrhxqcCBcrhukQDOl.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/nOUcoV6RRXTXPIZmxfi0B.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/A9MvoxL84QgbaPGuL_Gn8.png"
+        }
+      },
+      {
+        "_key": "ele_FWoS0lPPY6YwETaEl0utnPsz",
+        "_id": "elements/ele_FWoS0lPPY6YwETaEl0utnPsz",
+        "_rev": "_mHzhFeu---",
+        "name": "Selo Personalizado",
+        "description": "dia do CAFÉ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249804",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-04-13T20:50:39.316Z",
+        "updatedAt": "2026-09-14T00:48:33.802Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/b2bdcfae-f1ad-4369-b215-7a16983e17b1.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/b2bdcfae-f1ad-4369-b215-7a16983e17b1.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/b2bdcfae-f1ad-4369-b215-7a16983e17b1.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/b2bdcfae-f1ad-4369-b215-7a16983e17b1.png"
+        }
+      },
+      {
+        "_key": "ele_kNZ4LkUNnINOFjjPHxuYt2uG",
+        "_id": "elements/ele_kNZ4LkUNnINOFjjPHxuYt2uG",
+        "_rev": "_loIaDCq--_",
+        "name": "Selo Personalizado",
+        "description": "trocar texto de terça e quarta para quarta e quinta ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_Vut1jarWKL6w1nrtGJiGLQ2P",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-04-08T13:25:31.436Z",
+        "updatedAt": "2026-04-08T13:25:31.436Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/IvwXOIyFKAxa7IY7-Py57.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/IvwXOIyFKAxa7IY7-Py57.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/2-tgqc51HgmECF4y7hmkn.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/pNHM1wGW2m6LREVk4XQgh.png"
+        }
+      },
+      {
+        "_key": "ele_KzqWrsTvi0OMvcDO3PxQb8Oa",
+        "_id": "elements/ele_KzqWrsTvi0OMvcDO3PxQb8Oa",
+        "_rev": "_mHzhIM6---",
+        "name": "Selo Personalizado",
+        "description": "TROCA O TEXTO PARA \"SABADO E DOMINGO MALUCO\" ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249860",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-03-28T02:11:46.772Z",
+        "updatedAt": "2026-09-14T00:48:36.588Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/302337c7-bebe-4aa1-a3a3-03020478e27e.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/302337c7-bebe-4aa1-a3a3-03020478e27e.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/302337c7-bebe-4aa1-a3a3-03020478e27e.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/302337c7-bebe-4aa1-a3a3-03020478e27e.png"
+        }
+      },
+      {
+        "_key": "ele_EGdTIrWE4gbbc2RzRFqt7gIb",
+        "_id": "elements/ele_EGdTIrWE4gbbc2RzRFqt7gIb",
+        "_rev": "_loIaDCi--A",
+        "name": "Selo Personalizado",
+        "description": "BEBA COM MODERAÇÃO",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_6Kzfl7IRW9UvQXHt43cfob4c",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-15T15:08:47.112Z",
+        "updatedAt": "2026-01-15T15:08:47.112Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/Ic65eLtItBJ8IwBpx5rdH.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/Ic65eLtItBJ8IwBpx5rdH.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/eZSrpMAhHgRe7gOKbZSF_.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/AHc2S6h7tzYNuTPF1z_0o.png"
+        }
+      },
+      {
+        "_key": "ele_GFsf4MO7yVkEW47hBh4t5b2F",
+        "_id": "elements/ele_GFsf4MO7yVkEW47hBh4t5b2F",
+        "_rev": "_mHzmL7m---",
+        "name": "Selo Personalizado",
+        "description": "Ofertas de Verão",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255251752",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-12T17:18:24.606Z",
+        "updatedAt": "2026-09-14T00:54:08.088Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/78872920-6f40-4998-9709-4baff17978ef.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/78872920-6f40-4998-9709-4baff17978ef.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/78872920-6f40-4998-9709-4baff17978ef.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/78872920-6f40-4998-9709-4baff17978ef.png"
+        }
+      },
+      {
+        "_key": "ele_Ia3dY1gAKeKR4lOcWeTAwVOB",
+        "_id": "elements/ele_Ia3dY1gAKeKR4lOcWeTAwVOB",
+        "_rev": "_loIaDCi---",
+        "name": "Selo Personalizado",
+        "description": "trocar sexta por segunda ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_EO9toCw1pAQnzofV0rxkRjvY",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-09T23:44:51.084Z",
+        "updatedAt": "2026-01-09T23:44:51.084Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/FE5lS5oDtO7QLIEKkPyNe.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/FE5lS5oDtO7QLIEKkPyNe.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/a5V8YQr9_2zpu_CV6VfuW.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/2cD4IajRhPEvwi4p1B8zL.png"
+        }
+      },
+      {
+        "_key": "ele_DrNKyO7YWogHYXV2ZwLPTTcv",
+        "_id": "elements/ele_DrNKyO7YWogHYXV2ZwLPTTcv",
+        "_rev": "_loIaDCe--A",
+        "name": "Selo Personalizado",
+        "description": "Top Promoções",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_9mIE61ODO120xONTxwjwNURP",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-08T23:16:56.445Z",
+        "updatedAt": "2026-01-08T23:16:56.445Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/-kW2k0iJbsm07MnusB3kW.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/-kW2k0iJbsm07MnusB3kW.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/1eUhEUk7wcAmfbX2RmBbw.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/c5m6x1iZOGKSFv8XWl920.png"
+        }
+      },
+      {
+        "_key": "ele_25tRY548eeNqkhz8ZboaMLNW",
+        "_id": "elements/ele_25tRY548eeNqkhz8ZboaMLNW",
+        "_rev": "_loIaDCe--_",
+        "name": "Selo Personalizado",
+        "description": "QUARTA E QUINTA DA ECONOMIA COM A LOGO SB ONDE O S E VERDE E O B E LARANJA COM UNS PEDAÇOS DE CARNE E HORTIFRUTI",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_dPEAqogCHr6e6dDRFM6Qf7al",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-06T22:18:19.217Z",
+        "updatedAt": "2026-01-06T22:18:19.217Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/PIPeS7hQIrjVD82LHzMcV.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/PIPeS7hQIrjVD82LHzMcV.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/p_kJMCb-AnNM5IIh3hJI4.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/QzifrKM2GXuyty-iYzL0L.png"
+        }
+      },
+      {
+        "_key": "ele_hmkau6eo26WKCc1pb9QNZMbg",
+        "_id": "elements/ele_hmkau6eo26WKCc1pb9QNZMbg",
+        "_rev": "_mHzhU0q---",
+        "name": "Selo Personalizado",
+        "description": "QUARTA E QUINTA DA ECONOMIA COM A LOGO SB ONDE O S E VERDE E O B E LARANJA COM UNS PEDAÇOS DE CARNE E HORTIFRUTI",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249908",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-06T20:54:30.975Z",
+        "updatedAt": "2026-09-14T00:48:49.513Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/581d7e54-956c-423b-8648-f365cefbde2e.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/581d7e54-956c-423b-8648-f365cefbde2e.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/581d7e54-956c-423b-8648-f365cefbde2e.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/581d7e54-956c-423b-8648-f365cefbde2e.png"
+        }
+      },
+      {
+        "_key": "ele_XmThe0TRSNxq6yVaqBMJYAQP",
+        "_id": "elements/ele_XmThe0TRSNxq6yVaqBMJYAQP",
+        "_rev": "_mHzhXua---",
+        "name": "Selo Personalizado",
+        "description": "REMOVA AS FACAS ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249926",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2026-01-06T13:05:17.569Z",
+        "updatedAt": "2026-09-14T00:48:52.485Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/f362437c-f94c-412d-a886-dcbd4f3143a9.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/f362437c-f94c-412d-a886-dcbd4f3143a9.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/f362437c-f94c-412d-a886-dcbd4f3143a9.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/f362437c-f94c-412d-a886-dcbd4f3143a9.png"
+        }
+      },
+      {
+        "_key": "ele_55txdSkzqHOLbYV0mc71fkHT",
+        "_id": "elements/ele_55txdSkzqHOLbYV0mc71fkHT",
+        "_rev": "_mHzhbgy---",
+        "name": "Selo Personalizado",
+        "description": "mudar o texto para faça seu cadastro",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249961",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-26T22:08:06.342Z",
+        "updatedAt": "2026-09-14T00:48:56.363Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a7e0fe9a-e075-4124-8f79-86f97970b381.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a7e0fe9a-e075-4124-8f79-86f97970b381.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a7e0fe9a-e075-4124-8f79-86f97970b381.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a7e0fe9a-e075-4124-8f79-86f97970b381.png"
+        }
+      },
+      {
+        "_key": "ele_CMlfIdsoOyXADXHfASNwDpbA",
+        "_id": "elements/ele_CMlfIdsoOyXADXHfASNwDpbA",
+        "_rev": "_mHzheBG---",
+        "name": "Selo Personalizado",
+        "description": "quero ao inves de uma guirlanda, uma estrela",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255249992",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-22T19:03:59.192Z",
+        "updatedAt": "2026-09-14T00:48:58.928Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/12eb667d-7184-44ae-af9f-7a6e3b510608.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/12eb667d-7184-44ae-af9f-7a6e3b510608.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/12eb667d-7184-44ae-af9f-7a6e3b510608.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/12eb667d-7184-44ae-af9f-7a6e3b510608.png"
+        }
+      },
+      {
+        "_key": "ele_s9TLQ1MCQTH6DKz5omtCljqb",
+        "_id": "elements/ele_s9TLQ1MCQTH6DKz5omtCljqb",
+        "_rev": "_mHzhhZa---",
+        "name": "Selo Personalizado",
+        "description": "Tenda de natal",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255250025",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-22T18:46:05.201Z",
+        "updatedAt": "2026-09-14T00:49:02.388Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d7f7d57d-ec5d-4c73-88b5-74d7b5cfd1ef.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d7f7d57d-ec5d-4c73-88b5-74d7b5cfd1ef.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d7f7d57d-ec5d-4c73-88b5-74d7b5cfd1ef.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/d7f7d57d-ec5d-4c73-88b5-74d7b5cfd1ef.png"
+        }
+      },
+      {
+        "_key": "ele_LD5ZPiPkmF4CZ3RvwQHqBok2",
+        "_id": "elements/ele_LD5ZPiPkmF4CZ3RvwQHqBok2",
+        "_rev": "_mHzhlV----",
+        "name": "Selo Personalizado",
+        "description": "Se é bom é no superbom ",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255250053",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-09T04:23:57.851Z",
+        "updatedAt": "2026-09-14T00:49:06.410Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/1df684bd-2b10-442c-ba89-17fe6675a2d5.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/1df684bd-2b10-442c-ba89-17fe6675a2d5.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/1df684bd-2b10-442c-ba89-17fe6675a2d5.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/1df684bd-2b10-442c-ba89-17fe6675a2d5.png"
+        }
+      },
+      {
+        "_key": "ele_moDQFA77sNYBB4uFFaAczLbC",
+        "_id": "elements/ele_moDQFA77sNYBB4uFFaAczLbC",
+        "_rev": "_loIaDC----",
+        "name": "Selo Personalizado",
+        "description": "barbosa s bebidas",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "ass_iLtmKETRje6KOTLsqXriVHB4",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-05T19:20:43.073Z",
+        "updatedAt": "2025-12-05T19:20:43.074Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/HkSZnoK8m-VoRKXXIQKM7.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/HkSZnoK8m-VoRKXXIQKM7.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/jBWhGmv5W_WIfdhXKZ1Ph.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/jH2Wl4YN0f8G4ed62R86E.png"
+        }
+      },
+      {
+        "_key": "ele_t2AwmChgM1q7HhzCxmRenosQ",
+        "_id": "elements/ele_t2AwmChgM1q7HhzCxmRenosQ",
+        "_rev": "_mHzhowe---",
+        "name": "Selo Personalizado",
+        "description": "texto escrever TERÇA FEIRÃO",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255250071",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-01T19:32:51.218Z",
+        "updatedAt": "2026-09-14T00:49:09.925Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/06d4164b-a865-4b79-8ce3-7bf606597c20.png"
+        }
+      },
+      {
+        "_key": "ele_0hYRUIlp7e0UFCQltmEAl2GG",
+        "_id": "elements/ele_0hYRUIlp7e0UFCQltmEAl2GG",
+        "_rev": "_mHzhrrS---",
+        "name": "Selo Personalizado",
+        "description": "QUARTA E QUINTA VERDE",
+        "category": "3d",
+        "template": false,
+        "public": true,
+        "asset": "255250089",
+        "palette": [],
+        "keywords": [
+          "selo",
+          "personalizado",
+          "3d"
+        ],
+        "industries": [],
+        "themes": [],
+        "createdAt": "2025-12-01T03:37:06.853Z",
+        "updatedAt": "2026-09-14T00:49:12.914Z",
+        "assetUrls": {
+          "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a0b66144-2a30-4662-91da-c341950f5009.png",
+          "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a0b66144-2a30-4662-91da-c341950f5009.png",
+          "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a0b66144-2a30-4662-91da-c341950f5009.png",
+          "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/a0b66144-2a30-4662-91da-c341950f5009.png"
+        }
+      }
+    ]
+  }
+}

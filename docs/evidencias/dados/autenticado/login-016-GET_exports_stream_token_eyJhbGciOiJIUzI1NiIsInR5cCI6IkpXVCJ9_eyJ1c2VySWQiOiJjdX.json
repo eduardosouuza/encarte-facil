@@ -1,0 +1,11 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/exports/stream?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjdXNfNWIzMGVMUjB1cEdIbjNrYTZxVGRSUldOIiwicGFydG5lcklkIjoiQjBuMlVMWk9lWWpST3NhWENRbHNlIiwiZW1haWwiOiJjYXBAc3VwZXJwZWRyYWxsaS5jb20uYnIiLCJuYW1lIjoiY2FwQHN1cGVycGVkcmFsbGkuY29tLmJyIiwicm9sZSI6ImN1c3RvbWVyIiwic3RhdHVzIjoiYWN0aXZlIiwiaWF0IjoxNzkyNTA0NjY5LCJleHAiOjE3OTUwOTY2Njl9.YXuuNMuE6qyQtQ2UGFXdYDuNgYvfHGeF0VUHl_NO0nw",
+  "status": 200,
+  "resource_type": "eventsource",
+  "passos": [
+    4
+  ],
+  "request_body": null,
+  "response_body": null
+}

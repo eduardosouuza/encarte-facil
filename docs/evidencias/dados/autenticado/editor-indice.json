@@ -1,0 +1,182 @@
+[
+  {
+    "arquivo": "editor-001-POST_marketing_track.json",
+    "metodo": "POST",
+    "url": "https://api-v2.encartefacil.com/marketing/track",
+    "status": 204
+  },
+  {
+    "arquivo": "editor-002-GET_translations_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/translations/pt-br",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-003-GET_auth_verify.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/auth/verify",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-004-GET_partners_current.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/partners/current",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-005-GET_auth_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/auth/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-006-GET_customers_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/customers/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-007-GET_customers_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/customers/me",
+    "status": null
+  },
+  {
+    "arquivo": "editor-008-GET_affiliates_stats.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/affiliates/stats",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-009-GET_flyers_257336010_locale_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/flyers/257336010?locale=pt-br",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-010-GET_subscriptions_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/subscriptions/me",
+    "status": null
+  },
+  {
+    "arquivo": "editor-011-GET_exports_stream_token_REDACTED_ef_token.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/exports/stream?token=[REDACTED:ef_token]",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-012-GET_designs_by_theme_locale_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/designs/by-theme?locale=pt-br",
+    "status": null
+  },
+  {
+    "arquivo": "editor-013-GET_designs_limit_20_locale_pt_br_status_approved_archived_false_namedByMe_true.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/designs?limit=20&locale=pt-br&status=approved&archived=false&namedByMe=true",
+    "status": null
+  },
+  {
+    "arquivo": "editor-014-GET_brandkits_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/brandkits/me",
+    "status": null
+  },
+  {
+    "arquivo": "editor-015-POST_marketing_track.json",
+    "metodo": "POST",
+    "url": "https://api-v2.encartefacil.com/marketing/track",
+    "status": 204
+  },
+  {
+    "arquivo": "editor-016-GET_translations_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/translations/pt-br",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-017-GET_auth_verify.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/auth/verify",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-018-GET_partners_current.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/partners/current",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-019-GET_auth_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/auth/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-020-GET_customers_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/customers/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-021-GET_customers_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/customers/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-022-GET_affiliates_stats.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/affiliates/stats",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-023-GET_flyers_257336010_locale_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/flyers/257336010?locale=pt-br",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-024-GET_subscriptions_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/subscriptions/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-025-GET_exports_stream_token_REDACTED_ef_token.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/exports/stream?token=[REDACTED:ef_token]",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-026-GET_designs_by_theme_locale_pt_br.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/designs/by-theme?locale=pt-br",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-027-GET_designs_limit_20_locale_pt_br_status_approved_archived_false_namedByMe_true.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/designs?limit=20&locale=pt-br&status=approved&archived=false&namedByMe=true",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-028-GET_brandkits_me.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/brandkits/me",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-029-GET_elements_category_3d_locale_pt_br_limit_20_offset_0.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/elements?category=3d&locale=pt-br&limit=20&offset=0",
+    "status": 200
+  },
+  {
+    "arquivo": "editor-030-GET_flyers_summary_limit_12.json",
+    "metodo": "GET",
+    "url": "https://api-v2.encartefacil.com/flyers/summary?limit=12",
+    "status": 200
+  }
+]

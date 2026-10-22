@@ -1,0 +1,1 @@
+const s=["header","design","footer","full","section"],t=["started","draft","completed","approved","rejected"];function r(e){return e.assetUrls&&(e.assetUrls.high||e.assetUrls.medium||e.assetUrls.low)||null}export{s as a,t as d,r as g};

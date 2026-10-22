@@ -1,0 +1,22 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/auth/verify",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    0
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "valid": true,
+    "user": {
+      "userId": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "partnerId": "B0n2ULZOeYjROsaXCQlse",
+      "email": "cap@superpedralli.com.br",
+      "name": "cap@superpedralli.com.br",
+      "role": "customer",
+      "status": "active"
+    }
+  }
+}

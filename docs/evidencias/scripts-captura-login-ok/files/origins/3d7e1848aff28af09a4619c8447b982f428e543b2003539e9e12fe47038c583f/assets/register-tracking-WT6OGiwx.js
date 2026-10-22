@@ -1,0 +1,1 @@
+import{F as e,G as s,H as i}from"./index-KJ2_zNqK.js";const n=t=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t);function o(){try{return{visitorId:i(),sessionId:s(),...e()}}catch{return{}}}export{o as c,n as i};

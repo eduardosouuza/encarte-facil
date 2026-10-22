@@ -1,0 +1,14 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "mcp": {
+    "rea": {
+      "type": "local",
+      "command": ["rea", "--mcp"],
+      "environment": {
+        "REA_ALLOW_AUTONOMOUS_EXECUTION": "true"
+      },
+      "enabled": true,
+      "timeout": 60000
+    }
+  }
+}

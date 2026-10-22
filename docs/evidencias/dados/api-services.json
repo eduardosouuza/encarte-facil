@@ -1,0 +1,772 @@
+[
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "lo",
+    "base": "Nc",
+    "methods": [
+      {
+        "name": "login",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/auth/login",
+            "rest": ",t)"
+          }
+        ]
+      },
+      {
+        "name": "register",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/auth/register",
+            "rest": ",{market:H0()??void 0,locale:ZT()??void 0,...t})"
+          }
+        ]
+      },
+      {
+        "name": "getUser",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/auth/me",
+            "rest": ")"
+          }
+        ]
+      },
+      {
+        "name": "verifyToken",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/auth/verify",
+            "rest": ")).status===200}catch(n){return console.error(\"Token verification error:\",n),!1}}"
+          }
+        ]
+      },
+      {
+        "name": "impersonate",
+        "params": "t,n",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/admin/impersonation/${t}",
+            "rest": ",{reason:n})).data}"
+          }
+        ]
+      },
+      {
+        "name": "stopImpersonationAudit",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/admin/impersonation/stop",
+            "rest": ",t)}"
+          }
+        ]
+      },
+      {
+        "name": "passwordRecoveryEnabled",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/auth/capabilities",
+            "rest": ")).data.capabilities)==null?void 0:t.passwordRecovery)!==!1}catch{return!0}}"
+          }
+        ]
+      },
+      {
+        "name": "forgotPassword",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/auth/forgot-password",
+            "rest": ",{email:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "resetPassword",
+        "params": "t,n,r",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/auth/reset-password",
+            "rest": ",{token:t,email:n,password:r})).data}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "uo",
+    "base": "Nc",
+    "methods": [
+      {
+        "name": "getCurrentPartner",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/partners/current",
+            "rest": ")).data.partner||null}catch(t){return console.error(\"Erro ao buscar partner atual:\",t),null}}"
+          }
+        ]
+      },
+      {
+        "name": "getById",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/partners/${t}",
+            "rest": ")).data.partner||null}catch(n){throw console.error(\"Erro ao buscar partner:\",n),n}}"
+          }
+        ]
+      },
+      {
+        "name": "list",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/partners",
+            "rest": ",{params:n})).data.partners||[]}catch(n){throw console.error(\"Erro ao listar partners:\",n),n}}"
+          }
+        ]
+      },
+      {
+        "name": "update",
+        "params": "t,n",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/partners/${t}",
+            "rest": ",n)"
+          }
+        ]
+      },
+      {
+        "name": "archive",
+        "params": "t",
+        "calls": []
+      },
+      {
+        "name": "unarchive",
+        "params": "t",
+        "calls": []
+      },
+      {
+        "name": "deletePartner",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "DELETE",
+            "path": "/partners/${t}",
+            "rest": ")}catch(n){throw console.error(\"Erro ao deletar partner:\",n),n}}"
+          }
+        ]
+      },
+      {
+        "name": "count",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/partners/stats/active",
+            "rest": ")).data.count||0}catch(t){return console.error(\"Erro ao contar partners:\",t),0}}"
+          }
+        ]
+      },
+      {
+        "name": "listAll",
+        "params": "t",
+        "calls": []
+      },
+      {
+        "name": "getPartnerById",
+        "params": "t",
+        "calls": []
+      },
+      {
+        "name": "create",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/partners",
+            "rest": ",t)"
+          }
+        ]
+      },
+      {
+        "name": "setCustomDomain",
+        "params": "t,n",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/partners/${t}/domain",
+            "rest": ",{customDomain:n})).data}catch(o){throw new Error(((s=(r=o.response)==null?void 0:r.data)==null?void 0:s.message)||o.message||\"Erro ao configurar domínio\")}}"
+          }
+        ]
+      },
+      {
+        "name": "removeCustomDomain",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "DELETE",
+            "path": "/partners/${t}/domain",
+            "rest": ")).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao remover domínio\")}}"
+          }
+        ]
+      },
+      {
+        "name": "validateCustomDomain",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/partners/${t}/domain/validate",
+            "rest": ",{})).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao validar domínio\")}}"
+          }
+        ]
+      },
+      {
+        "name": "retrySslGeneration",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/partners/${t}/domain/retry-ssl",
+            "rest": ",{})).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao tentar gerar SSL\")}}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "fo",
+    "base": "Nc",
+    "methods": [
+      {
+        "name": "getSubscription",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/subscriptions/me",
+            "rest": ")).data}"
+          }
+        ]
+      },
+      {
+        "name": "getPrices",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/prices",
+            "rest": ")).data}"
+          }
+        ]
+      },
+      {
+        "name": "createCheckoutSession",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/checkout",
+            "rest": ",{priceId:t,clientMeta:h3(\"app\")})).data}"
+          }
+        ]
+      },
+      {
+        "name": "getOverview",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/billing/overview",
+            "rest": ")).data}"
+          }
+        ]
+      },
+      {
+        "name": "saveCard",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/card",
+            "rest": ",t)).data}"
+          }
+        ]
+      },
+      {
+        "name": "setDefaultCard",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/card/default",
+            "rest": ",{cardId:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "removeCard",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/card/remove",
+            "rest": ",{cardId:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "saveFiscal",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/fiscal",
+            "rest": ",t)).data}"
+          }
+        ]
+      },
+      {
+        "name": "createStripeCardSession",
+        "params": "",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/card/stripe/session",
+            "rest": ",{})).data}"
+          }
+        ]
+      },
+      {
+        "name": "confirmStripeCard",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/card/stripe/confirm",
+            "rest": ",{sessionId:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "cancelOwn",
+        "params": "",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/subscriptions/cancel",
+            "rest": ",{})).data}"
+          }
+        ]
+      },
+      {
+        "name": "cancelPixRecurring",
+        "params": "",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/billing/pix-recurring/cancel",
+            "rest": ",{})).data}"
+          }
+        ]
+      },
+      {
+        "name": "resumeOwn",
+        "params": "",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/subscriptions/resume",
+            "rest": ",{})).data}"
+          }
+        ]
+      },
+      {
+        "name": "createPortalSession",
+        "params": "",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/stripe/portal",
+            "rest": ",{})).data}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "ho",
+    "base": "Nc",
+    "methods": [
+      {
+        "name": "getMe",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/customers/me",
+            "rest": ")).data.customer}"
+          }
+        ]
+      },
+      {
+        "name": "updateMe",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/customers/me",
+            "rest": ",t)).data.customer}"
+          }
+        ]
+      },
+      {
+        "name": "sendPhoneCode",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/customers/me/phone/send-code",
+            "rest": ",t?{phone:t}:{})).data}"
+          }
+        ]
+      },
+      {
+        "name": "verifyPhoneCode",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/customers/me/phone/verify",
+            "rest": ",{code:t})).data.customer}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "po",
+    "base": "Nc",
+    "methods": [
+      {
+        "name": "detect",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/public/market",
+            "rest": ",{params:{locale:t.locale??void 0}})).data.prompt}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "service-cCDUhbQQ.js",
+    "className": "s",
+    "base": "b",
+    "methods": [
+      {
+        "name": "getMyBrandKit",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/brandkits/me",
+            "rest": ")).data.brandKit}"
+          }
+        ]
+      },
+      {
+        "name": "getById",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/brandkits/${t}",
+            "rest": ")).data.brandKit}"
+          }
+        ]
+      },
+      {
+        "name": "update",
+        "params": "t,a",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/brandkits/${t}",
+            "rest": ",{brandKit:a})).data.brandKit}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "service-Chphq-AR.js",
+    "className": "e",
+    "base": "f",
+    "methods": [
+      {
+        "name": "getStats",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/affiliates/stats",
+            "rest": ")).data}"
+          }
+        ]
+      },
+      {
+        "name": "getReferrals",
+        "params": "t,s",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/affiliates/referrals",
+            "rest": ",{params:a})).data}"
+          }
+        ]
+      },
+      {
+        "name": "claimReward",
+        "params": "t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/affiliates/claim-reward",
+            "rest": ",{milestoneTarget:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "getAdminAffiliates",
+        "params": "t,s",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/admin/affiliates",
+            "rest": ",{params:a})).data}"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "service-CmufRMLl.js",
+    "className": "a",
+    "base": "u",
+    "methods": [
+      {
+        "name": "list",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/formats",
+            "rest": ",{params:o})).data.formats||[]}catch(o){throw console.error(\"Erro ao listar formatos:\",o),o}}"
+          }
+        ]
+      },
+      {
+        "name": "getById",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/formats/${s}",
+            "rest": ")).data.format||null}catch(o){throw console.error(\"Erro ao buscar formato:\",o),o}}"
+          }
+        ]
+      },
+      {
+        "name": "listFormats",
+        "params": "s",
+        "calls": []
+      }
+    ]
+  },
+  {
+    "file": "service-DQzaU991.js",
+    "className": "n",
+    "base": "g",
+    "methods": [
+      {
+        "name": "list",
+        "params": "s={}",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/designs",
+            "rest": ",{params:e})).data.designs||[]}"
+          }
+        ]
+      },
+      {
+        "name": "getById",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/designs/${s}",
+            "rest": ",{params:t})).data.design}"
+          }
+        ]
+      },
+      {
+        "name": "designsByTheme",
+        "params": "s=\"pt-br\"",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/designs/by-theme",
+            "rest": ",{params:{locale:s}})).data}"
+          }
+        ]
+      },
+      {
+        "name": "approve",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs/${s}/approve",
+            "rest": ")).data.design}"
+          }
+        ]
+      },
+      {
+        "name": "reject",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs/${s}/reject",
+            "rest": ",{message:e})).data.design}"
+          }
+        ]
+      },
+      {
+        "name": "create",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs",
+            "rest": ",s)).data.design}"
+          }
+        ]
+      },
+      {
+        "name": "update",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/designs/${s}",
+            "rest": ",e)).data.design}"
+          }
+        ]
+      },
+      {
+        "name": "deleteDesign",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "DELETE",
+            "path": "/designs/${s}",
+            "rest": ")}"
+          }
+        ]
+      },
+      {
+        "name": "render",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs/${s}/render",
+            "rest": ",{},{params:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "savePreview",
+        "params": "s,e,t",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs/${s}/preview",
+            "rest": ",{image:e,locale:t})).data}"
+          }
+        ]
+      },
+      {
+        "name": "myDesignNames",
+        "params": "",
+        "calls": [
+          {
+            "verb": "GET",
+            "path": "/customer-designs",
+            "rest": ")).data.names||[]}"
+          }
+        ]
+      },
+      {
+        "name": "saveDesignName",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "PUT",
+            "path": "/customer-designs/${s}",
+            "rest": ",{title:e})).data.name}"
+          }
+        ]
+      },
+      {
+        "name": "removeDesignName",
+        "params": "s",
+        "calls": [
+          {
+            "verb": "DELETE",
+            "path": "/customer-designs/${s}",
+            "rest": ")}"
+          }
+        ]
+      },
+      {
+        "name": "generateMetadata",
+        "params": "s,e",
+        "calls": [
+          {
+            "verb": "POST",
+            "path": "/designs/${s}/metadata/generate",
+            "rest": ",e)).data}"
+          }
+        ]
+      }
+    ]
+  }
+]

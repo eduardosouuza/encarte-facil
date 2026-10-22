@@ -1,0 +1,2533 @@
+[
+  {
+    "file": "affiliate-D1ZnFfMs.js",
+    "endpoints": [],
+    "labels": [
+      "Iniciante",
+      "Bronze",
+      "Prata",
+      "Ouro",
+      "Diamante"
+    ]
+  },
+  {
+    "file": "billing-events-timeline-ML2Bka4X.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/billing/invoices",
+        "offset": 1905
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/invoices",
+        "offset": 2026
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/events",
+        "offset": 2134
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/pay-link",
+        "offset": 2241
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/invoices/refund",
+        "offset": 2345
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/invoices/retry",
+        "offset": 2441
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/invoices/second-copy",
+        "offset": 2554
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/invoices/cancel",
+        "offset": 2663
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/subscriptions/cancel",
+        "offset": 2774
+      }
+    ],
+    "labels": [
+      "Paga",
+      "A vencer",
+      "Em atraso",
+      "Estornada",
+      "Falhou",
+      "Cancelada",
+      "Processando"
+    ]
+  },
+  {
+    "file": "bulk-nKorVO5W.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/headers/config",
+        "offset": 1297
+      },
+      {
+        "method": "GET",
+        "path": "/admin/headers/jobs",
+        "offset": 1367
+      },
+      {
+        "method": "GET",
+        "path": "/admin/headers/jobs/${a}",
+        "offset": 1443
+      },
+      {
+        "method": "POST",
+        "path": "/admin/headers/bulk-generate",
+        "offset": 1525
+      },
+      {
+        "method": "POST",
+        "path": "/admin/headers/jobs/${a}/retry",
+        "offset": 1607
+      },
+      {
+        "method": "POST",
+        "path": "/admin/headers/jobs/${a}/decide",
+        "offset": 1694
+      },
+      {
+        "method": "DELETE",
+        "path": "/admin/headers/jobs/${a}",
+        "offset": 1795
+      }
+    ],
+    "labels": [
+      "PT-BR",
+      "Segmentos",
+      "Temas",
+      "Quantidade",
+      "Buscar segmento...",
+      "Digite um tema e Enter (ex: Black Friday)",
+      "Na fila",
+      "Gerando",
+      "Gerado",
+      "Erro",
+      "Aprovado",
+      "Rejeitado",
+      "Headers (composição)"
+    ]
+  },
+  {
+    "file": "chat-page-sXQLYrOf.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/chat/status",
+        "offset": 10733
+      },
+      {
+        "method": "POST",
+        "path": "/chat/sessions",
+        "offset": 10815
+      },
+      {
+        "method": "GET",
+        "path": "/chat/sessions",
+        "offset": 10894
+      },
+      {
+        "method": "GET",
+        "path": "/chat/sessions/${t}",
+        "offset": 10974
+      }
+    ],
+    "labels": [
+      "Conferindo o encarte e ajustando",
+      "Prévia do encarte"
+    ]
+  },
+  {
+    "file": "checkout-page-Z5ZnzTs3.js",
+    "endpoints": [],
+    "labels": [
+      "••••••••"
+    ]
+  },
+  {
+    "file": "checkout-shell-Fi6mvr9_.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/public/pay/${encodeURIComponent(r)}",
+        "offset": 2453
+      },
+      {
+        "method": "POST",
+        "path": "/public/pay/${encodeURIComponent(r)}/stripe",
+        "offset": 2557
+      },
+      {
+        "method": "POST",
+        "path": "/public/pay/${encodeURIComponent(r)}/renew",
+        "offset": 2658
+      },
+      {
+        "method": "GET",
+        "path": "/public/prices",
+        "offset": 2760
+      },
+      {
+        "method": "POST",
+        "path": "/auth/register-and-checkout",
+        "offset": 2835
+      },
+      {
+        "method": "POST",
+        "path": "/billing/stripe/confirm",
+        "offset": 3241
+      }
+    ],
+    "labels": [
+      "0000 0000 0000 0000",
+      "00000-000",
+      "(11) 99999-9999"
+    ]
+  },
+  {
+    "file": "comps-list-DiMn7nL6.js",
+    "endpoints": [],
+    "labels": [
+      "Vencida e ativa",
+      "Interrompida",
+      "Em curso",
+      "Encerrada",
+      "Sem estado",
+      "vencidas e ainda ativas",
+      "interrompidas",
+      "em curso",
+      "Cortesias",
+      "Buscar por cliente, motivo ou quem concedeu..."
+    ]
+  },
+  {
+    "file": "cover-thumb-D2iZ0B-2.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/blog",
+        "offset": 395
+      },
+      {
+        "method": "GET",
+        "path": "/admin/blog/${e}",
+        "offset": 476
+      },
+      {
+        "method": "POST",
+        "path": "/admin/blog",
+        "offset": 551
+      },
+      {
+        "method": "PUT",
+        "path": "/admin/blog/${e}",
+        "offset": 626
+      },
+      {
+        "method": "DELETE",
+        "path": "/admin/blog/${e}",
+        "offset": 696
+      },
+      {
+        "method": "PATCH",
+        "path": "/admin/blog/${e}/draft",
+        "offset": 764
+      }
+    ],
+    "labels": [
+      "Vender mais com encartes",
+      "Calendário promocional",
+      "Design e conversão",
+      "Guia: encarte de supermercado",
+      "Equipe EncarteFácil",
+      "Redação EncarteFácil",
+      "Português",
+      "English",
+      "Español"
+    ]
+  },
+  {
+    "file": "date-picker-IzD4iw2Y.js",
+    "endpoints": [],
+    "labels": [
+      "hh:mm"
+    ]
+  },
+  {
+    "file": "date-range-picker-COlijii8.js",
+    "endpoints": [],
+    "labels": [
+      "Últimos 7 dias",
+      "Últimos 30 dias",
+      "Últimos 90 dias",
+      "Este mês",
+      "Mês passado",
+      "Este ano"
+    ]
+  },
+  {
+    "file": "editor-C_G0UypU.js",
+    "endpoints": [],
+    "labels": [
+      "Editar post",
+      "Slug",
+      "como-fazer-encarte",
+      "Gerar do título",
+      "Título",
+      "Descrição (meta)",
+      "Resposta direta (GEO)",
+      "Corpo (Markdown)",
+      "Texto alternativo da capa",
+      "Cluster",
+      "Autor",
+      "Data de publicação",
+      "Data de atualização",
+      "Tags",
+      "encarte, supermercado",
+      "Segmentos",
+      "supermercado, hortifruti",
+      "Capa",
+      "/blog/covers/...",
+      "Ícone (lucide)",
+      "Pergunta",
+      "Resposta"
+    ]
+  },
+  {
+    "file": "entities-DDWjtojW.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/emails/sequences",
+        "offset": 335
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/sequences",
+        "offset": 424
+      },
+      {
+        "method": "PATCH",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}",
+        "offset": 506
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/activate",
+        "offset": 603
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/pause",
+        "offset": 706
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/analytics",
+        "offset": 810
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/enrollments",
+        "offset": 985
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/results",
+        "offset": 1104
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/results/${encodeURIComponent(e)}",
+        "offset": 1202
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/dispatches",
+        "offset": 1319
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/dispatches/${encodeURIComponent(e)}",
+        "offset": 1591
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/replies",
+        "offset": 1694
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/conversions",
+        "offset": 1796
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/enroll/preview",
+        "offset": 1907
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/sequences/${encodeURIComponent(e)}/enroll",
+        "offset": 2086
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/ai/sequence",
+        "offset": 2237
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/ai/template",
+        "offset": 2326
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/health",
+        "offset": 2407
+      },
+      {
+        "method": "PATCH",
+        "path": "/admin/emails/settings",
+        "offset": 2476
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/scan-now",
+        "offset": 2544
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/senders",
+        "offset": 2622
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/senders",
+        "offset": 2700
+      },
+      {
+        "method": "DELETE",
+        "path": "/admin/emails/senders/${encodeURIComponent(e)}",
+        "offset": 2765
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/suppressions",
+        "offset": 2866
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/suppressions",
+        "offset": 2990
+      },
+      {
+        "method": "DELETE",
+        "path": "/admin/emails/suppressions/${encodeURIComponent(e)}",
+        "offset": 3116
+      },
+      {
+        "method": "GET",
+        "path": "/admin/emails/templates",
+        "offset": 3218
+      },
+      {
+        "method": "POST",
+        "path": "/admin/emails/templates",
+        "offset": 3300
+      },
+      {
+        "method": "DELETE",
+        "path": "/admin/emails/templates/${encodeURIComponent(e)}",
+        "offset": 3369
+      }
+    ],
+    "labels": [
+      "Amigável",
+      "Formal",
+      "Direto",
+      "Entusiasmado"
+    ]
+  },
+  {
+    "file": "generate-uGBXj2EA.js",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/admin/products/generate",
+        "offset": 1134
+      },
+      {
+        "method": "POST",
+        "path": "/admin/products/generate/save",
+        "offset": 1216
+      },
+      {
+        "method": "GET",
+        "path": "/admin/products/demo",
+        "offset": 1317
+      }
+    ],
+    "labels": [
+      "Avulsos",
+      "Combos / Kits",
+      "Leve 3 pague 2",
+      "Oferta relâmpago",
+      "Configuração",
+      "Revisão",
+      "Buscar segmento...",
+      "Nome",
+      "Descrição",
+      "Produtos (IA)",
+      "Buscar produtos demo..."
+    ]
+  },
+  {
+    "file": "header-DAl84wtm.js",
+    "endpoints": [],
+    "labels": [
+      "Sair"
+    ]
+  },
+  {
+    "file": "inbox-page-BwfPJNci.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/inbox/stats",
+        "offset": 4258
+      },
+      {
+        "method": "GET",
+        "path": "/admin/inbox/conversations",
+        "offset": 4338
+      },
+      {
+        "method": "GET",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/messages",
+        "offset": 4486
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/read",
+        "offset": 4602
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/unread",
+        "offset": 4701
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/archive",
+        "offset": 4801
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/send",
+        "offset": 4911
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/send-template",
+        "offset": 5030
+      },
+      {
+        "method": "POST",
+        "path": "/admin/inbox/conversations/${encodeURIComponent(a)}/bot",
+        "offset": 5148
+      },
+      {
+        "method": "GET",
+        "path": "/admin/inbox/whatsapp-templates",
+        "offset": 5259
+      }
+    ],
+    "labels": [
+      "Responder…",
+      "Enviando…",
+      "Não entregue",
+      "Enviada · ainda não entregue",
+      "Respondida",
+      "Esperando há mais de 1 hora",
+      "Hoje",
+      "Respondidas",
+      "Nenhuma conversa encontrada",
+      "Nenhuma conversa arquivada",
+      "Nenhuma conversa ainda",
+      "Buscar na Inbox"
+    ]
+  },
+  {
+    "file": "index-BehZtlK7.js",
+    "endpoints": [],
+    "labels": [
+      "Sombra",
+      "Cor",
+      "Blur",
+      "Offset X",
+      "Offset Y",
+      "Gradiente",
+      "Ângulo",
+      "Borda",
+      "Largura",
+      "Glow",
+      "Opacidade",
+      "Valor",
+      "Sombra Interna",
+      "Outline",
+      "Offset",
+      "Filtros",
+      "Brilho",
+      "Contraste",
+      "Saturação",
+      "Matiz",
+      "Transformação",
+      "Escala",
+      "Rotação",
+      "Skew X",
+      "Skew Y"
+    ]
+  },
+  {
+    "file": "index-BLLrK9Mc.js",
+    "endpoints": [],
+    "labels": [
+      "Buscar fonte...",
+      "Thin",
+      "Extra Light",
+      "Light",
+      "Regular",
+      "Medium",
+      "Semi Bold",
+      "Bold",
+      "Extra Bold",
+      "Black",
+      "Itálico",
+      "Sublinhado",
+      "Maiúsculas",
+      "Fontes",
+      "Adicionar texto",
+      "Esquerda",
+      "Centro",
+      "Direita",
+      "Estilo do texto",
+      "Cor do texto",
+      "Faixa superior",
+      "Fundo principal",
+      "Texto da faixa",
+      "Nome do produto",
+      "Preço",
+      "Detalhe / borda",
+      "Fundo da etiqueta",
+      "Detalhe / unidade",
+      "Cores",
+      "Recalcular cores a partir do fundo e do selo",
+      "Usar apenas as cores do modelo de cartaz",
+      "Recalcular cores com base nas imagens atuais",
+      "Voltar à cor padrão da marca (#FACC15 / #D22323)",
+      "Proporções",
+      "Formato",
+      "nome@email.com",
+      "Hoje",
+      "3 dias",
+      "7 dias",
+      "15 dias",
+      "Remover datas",
+      "Validade da oferta",
+      "Desfazer (Ctrl+Z / Cmd+Z)",
+      "Refazer (Ctrl+Shift+Z / Cmd+Shift+Z)",
+      "Diminuir zoom",
+      "Aumentar zoom",
+      "Ajustar à tela",
+      "Escolha um tema",
+      "Escolha o formato",
+      "Adicione um produto",
+      "Mande no WhatsApp"
+    ]
+  },
+  {
+    "file": "index-BMGestSM.js",
+    "endpoints": [],
+    "labels": [
+      "••••••••",
+      "seu@email.com"
+    ]
+  },
+  {
+    "file": "index-Bri8j3Ot.js",
+    "endpoints": [],
+    "labels": [
+      "Iniciar sesión",
+      "Accede a tu cuenta",
+      "Crear cuenta",
+      "Comienza a crear tus folletos ahora",
+      "Recuperar contraseña",
+      "Ingresa tu correo para recibir el enlace de recuperación",
+      "Panel de control",
+      "Editar Producto",
+      "Productos",
+      "Pegar Lista",
+      "Escribe el nombre de un producto, pega una lista o arrastra una imagen...",
+      "Sin productos",
+      "Filtrar por",
+      "Ordenar por",
+      "Mis Folletos",
+      "Aún no hay folletos",
+      "Encabezados",
+      "Marca",
+      "Empresa",
+      "Logos",
+      "Pagos",
+      "Elementos",
+      "Etiquetas",
+      "Formatos",
+      "Modelos de video",
+      "Carrusel de productos",
+      "Carrusel + Lista",
+      "Tus descargas",
+      "Elige tu plan",
+      "Desbloquea todas las herramientas profesionales para crear folletos increíbles",
+      "Plan y pago.",
+      "Desbloquea la edición de encabezados",
+      "Edita el tamaño y posición de los productos",
+      "Abre el folleto listo en la cola",
+      "Crea carteles profesionales",
+      "Crea videos animados",
+      "Accede a formatos premium",
+      "Elimina fondos de imágenes",
+      "Accede a todos los elementos",
+      "Crea tu biblioteca de elementos",
+      "Límite de logotipos alcanzado",
+      "Para mandar este folleto al grupo de la tienda",
+      "Planes y precios",
+      "Elige el plan ideal para tu negocio",
+      "Pix recurrente (Pix Automático)",
+      "Confirma tu WhatsApp",
+      "Enviamos un código de 6 números a",
+      "¿Cuántas tiendas tienes?",
+      "Contando matriz y sucursales.",
+      "¿Cuántas personas trabajan contigo?",
+      "Sumando todas las tiendas.",
+      "Tu rubro de actuación",
+      "¡Así podemos sugerirte temas y productos perfectos para ti! 😊",
+      "¿Cuál es tu puesto en la empresa?",
+      "¡Esto nos ayuda a entender mejor tu perfil y cómo podemos ayudarte! 😊",
+      "¿Dónde está tu tienda?",
+      "Así te mostramos precios en tu moneda, productos y fechas de tu país.",
+      "Crea folletos profesionales en menos de 5 minutos",
+      "Más de 3.000 comerciantes ya aumentaron sus ventas hasta un 30%",
+      "Usado por comercios en todo Brasil",
+      "Pensado para tu día a día",
+      "Todo lo que necesitas para promocionar ofertas con más rapidez, claridad y seguridad — en el navegador, al ritmo del retail.",
+      "Lista de ofertas inteligente",
+      "Arte lista en minutos",
+      "Pago seguro",
+      "Rehacer folleto en un toque",
+      "Todo centralizado en la cuenta",
+      "Del problema a publicar en pocos pasos",
+      "Primero los frenos que retrasan la promo; después el camino simple hasta el folleto en línea.",
+      "Tus clientes ignoran ofertas sin un visual atractivo",
+      "Pierdes horas armando folletos desde cero",
+      "Pagar diseñador cada semana se come tu margen",
+      "Elige entre miles de plantillas profesionales",
+      "Pega tu lista de productos: la IA encuentra imágenes y precios automáticamente",
+      "Descarga o comparte directo en WhatsApp",
+      "Muestra aquí el flujo completo en pocos segundos",
+      "Todo lo que tu retail necesita para vender más",
+      "Folletos ilimitados",
+      "Plantillas nuevas cada semana",
+      "Formatos para WhatsApp, Instagram e impresión",
+      "IA que arma el folleto por ti",
+      "Tu logo e identidad visual",
+      "Soporte por WhatsApp",
+      "Quien lo usa, lo recomienda",
+      "Preguntas frecuentes",
+      "Tus competidores ya están difundiendo mejores ofertas. ¿Y tú?",
+      "Folletos Promocionales para Comercio | Creación de Folletos Profesionales",
+      "Folletos Promocionales para Comercio que Aumentan tus Ventas",
+      "No hay una forma correcta de promocionar.",
+      "Importá como quieras, armá a tu manera y publicá donde está tu cliente. En un solo lugar, podés:",
+      "Cinco recursos, un solo flujo",
+      "Cada demo de abajo es una réplica fiel de la pantalla real de Encarte Fácil: los productos entran, diseñás, das el acabado, exportás y distribuís.",
+      "Pegá la lista. La IA hace el resto.",
+      "Arrastrá, soltá y listo",
+      "Elegí el mejor tema para tu folleto",
+      "Sellos, fotos, decorativos y fondos para que tu folleto destaque",
+      "Elegí un tema",
+      "Recorte limpio en un clic",
+      "Un folleto, todos los canales",
+      "PNG",
+      "JPEG",
+      "PDF",
+      "MP4",
+      "Tu folleto nace en una conversación",
+      "tiendas activas",
+      "para un folleto listo",
+      "en ventas con promos",
+      "para empezar",
+      "Del problema a publicado en 3 pasos",
+      "Dejá la planilla y las capturas: llegá a WhatsApp con el arte listo.",
+      "Elegí una plantilla profesional",
+      "Pegá la lista — la IA la arma",
+      "Descargá o enviá por WhatsApp",
+      "Hecho para tu comercio",
+      "Adaptá cualquier plantilla a tu realidad en pocos clics.",
+      "Supermercados",
+      "Farmacias",
+      "Pet shops",
+      "Verdulerías y almacenes",
+      "Qué es un folleto promocional y cómo impulsa al comercio",
+      "Tipos de folletos que tu tienda puede usar",
+      "Existen distintos tipos de folletos promocionales para usar a lo largo del mes, según la estrategia de tu tienda.",
+      "Folleto semanal de ofertas",
+      "Folleto promocional mensual",
+      "Folleto digital para WhatsApp",
+      "Folleto para redes sociales",
+      "Folleto estacional",
+      "Beneficios de usar folletos promocionales en el comercio",
+      "El uso estratégico de folletos trae varias ventajas competitivas para empresas del comercio.",
+      "Ejemplos de folletos promocionales que generan resultados",
+      "Folletos para comercios en todo Brasil",
+      "Poné tu tienda en la conversación del barrio.",
+      "Preguntas frecuentes sobre folletos promocionales",
+      "Empezá gratis. Crecé cuando quieras.",
+      "Armá y compartí tus primeros folletos sin pagar nada. Cuando necesités más, Pro desbloquea todo.",
+      "Tus competidores ya publican mejores ofertas. ¿Y vos?",
+      "Producto",
+      "Cuenta",
+      "Hablá con nuestro equipo",
+      "Folleto por chat",
+      "Describe lo que quieres y mira cómo se arma el folleto.",
+      "Describe el folleto o pega tu lista de productos…"
+    ]
+  },
+  {
+    "file": "index-C8Se_WUH.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/seo/overview",
+        "offset": 1349
+      },
+      {
+        "method": "GET",
+        "path": "/admin/seo/insights",
+        "offset": 1429
+      },
+      {
+        "method": "GET",
+        "path": "/admin/seo/keywords",
+        "offset": 1742
+      },
+      {
+        "method": "GET",
+        "path": "/admin/seo/keywords/${encodeURIComponent(r)}",
+        "offset": 1824
+      },
+      {
+        "method": "POST",
+        "path": "/admin/seo/keywords/${encodeURIComponent(r)}/refresh",
+        "offset": 1924
+      },
+      {
+        "method": "GET",
+        "path": "/admin/seo/competitors",
+        "offset": 2036
+      },
+      {
+        "method": "POST",
+        "path": "/admin/seo/keywords/import",
+        "offset": 2125
+      }
+    ],
+    "labels": [
+      "Top 3",
+      "Top 10",
+      "Top 20",
+      "Fora",
+      "SEO",
+      "Monitoradas",
+      "Visibilidade",
+      "Posição média",
+      "Top concorrente",
+      "Buscar keyword…",
+      "Cluster",
+      "Posição",
+      "Status",
+      "Coletar agora"
+    ]
+  },
+  {
+    "file": "index-CDHbdXkF.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/stats/overview",
+        "offset": 3476
+      },
+      {
+        "method": "GET",
+        "path": "/stats/customers",
+        "offset": 3787
+      },
+      {
+        "method": "GET",
+        "path": "/stats/content",
+        "offset": 4098
+      },
+      {
+        "method": "GET",
+        "path": "/stats/engagement",
+        "offset": 4409
+      },
+      {
+        "method": "GET",
+        "path": "/stats/revenue",
+        "offset": 4672
+      },
+      {
+        "method": "GET",
+        "path": "/stats/partners",
+        "offset": 4865
+      }
+    ],
+    "labels": [
+      "Total de Clientes",
+      "Clientes Ativos",
+      "Encartes",
+      "Partners Ativos",
+      "Início",
+      "Novo",
+      "Expansão",
+      "Reativação",
+      "Contração",
+      "Churn",
+      "Fim",
+      "Movimento do MRR",
+      "Pessoas no período",
+      "Ativados",
+      "Reativados",
+      "Cancelados",
+      "Retenção e valor",
+      "Churn de logos",
+      "Churn de receita",
+      "NRR",
+      "GRR",
+      "LTV",
+      "Quick ratio",
+      "LTV:CAC",
+      "Tendência",
+      "Composição do MRR",
+      "Saúde da base",
+      "Inadimplentes",
+      "MRR em risco",
+      "Trials",
+      "Conversão de trial",
+      "Mês a mês",
+      "Checkout abandonado",
+      "Campanha",
+      "Conjunto",
+      "Criativo",
+      "Página",
+      "Funil",
+      "Cliques",
+      "Visitas",
+      "Cadastros",
+      "Checkouts",
+      "Compras",
+      "De onde veio",
+      "Recuperação",
+      "E-mail",
+      "WhatsApp",
+      "Receita",
+      "Marketing",
+      "Operação",
+      "Dashboard"
+    ]
+  },
+  {
+    "file": "index-CKGpbnMo.js",
+    "endpoints": [],
+    "labels": [
+      "Sign In",
+      "Access your account",
+      "Sign Up",
+      "Start creating your flyers now",
+      "Recover Password",
+      "Enter your email to receive the recovery link",
+      "Dashboard",
+      "Edit Product",
+      "Products",
+      "Paste List",
+      "Type a product name, paste a list or drag an image...",
+      "No products",
+      "Filter by",
+      "Sort by",
+      "My Flyers",
+      "No flyers yet",
+      "Headers",
+      "Brand",
+      "Company",
+      "Logos",
+      "Payments",
+      "Elements",
+      "Tags",
+      "Formats",
+      "Video templates",
+      "Product carousel",
+      "Carousel + List",
+      "Your downloads",
+      "Choose your plan",
+      "Unlock all professional tools to create amazing flyers",
+      "Plan and payment.",
+      "Unlock header editing",
+      "Edit product size and position",
+      "Open the flyer waiting in the queue",
+      "Create professional posters",
+      "Create animated videos",
+      "Access premium formats",
+      "Remove image backgrounds",
+      "Access all elements",
+      "Build your element library",
+      "Logo limit reached",
+      "Send this flyer in the store WhatsApp group",
+      "Plans and pricing",
+      "Choose the ideal plan for your business",
+      "Recurring Pix (Pix Automático)",
+      "Confirm your WhatsApp",
+      "We sent a 6-digit code to",
+      "How many stores do you have?",
+      "Including headquarters and branches.",
+      "How many people work with you?",
+      "Across all stores.",
+      "Your line of business",
+      "That way we can suggest perfect themes and products for you! 😊",
+      "What is your role in the company?",
+      "This helps us understand your profile better and how we can help you! 😊",
+      "Where is your store?",
+      "So we can show prices in your currency, plus products and dates from your country.",
+      "Create Professional Flyers in Under 5 Minutes",
+      "Over 3,000 grocery retailers have already boosted sales by up to 30%",
+      "Trusted by markets across Brazil",
+      "Smart features for your daily workflow",
+      "Everything you need to promote offers faster, clearer, and more securely — right in your browser, at retail speed.",
+      "Smart offer lists",
+      "Ready-to-go artwork in minutes",
+      "Secure checkout",
+      "Redo a flyer in one tap",
+      "Everything in one account",
+      "From friction to published in a few steps",
+      "First the blockers that slow promotions down; then the simple path to a live flyer.",
+      "Customers skip offers without eye-catching visuals",
+      "You lose hours building flyers from scratch",
+      "Paying a designer every week eats your margin",
+      "Pick from thousands of professional templates",
+      "Paste your product list — AI finds images and prices automatically",
+      "Download or share straight to WhatsApp",
+      "Show the full flow in a few seconds here",
+      "Everything your retail business needs to sell more",
+      "Unlimited flyers",
+      "Fresh templates every week",
+      "Formats for WhatsApp, Instagram, and print",
+      "AI that assembles the flyer for you",
+      "Your logo and visual identity",
+      "Support on WhatsApp",
+      "Loved by teams like yours",
+      "Frequently asked questions",
+      "Your Competitors Are Already Running Better Offers. What About You?",
+      "Promotional Flyers for Retail | Professional Flyer Creation",
+      "Promotional Flyers for Retail That Grow Your Sales",
+      "There’s no right way to advertise.",
+      "Import however you like, design your way and publish where your customer is. In one place, you can:",
+      "Five features, one flow",
+      "Every demo below is a faithful replica of the real Encarte Fácil screen — products come in, you design, polish, export and distribute.",
+      "Paste the list. AI does the rest.",
+      "Drag, drop and you are done",
+      "Pick the best theme for your flyer",
+      "Seals, photos, decoratives and backgrounds to make your flyer pop",
+      "Pick a theme",
+      "Clean cutout in one click",
+      "One flyer, every channel",
+      "PNG",
+      "JPEG",
+      "PDF",
+      "MP4",
+      "Your flyer is born in a chat",
+      "Used by stores across Brazil",
+      "active stores",
+      "to a finished flyer",
+      "in promo sales",
+      "to get started",
+      "From problem to published in 3 steps",
+      "Leave the spreadsheet and screenshots behind: reach WhatsApp with finished art.",
+      "Pick a professional template",
+      "Paste the list — AI builds it",
+      "Download or send on WhatsApp",
+      "Built for your retail",
+      "Adapt any template to your reality in a few clicks.",
+      "Supermarkets",
+      "Pharmacies",
+      "Pet shops",
+      "Greengrocers & markets",
+      "What is a promotional flyer and how it drives retail",
+      "Types of flyers your store can use",
+      "There are different types of promotional flyers to use throughout the month, depending on your store strategy.",
+      "Weekly offer flyer",
+      "Monthly promotional flyer",
+      "Digital flyer for WhatsApp",
+      "Flyer for social media",
+      "Seasonal flyer",
+      "Benefits of using promotional flyers in retail",
+      "Using flyers strategically brings several competitive advantages for retail businesses.",
+      "Examples of promotional flyers that deliver results",
+      "Flyers for retailers across Brazil",
+      "Put your store in the local conversation.",
+      "People who use it, recommend it",
+      "Frequently asked questions about promotional flyers",
+      "Start free. Grow when you want.",
+      "Build and share your first flyers at no cost. When you need more, Pro unlocks everything.",
+      "Your competitors are already running better offers. Are you?",
+      "Product",
+      "Account",
+      "Talk to our team",
+      "Flyer by chat",
+      "Describe what you want and watch the flyer come together.",
+      "Describe the flyer or paste your product list…"
+    ]
+  },
+  {
+    "file": "index-CwNwWR_E.js",
+    "endpoints": [],
+    "labels": [
+      "Mover para frente",
+      "Mover para trás",
+      "Duplicar",
+      "Excluir",
+      "Nome do elemento",
+      "Selos",
+      "Fotos",
+      "Decorativo",
+      "Papel",
+      "Fundos",
+      "Buscar elementos...",
+      "Ex: Design Moderno para Supermercado",
+      "Descreva o design e quando usá-lo...",
+      "supermercado, promoção, moderno, colorido",
+      "Iniciado",
+      "Rascunho",
+      "Concluído",
+      "Aprovado",
+      "Rejeitado",
+      "Nome definido (PT-BR)",
+      "Pelo menos 1 elemento",
+      "Salvo (sem alterações pendentes)",
+      "Preview gerado",
+      "Segmento vinculado",
+      "Tema vinculado",
+      "Camadas",
+      "Elementos",
+      "Dados",
+      "Config",
+      "Publicar",
+      "Desfazer (Ctrl+Z)",
+      "Refazer (Ctrl+Shift+Z)",
+      "Ajustar à tela",
+      "Publicar / aprovar",
+      "ex: promoção, desconto, oferta"
+    ]
+  },
+  {
+    "file": "index-Dcs6KTkN.js",
+    "endpoints": [],
+    "labels": [
+      "Selos",
+      "Fotos",
+      "Decorativo",
+      "Fundos",
+      "Usar uma cor sólida como fundo (oculta a imagem)"
+    ]
+  },
+  {
+    "file": "index-DzXvaxmD.js",
+    "endpoints": [],
+    "labels": [
+      "Afiliados"
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/auth/login",
+        "offset": 324232
+      },
+      {
+        "method": "POST",
+        "path": "/auth/register",
+        "offset": 324334
+      },
+      {
+        "method": "GET",
+        "path": "/auth/me",
+        "offset": 324482
+      },
+      {
+        "method": "GET",
+        "path": "/auth/verify",
+        "offset": 324611
+      },
+      {
+        "method": "POST",
+        "path": "/admin/impersonation/${t}",
+        "offset": 324751
+      },
+      {
+        "method": "POST",
+        "path": "/admin/impersonation/stop",
+        "offset": 324845
+      },
+      {
+        "method": "GET",
+        "path": "/auth/capabilities",
+        "offset": 325522
+      },
+      {
+        "method": "POST",
+        "path": "/auth/forgot-password",
+        "offset": 325664
+      },
+      {
+        "method": "POST",
+        "path": "/auth/reset-password",
+        "offset": 325755
+      },
+      {
+        "method": "GET",
+        "path": "/partners/current",
+        "offset": 399802
+      },
+      {
+        "method": "GET",
+        "path": "/partners/${t}",
+        "offset": 399957
+      },
+      {
+        "method": "GET",
+        "path": "/partners",
+        "offset": 400367
+      },
+      {
+        "method": "PUT",
+        "path": "/partners/${t}",
+        "offset": 400517
+      },
+      {
+        "method": "GET",
+        "path": "/partners/stats/active",
+        "offset": 400961
+      },
+      {
+        "method": "POST",
+        "path": "/partners",
+        "offset": 401199
+      },
+      {
+        "method": "PUT",
+        "path": "/partners/${t}/domain",
+        "offset": 401418
+      },
+      {
+        "method": "POST",
+        "path": "/partners/${t}/domain/validate",
+        "offset": 401888
+      },
+      {
+        "method": "POST",
+        "path": "/partners/${t}/domain/retry-ssl",
+        "offset": 402123
+      },
+      {
+        "method": "GET",
+        "path": "/subscriptions/me",
+        "offset": 455991
+      },
+      {
+        "method": "GET",
+        "path": "/prices",
+        "offset": 456058
+      },
+      {
+        "method": "POST",
+        "path": "/billing/checkout",
+        "offset": 456128
+      },
+      {
+        "method": "GET",
+        "path": "/billing/overview",
+        "offset": 456231
+      },
+      {
+        "method": "POST",
+        "path": "/billing/card",
+        "offset": 456298
+      },
+      {
+        "method": "POST",
+        "path": "/billing/card/default",
+        "offset": 456370
+      },
+      {
+        "method": "POST",
+        "path": "/billing/card/remove",
+        "offset": 456455
+      },
+      {
+        "method": "POST",
+        "path": "/billing/fiscal",
+        "offset": 456539
+      },
+      {
+        "method": "POST",
+        "path": "/billing/card/stripe/session",
+        "offset": 456621
+      },
+      {
+        "method": "POST",
+        "path": "/billing/card/stripe/confirm",
+        "offset": 456712
+      },
+      {
+        "method": "POST",
+        "path": "/subscriptions/cancel",
+        "offset": 456805
+      },
+      {
+        "method": "POST",
+        "path": "/billing/pix-recurring/cancel",
+        "offset": 456889
+      },
+      {
+        "method": "POST",
+        "path": "/subscriptions/resume",
+        "offset": 456972
+      },
+      {
+        "method": "POST",
+        "path": "/stripe/portal",
+        "offset": 457057
+      },
+      {
+        "method": "GET",
+        "path": "/customers/me",
+        "offset": 653257
+      },
+      {
+        "method": "PUT",
+        "path": "/customers/me",
+        "offset": 653329
+      },
+      {
+        "method": "POST",
+        "path": "/customers/me/phone/send-code",
+        "offset": 653408
+      },
+      {
+        "method": "POST",
+        "path": "/customers/me/phone/verify",
+        "offset": 653510
+      },
+      {
+        "method": "GET",
+        "path": "/public/market",
+        "offset": 819032
+      }
+    ],
+    "labels": [
+      "DO DIA",
+      "Nome da loja",
+      "E-mail",
+      "Plano",
+      "Situação do plano",
+      "Link do app",
+      "Link do checkout",
+      "Checkout de pagamento",
+      "Link para salvar cartão",
+      "Valor do plano",
+      "Link WhatsApp",
+      "Básicos",
+      "Polígonos",
+      "Selos e badges",
+      "Fitas e etiquetas",
+      "Tamanho personalizado",
+      "(00) 00000-0000",
+      "0000 0000 0000 0000",
+      "000.000.000-00",
+      "00000-000",
+      "Sair da personificação e voltar à sua conta admin"
+    ]
+  },
+  {
+    "file": "index-MqiCARZ_.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/products",
+        "offset": 8288
+      },
+      {
+        "method": "GET",
+        "path": "/products/${t}",
+        "offset": 8374
+      },
+      {
+        "method": "GET",
+        "path": "/products/search",
+        "offset": 8469
+      },
+      {
+        "method": "POST",
+        "path": "/products/parse-line",
+        "offset": 8567
+      },
+      {
+        "method": "POST",
+        "path": "/products",
+        "offset": 8658
+      },
+      {
+        "method": "POST",
+        "path": "/products/search-images/persist",
+        "offset": 8744
+      },
+      {
+        "method": "POST",
+        "path": "/products/${t}/price",
+        "offset": 9282
+      },
+      {
+        "method": "POST",
+        "path": "/products/${t}/remove-background",
+        "offset": 9431
+      }
+    ],
+    "labels": [
+      "Remover produto",
+      "Digite para buscar...",
+      "Remover fundo",
+      "Aplicar o último preço usado neste produto"
+    ]
+  },
+  {
+    "file": "index-NdTqfVHP.js",
+    "endpoints": [],
+    "labels": [
+      "Ex.: 3 e-mails para reativar lojas que cancelaram nos últimos 3 meses, terminando com uma oferta de volta",
+      "A IA sugere um ao gerar",
+      "Assunto",
+      "<p>Oi {{company}}…</p>",
+      "Todos",
+      "Ativos",
+      "Em teste",
+      "Inadimplentes",
+      "Cancelados",
+      "Vão cancelar",
+      "Inativos",
+      "e-mail ou telefone",
+      "Destaque (links e botão)",
+      "Fundo da página",
+      "Fundo do cartão",
+      "Texto",
+      "Texto secundário",
+      "Largura (px)",
+      "Arredondamento (px)",
+      "Encartefácil",
+      "https://… (vazio = só o nome em texto)",
+      "Pré-visualização do e-mail",
+      "Até assinar",
+      "Não pagou",
+      "Atraso",
+      "Carrinho",
+      "Salvar cartão",
+      "Todas as reações",
+      "Abriu",
+      "Clicou",
+      "Respondeu",
+      "Assinou ou pagou",
+      "Não abriu",
+      "Descadastrou",
+      "Reclamou spam",
+      "Devolvido",
+      "Falhou",
+      "Entregue",
+      "Enviado",
+      "Na fila",
+      "Devolvido (temporário)",
+      "Enviados",
+      "Entregues",
+      "Abriram",
+      "Clicaram",
+      "Responderam",
+      "Na sequência",
+      "Receberam tudo",
+      "Pararam antes",
+      "Com falha",
+      "Para",
+      "Assunto que saiu",
+      "Enviado em",
+      "Entregue em",
+      "Abertura",
+      "Clique",
+      "Devolução",
+      "Descadastro",
+      "Reclamação de spam",
+      "Erro do envio",
+      "Nada registrado ainda",
+      "Resultados",
+      "Atividade por dia",
+      "Assinaram",
+      "Descadastros",
+      "Devoluções",
+      "Campanhas",
+      "Nenhuma sequência com movimento",
+      "Quem assinou",
+      "Ninguém assinou depois dos e-mails neste período",
+      "Quem respondeu",
+      "Nenhuma resposta neste período",
+      "Todas as campanhas",
+      "Buscar por e-mail ou loja",
+      "Envios",
+      "oi@encartefacil.com.br",
+      "Buscar e-mail",
+      "Cole e-mails separados por vírgula, ponto e vírgula ou quebra de linha",
+      "Orçamento do dia",
+      "Enviados hoje",
+      "Devoluções (24h)",
+      "Reclamações (24h)",
+      "E-mails"
+    ]
+  },
+  {
+    "file": "index-VDyxRd0o.js",
+    "endpoints": [],
+    "labels": [
+      "Entrar",
+      "Acesse sua conta",
+      "Criar conta",
+      "Comece a criar seus encartes agora",
+      "Recuperar senha",
+      "Digite seu e-mail para receber o link de recuperação",
+      "Dashboard",
+      "Editar Produto",
+      "Produtos",
+      "Colar Lista",
+      "Digite o nome de um produto, cole uma lista ou arraste uma imagem...",
+      "Nenhum produto",
+      "Filtrar por",
+      "Ordenar por",
+      "Meus Encartes",
+      "Nenhum encarte ainda",
+      "Headers",
+      "Marca",
+      "Empresa",
+      "Logos",
+      "Pagamentos",
+      "Elementos",
+      "Tags",
+      "Formatos",
+      "Modelos de vídeo",
+      "Carrossel de produtos",
+      "Carrossel + Lista",
+      "Seus downloads",
+      "Escolha seu plano",
+      "Desbloqueie todas as ferramentas profissionais para criar encartes incríveis",
+      "Plano e pagamento.",
+      "Tenha mais poder para editar cabeçalhos",
+      "Edite o tamanho e posição dos produtos",
+      "Abra o encarte pronto na fila",
+      "Crie cartazes profissionais",
+      "Crie vídeos animados",
+      "Acesse formatos premium",
+      "Remova fundos de imagens",
+      "Acesse todos os elementos",
+      "Crie sua biblioteca de elementos",
+      "Limite de logomarcas atingido",
+      "Pra mandar este encarte no grupo da loja",
+      "Planos e preços",
+      "Escolha o plano ideal para o seu negócio",
+      "Pix recorrente (Pix Automático)",
+      "Confirme seu WhatsApp",
+      "Enviamos um código de 6 números para",
+      "Quantas lojas você tem?",
+      "Contando matriz e filiais.",
+      "Quantas pessoas trabalham com você?",
+      "Somando todas as lojas.",
+      "Seu ramo de atuação",
+      "Assim conseguimos sugerir temas e produtos perfeitos para você! 😊",
+      "Qual a sua posição na empresa?",
+      "Isso nos ajuda a entender melhor sobre o seu perfil e como podemos te ajudar! 😊",
+      "Onde fica a sua loja?",
+      "Assim mostramos preços na sua moeda, produtos e datas do seu país.",
+      "Crie Encartes Profissionais em Menos de 5 Minutos",
+      "Mais de 3.000 supermercadistas já aumentaram suas vendas em até 30%",
+      "Usado por mercados em todo o Brasil",
+      "Recursos pensados para o seu dia a dia",
+      "Tudo o que você precisa para divulgar ofertas com mais rapidez, clareza e segurança — direto do navegador, no ritmo do seu varejo.",
+      "Lista de ofertas inteligente",
+      "Arte pronta em minutos",
+      "Pagamento seguro",
+      "Refazer encarte em um toque",
+      "Tudo centralizado na conta",
+      "Do problema à publicação em poucos passos",
+      "Primeiro os bloqueios que derrubam a promoção; em seguida, o caminho simples até o encarte no ar.",
+      "Seus clientes ignoram ofertas sem visual atrativo",
+      "Você perde horas tentando montar encartes do zero",
+      "Pagar designer toda semana come seu lucro",
+      "Escolha um dos milhares de templates profissionais",
+      "Cole sua lista de produtos — a IA encontra imagens e preços automaticamente",
+      "Baixe ou compartilhe direto no WhatsApp",
+      "Mostre aqui o fluxo completo em poucos segundos",
+      "Tudo o que seu varejo precisa para vender mais",
+      "Encartes ilimitados",
+      "Templates novos toda semana",
+      "Formatos para WhatsApp, Instagram e impressão",
+      "IA que monta o encarte por você",
+      "Sua logo e identidade visual",
+      "Suporte via WhatsApp",
+      "Quem usa, recomenda",
+      "Perguntas frequentes",
+      "Seus Concorrentes Já Estão Divulgando Ofertas Melhores. E Você?",
+      "Encartes Promocionais para Varejo | Criação de Encartes Profissionais",
+      "Encartes Promocionais para Varejo que Aumentam suas Vendas",
+      "Não tem um jeito certo de divulgar.",
+      "Importe como quiser, monte do seu jeito e publique onde seu cliente está. Num só lugar, você pode:",
+      "Cinco recursos, um fluxo só",
+      "Cada demonstração abaixo é uma réplica fiel da tela real do Encarte Fácil — produtos entram, você desenha, dá o acabamento, exporta e distribui.",
+      "Cole a lista. A IA monta o resto.",
+      "Arraste, solte e está pronto",
+      "Escolha o melhor tema para o seu encarte",
+      "Selos, fotos, decorativos e fundos pra deixar seu encarte único",
+      "Selecione um tema",
+      "Recorte limpo em um clique",
+      "Um encarte, todos os canais",
+      "PNG",
+      "JPEG",
+      "PDF",
+      "MP4",
+      "Seu encarte nasce numa conversa",
+      "lojas ativas",
+      "pra um encarte pronto",
+      "em vendas nas promoções",
+      "pra começar a usar",
+      "Do problema à publicação em 3 passos",
+      "Saia da planilha e do print: chegue ao WhatsApp com arte pronta.",
+      "Escolha um template profissional",
+      "Cole a lista — a IA monta",
+      "Baixe ou envie no WhatsApp",
+      "Feito para o seu varejo",
+      "Adapte qualquer template à sua realidade em poucos cliques.",
+      "Supermercados",
+      "Farmácias",
+      "Pet shops",
+      "Hortifrúti & mercearias",
+      "O que é um encarte promocional e como ele impulsiona o varejo",
+      "Tipos de encartes que sua loja pode utilizar",
+      "Existem diferentes tipos de encartes promocionais para usar ao longo do mês, dependendo da estratégia da sua loja.",
+      "Encarte semanal de ofertas",
+      "Encarte promocional mensal",
+      "Encarte digital para WhatsApp",
+      "Encarte para redes sociais",
+      "Encarte sazonal",
+      "Benefícios de usar encartes promocionais no varejo",
+      "O uso estratégico de encartes traz diversas vantagens competitivas para empresas do varejo.",
+      "Exemplos de encartes promocionais que geram resultados",
+      "Encartes para varejistas em todo o Brasil",
+      "Coloque sua loja na conversa da cidade.",
+      "Perguntas frequentes sobre encartes promocionais",
+      "Comece grátis. Cresça quando quiser.",
+      "Monte e divulgue seus primeiros encartes sem pagar nada. Quando precisar de mais, o Pro libera tudo.",
+      "Seus concorrentes já estão divulgando ofertas melhores. E você?",
+      "Produto",
+      "Conta",
+      "Fale com a nossa equipe",
+      "Encarte por conversa",
+      "Descreva o que você quer e acompanhe o encarte sendo montado.",
+      "Descreva o encarte ou cole sua lista de produtos…"
+    ]
+  },
+  {
+    "file": "layout-rgrbKY06.js",
+    "endpoints": [],
+    "labels": [
+      "Inbox",
+      "Assinantes",
+      "Cobranças",
+      "Checkouts",
+      "Campanhas",
+      "Cortesias",
+      "Clientes",
+      "Catálogo",
+      "Designs",
+      "Headers",
+      "Elementos",
+      "Produtos",
+      "Segmentos",
+      "Temas",
+      "Formatos",
+      "Comercial",
+      "Planos",
+      "Promoções",
+      "Afiliados",
+      "Partners",
+      "Conteúdo",
+      "E-mails",
+      "SEO",
+      "Blog",
+      "Análise",
+      "Dashboard",
+      "Online",
+      "Logs",
+      "Eventos"
+    ]
+  },
+  {
+    "file": "list-BANlmtTu.js",
+    "endpoints": [],
+    "labels": [
+      "Designs",
+      "Buscar designs...",
+      "Idioma"
+    ]
+  },
+  {
+    "file": "list-Bifj8scx.js",
+    "endpoints": [],
+    "labels": [
+      "Ex: Supermercado",
+      "Descrição curta do segmento",
+      "Todos",
+      "Publicados",
+      "Rascunhos",
+      "Sem designs",
+      "Segmentos",
+      "Buscar segmentos...",
+      "Editar",
+      "Arquivar"
+    ]
+  },
+  {
+    "file": "list-C5LigiU1.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/billing/recovery",
+        "offset": 7323
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/checkout-sessions",
+        "offset": 7410
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/checkout-sessions/${r}",
+        "offset": 7546
+      }
+    ],
+    "labels": [
+      "De onde veio",
+      "Cliente e assinatura",
+      "Aparelho",
+      "Rede e técnico",
+      "Pago",
+      "Em andamento",
+      "Parou com erro",
+      "Abandonado",
+      "Todos",
+      "Com erro",
+      "Abandonados",
+      "Pagos",
+      "Situação",
+      "Cliente",
+      "Plano",
+      "Valor",
+      "Gateway",
+      "Método",
+      "Tentativas",
+      "Página",
+      "Início",
+      "Checkouts",
+      "Clientes",
+      "Pararam com erro"
+    ]
+  },
+  {
+    "file": "list-CX9hnMdw.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/billing/campaigns",
+        "offset": 989
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/campaigns",
+        "offset": 1071
+      },
+      {
+        "method": "PUT",
+        "path": "/admin/billing/campaigns/${t}",
+        "offset": 1157
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/campaigns/${t}/preview",
+        "offset": 1246
+      },
+      {
+        "method": "POST",
+        "path": "/admin/billing/campaigns/${t}/send",
+        "offset": 1329
+      },
+      {
+        "method": "GET",
+        "path": "/admin/billing/campaigns/${t}/grants",
+        "offset": 1423
+      }
+    ],
+    "labels": [
+      "Campanhas de cupom",
+      "BLACK25",
+      "Black Friday 2026"
+    ]
+  },
+  {
+    "file": "list-CXKHdjuZ.js",
+    "endpoints": [],
+    "labels": [
+      "Adesivos",
+      "Decorativos",
+      "Selos 3D",
+      "Fitas",
+      "Splash",
+      "Tags",
+      "Molduras",
+      "Backgrounds",
+      "Fotos",
+      "Ícones",
+      "Formas",
+      "Flat",
+      "Realista",
+      "Cartoon",
+      "Minimalista",
+      "Quadrado",
+      "Banner",
+      "Vertical",
+      "Ex: Selo Oferta",
+      "oferta, selo, promoção",
+      "Ex: selo de oferta redondo vermelho com brilho, estilo promoção",
+      "Todas Categorias",
+      "Linhas",
+      "Efeitos",
+      "Setas",
+      "Blobs",
+      "Elementos",
+      "Buscar por nome, descrição ou keywords...",
+      "Filtrar por partner...",
+      "Filtrar por customer...",
+      "Keyword"
+    ]
+  },
+  {
+    "file": "list-CXobAHpR.js",
+    "endpoints": [],
+    "labels": [
+      "Selecione o prazo",
+      "Ex.: parceria com a rede, 30 dias de teste combinados por telefone",
+      "Estornar cobrança",
+      "Cancelar cobrança",
+      "Gerar segunda via",
+      "Cancelar assinatura",
+      "Abrir fatura do cliente",
+      "Ativo",
+      "Trial",
+      "Atrasado",
+      "Não pago",
+      "Cancelado",
+      "Incompleto",
+      "Expirado",
+      "Pausado",
+      "Assinatura",
+      "Acesso",
+      "Cobrança",
+      "Modelo",
+      "Gateway",
+      "Cancelamento",
+      "Próxima cobrança",
+      "Assinante desde",
+      "Stripe",
+      "Asaas",
+      "Cliente",
+      "Conta",
+      "Telefone",
+      "WhatsApp",
+      "Idioma",
+      "Último login",
+      "Último encarte",
+      "Cliente desde",
+      "Recursos",
+      "Faturas",
+      "Histórico",
+      "Matricular em uma sequência…",
+      "Todos",
+      "Ativos",
+      "Inativos",
+      "Inadimplentes",
+      "Cancelados",
+      "Agend. cancelar",
+      "Escolher plano",
+      "Pagar plano reservado",
+      "Pagar fatura em atraso",
+      "Trocar cartão",
+      "Cobranças",
+      "Buscar por email, telefone...",
+      "O mesmo passo que o cliente vê no app, nos e-mails e no WhatsApp",
+      "Ver faturas nos gateways",
+      "Ver detalhes"
+    ]
+  },
+  {
+    "file": "list-CZ0QRowV.js",
+    "endpoints": [],
+    "labels": [
+      "Digite ou clique em Gerar",
+      "Ex.: cliente ligou sem acesso ao e-mail cadastrado",
+      "Admin",
+      "Usuário",
+      "Visitante",
+      "Cliente",
+      "Português (Brasil)",
+      "English",
+      "Español",
+      "Não informado",
+      "E-mail",
+      "Telefone",
+      "Papel",
+      "Selecionar papel",
+      "Idioma",
+      "Selecionar idioma",
+      "Indústria",
+      "Selecionar indústria",
+      "Cargo na empresa",
+      "Selecionar cargo",
+      "Logins",
+      "Último login",
+      "Login atual",
+      "Código de referência",
+      "Assinatura",
+      "Stripe",
+      "Afiliado",
+      "Onde",
+      "CEP",
+      "Criado em",
+      "Atualizado em",
+      "Último encarte",
+      "Navegador",
+      "Sistema",
+      "Resolução",
+      "Definir uma nova senha para este cliente",
+      "Aplicar desconto nos próximos ciclos de cobrança",
+      "Clientes",
+      "Buscar por nome ou e-mail",
+      "Ex: Supermercado",
+      "Desconto"
+    ]
+  },
+  {
+    "file": "list-D2qJ1TMH.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/themes",
+        "offset": 1595
+      },
+      {
+        "method": "GET",
+        "path": "/themes/${r}",
+        "offset": 1673
+      },
+      {
+        "method": "POST",
+        "path": "/themes",
+        "offset": 1739
+      },
+      {
+        "method": "PUT",
+        "path": "/themes/${r}",
+        "offset": 1805
+      },
+      {
+        "method": "GET",
+        "path": "/themes/stats/count",
+        "offset": 2048
+      }
+    ],
+    "labels": [
+      "Nome do tema",
+      "1, 15, 25",
+      "0, 6",
+      "Título",
+      "Temas",
+      "Buscar temas..."
+    ]
+  },
+  {
+    "file": "list-D41tS_4y.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/prices",
+        "offset": 713
+      },
+      {
+        "method": "PUT",
+        "path": "/admin/prices/${a}",
+        "offset": 787
+      }
+    ],
+    "labels": [
+      "Criar encartes",
+      "Criar cartazes",
+      "Baixar vídeo",
+      "Remover fundos",
+      "Formatos premium",
+      "Editar produtos",
+      "Editar cabeçalhos",
+      "Todos os elementos",
+      "Elementos próprios",
+      "Compartilhamento social",
+      "Planos"
+    ]
+  },
+  {
+    "file": "list-D79pWSgp.js",
+    "endpoints": [],
+    "labels": [
+      "Formatos",
+      "Buscar formatos..."
+    ]
+  },
+  {
+    "file": "list-DxHQktZq.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/stats/marketing-events",
+        "offset": 1759
+      },
+      {
+        "method": "GET",
+        "path": "/stats/marketing-events/stats",
+        "offset": 1860
+      },
+      {
+        "method": "GET",
+        "path": "/stats/marketing-events/${encodeURIComponent(t)}",
+        "offset": 1961
+      }
+    ],
+    "labels": [
+      "Últimos 7 dias",
+      "Eventos de marketing",
+      "Todas",
+      "Todos",
+      "E-mail, event_id, customer key ou tipo",
+      "Opcional"
+    ]
+  },
+  {
+    "file": "list-vLvGbrCr.js",
+    "endpoints": [],
+    "labels": [
+      "Blog",
+      "Buscar por título ou slug…",
+      "Editar",
+      "Excluir"
+    ]
+  },
+  {
+    "file": "list-XFvKs-CJ.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/promotions",
+        "offset": 2081
+      },
+      {
+        "method": "GET",
+        "path": "/admin/promotions/${t}",
+        "offset": 2240
+      },
+      {
+        "method": "POST",
+        "path": "/admin/promotions",
+        "offset": 2393
+      },
+      {
+        "method": "PUT",
+        "path": "/admin/promotions/${t}",
+        "offset": 2610
+      }
+    ],
+    "labels": [
+      "Ex: Black Friday 2026",
+      "Mensagem que será exibida aos usuários",
+      "https://...",
+      "black-friday, cyber-monday",
+      "google, facebook",
+      "cpc, email",
+      "premium, pro, basic",
+      "BR, US, PT",
+      "SP, RJ, MG",
+      "São Paulo, Rio de Janeiro",
+      "supermercado, farmacia, restaurante",
+      "afiliado1, afiliado2",
+      "999",
+      "Ilimitado",
+      "Saiba Mais",
+      "Promoções",
+      "Buscar promoções...",
+      "Nova Promoção"
+    ]
+  },
+  {
+    "file": "list-_Pezqj2x.js",
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/ai/analyze-logo-colors",
+        "offset": 27166
+      }
+    ],
+    "labels": [
+      "loja.seudominio.com.br",
+      "URL da logo",
+      "URL do ícone",
+      "URL do favicon",
+      "URL do apple icon",
+      "noreply@example.com",
+      "support@example.com",
+      "acct_xxxxxxxxxx",
+      "#000000",
+      "Cor Primária",
+      "Cor Secundária",
+      "Cor de Fundo",
+      "Ex: Empresa XYZ",
+      "contato@empresa.com",
+      "00.000.000/0000-00",
+      "Ex: Encartes XYZ",
+      "Descrição da plataforma",
+      "app.empresa.com",
+      "noreply@empresa.com",
+      "suporte@empresa.com",
+      "Upload da Logo",
+      "Personalização",
+      "Informações",
+      "Sair da Simulação",
+      "Partners",
+      "Buscar por nome, email...",
+      "Visualizar",
+      "Simular Partner"
+    ]
+  },
+  {
+    "file": "logs-Bhi2Sf4U.js",
+    "endpoints": [],
+    "labels": [
+      "Logs & Analytics",
+      "Online Agora",
+      "usuarios ativos",
+      "Sessoes Ativas",
+      "ultimos 5 min",
+      "Taxa de Rejeicao",
+      "sessoes com 1 evento",
+      "Tempo Medio",
+      "duracao de sessao"
+    ]
+  },
+  {
+    "file": "page-B6i9_e-4.js",
+    "endpoints": [],
+    "labels": [
+      "Iniciante",
+      "Compartilhe",
+      "Cadastro",
+      "Assinatura",
+      "Comissão"
+    ]
+  },
+  {
+    "file": "service-BD1gRGM4.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/subscribers",
+        "offset": 996
+      },
+      {
+        "method": "GET",
+        "path": "/admin/prices",
+        "offset": 1155
+      },
+      {
+        "method": "GET",
+        "path": "/admin/subscribers/comps",
+        "offset": 1229
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-BZ15meZL.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/elements",
+        "offset": 352
+      },
+      {
+        "method": "GET",
+        "path": "/elements/${e}",
+        "offset": 551
+      },
+      {
+        "method": "POST",
+        "path": "/elements",
+        "offset": 621
+      },
+      {
+        "method": "PUT",
+        "path": "/elements/${e}",
+        "offset": 691
+      },
+      {
+        "method": "GET",
+        "path": "/elements/colored",
+        "offset": 829
+      },
+      {
+        "method": "POST",
+        "path": "/elements/colored/batch",
+        "offset": 961
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-cCDUhbQQ.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/brandkits/me",
+        "offset": 2948
+      },
+      {
+        "method": "GET",
+        "path": "/brandkits/${t}",
+        "offset": 3019
+      },
+      {
+        "method": "PUT",
+        "path": "/brandkits/${t}",
+        "offset": 3093
+      }
+    ],
+    "labels": [
+      "Nome",
+      "Slogan",
+      "Validade",
+      "Telefone",
+      "WhatsApp",
+      "Endereço",
+      "Site",
+      "Instagram",
+      "Facebook",
+      "Formas de Pagamento"
+    ]
+  },
+  {
+    "file": "service-CF5Sq1Yo.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/industries",
+        "offset": 541
+      },
+      {
+        "method": "GET",
+        "path": "/admin/industries",
+        "offset": 695
+      },
+      {
+        "method": "GET",
+        "path": "/industries/${r}",
+        "offset": 957
+      },
+      {
+        "method": "POST",
+        "path": "/industries",
+        "offset": 1103
+      },
+      {
+        "method": "PUT",
+        "path": "/industries/${r}",
+        "offset": 1312
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-Chphq-AR.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/affiliates/stats",
+        "offset": 352
+      },
+      {
+        "method": "GET",
+        "path": "/affiliates/referrals",
+        "offset": 502
+      },
+      {
+        "method": "POST",
+        "path": "/affiliates/claim-reward",
+        "offset": 587
+      },
+      {
+        "method": "GET",
+        "path": "/admin/affiliates",
+        "offset": 771
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-CmufRMLl.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/formats",
+        "offset": 672
+      },
+      {
+        "method": "GET",
+        "path": "/formats/${s}",
+        "offset": 818
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-DQzaU991.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/designs",
+        "offset": 762
+      },
+      {
+        "method": "GET",
+        "path": "/designs/${s}",
+        "offset": 872
+      },
+      {
+        "method": "GET",
+        "path": "/designs/by-theme",
+        "offset": 967
+      },
+      {
+        "method": "POST",
+        "path": "/designs/${s}/approve",
+        "offset": 1053
+      },
+      {
+        "method": "POST",
+        "path": "/designs/${s}/reject",
+        "offset": 1132
+      },
+      {
+        "method": "POST",
+        "path": "/designs",
+        "offset": 1220
+      },
+      {
+        "method": "PUT",
+        "path": "/designs/${s}",
+        "offset": 1288
+      },
+      {
+        "method": "POST",
+        "path": "/designs/${s}/render",
+        "offset": 1446
+      },
+      {
+        "method": "POST",
+        "path": "/designs/${s}/preview",
+        "offset": 1538
+      },
+      {
+        "method": "GET",
+        "path": "/customer-designs",
+        "offset": 1633
+      },
+      {
+        "method": "PUT",
+        "path": "/customer-designs/${s}",
+        "offset": 1718
+      },
+      {
+        "method": "POST",
+        "path": "/designs/${s}/metadata/generate",
+        "offset": 1886
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "service-DXeeuWYQ.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/admin/elements",
+        "offset": 352
+      },
+      {
+        "method": "POST",
+        "path": "/admin/elements",
+        "offset": 761
+      },
+      {
+        "method": "PUT",
+        "path": "/admin/elements/${e}",
+        "offset": 837
+      },
+      {
+        "method": "POST",
+        "path": "/admin/elements/${e}/localized-asset/generate",
+        "offset": 933
+      },
+      {
+        "method": "POST",
+        "path": "/admin/elements/generate",
+        "offset": 1031
+      },
+      {
+        "method": "POST",
+        "path": "/admin/elements/generate/save",
+        "offset": 1113
+      },
+      {
+        "method": "POST",
+        "path": "/admin/elements/template/${e}",
+        "offset": 1268
+      }
+    ],
+    "labels": []
+  },
+  {
+    "file": "shared-selection-controls-OlU5v_M1.js",
+    "endpoints": [],
+    "labels": [
+      "Internacionalização / Metadados",
+      "Duplicar",
+      "Excluir"
+    ]
+  },
+  {
+    "file": "status-mark-CCaLzug_.js",
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/customers",
+        "offset": 1986
+      },
+      {
+        "method": "GET",
+        "path": "/customers/${e}",
+        "offset": 2136
+      },
+      {
+        "method": "PUT",
+        "path": "/customers/${e}/password",
+        "offset": 2277
+      },
+      {
+        "method": "POST",
+        "path": "/customers/${e}/comp",
+        "offset": 2384
+      },
+      {
+        "method": "POST",
+        "path": "/customers/${e}/discount",
+        "offset": 2536
+      },
+      {
+        "method": "DELETE",
+        "path": "/customers/${e}/discount",
+        "offset": 2657
+      },
+      {
+        "method": "PUT",
+        "path": "/customers/${e}",
+        "offset": 2754
+      },
+      {
+        "method": "GET",
+        "path": "/customers/stats/count",
+        "offset": 3294
+      }
+    ],
+    "labels": [
+      "Ex.: validar o checkout em produção; parceria com a rede X"
+    ]
+  },
+  {
+    "file": "use-mobile-layout-B9xEXdHq.js",
+    "endpoints": [],
+    "labels": [
+      "🇧🇷 PT",
+      "🇺🇸 EN",
+      "🇪🇸 ES",
+      "🇧🇷 Português",
+      "🇺🇸 English",
+      "🇪🇸 Español",
+      "Selecionar idioma",
+      "Chat",
+      "Temas",
+      "Produtos",
+      "Elementos",
+      "Tags",
+      "Formatos",
+      "Marca",
+      "Encartes"
+    ]
+  }
+]

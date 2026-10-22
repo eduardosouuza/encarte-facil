@@ -1,0 +1,52 @@
+[
+  {
+    "step_id": "scenario_start",
+    "action": "goto_start",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/login",
+    "eventos": [
+      1,
+      124
+    ]
+  },
+  {
+    "step_id": "preencher-email",
+    "action": "fill",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/login",
+    "eventos": [
+      125,
+      131
+    ]
+  },
+  {
+    "step_id": "preencher-senha",
+    "action": "fill",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/login",
+    "eventos": [
+      132,
+      131
+    ]
+  },
+  {
+    "step_id": "clicar-entrar",
+    "action": "click",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/login",
+    "eventos": [
+      132,
+      136
+    ]
+  },
+  {
+    "step_id": "aguardar-carregamento",
+    "action": "wait_for_timeout",
+    "status": "completed",
+    "url": "https://editor.encartefacil.com/editor/257336010",
+    "eventos": [
+      137,
+      953
+    ]
+  }
+]

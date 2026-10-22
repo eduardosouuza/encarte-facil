@@ -1,0 +1,230 @@
+[
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "lo",
+    "base": "Nc",
+    "calls": [
+      {
+        "verb": "POST",
+        "path": "/auth/login",
+        "args": ",t)"
+      },
+      {
+        "verb": "POST",
+        "path": "/auth/register",
+        "args": ",{market:H0()??void 0,locale:ZT()??void 0,...t})"
+      },
+      {
+        "verb": "GET",
+        "path": "/auth/me",
+        "args": ")"
+      },
+      {
+        "verb": "GET",
+        "path": "/auth/verify",
+        "args": ")).status===200}catch(n){return console.error(\"Token verification error:\",n),!1}}async impersonate(t,n){return(await this.post(`/admin/impersonation/${t}`,{reason:n})).data}async stopImpersonationAudi"
+      },
+      {
+        "verb": "POST",
+        "path": "/admin/impersonation/stop",
+        "args": ",t)}saveAdminOriginalToken(t){localStorage.setItem(lt.ADMIN_ORIGINAL_TOKEN,t)}getAdminOriginalToken(){return localStorage.getItem(lt.ADMIN_ORIGINAL_TOKEN)}removeAdminOriginalToken(){localStorage.remov"
+      },
+      {
+        "verb": "GET",
+        "path": "/auth/capabilities",
+        "args": ")).data.capabilities)==null?void 0:t.passwordRecovery)!==!1}catch{return!0}}async forgotPassword(t){return(await this.post(\"/auth/forgot-password\",{email:t})).data}async resetPassword(t,n,r){return(aw"
+      },
+      {
+        "verb": "POST",
+        "path": "/auth/reset-password",
+        "args": ",{token:t,email:n,password:r})).data}saveToken(t){localStorage.setItem(lt.AUTH_TOKEN,t)}getToken(){return localStorage.getItem(lt.AUTH_TOKEN)}removeToken(){localStorage.removeItem(lt.AUTH_TOKEN)}saveA"
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "uo",
+    "base": "Nc",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/partners/current",
+        "args": ")).data.partner||null}catch(t){return console.error(\"Erro ao buscar partner atual:\",t),null}}async getById(t){try{return(await this.get(`/partners/${t}`)).data.partner||null}catch(n){throw console.err"
+      },
+      {
+        "verb": "GET",
+        "path": "/partners",
+        "args": ",{params:n})).data.partners||[]}catch(n){throw console.error(\"Erro ao listar partners:\",n),n}}async update(t,n){try{const r=await this.put(`/partners/${t}`,n)"
+      },
+      {
+        "verb": "DELETE",
+        "path": "/partners/${t}",
+        "args": ")}catch(n){throw console.error(\"Erro ao deletar partner:\",n),n}}async count(){try{return(await this.get(\"/partners/stats/active\")).data.count||0}catch(t){return console.error(\"Erro ao contar partners:"
+      },
+      {
+        "verb": "POST",
+        "path": "/partners",
+        "args": ",t)"
+      },
+      {
+        "verb": "PUT",
+        "path": "/partners/${t}/domain",
+        "args": ",{customDomain:n})).data}catch(o){throw new Error(((s=(r=o.response)==null?void 0:r.data)==null?void 0:s.message)||o.message||\"Erro ao configurar domínio\")}}async removeCustomDomain(t){var n,r"
+      },
+      {
+        "verb": "DELETE",
+        "path": "/partners/${t}/domain",
+        "args": ")).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao remover domínio\")}}async validateCustomDomain(t){var n,r"
+      },
+      {
+        "verb": "POST",
+        "path": "/partners/${t}/domain/validate",
+        "args": ",{})).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao validar domínio\")}}async retrySslGeneration(t){var n,r"
+      },
+      {
+        "verb": "POST",
+        "path": "/partners/${t}/domain/retry-ssl",
+        "args": ",{})).data}catch(s){throw new Error(((r=(n=s.response)==null?void 0:n.data)==null?void 0:r.message)||s.message||\"Erro ao tentar gerar SSL\")}}}"
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "fo",
+    "base": "Nc",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/subscriptions/me",
+        "args": ")).data}async getPrices(){return(await this.get(\"/prices\")).data}async createCheckoutSession(t){return(await this.post(\"/billing/checkout\",{priceId:t,clientMeta:h3(\"app\")})).data}async getOverview(){r"
+      },
+      {
+        "verb": "GET",
+        "path": "/billing/overview",
+        "args": ")).data}async saveCard(t){return(await this.post(\"/billing/card\",t)).data}async setDefaultCard(t){return(await this.post(\"/billing/card/default\",{cardId:t})).data}async removeCard(t){return(await this"
+      },
+      {
+        "verb": "POST",
+        "path": "/billing/fiscal",
+        "args": ",t)).data}async createStripeCardSession(){return(await this.post(\"/billing/card/stripe/session\",{})).data}async confirmStripeCard(t){return(await this.post(\"/billing/card/stripe/confirm\",{sessionId:t}"
+      },
+      {
+        "verb": "POST",
+        "path": "/subscriptions/cancel",
+        "args": ",{})).data}async cancelPixRecurring(){return(await this.post(\"/billing/pix-recurring/cancel\",{})).data}async resumeOwn(){return(await this.post(\"/subscriptions/resume\",{})).data}async createPortalSess"
+      },
+      {
+        "verb": "POST",
+        "path": "/stripe/portal",
+        "args": ",{})).data}}"
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "ho",
+    "base": "Nc",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/customers/me",
+        "args": ")).data.customer}async updateMe(t){return(await this.put(\"/customers/me\",t)).data.customer}async sendPhoneCode(t){return(await this.post(\"/customers/me/phone/send-code\",t?{phone:t}:{})).data}async ver"
+      },
+      {
+        "verb": "POST",
+        "path": "/customers/me/phone/verify",
+        "args": ",{code:t})).data.customer}}"
+      }
+    ]
+  },
+  {
+    "file": "index-KJ2_zNqK.js",
+    "className": "po",
+    "base": "Nc",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/public/market",
+        "args": ",{params:{locale:t.locale??void 0}})).data.prompt}}"
+      }
+    ]
+  },
+  {
+    "file": "service-cCDUhbQQ.js",
+    "className": "s",
+    "base": "b",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/brandkits/me",
+        "args": ")).data.brandKit}async getById(t){return(await this.get(`/brandkits/${t}`)).data.brandKit}async update(t,a){return(await this.put(`/brandkits/${t}`,{brandKit:a})).data.brandKit}}"
+      }
+    ]
+  },
+  {
+    "file": "service-Chphq-AR.js",
+    "className": "e",
+    "base": "f",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/affiliates/stats",
+        "args": ")).data}async getReferrals(t,s){const a={}"
+      },
+      {
+        "verb": "GET",
+        "path": "/affiliates/referrals",
+        "args": ",{params:a})).data}async claimReward(t){return(await this.post(\"/affiliates/claim-reward\",{milestoneTarget:t})).data}async getAdminAffiliates(t,s){const a={}"
+      },
+      {
+        "verb": "GET",
+        "path": "/admin/affiliates",
+        "args": ",{params:a})).data}}"
+      }
+    ]
+  },
+  {
+    "file": "service-CmufRMLl.js",
+    "className": "a",
+    "base": "u",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/formats",
+        "args": ",{params:o})).data.formats||[]}catch(o){throw console.error(\"Erro ao listar formatos:\",o),o}}async getById(s){try{return(await this.get(`/formats/${s}`)).data.format||null}catch(o){throw console.error"
+      }
+    ]
+  },
+  {
+    "file": "service-DQzaU991.js",
+    "className": "n",
+    "base": "g",
+    "calls": [
+      {
+        "verb": "GET",
+        "path": "/designs",
+        "args": ",{params:e})).data.designs||[]}async getById(s,e){const t={}"
+      },
+      {
+        "verb": "GET",
+        "path": "/designs/${s}",
+        "args": ",{params:t})).data.design}async designsByTheme(s=\"pt-br\"){return(await this.get(\"/designs/by-theme\",{params:{locale:s}})).data}async approve(s){return(await this.post(`/designs/${s}/approve`)).data.de"
+      },
+      {
+        "verb": "POST",
+        "path": "/designs/${s}/reject",
+        "args": ",{message:e})).data.design}async create(s){return(await this.post(\"/designs\",s)).data.design}async update(s,e){return(await this.put(`/designs/${s}`,e)).data.design}async deleteDesign(s){await super.d"
+      },
+      {
+        "verb": "POST",
+        "path": "/designs/${s}/render",
+        "args": ",{},{params:t})).data}async savePreview(s,e,t){return(await this.post(`/designs/${s}/preview`,{image:e,locale:t})).data}async myDesignNames(){return(await this.get(\"/customer-designs\")).data.names||[]"
+      },
+      {
+        "verb": "PUT",
+        "path": "/customer-designs/${s}",
+        "args": ",{title:e})).data.name}async removeDesignName(s){await super.delete(`/customer-designs/${s}`)}async generateMetadata(s,e){return(await this.post(`/designs/${s}/metadata/generate`,e)).data}}"
+      }
+    ]
+  }
+]

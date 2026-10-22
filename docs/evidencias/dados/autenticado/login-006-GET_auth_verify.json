@@ -1,0 +1,22 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/auth/verify",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    4
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "valid": true,
+    "user": {
+      "userId": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "partnerId": "B0n2ULZOeYjROsaXCQlse",
+      "email": "[REDACTED:ef_email]",
+      "name": "[REDACTED:ef_email]",
+      "role": "customer",
+      "status": "active"
+    }
+  }
+}

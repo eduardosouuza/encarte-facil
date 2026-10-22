@@ -1,0 +1,80 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/brandkits/me",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    4
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "brandKit": {
+      "_key": "bra_KcGuTs00VVVxjU48Rk8VpyT0",
+      "_id": "brandkits/bra_KcGuTs00VVVxjU48Rk8VpyT0",
+      "_rev": "_lwjMbwa---",
+      "customer": "cus_5b30eLR0upGHn3ka6qTdRRWN",
+      "author": "",
+      "name": "Super Pedralli",
+      "slogan": "",
+      "social": {
+        "facebook": "",
+        "instagram": ""
+      },
+      "contact": {
+        "landline": "",
+        "whatsapp": "(51) 98434.4579"
+      },
+      "logos": [
+        "222507324",
+        "222507454",
+        "222507599"
+      ],
+      "palettes": [
+        "pal_didzQLLmMT5ZXni9RcCphjuV",
+        "pal_KGXKwUtbXHZvNDxSJoHRjhvJ",
+        "pal_PAfvgtB9AtZQrsROGZx5zdPT",
+        "pal_YYiRVvqgRFpQwT8BJqMRYyxz"
+      ],
+      "address": "Av. Sen. Salgado Filho, 5879",
+      "cards": [
+        "/payments/banricompras.png"
+      ],
+      "website": "www.superpedralli.com.br",
+      "createdAt": "2024-10-21T17:00:56.842Z",
+      "updatedAt": "2026-07-03T18:47:16.005Z",
+      "logoUrls": [
+        {
+          "url": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png",
+          "thumbnail": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png",
+          "urls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/3fc9180a-45af-4a8a-85dd-e410d83d8d7f.png"
+          }
+        },
+        {
+          "url": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+          "thumbnail": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+          "urls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/5a71eef1-1cda-4dcf-a5ca-5bbe3e297df2.png"
+          }
+        },
+        {
+          "url": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png",
+          "thumbnail": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png",
+          "urls": {
+            "original": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png",
+            "high": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png",
+            "medium": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png",
+            "low": "https://efacil-public.s3.sa-east-1.amazonaws.com/products/c5de4811-5c75-436d-be3e-99fe8d05159c.png"
+          }
+        }
+      ]
+    }
+  }
+}

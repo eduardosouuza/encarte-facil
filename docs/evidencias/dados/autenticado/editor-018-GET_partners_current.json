@@ -1,0 +1,555 @@
+{
+  "metodo": "GET",
+  "url": "https://api-v2.encartefacil.com/partners/current",
+  "status": 200,
+  "resource_type": "fetch",
+  "passos": [
+    1,
+    2
+  ],
+  "request_body": null,
+  "response_body": {
+    "success": true,
+    "partner": {
+      "_key": "B0n2ULZOeYjROsaXCQlse",
+      "_id": "partners/B0n2ULZOeYjROsaXCQlse",
+      "_rev": "_mN0Myeq---",
+      "name": "Encartefacil",
+      "active": true,
+      "type": "standard",
+      "email": "rodrigo@berry.tech",
+      "feePercent": 0,
+      "referralRewardCredits": 15,
+      "stripeAccount": "acct_1O3K6EDRLpD2PNus",
+      "defaultCountryCode": "BR",
+      "products": [
+        {
+          "id": "eDPFcWNoQjS5p2KP",
+          "name": "Plano Business",
+          "description": "Crie encartes profissionais em poucos minutos.",
+          "prices": [
+            {
+              "credits": 10,
+              "amount": 5900
+            },
+            {
+              "credits": 30,
+              "amount": 8900
+            },
+            {
+              "credits": 60,
+              "amount": 12900
+            },
+            {
+              "credits": 100,
+              "amount": 15900
+            },
+            {
+              "credits": 150,
+              "amount": 18900
+            },
+            {
+              "credits": 200,
+              "amount": 23900
+            },
+            {
+              "credits": 300,
+              "amount": 34900
+            }
+          ]
+        }
+      ],
+      "config": {
+        "product": {
+          "name": "Encartefacil",
+          "description": "Criador de encartes digitais",
+          "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+        },
+        "app": {
+          "name": "Encartefacil",
+          "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+          "domain": "encartefacil.com"
+        },
+        "email": {
+          "sender": "suporte@encartefacil.com"
+        },
+        "logo": {
+          "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+          "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+          "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+          "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png"
+        },
+        "colors": {
+          "light": {
+            "primary": "#19e19e",
+            "secondary": "#f5f5f5",
+            "background": "#ffffff"
+          },
+          "dark": {
+            "primary": "#29d39d",
+            "secondary": "#262626",
+            "background": "#0a0a0a"
+          }
+        }
+      },
+      "customSealsEnabled": true,
+      "updatedAt": "2026-10-02T16:59:50.662Z",
+      "taxId": "",
+      "couponCode": "ALGUM_CUPOM",
+      "connections": 1,
+      "planSlug": "pro",
+      "partner": {
+        "_id": "partners/B0n2ULZOeYjROsaXCQlse",
+        "_key": "B0n2ULZOeYjROsaXCQlse",
+        "_rev": "_mNzn6Sq---",
+        "active": true,
+        "archived": true,
+        "config": {
+          "app": {
+            "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+            "domain": "encartefacil.com",
+            "name": "Encartefacil"
+          },
+          "colors": {
+            "dark": {
+              "background": "#0a0a0a",
+              "primary": "#29d39d",
+              "secondary": "#262626"
+            },
+            "light": {
+              "background": "#ffffff",
+              "primary": "#19e19e",
+              "secondary": "#f5f5f5"
+            }
+          },
+          "email": {
+            "sender": "suporte@encartefacil.com"
+          },
+          "logo": {
+            "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+            "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+            "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+            "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+          },
+          "product": {
+            "description": "Criador de encartes digitais",
+            "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+            "name": "Encartefacil"
+          }
+        },
+        "connections": 1,
+        "couponCode": "ALGUM_CUPOM",
+        "customSealsEnabled": true,
+        "customer": {
+          "_id": "customers/266417948",
+          "_key": "266417948",
+          "_rev": "_mNzizaK---",
+          "active": true,
+          "affiliate": null,
+          "createdAt": "2026-10-01T15:42:40.255Z",
+          "currentLoginAt": "2026-10-02T15:58:16.009Z",
+          "email": "rodrigo@berry.tech",
+          "lastLoginAt": "2026-10-01T16:01:04.748Z",
+          "logins": 3,
+          "market": "BR",
+          "metadata": {
+            "customer": "Supermercado",
+            "fbp": "fb.1.1790869053612.8341309754",
+            "landingPage": "/",
+            "lastLandingPage": "/",
+            "lastLandingUrl": "https://editor.encartefacil.com/",
+            "lastTouchAt": "2026-10-01T15:42:49.498+00:00",
+            "phoneVerificationRequired": false,
+            "referer": "https://www.google.com/",
+            "visitorId": "46241e0c-fe69-49c2-8bbb-43bacd0b76c2"
+          },
+          "partner": "B0n2ULZOeYjROsaXCQlse",
+          "phone": "85912345678",
+          "phoneVerificationRequired": false,
+          "provider": "email",
+          "referralCode": "UW67XHZQtH2F8cdQs1A3sWQa2mQC9tQ",
+          "role": "admin",
+          "tradeName": "Supermercado",
+          "updatedAt": "2026-10-02T16:13:59.106Z",
+          "whatsappPhone": "85912345678"
+        },
+        "defaultCountryCode": "BR",
+        "email": "rodrigo@berry.tech",
+        "feePercent": 0,
+        "name": "Encartefacil",
+        "partner": {
+          "_id": "partners/B0n2ULZOeYjROsaXCQlse",
+          "_key": "B0n2ULZOeYjROsaXCQlse",
+          "_rev": "_mNzNBfa---",
+          "active": true,
+          "admin": true,
+          "archived": true,
+          "config": {
+            "app": {
+              "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+              "domain": "encartefacil.com",
+              "name": "Encartefacil"
+            },
+            "colors": {
+              "dark": {
+                "background": "#0a0a0a",
+                "primary": "#29d39d",
+                "secondary": "#262626"
+              },
+              "light": {
+                "background": "#ffffff",
+                "primary": "#19e19e",
+                "secondary": "#f5f5f5"
+              }
+            },
+            "email": {
+              "sender": "suporte@encartefacil.com"
+            },
+            "logo": {
+              "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+              "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+              "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+              "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+            },
+            "product": {
+              "description": "Criador de encartes digitais",
+              "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+              "name": "Encartefacil"
+            }
+          },
+          "connections": 1,
+          "couponCode": "ALGUM_CUPOM",
+          "customSealsEnabled": true,
+          "defaultCountryCode": "BR",
+          "email": "producaovexa@gmail.com",
+          "feePercent": 0,
+          "group": "admin",
+          "is_admin": true,
+          "name": "Encartefacil",
+          "partner": {
+            "_id": "partners/B0n2ULZOeYjROsaXCQlse",
+            "_key": "B0n2ULZOeYjROsaXCQlse",
+            "_rev": "_mNe4gd6---",
+            "active": true,
+            "admin": true,
+            "archived": false,
+            "config": {
+              "app": {
+                "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+                "domain": "encartefacil.com",
+                "name": "Encartefacil"
+              },
+              "colors": {
+                "dark": {
+                  "background": "#0a0a0a",
+                  "primary": "#29d39d",
+                  "secondary": "#262626"
+                },
+                "light": {
+                  "background": "#ffffff",
+                  "primary": "#19e19e",
+                  "secondary": "#f5f5f5"
+                }
+              },
+              "email": {
+                "sender": "suporte@encartefacil.com"
+              },
+              "logo": {
+                "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+              },
+              "product": {
+                "description": "Criador de encartes digitais",
+                "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+                "name": "Encartefacil"
+              }
+            },
+            "connections": 1,
+            "couponCode": "ALGUM_CUPOM",
+            "customSealsEnabled": true,
+            "defaultCountryCode": "BR",
+            "email": "rodrigo@berry.tech",
+            "feePercent": 0,
+            "group": "admin",
+            "is_admin": true,
+            "name": "Encartefacil",
+            "partner": {
+              "_id": "partners/B0n2ULZOeYjROsaXCQlse",
+              "_key": "B0n2ULZOeYjROsaXCQlse",
+              "_rev": "_mNerU2i---",
+              "active": false,
+              "admin": true,
+              "archived": false,
+              "config": {
+                "app": {
+                  "description": "Crie encartes e tabloides de ofertas fantásticos em apenas alguns minutos.",
+                  "domain": "encartefacil.com",
+                  "name": "Tome"
+                },
+                "colors": {
+                  "dark": {
+                    "background": "#0a0a0a",
+                    "primary": "#29d39d",
+                    "secondary": "#262626"
+                  },
+                  "light": {
+                    "background": "#ffffff",
+                    "primary": "#19e19e",
+                    "secondary": "#f5f5f5"
+                  }
+                },
+                "email": {
+                  "sender": "suporte@encartefacil.com"
+                },
+                "logo": {
+                  "appleIcon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                  "favicon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                  "icon": "https://efacil-public.s3.sa-east-1.amazonaws.com/icon_pN8bGwprttpeclpvJ3l2.png",
+                  "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png"
+                },
+                "product": {
+                  "description": "Criador de encartes digitais",
+                  "logo": "https://efacil-public.s3.sa-east-1.amazonaws.com/logo_pN8bGwprttpeclpvJ3l2.png",
+                  "name": "Encartefacil"
+                }
+              },
+              "connections": 1,
+              "couponCode": "ALGUM_CUPOM",
+              "customSealsEnabled": true,
+              "defaultCountryCode": "BR",
+              "email": "rodrigo@berry.tech",
+              "feePercent": 0,
+              "group": "admin",
+              "is_admin": true,
+              "name": "Encartefacil",
+              "phoneVerificationRequired": false,
+              "planSlug": "admin",
+              "products": [
+                {
+                  "id": "eDPFcWNoQjS5p2KP",
+                  "name": "Plano Business",
+                  "description": "Crie encartes profissionais em poucos minutos.",
+                  "prices": [
+                    {
+                      "credits": 10,
+                      "amount": 5900
+                    },
+                    {
+                      "credits": 30,
+                      "amount": 8900
+                    },
+                    {
+                      "credits": 60,
+                      "amount": 12900
+                    },
+                    {
+                      "credits": 100,
+                      "amount": 15900
+                    },
+                    {
+                      "credits": 150,
+                      "amount": 18900
+                    },
+                    {
+                      "credits": 200,
+                      "amount": 23900
+                    },
+                    {
+                      "credits": 300,
+                      "amount": 34900
+                    }
+                  ]
+                }
+              ],
+              "referralRewardCredits": 15,
+              "role": "admin",
+              "stripeAccount": "acct_1O3K6EDRLpD2PNus",
+              "taxId": "",
+              "type": "admin",
+              "updatedAt": "2026-10-01T15:55:17.256Z",
+              "whatsapp": true
+            },
+            "phoneVerificationRequired": false,
+            "planSlug": "pro",
+            "products": [
+              {
+                "id": "eDPFcWNoQjS5p2KP",
+                "name": "Plano Business",
+                "description": "Crie encartes profissionais em poucos minutos.",
+                "prices": [
+                  {
+                    "credits": 10,
+                    "amount": 5900
+                  },
+                  {
+                    "credits": 30,
+                    "amount": 8900
+                  },
+                  {
+                    "credits": 60,
+                    "amount": 12900
+                  },
+                  {
+                    "credits": 100,
+                    "amount": 15900
+                  },
+                  {
+                    "credits": 150,
+                    "amount": 18900
+                  },
+                  {
+                    "credits": 200,
+                    "amount": 23900
+                  },
+                  {
+                    "credits": 300,
+                    "amount": 34900
+                  }
+                ]
+              }
+            ],
+            "referralRewardCredits": 15,
+            "role": "admin",
+            "stripeAccount": "acct_1O3K6EDRLpD2PNus",
+            "success": true,
+            "taxId": "",
+            "type": "admin",
+            "updatedAt": "2026-10-01T16:09:41.118Z",
+            "whatsapp": true,
+            "whatsappVerified": true
+          },
+          "phoneVerificationRequired": false,
+          "planSlug": "pro",
+          "products": [
+            {
+              "id": "eDPFcWNoQjS5p2KP",
+              "name": "Plano Business",
+              "description": "Crie encartes profissionais em poucos minutos.",
+              "prices": [
+                {
+                  "credits": 10,
+                  "amount": 5900
+                },
+                {
+                  "credits": 30,
+                  "amount": 8900
+                },
+                {
+                  "credits": 60,
+                  "amount": 12900
+                },
+                {
+                  "credits": 100,
+                  "amount": 15900
+                },
+                {
+                  "credits": 150,
+                  "amount": 18900
+                },
+                {
+                  "credits": 200,
+                  "amount": 23900
+                },
+                {
+                  "credits": 300,
+                  "amount": 34900
+                }
+              ]
+            }
+          ],
+          "referralRewardCredits": 15,
+          "role": "admin",
+          "stripeAccount": "acct_1O3K6EDRLpD2PNus",
+          "success": true,
+          "taxId": "",
+          "type": "standard",
+          "updatedAt": "2026-10-02T15:50:11.733Z",
+          "whatsapp": true,
+          "whatsappVerified": true
+        },
+        "phoneVerificationRequired": true,
+        "planSlug": "pro",
+        "products": [
+          {
+            "id": "eDPFcWNoQjS5p2KP",
+            "name": "Plano Business",
+            "description": "Crie encartes profissionais em poucos minutos.",
+            "prices": [
+              {
+                "credits": 10,
+                "amount": 5900
+              },
+              {
+                "credits": 30,
+                "amount": 8900
+              },
+              {
+                "credits": 60,
+                "amount": 12900
+              },
+              {
+                "credits": 100,
+                "amount": 15900
+              },
+              {
+                "credits": 150,
+                "amount": 18900
+              },
+              {
+                "credits": 200,
+                "amount": 23900
+              },
+              {
+                "credits": 300,
+                "amount": 34900
+              }
+            ]
+          }
+        ],
+        "referralRewardCredits": 15,
+        "stripeAccount": "acct_1O3K6EDRLpD2PNus",
+        "success": true,
+        "taxId": "",
+        "type": "standard",
+        "updatedAt": "2026-10-02T16:19:33.834Z",
+        "whatsapp": true
+      },
+      "success": true,
+      "archived": true,
+      "customer": {
+        "_key": "266417948",
+        "_id": "customers/266417948",
+        "_rev": "_mNzizaK---",
+        "partner": "B0n2ULZOeYjROsaXCQlse",
+        "affiliate": null,
+        "email": "producaovexa@gmail.com",
+        "role": "admin",
+        "active": true,
+        "phone": "85912345678",
+        "whatsappPhone": "85912345678",
+        "market": "BR",
+        "provider": "email",
+        "logins": 3,
+        "referralCode": "UW67XHZQtH2F8cdQs1A3sWQa2mQC9tQ",
+        "tradeName": "Supermercado",
+        "metadata": {
+          "customer": "Supermercado",
+          "fbp": "fb.1.1790869053612.8341309754",
+          "landingPage": "/",
+          "referer": "https://www.google.com/",
+          "visitorId": "46241e0c-fe69-49c2-8bbb-43bacd0b76c2",
+          "lastTouchAt": "2026-10-01T15:42:49.498+00:00",
+          "lastLandingUrl": "https://editor.encartefacil.com/",
+          "lastLandingPage": "/"
+        },
+        "createdAt": "2026-10-01T15:42:40.255Z",
+        "updatedAt": "2026-10-02T16:13:59.106Z",
+        "currentLoginAt": "2026-10-02T15:58:16.009Z",
+        "lastLoginAt": "2026-10-01T16:01:04.748Z",
+        "phoneVerificationRequired": false
+      }
+    }
+  }
+}
