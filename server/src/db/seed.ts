@@ -16,6 +16,12 @@ export const FORMATS = [
 ] as const;
 
 export const THEMES = [
+  { theme: "churrasco", title: "Churrasco", description: "Carvão e brasa para açougues e fins de semana.", tokens: { base: "#fff7ed", baseSolid: "#ffffff", accent: "#c2410c", contrast: "#292524", surface: "#fed7aa", onSurface: "#ffffff" }, fonts: { display: "Oswald", body: "Roboto" } },
+  { theme: "pet-shop", title: "Pet Shop", description: "Cuidado e diversão para os melhores amigos.", tokens: { base: "#f0fdfa", baseSolid: "#ffffff", accent: "#0f766e", contrast: "#134e4a", surface: "#99f6e4", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
+  { theme: "beleza", title: "Beleza", description: "Seleção delicada para cosméticos e perfumaria.", tokens: { base: "#fdf2f8", baseSolid: "#ffffff", accent: "#be185d", contrast: "#500724", surface: "#fbcfe8", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
+  { theme: "verao", title: "Verão", description: "Cores vibrantes para uma estação refrescante.", tokens: { base: "#ecfeff", baseSolid: "#ffffff", accent: "#0891b2", contrast: "#164e63", surface: "#fde68a", onSurface: "#ffffff" }, fonts: { display: "Oswald", body: "Roboto" } },
+  { theme: "pascoa", title: "Páscoa", description: "Chocolate e tons suaves para presentear.", tokens: { base: "#faf5ff", baseSolid: "#ffffff", accent: "#7e22ce", contrast: "#3b0764", surface: "#e9d5ff", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
+  { theme: "premium", title: "Seleção Premium", description: "Elegância em azul profundo e dourado.", tokens: { base: "#f8fafc", baseSolid: "#ffffff", accent: "#a16207", contrast: "#0f172a", surface: "#fef3c7", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
   { theme: "operacao-promo", title: "Super Ofertas", description: "Campanhas gerais de supermercado.", tokens: { base: "#fff7ed", baseSolid: "#ffffff", accent: "#ef312f", contrast: "#172554", surface: "#fed7aa", onSurface: "#ffffff" }, fonts: { display: "Oswald", body: "Roboto" } },
   { theme: "primavera", title: "Primavera", description: "Flores, cores leves e campanhas sazonais.", tokens: { base: "#f0fdf4", baseSolid: "#ffffff", accent: "#f472b6", contrast: "#14532d", surface: "#fce7f3", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
   { theme: "outubro-rosa", title: "Outubro Rosa", description: "Campanha rosa com comunicação acolhedora.", tokens: { base: "#fff1f2", baseSolid: "#ffffff", accent: "#ec4899", contrast: "#831843", surface: "#fbcfe8", onSurface: "#ffffff" }, fonts: { display: "Montserrat", body: "Roboto" } },
@@ -32,6 +38,12 @@ export const THEMES = [
 ] as const;
 
 const DESIGN_PRESETS = [
+  ["churrasco", "Festival do Churrasco", "ACENDA O CHURRASCO"], ["churrasco", "Seleção do Açougue", "CORTES ESPECIAIS"],
+  ["pet-shop", "Amigo Pet", "CARINHO EM OFERTA"], ["pet-shop", "Festival Pet", "SEU PET MERECE"],
+  ["beleza", "Beleza em Oferta", "SEU MOMENTO DE CUIDAR"], ["beleza", "Perfumaria Especial", "BELEZA TODO DIA"],
+  ["verao", "Verão Tropical", "VERÃO DE OFERTAS"], ["verao", "Refresque seu Dia", "PREÇOS REFRESCANTES"],
+  ["pascoa", "Páscoa Doce", "UMA PÁSCOA MAIS DOCE"], ["pascoa", "Presentes de Páscoa", "ENCANTE NESTA PÁSCOA"],
+  ["premium", "Seleção Especial", "ESCOLHAS ESPECIAIS"], ["premium", "Empório Premium", "SABORES SELECIONADOS"],
   ["operacao-promo", "Festival de Ofertas", "OFERTAS IMPERDÍVEIS"], ["operacao-promo", "Preço Baixo Todo Dia", "PREÇO BAIXO"],
   ["primavera", "Primavera Floral", "PRIMAVERA DE OFERTAS"], ["primavera", "Primavera Fresh", "FLORESÇA SUA ECONOMIA"],
   ["outubro-rosa", "Laço Rosa", "OUTUBRO ROSA"], ["outubro-rosa", "Rosa Premium", "CUIDAR É UM ATO DE AMOR"],
@@ -50,6 +62,14 @@ const DESIGN_PRESETS = [
 function buildElements(theme: (typeof THEMES)[number], format: { width: number; height: number }, headline: string, variant: number) {
   const w = format.width;
   const h = format.height;
+  const readable = (hex: string) => {
+    const rgb = hex.slice(1).match(/.{2}/g)!.map(value => {
+      const c = parseInt(value, 16) / 255;
+      return c <= .04045 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4;
+    });
+    return rgb[0]! * .2126 + rgb[1]! * .7152 + rgb[2]! * .0722 > .179 ? "#111827" : "#ffffff";
+  };
+  const headingColor = readable(variant % 2 ? theme.tokens.contrast : theme.tokens.accent);
   return [
     { id: "background", category: "background", type: "shape", x: 0, y: 0, width: w, height: h, backgroundColor: theme.tokens.base, zIndex: 0 },
     {
@@ -63,8 +83,8 @@ function buildElements(theme: (typeof THEMES)[number], format: { width: number; 
       backgroundColor: variant % 2 ? theme.tokens.contrast : theme.tokens.accent,
       zIndex: 1,
     },
-    { id: "diagonal-left", category: "decorative", type: "shape", x: Math.round(-w * .12), y: Math.round(h * .18), width: Math.round(w * .55), height: Math.round(h * .09), rotation: -7, backgroundColor: theme.tokens.surface, opacity: .9, zIndex: 1 },
-    { id: "diagonal-right", category: "decorative", type: "shape", x: Math.round(w * .68), y: Math.round(h * .04), width: Math.round(w * .42), height: Math.round(h * .08), rotation: 12, backgroundColor: theme.tokens.surface, opacity: .55, zIndex: 1 },
+    { id: "diagonal-left", category: "decorative", type: "shape", subtype: variant % 3 === 0 ? "circle" : "rounded", x: Math.round(-w * .12), y: Math.round(h * .18), width: Math.round(w * .55), height: Math.round(h * .09), rotation: -7, backgroundColor: theme.tokens.surface, opacity: .9, zIndex: 1 },
+    { id: "diagonal-right", category: "decorative", type: "shape", subtype: variant % 3 === 1 ? "star" : "circle", x: Math.round(w * .78), y: Math.round(-h * .025), width: Math.round(w * .28), height: Math.round(h * .18), rotation: 12, backgroundColor: theme.tokens.surface, opacity: .3, zIndex: 1 },
     {
       id: "title",
       category: "decorative",
@@ -77,8 +97,8 @@ function buildElements(theme: (typeof THEMES)[number], format: { width: number; 
       textStyle: {
         fontFamily: theme.fonts.display,
         fontWeight: 700,
-        fontSize: Math.round(h * (headline.length > 20 ? 0.052 : 0.066)),
-        color: variant % 2 ? "#ffffff" : theme.tokens.onSurface,
+        fontSize: Math.floor(Math.min(h * .045, w * .82 / (headline.length * .85))),
+        color: headingColor,
         align: "center",
       },
       zIndex: 2,
@@ -96,12 +116,12 @@ function buildElements(theme: (typeof THEMES)[number], format: { width: number; 
         fontFamily: theme.fonts.body,
         fontWeight: 500,
         fontSize: Math.round(h * 0.03),
-        color: variant % 2 ? "#ffffff" : theme.tokens.onSurface,
+        color: headingColor,
         align: "center",
       },
       zIndex: 2,
     },
-    { id: "offer-ribbon", category: "decorative", type: "text", x: Math.round(w * .35), y: Math.round(h * .225), width: Math.round(w * .3), height: Math.round(h * .045), text: "OFERTAS DA SEMANA", backgroundColor: theme.tokens.surface, textStyle: { fontFamily: theme.fonts.body, fontWeight: 700, fontSize: Math.round(h * .018), color: theme.tokens.contrast, align: "center" }, zIndex: 4 },
+    { id: "offer-ribbon", category: "decorative", type: "text", x: Math.round(w * .35), y: Math.round(h * .225), width: Math.round(w * .3), height: Math.round(h * .045), text: "OFERTAS DA SEMANA", backgroundColor: theme.tokens.surface, textStyle: { fontFamily: theme.fonts.body, fontWeight: 700, fontSize: Math.round(h * .018), color: readable(theme.tokens.surface), align: "center" }, zIndex: 4 },
     {
       id: "footer",
       category: "decorative",

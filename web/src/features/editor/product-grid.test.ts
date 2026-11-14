@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { EditorProduct } from "./use-editor-state";
-import { layoutProductGrid } from "./product-grid";
+import { layoutProductGrid, type ProductGridMode } from "./product-grid";
 
 function products(count: number): EditorProduct[] {
   return Array.from({ length: count }, (_, index) => ({ id: `p${index}`, x: 0, y: 0, width: 1, height: 1, rotation: 0, isHighlighted: false }));
@@ -37,4 +37,38 @@ describe("layoutProductGrid", () => {
     expect(new Set(result.map(product => product.width))).toEqual(new Set([result[0]!.width]));
     expect(new Set(result.map(product => product.height))).toEqual(new Set([result[0]!.height]));
   });
+});
+
+it("repete os mesmos espacos nas folhas e preserva ordem e sobra", () => {
+  const result = layoutProductGrid(products(14), 3, 1080, 1350, "flyer", "balanced", 6);
+  expect(result.map(p => p.id)).toEqual(products(14).map(p => p.id));
+  for (let index = 6; index < result.length; index++) {
+    const { x, y, width, height } = result[index % 6]!;
+    expect(result[index]).toMatchObject({ x, y, width, height });
+  }
+});
+
+it.each<ProductGridMode>(["balanced", "featured", "featured-center", "featured-right", "wide-left", "wide-center", "wide-right"])("repete a grade %s sem sobrepor produtos", mode => {
+  const result = layoutProductGrid(products(35), 4, 1080, 1350, "flyer", mode, 16);
+  const first = result.slice(0, 16);
+  for (const [index, card] of first.entries()) {
+    expect(result[index + 16]).toMatchObject({ x: card.x, y: card.y, width: card.width, height: card.height });
+    expect(card.x + card.width).toBeLessThanOrEqual(1080);
+    expect(card.y + card.height).toBeLessThanOrEqual(1350);
+    for (const other of first.filter(p => p.id !== card.id)) {
+      expect(card.x + card.width <= other.x || other.x + other.width <= card.x ||
+        card.y + card.height <= other.y || other.y + other.height <= card.y).toBe(true);
+    }
+  }
+});
+it("nao sobrepoe cards em formatos baixos e grades densas", () => {
+  const result = layoutProductGrid(products(48), 8, 1080, 566, "flyer", "balanced", 48);
+  for (const card of result) {
+    expect(card.y + card.height).toBeLessThanOrEqual(566);
+    expect(card.width).toBeGreaterThan(0);
+    for (const other of result.filter(p => p.id !== card.id)) {
+      expect(card.x + card.width <= other.x || other.x + other.width <= card.x ||
+        card.y + card.height <= other.y || other.y + other.height <= card.y).toBe(true);
+    }
+  }
 });

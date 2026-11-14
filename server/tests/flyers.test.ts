@@ -1,4 +1,5 @@
-import { beforeAll, describe, expect, it } from "vitest";
+import { beforeAll, describe, expect, it, vi } from "vitest";
+import sharp from "sharp";
 import request from "supertest";
 import { app, bootstrap, registerUser } from "./helpers.js";
 
@@ -174,6 +175,26 @@ describe("validacao do payload", () => {
 });
 
 describe("renderizacao", () => {
+  it("incorpora imagens remotas do catálogo na prévia e na exportação", async () => {
+    const png = await sharp({ create: { width: 2, height: 2, channels: 4, background: "red" } }).png().toBuffer();
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockImplementation(async () => new Response(new Uint8Array(png)));
+    try {
+      const image = "https://efacil-public.s3.sa-east-1.amazonaws.com/test.png";
+      const created = await request(app).post("/api/flyers").set(headers).send(flyerPayload({
+        elements: [{ id: "bg", type: "image", image, width: 100, height: 100 }],
+        products: [{ ...flyerPayload().products[0], image }],
+      }));
+      expect(created.status).toBe(201);
+      const id = created.body.flyer._key;
+      const preview = await request(app).get(`/api/flyers/${id}/render.svg`).set(headers);
+      expect(preview.status).toBe(200);
+      expect(preview.text ?? String(preview.body)).toContain("data:image/png;base64,");
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      const exported = await request(app).post(`/api/flyers/${id}/render`).set(headers).send({ format: "png" });
+      expect(exported.status).toBe(200);
+    } finally { fetchMock.mockRestore(); }
+  });
+
   it("devolve SVG com os elementos do encarte", async () => {
     const created = await request(app).post("/api/flyers").set(headers).send(flyerPayload({ name: "Renderizavel" }));
     const id = created.body.flyer._key as string;

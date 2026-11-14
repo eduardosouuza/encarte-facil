@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import { ShapeArtwork } from "./catalog-preview";
 import type { EditorElement, EditorProduct } from "./use-editor-state";
 
 interface CanvasProps {
@@ -159,17 +160,18 @@ export function FlyerCanvas({
                   zIndex: element.zIndex,
                   opacity: element.opacity,
                   transform: element.rotation ? `rotate(${element.rotation}deg)` : undefined,
-                  backgroundColor: element.backgroundColor ?? "transparent",
+                  backgroundColor: element.type === "shape" ? "transparent" : element.backgroundColor ?? "transparent",
                   ...(element.type === "image" && element.image
                     ? {
                         backgroundImage: `url(${element.image})`,
-                        backgroundSize: "contain",
+                        backgroundSize: element.imageFit === "fill" ? "100% 100%" : element.imageFit ?? "contain",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                       }
                     : {}),
                 }}
               >
+                {element.type === "shape" && element.backgroundColor && <ShapeArtwork subtype={element.subtype} color={element.backgroundColor} />}
                 {element.type === "text" || element.text ? (
                   <div
                     className="flex h-full w-full items-center justify-center whitespace-pre-wrap p-1 text-center"
@@ -207,13 +209,14 @@ export function FlyerCanvas({
               typeof product.salePrice === "number" &&
               typeof product.price === "number" &&
               product.salePrice < product.price;
+            const textScale = Math.min(product.width, product.height);
             const tagColor = product.tagColor ?? "#e11d48";
             const tagShape = product.tagShape ?? "pill";
             const tagStyle = product.tagStyle ?? "solid";
             const tagVisualStyle: React.CSSProperties = {
               color: product.textColor ?? "#ffffff",
-              fontSize: product.width * .1,
-              padding: `${Math.max(3, product.width * .018)}px ${Math.max(8, product.width * .045)}px`,
+              fontSize: textScale * .1,
+              padding: `${Math.max(3, textScale * .018)}px ${Math.max(8, textScale * .045)}px`,
               borderRadius: tagShape === "circle" ? "50%" : tagShape === "pill" ? "9999px" : tagShape === "square" ? "3px" : "8px",
               background: tagStyle === "gradient" ? `linear-gradient(135deg, ${tagColor}, #111827)` : tagStyle === "outline" ? "transparent" : tagColor,
               border: tagStyle === "outline" ? `3px solid ${tagColor}` : undefined,
@@ -230,7 +233,7 @@ export function FlyerCanvas({
                   startDrag(event, "move", "product", product.id, product);
                 }}
                 className={cn(
-                  "absolute cursor-move select-none overflow-hidden rounded-sm border bg-white shadow-sm",
+                  "absolute cursor-move select-none overflow-hidden bg-white",
                   product.isHighlighted && "ring-2 ring-primary",
                   isSelected && "outline outline-2 outline-primary",
                 )}
@@ -242,18 +245,21 @@ export function FlyerCanvas({
                   zIndex: 500 + products.indexOf(product),
                   transform: product.rotation ? `rotate(${product.rotation}deg)` : undefined,
                   backgroundColor: product.backgroundColor ?? "#ffffff",
+                  border: `${product.borderWidth ?? 1}px solid ${product.borderColor ?? (product.isHighlighted ? "#29d19c" : "#e2e8f0")}`,
+                  borderRadius: product.borderRadius ?? 10,
+                  boxShadow: product.cardShadow === false ? "none" : "0 2px 8px rgba(15, 23, 42, 0.12)",
                   color: "#111827",
                 }}
               >
                 {product.image ? (
                   <img src={product.image} alt={product.name ?? "Produto"} className="h-[58%] w-full bg-white object-contain p-1" />
-                ) : <div className="grid h-[58%] place-items-center bg-slate-50 text-slate-300" style={{ fontSize: Math.max(18, product.width * .16) }}>▧</div>}
-                <div className="p-2 text-center" style={{ fontSize: Math.max(10, Math.min(28, product.width * .075)) }}>
+                ) : <div className="grid h-[58%] place-items-center bg-slate-50 text-slate-300" style={{ fontSize: Math.max(18, textScale * .16) }}>▧</div>}
+                <div className="text-center" style={{ padding: Math.min(8, product.height * .015), lineHeight: 1.1, fontSize: Math.min(28, textScale * .075) }}>
                   <p className="truncate font-semibold">{product.name ?? "Produto"}</p>
-                  <div className="flex flex-col items-center gap-1">
+                  <div className="flex flex-col items-center">
                     {hasDiscount ? (
                       <>
-                        <span className="line-through opacity-60" style={{ fontSize: product.width * .07 }}>
+                        <span className="line-through opacity-60" style={{ fontSize: textScale * .07 }}>
                           R$ {(product.price ?? 0).toFixed(2)}
                         </span>
                         <span className="font-bold" style={tagVisualStyle}>
@@ -266,7 +272,7 @@ export function FlyerCanvas({
                       </span>
                     )}
                   </div>
-                  {product.unit ? <span className="opacity-70" style={{ fontSize: product.width * .06 }}>{product.unit}</span> : null}
+                  {product.unit ? <span className="opacity-70" style={{ fontSize: textScale * .06 }}>{product.unit}</span> : null}
                 </div>
 
                 {isSelected ? (

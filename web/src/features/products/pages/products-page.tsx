@@ -20,6 +20,10 @@ import type { Product } from "@/lib/types";
 import { uploadImage } from "@/features/media/media-library";
 import { api } from "@/lib/api";
 import { Textarea } from "@/components/ui/textarea";
+import { parsePrice } from "../price";
+import { useQueryClient } from "@tanstack/react-query";
+import { normalizeSearch } from "@/features/editor/catalog-preview";
+import { ProductImagePicker } from "../product-image-picker";
 
 interface FormState {
   name: string;
@@ -42,6 +46,7 @@ const EMPTY_FORM: FormState = {
 };
 
 export function ProductsPage() {
+  const queryClient = useQueryClient();
   const [term, setTerm] = React.useState("");
   const [dialogOpen, setDialogOpen] = React.useState(false);
   const [editing, setEditing] = React.useState<Product | null>(null);
@@ -51,8 +56,9 @@ export function ProductsPage() {
   const [bulkText, setBulkText] = React.useState("");
   const [bulkBusy, setBulkBusy] = React.useState(false);
   const [findingPhoto, setFindingPhoto] = React.useState<string | null>(null);
+  const [photoProduct, setPhotoProduct] = React.useState<Product | null>(null);
 
-  const productsQuery = useProducts(term);
+  const productsQuery = useProducts();
   const createProduct = useCreateProduct();
   const updateProduct = useUpdateProduct();
   const deleteProduct = useDeleteProduct();
@@ -79,23 +85,27 @@ export function ProductsPage() {
 
   async function handleSubmit(event: React.FormEvent) {
     event.preventDefault();
-    const price = Number(form.price.replace(",", "."));
+    const price = parsePrice(form.price);
     if (!form.name.trim()) {
       toast.error("Informe o nome do produto");
       return;
     }
-    if (Number.isNaN(price) || price < 0) {
+    if (price === null) {
       toast.error("Informe um preco valido");
       return;
     }
 
     const salePriceRaw = form.salePrice.trim();
-    const salePrice = salePriceRaw ? Number(salePriceRaw.replace(",", ".")) : null;
+    const salePrice = salePriceRaw ? parsePrice(salePriceRaw) : null;
+    if (salePriceRaw && salePrice === null) {
+      toast.error("Informe um preço promocional válido");
+      return;
+    }
 
     const payload = {
       name: form.name.trim(),
       price,
-      salePrice: salePrice === null || Number.isNaN(salePrice) ? null : salePrice,
+      salePrice,
       unit: form.unit.trim() || null,
       image: form.image.trim() || null,
       notes: form.notes.trim() || null,
@@ -148,24 +158,22 @@ export function ProductsPage() {
   }
 
   async function handleBulkImport() {
-    const lines = bulkText.split(/\r?\n/).map(line => line.trim()).filter(Boolean).slice(0, 100);
+    const lines = bulkText.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
     if (!lines.length) { toast.error("Cole ao menos um produto por linha"); return; }
+    if (lines.length > 50) { toast.error("Importe até 50 produtos por vez."); return; }
+    if (bulkBusy) return;
     setBulkBusy(true);
-    let created = 0, skipped = 0;
     try {
-      for (const line of lines) {
-        const { parsed } = await api.post<{ parsed: { name: string; price: number | null; unit: string | null } }>("/products/parse-line", { text: line });
-        if (parsed.price === null) { skipped++; continue; }
-        await createProduct.mutateAsync({ name: parsed.name, price: parsed.price, unit: parsed.unit });
-        created++;
-      }
+      const result = await api.post<{ products: Product[]; ignored: { line: string; reason: string }[] }>("/products/import-list", { text: bulkText });
+      const created = result.products.length, skipped = result.ignored.length;
+      await queryClient.invalidateQueries({ queryKey: ["products"] });
       toast.success(`${created} produto(s) importado(s)${skipped ? `; ${skipped} sem preço foram ignorados` : ""}`);
       setBulkText(""); setBulkOpen(false);
     } catch (error) { toast.error(error instanceof Error ? error.message : "Falha na importação"); }
     finally { setBulkBusy(false); }
   }
 
-  const products = productsQuery.data?.products ?? [];
+  const products = (productsQuery.data?.products ?? []).filter(product => normalizeSearch(`${product.name} ${product.category ?? ""} ${product.unit ?? ""}`).includes(normalizeSearch(term)));
 
   return (
     <div className="space-y-6">
@@ -312,14 +320,14 @@ export function ProductsPage() {
         </CardContent>
       </Card>
 
-      {products.length === 0 ? (
+      {productsQuery.isLoading ? <p role="status" className="p-8 text-center">Carregando produtos...</p> : productsQuery.isError ? <div role="alert" className="rounded-lg border p-6"><p>Não foi possível carregar os produtos.</p><Button variant="outline" onClick={() => void productsQuery.refetch()}>Tentar novamente</Button></div> : products.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-lg border border-dashed py-16 text-center">
           <Package className="mb-3 h-8 w-8 text-muted-foreground" />
-          <p className="font-medium">Nenhum produto cadastrado</p>
+          <p className="font-medium">{term ? "Nenhum produto encontrado" : "Nenhum produto cadastrado"}</p>
           <p className="text-sm text-muted-foreground">Cadastre produtos para usar nos encartes.</p>
         </div>
       ) : (
-        <div className="overflow-hidden rounded-lg border bg-white dark:bg-slate-950">
+        <div className="overflow-x-auto rounded-lg border bg-white dark:bg-slate-950">
           <table className="w-full text-left text-sm">
             <thead className="border-b bg-muted/50 text-xs uppercase text-muted-foreground">
               <tr>
@@ -366,6 +374,7 @@ export function ProductsPage() {
                       {!product.image && <Button variant="outline" size="sm" disabled={findingPhoto !== null} onClick={() => void handleFindPhoto(product)} aria-label={`Buscar foto de ${product.name}`}>
                         {findingPhoto === product._key ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}Buscar foto
                       </Button>}
+                      <Button variant="outline" size="sm" onClick={() => setPhotoProduct(product)} aria-label={`Escolher foto de ${product.name}`}>Escolher foto</Button>
                       {product.image?.startsWith("/api/assets/") ? <Button variant="ghost" size="icon" onClick={() => void handleRemoveBackground(product)} aria-label="Remover fundo">
                         <WandSparkles className="h-4 w-4" />
                       </Button> : null}
@@ -388,6 +397,7 @@ export function ProductsPage() {
           </table>
         </div>
       )}
+      {photoProduct && <ProductImagePicker key={photoProduct._key} product={photoProduct} onClose={() => setPhotoProduct(null)} />}
     </div>
   );
 }

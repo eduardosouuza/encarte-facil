@@ -2,31 +2,41 @@ import type { SQLInputValue } from "node:sqlite";
 import { Router } from "express";
 import { z } from "zod";
 import { getDb } from "../db/connection.js";
-import { asyncHandler, parseWith } from "../lib/http.js";
+import { ApiError, asyncHandler, parseWith } from "../lib/http.js";
 import { requireAuth } from "../middleware/auth.js";
 import { THEMES } from "../db/seed.js";
 import { ELEMENT_LIBRARY, INDUSTRIES } from "./editor-catalog.data.js";
+import { renderFlyerToSvg, type RenderElement } from "../lib/svg.js";
+import { getOriginalDesign, listOriginalDesigns, listOriginalElements } from "./original-designs.js";
 
 export const catalogRouter = Router();
 
-catalogRouter.get("/elements", (req, res) => {
+catalogRouter.get("/elements", asyncHandler(async (req, res) => {
   const term = String(req.query.term ?? "").trim().toLocaleLowerCase("pt-BR");
   const category = String(req.query.category ?? "").trim();
-  const categories = category === "seal" ? ["3d", "tags"] : [category];
+  const remote = await listOriginalElements({ term, category, limit: Number(req.query.limit) || 100 }).catch(() => { throw new ApiError(502, "O catálogo original do Encarte Fácil está indisponível. Tente novamente."); });
+  if (remote !== null) {
+    res.json({ success: true, elements: remote });
+    return;
+  }
+  const categories = category === "seal" ? ["3d", "tags"] : category === "backgrounds" ? ["background", "backgrounds"] : [category];
   const limit = Math.min(100, Math.max(1, Number(req.query.limit) || 20));
   const offset = Math.max(0, Number(req.query.offset) || 0);
   const elements = ELEMENT_LIBRARY.filter((element) =>
     (!term || element.title.toLocaleLowerCase("pt-BR").includes(term)) && (!category || categories.includes(element.category)),
   ).slice(offset, offset + limit);
   res.json({ success: true, elements });
-});
+}));
 
 catalogRouter.get("/elements/colored", (req, res) => {
   const id = String(req.query.url ?? "").replace(/^element:/, "");
   const color = /^#[0-9a-f]{6}$/i.test(String(req.query.color ?? "")) ? String(req.query.color) : "#e11d48";
   const element = ELEMENT_LIBRARY.find((item) => item._key === id);
   if (!element) return void res.status(404).json({ success: false, error: "Elemento não encontrado" });
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"><rect width="256" height="256" rx="32" fill="${color}"/></svg>`;
+  const payload: RenderElement = { ...element.payload };
+  if (payload.type === "text" && !payload.backgroundColor) payload.textStyle = { ...payload.textStyle, color };
+  else payload.backgroundColor = color;
+  const svg = renderFlyerToSvg({ width: payload.width ?? 256, height: payload.height ?? 256, elements: [payload], products: [], backgroundColor: "transparent" });
   res.json({ success: true, svg });
 });
 
@@ -182,6 +192,11 @@ catalogRouter.get(
       "query",
       req.query,
     );
+    const remote = await listOriginalDesigns({ term: query.term, theme: query.theme, limit: query.limit, offset: query.offset }).catch(() => { throw new ApiError(502, "O catálogo original do Encarte Fácil está indisponível. Tente novamente."); });
+    if (remote !== null) {
+      res.json({ success: true, designs: remote });
+      return;
+    }
     const db = getDb();
     const where: string[] = ["1 = 1"];
     const params: SQLInputValue[] = [];
@@ -230,6 +245,11 @@ catalogRouter.get(
 catalogRouter.get(
   "/designs/:id",
   asyncHandler(async (req, res) => {
+    const remote = await getOriginalDesign(req.params.id!).catch(() => { throw new ApiError(502, "O catálogo original do Encarte Fácil está indisponível. Tente novamente."); });
+    if (remote) {
+      res.json({ success: true, design: remote });
+      return;
+    }
     const db = getDb();
     const row = db.prepare(`SELECT * FROM designs WHERE id = ? OR theme = ?`).get(req.params.id!, req.params.id!) as
       | DesignRow

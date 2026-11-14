@@ -143,7 +143,16 @@ export interface ProductListResponse {
 export function useProducts(term = "") {
   return useQuery({
     queryKey: ["products", term],
-    queryFn: () => api.get<ProductListResponse>("/products", { term: term || undefined, limit: 100 }),
+    queryFn: async ({ signal }) => {
+      const first = await api.get<ProductListResponse>("/products", { term: term || undefined, limit: 200 }, signal);
+      const products = [...first.products];
+      while (products.length < first.total) {
+        const page = await api.get<ProductListResponse>("/products", { term: term || undefined, limit: 200, offset: products.length }, signal);
+        if (!page.products.length) break;
+        products.push(...page.products);
+      }
+      return { ...first, products };
+    },
   });
 }
 

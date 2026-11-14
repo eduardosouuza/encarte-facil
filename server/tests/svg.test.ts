@@ -2,6 +2,17 @@ import { describe, expect, it } from "vitest";
 import { renderFlyerToSvg } from "../src/lib/svg.js";
 
 describe("renderFlyerToSvg", () => {
+  it("preserva círculos, estrelas e o fundo dos adesivos na exportação", () => {
+    const svg = renderFlyerToSvg({ width: 500, height: 500, products: [], elements: [
+      { type: "shape", subtype: "circle", width: 100, height: 80, backgroundColor: "#ff0000" },
+      { type: "shape", subtype: "star", width: 100, height: 100, backgroundColor: "#ffff00" },
+      { type: "text", width: 240, height: 72, text: "OFERTA", backgroundColor: "#e11d48" },
+    ] });
+    expect(svg).toContain('<ellipse cx="50" cy="40" rx="50" ry="40"');
+    expect(svg).toContain('<polygon points="50,0 61,35');
+    expect(svg.indexOf('fill="#e11d48"')).toBeLessThan(svg.indexOf('>OFERTA</tspan>'));
+    expect(svg).toContain('fill="#e11d48"');
+  });
   it("renderiza o cabecalho SVG com as dimensoes do formato", () => {
     const svg = renderFlyerToSvg({
       name: "Encarte",

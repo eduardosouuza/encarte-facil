@@ -7,6 +7,7 @@ import { requireAuth } from "../middleware/auth.js";
 import { newId } from "../lib/ids.js";
 import { nowIso } from "../lib/time.js";
 import { removeAssetBackground, saveImage } from "./media.routes.js";
+import { allowedProductImageUrl, searchOriginalProductImages } from "./original-product-images.js";
 
 export const productRouter = Router();
 
@@ -111,14 +112,9 @@ function normalizedSearch(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-function allowedProductImageUrl(value: string) {
-  try {
-    const url = new URL(value);
-    return url.protocol === "https:" && !url.username && !url.password && (!url.port || url.port === "443") && ["images.openfoodfacts.org", "images.openfoodfacts.net", "efacil-public.s3.sa-east-1.amazonaws.com", "cdn.encartefacil.com"].includes(url.hostname);
-  } catch { return false; }
-}
-
 async function searchProductImages(term: string) {
+  const catalog = await searchOriginalProductImages(term);
+  if (catalog !== null) return catalog;
   const normalizedTerm = normalizedSearch(term).replace(/\b\d+\s*(kg|g|mg|ml|l|un|und)\b/g, "").trim();
   const original = ORIGINAL_PRODUCT_IMAGES
     .filter(([title]) => {
@@ -206,7 +202,8 @@ productRouter.post("/search-images/persist", asyncHandler(async (req, res) => {
 
 productRouter.post("/import-list", asyncHandler(async (req, res) => {
   const { text } = parseWith(z.object({ text: z.string().trim().min(1).max(20_000) }), "body", req.body);
-  const lines = text.split(/\r?\n/).map(line => line.trim()).filter(Boolean).slice(0, 50);
+  const lines = text.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
+  if (lines.length > 50) throw ApiError.badRequest("Importe até 50 produtos por vez. Nenhum produto foi importado.");
   const parsed = lines.map((line, index) => ({ index, line, ...parseProductLine(line) }));
   const valid = parsed.filter(item => item.name && item.price !== null);
   if (!valid.length) throw ApiError.badRequest("Nenhuma linha com nome e preço foi encontrada.");

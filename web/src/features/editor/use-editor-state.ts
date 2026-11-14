@@ -21,7 +21,12 @@ export interface EditorElement {
   zIndex: number;
   text?: string;
   backgroundColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  cardShadow?: boolean;
   image?: string;
+  imageFit?: "contain" | "cover" | "fill";
   textStyle?: {
     fontFamily?: string;
     fontWeight?: number | string;
@@ -51,6 +56,10 @@ export interface EditorProduct {
   tagColor?: string;
   textColor?: string;
   backgroundColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  cardShadow?: boolean;
   tagShape?: "circle" | "pill" | "ticket" | "burst" | "square";
   tagStyle?: "solid" | "outline" | "gradient" | "shadow";
 }

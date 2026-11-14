@@ -234,6 +234,15 @@ export function InspectorPanel({
           <label className="block text-sm">Preço promocional<Input type="number" min={0} step="0.01" value={product.salePrice ?? ""} onChange={e => onChangeProduct({ salePrice: e.target.value === "" ? null : Math.max(0, Number(e.target.value)) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
           <label className="block text-sm">Unidade<Input value={product.unit ?? ""} maxLength={40} onChange={e => onChangeProduct({ unit: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
           {(["tagColor", "textColor", "backgroundColor"] as const).map((key, i) => <label key={key} className="block text-sm">{["Cor da tag", "Texto da tag", "Fundo do produto"][i]}<Input type="color" value={product[key] ?? ["#e11d48", "#ffffff", "#ffffff"][i]} onChange={e => onChangeProduct({ [key]: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>)}
+          <div className="space-y-2 rounded-lg border p-3">
+            <p className="text-sm font-medium">Caixa do produto</p>
+            <div className="grid grid-cols-2 gap-2">
+              <label className="text-xs">Cor da borda<Input type="color" className="h-9 p-1" value={product.borderColor ?? "#e2e8f0"} onChange={e => onChangeProduct({ borderColor: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
+              <label className="text-xs">Espessura<Input type="number" min={0} max={12} value={product.borderWidth ?? 1} onChange={e => onChangeProduct({ borderWidth: Math.max(0, Math.min(12, Number(e.target.value))) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
+            </div>
+            <label className="block text-xs">Arredondamento<Input type="range" min={0} max={40} value={product.borderRadius ?? 10} onChange={e => onChangeProduct({ borderRadius: Number(e.target.value) }, false)} onMouseUp={() => onChangeProduct({}, true)} /></label>
+            <label className="flex items-center gap-2 text-xs"><input type="checkbox" checked={product.cardShadow !== false} onChange={e => onChangeProduct({ cardShadow: e.target.checked }, true)} /> Sombra da caixa</label>
+          </div>
           <div className="grid grid-cols-2 gap-2">
             <label className="text-sm">Forma<select className="mt-1 w-full rounded-md border bg-background p-2" value={product.tagShape ?? "pill"} onChange={event => onChangeProduct({ tagShape: event.target.value as EditorProduct["tagShape"] }, true)}><option value="circle">Círculo</option><option value="pill">Pílula</option><option value="ticket">Ingresso</option><option value="burst">Explosão</option><option value="square">Quadrada</option></select></label>
             <label className="text-sm">Estilo<select className="mt-1 w-full rounded-md border bg-background p-2" value={product.tagStyle ?? "solid"} onChange={event => onChangeProduct({ tagStyle: event.target.value as EditorProduct["tagStyle"] }, true)}><option value="solid">Sólida</option><option value="outline">Contorno</option><option value="gradient">Gradiente</option><option value="shadow">Sombra</option></select></label>

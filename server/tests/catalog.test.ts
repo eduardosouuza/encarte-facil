@@ -10,6 +10,29 @@ beforeAll(async () => {
 });
 
 describe("catalogo de formatos e modelos", () => {
+  it("não substitui o catálogo original por modelos locais quando a conexão falha", async () => {
+    vi.stubEnv("ORIGINAL_CATALOG_EMAIL", "offline@example.com");
+    vi.stubEnv("ORIGINAL_CATALOG_PASSWORD", "test-password");
+    const fetchMock = vi.spyOn(globalThis, "fetch").mockRejectedValue(new Error("fetch failed"));
+    try {
+      const designs = await request(app).get("/api/designs").set(headers);
+      expect(designs.status).toBe(502);
+      expect(designs.body.designs).toBeUndefined();
+      expect(designs.body.error).toContain("catálogo original");
+      const detail = await request(app).get("/api/designs/operacao-promo").set(headers);
+      expect(detail.status).toBe(502);
+      const backgrounds = await request(app).get("/api/elements?category=backgrounds").set(headers);
+      expect(backgrounds.status).toBe(502);
+      expect(backgrounds.body.elements).toBeUndefined();
+    } finally { fetchMock.mockRestore(); vi.unstubAllEnvs(); }
+  });
+
+  it("recolore o elemento escolhido preservando seu desenho", async () => {
+    const response = await request(app).get("/api/elements/colored?url=element:basic-circle&color=%23123456");
+    expect(response.status).toBe(200);
+    expect(response.body.svg).toContain("<ellipse");
+    expect(response.body.svg).toContain('fill="#123456"');
+  });
   it("lista a biblioteca de elementos, segmentos e temas observados no cliente original", async () => {
     const elements = await request(app).get("/api/elements?category=seal");
     expect(elements.status).toBe(200);
@@ -59,6 +82,13 @@ describe("catalogo de formatos e modelos", () => {
 });
 
 describe("produtos", () => {
+  it("rejeita listas acima do limite sem importar parcialmente", async () => {
+    const before = await request(app).get("/api/products").set(headers);
+    const response = await request(app).post("/api/products/import-list").set(headers).send({ text: Array.from({ length: 51 }, () => "Arroz R$ 5,90").join("\n") });
+    expect(response.status).toBe(400);
+    const after = await request(app).get("/api/products").set(headers);
+    expect(after.body.total).toBe(before.body.total);
+  });
   it("usa a busca alternativa quando o primeiro serviço falha", async () => {
     const fetchMock = vi.spyOn(globalThis, "fetch")
       .mockResolvedValueOnce(new Response("Unavailable", { status: 503 }))

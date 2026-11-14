@@ -6,6 +6,7 @@ import {
   Download,
   Image as ImageIcon,
   LayoutTemplate,
+  Grid3X3,
   Layers3,
   Loader2,
   Newspaper,
@@ -39,21 +40,26 @@ import { downloadFile } from "@/lib/download";
 import { MediaLibrary, type Asset } from "@/features/media/media-library";
 import { BrandPage, useBrandKit } from "@/features/media/brand-page";
 import { Textarea } from "@/components/ui/textarea";
+import { CatalogPreview, normalizeSearch } from "../../editor/catalog-preview";
+import { useQuery } from "@tanstack/react-query";
 import { FlyerCanvas } from "../../editor/flyer-canvas";
 import { InspectorPanel } from "../../editor/inspector-panel";
 import { useEditorState, type EditorElement, type EditorProduct } from "../../editor/use-editor-state";
+import { GridPicker } from "../../editor/grid-picker";
 import { layoutProductGrid, type ProductGridMode } from "../../editor/product-grid";
 import { formatCurrency } from "@/lib/utils";
 import type { Flyer, Product } from "@/lib/types";
+import { ProductImagePicker } from "@/features/products/product-image-picker";
 
 const DEFAULT_WIDTH = 1080;
 const DEFAULT_HEIGHT = 1350;
 
-type EditorSection = "themes" | "products" | "elements" | "tags" | "formats" | "brand" | "flyers";
+type EditorSection = "grid" | "themes" | "products" | "elements" | "tags" | "formats" | "brand" | "flyers";
 
 const EDITOR_SECTIONS = [
   { id: "themes", label: "Temas", icon: Palette },
   { id: "products", label: "Produtos", icon: Package },
+  { id: "grid", label: "Grade", icon: Grid3X3 },
   { id: "elements", label: "Elementos", icon: Shapes },
   { id: "tags", label: "Tags", icon: Tags },
   { id: "formats", label: "Formatos", icon: LayoutTemplate },
@@ -78,12 +84,13 @@ const TAG_COLORS = [
 ] as const;
 
 const ELEMENT_CATEGORY_LABELS: Record<string, string> = {
-  all: "Todos", text: "Textos", stickers: "Adesivos", decorative: "Decorativos", "3d": "Selos 3D",
+  all: "Todos", text: "Textos", stickers: "Adesivos", decorative: "Decorativo", seal: "Selos", "3d": "Selos 3D",
   ribbons: "Fitas", splash: "Splash", tags: "Tags", frames: "Molduras", backgrounds: "Backgrounds",
   photos: "Fotos", icons: "Ícones", shapes: "Formas",
 };
 
 const THEME_GROUP_LABELS: Record<string, string> = {
+  churrasco: "Churrasco", "pet-shop": "Pet Shop", beleza: "Beleza", verao: "Verão", pascoa: "Páscoa", premium: "Seleção Premium",
   "operacao-promo": "Super Ofertas", primavera: "Primavera", "outubro-rosa": "Outubro Rosa",
   halloween: "Dia das Bruxas", outubro: "Outubro", "segunda-feira": "Segunda-Feira",
   "terca-feira": "Terça-Feira", "hortifruti-fresh": "Hortifruti", "black-friday": "Black Friday",
@@ -97,6 +104,8 @@ interface CatalogElement {
   category: string;
   payload: Omit<EditorElement, "id" | "zIndex" | "x" | "y" | "rotation" | "opacity"> & Partial<Pick<EditorElement, "x" | "y" | "rotation" | "opacity">>;
 }
+
+const BACKGROUND_CATEGORIES = new Set(["background", "backgrounds"]);
 
 export function EditorPage() {
   const { id } = useParams<{ id: string }>();
@@ -115,11 +124,14 @@ export function EditorPage() {
   const [panelOpen, setPanelOpen] = React.useState(true);
   const [startAt, setStartAt] = React.useState("");
   const [endAt, setEndAt] = React.useState("");
-  const [columns, setColumns] = React.useState(3);
-  const [gridMode, setGridMode] = React.useState<ProductGridMode>("featured");
+  const [columns, setColumns] = React.useState(4);
+  const [productsPerPage, setProductsPerPage] = React.useState(16);
+  const [activePage, setActivePage] = React.useState(0);
+  const [gridMode, setGridMode] = React.useState<ProductGridMode>("balanced");
   const [productSearch, setProductSearch] = React.useState("");
   const [elementSearch, setElementSearch] = React.useState("");
   const [elementCategory, setElementCategory] = React.useState("all");
+  const [elementLibraryTab, setElementLibraryTab] = React.useState<"library" | "mine">("library");
   const [themeSearch, setThemeSearch] = React.useState("");
   const [tagTab, setTagTab] = React.useState<"shapes" | "style" | "colors">("shapes");
   const [productTab, setProductTab] = React.useState<"search" | "library" | "flyer">("search");
@@ -128,7 +140,9 @@ export function EditorPage() {
   const [bulkProgress, setBulkProgress] = React.useState("");
   const [expandedThemeGroups, setExpandedThemeGroups] = React.useState<Set<string>>(() => new Set());
   const [findingImage, setFindingImage] = React.useState<string | null>(null);
-  const [catalogElements, setCatalogElements] = React.useState<CatalogElement[]>([]);
+  const [photoProduct, setPhotoProduct] = React.useState<Product | null>(null);
+  const elementsQuery = useQuery({ queryKey: ["elements", elementCategory], queryFn: ({ signal }) => api.get<{ elements: CatalogElement[] }>("/elements", { limit: 100, category: elementCategory === "all" ? undefined : elementCategory }, signal) });
+  const catalogElements = elementsQuery.data?.elements ?? [];
   const [saveError, setSaveError] = React.useState("");
   const savedSignature = React.useRef("");
   const currentSignature = React.useRef("");
@@ -152,21 +166,14 @@ export function EditorPage() {
   const flyer = flyerQuery.data;
 
   React.useEffect(() => {
-    const controller = new AbortController();
-    void api.get<{ elements: CatalogElement[] }>("/elements", { limit: 100 }, controller.signal)
-      .then((result) => setCatalogElements(result.elements))
-      .catch((error) => { if (!controller.signal.aborted) toast.error(error instanceof Error ? error.message : "Falha ao carregar elementos"); });
-    return () => controller.abort();
-  }, []);
-
-  React.useEffect(() => {
     if (!flyer || hydrated) return;
     setName(flyer.name);
     setFormatCode(flyer.format ?? "");
     setContent(flyer.content ?? "flyer");
     setDesignCode(flyer.design ?? null);
-    setColumns(Math.min(8, Math.max(1, Number(flyer.grid?.columns) || 3)));
-    setGridMode(flyer.grid?.mode === "balanced" ? "balanced" : "featured");
+    setColumns(Math.min(8, Math.max(1, Number(flyer.grid?.columns) || 4)));
+    setProductsPerPage(Math.min(48, Math.max(1, Math.floor(Number(flyer.grid?.productsPerPage) || 16))));
+    setGridMode((["balanced", "featured", "featured-center", "featured-right", "wide-left", "wide-center", "wide-right"].includes(String(flyer.grid?.mode)) ? flyer.grid?.mode : "balanced") as ProductGridMode);
     setStartAt(flyer.startAt?.slice(0, 10) ?? "");
     setEndAt(flyer.endAt?.slice(0, 10) ?? "");
     editor.reset({
@@ -190,10 +197,29 @@ export function EditorPage() {
   const canvasWidth = format?.width ?? DEFAULT_WIDTH;
   const canvasHeight = format?.height ?? DEFAULT_HEIGHT;
 
+  const paginationInitialized = React.useRef(false);
+  const productOrder = editor.products.map(product => product.id).join(",");
+  React.useEffect(() => {
+    if (!hydrated || !formatsQuery.data) return;
+    if (!paginationInitialized.current) {
+      paginationInitialized.current = true;
+      if (Number(flyer?.grid?.productsPerPage) > 0) return;
+    }
+    const state = latestEditor.current;
+    const arranged = layoutProductGrid(state.products, columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage);
+    if (JSON.stringify(arranged) !== JSON.stringify(state.products)) state.update({ products: arranged });
+  }, [hydrated, Boolean(formatsQuery.data), productOrder, columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage]);
+  const pageCount = Math.max(1, Math.ceil(editor.products.length / productsPerPage));
+  const visiblePage = Math.min(activePage, pageCount - 1);
+  React.useEffect(() => {
+    if (editor.selectedKind !== "product") return;
+    const index = editor.products.findIndex(product => product.id === editor.selectedId);
+    if (index >= 0) setActivePage(Math.floor(index / productsPerPage));
+  }, [editor.selectedId, editor.selectedKind, productsPerPage, productOrder]);
   const payload = {
     name: name.trim() || "Encarte sem nome",
     content, design: designCode, format: formatCode || null, startAt: startAt || null, endAt: endAt || null,
-    grid: { columns, layout: "product-cards", mode: gridMode, auto: true },
+    grid: { columns, layout: "product-cards", mode: gridMode, productsPerPage, auto: true },
     backgroundColor: editor.backgroundColor, elements: editor.elements,
     products: editor.products, footer: editor.footer,
   };
@@ -245,8 +271,11 @@ export function EditorPage() {
     setExporting(true);
     try {
       await persist(false);
-      const data = await api.post<{ export: { fileUrl: string } }>(`/flyers/${id}/${formatName === "mp4" ? "render-video" : "render"}`, { format: formatName });
-      await downloadFile(data.export.fileUrl, `${name || "encarte"}.${formatName}`);
+      const data = await api.post<{ export: { fileUrl: string; files?: string[] } }>(`/flyers/${id}/${formatName === "mp4" ? "render-video" : "render"}`, { format: formatName });
+      const files = data.export.files ?? [data.export.fileUrl];
+      for (const [index, url] of files.entries()) {
+        await downloadFile(url, `${name || "encarte"}${files.length > 1 ? `-folha-${index + 1}` : ""}.${formatName}`);
+      }
       toast.success("Arquivo exportado");
     } catch (error) { toast.error(error instanceof Error ? error.message : "Falha na exportação"); }
     finally { setExporting(false); }
@@ -269,7 +298,7 @@ export function EditorPage() {
   }
   function arrangeProducts() {
     if (!editor.products.length) return;
-    editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, gridMode) });
+    editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage) });
     toast.success("Produtos organizados no grid");
   }
   function applyBrand() {
@@ -338,15 +367,44 @@ export function EditorPage() {
   }
   function addCatalogElement(item: CatalogElement) {
     const payload = JSON.parse(JSON.stringify(item.payload)) as CatalogElement["payload"];
+    if (BACKGROUND_CATEGORIES.has(item.category)) {
+      const id = `background_${Math.random().toString(36).slice(2, 10)}`;
+      editor.update({
+        elements: [
+          ...editor.elements.filter(element => !BACKGROUND_CATEGORIES.has(element.category)),
+          {
+            ...payload,
+            id,
+            category: "background",
+            type: "image",
+            x: 0,
+            y: 0,
+            width: canvasWidth,
+            height: canvasHeight,
+            imageFit: "cover",
+            rotation: 0,
+            opacity: 1,
+            zIndex: -1000,
+          },
+        ],
+      });
+      editor.select(id, "element");
+      toast.success(`Fundo ${item.title} aplicado ao encarte`);
+      return;
+    }
+    const scale = Math.min(1, canvasWidth * .85 / payload.width, canvasHeight * .85 / payload.height);
     editor.addElement({
       ...payload,
-      x: payload.x ?? 100,
-      y: payload.y ?? 120,
+      width: Math.round(payload.width * scale), height: Math.round(payload.height * scale),
+      textStyle: payload.textStyle ? { ...payload.textStyle, fontSize: (payload.textStyle.fontSize ?? 24) * scale } : undefined,
+      x: Math.max(0, (canvasWidth - payload.width * scale) / 2),
+      y: Math.max(0, (canvasHeight - payload.height * scale) / 2),
       rotation: payload.rotation ?? 0,
       opacity: payload.opacity ?? 1,
     });
   }
   async function addProduct(productId: string) {
+    if (findingImage) return;
     const p = productsQuery.data?.products.find(p => p._key === productId);
     if (!p) return;
     let image = p.image ?? undefined;
@@ -362,7 +420,7 @@ export function EditorPage() {
     }
     const added: EditorProduct = { id: `product_${Math.random().toString(36).slice(2, 10)}`, productId: p._key, name: p.name, image, price: p.price,
       salePrice: p.salePrice, unit: p.unit ?? undefined, notes: p.notes ?? undefined, x: 0, y: 0, width: 240, height: 300, rotation: 0, isHighlighted: false };
-    latestEditor.current.update({ products: layoutProductGrid([...latestEditor.current.products, added], columns, canvasWidth, canvasHeight, content, gridMode) });
+    latestEditor.current.update({ products: layoutProductGrid([...latestEditor.current.products, added], columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage) });
     editor.select(added.id, "product");
   }
 
@@ -406,7 +464,7 @@ export function EditorPage() {
         unit: product.unit ?? undefined, notes: product.notes ?? undefined, x: 0, y: 0,
         width: 240, height: 300, rotation: 0, isHighlighted: false,
       }));
-      latestEditor.current.update({ products: layoutProductGrid([...latestEditor.current.products, ...added], columns, canvasWidth, canvasHeight, content, gridMode) });
+      latestEditor.current.update({ products: layoutProductGrid([...latestEditor.current.products, ...added], columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage) });
       await queryClient.invalidateQueries({ queryKey: ["products"] });
       setBulkProductText("");
       setProductTab("flyer");
@@ -417,9 +475,16 @@ export function EditorPage() {
     finally { setBulkImporting(false); setBulkProgress(""); }
   }
 
-  function applyDesign(designId: string) {
-    const design = designsQuery.data?.find(item => item._key === designId);
-    if (!design) return;
+  async function applyDesign(designId: string) {
+    const listedDesign = designsQuery.data?.find(item => item._key === designId);
+    if (!listedDesign) return;
+    let design = listedDesign;
+    try {
+      const result = await api.get<{ success: boolean; design: typeof listedDesign }>(`/designs/${designId}`);
+      design = result.design;
+    } catch {
+      // A listagem continua aplicável quando o detalhe remoto está indisponível.
+    }
     const sourceWidth = 1080;
     const sourceHeight = 1350;
     const scaleX = canvasWidth / sourceWidth;
@@ -429,19 +494,20 @@ export function EditorPage() {
       category: item.category ?? "decorative",
       type: item.type ?? "shape",
       subtype: item.subtype,
-      x: Math.round((item.x ?? 0) * scaleX),
-      y: Math.round((item.y ?? 0) * scaleY),
-      width: Math.round((item.width ?? 240) * scaleX),
-      height: Math.round((item.height ?? 80) * scaleY),
+      x: item.category === "background" ? 0 : Math.round((item.x ?? 0) * scaleX),
+      y: item.category === "background" ? 0 : Math.round((item.y ?? 0) * scaleY),
+      width: item.category === "background" ? canvasWidth : Math.round((item.width ?? 240) * scaleX),
+      height: item.category === "background" ? canvasHeight : Math.round((item.height ?? 80) * scaleY),
       rotation: item.rotation ?? 0,
       opacity: item.opacity ?? 1,
       zIndex: item.zIndex ?? index,
       text: item.text,
       backgroundColor: item.backgroundColor,
       image: item.image,
+      imageFit: item.category === "background" ? "fill" : item.imageFit,
       textStyle: item.textStyle ? { ...item.textStyle, fontSize: item.textStyle.fontSize ? Math.round(item.textStyle.fontSize * Math.min(scaleX, scaleY)) : undefined } : undefined,
     }));
-    editor.update({ elements, products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, gridMode), backgroundColor: design.backgroundColor ?? editor.backgroundColor });
+    editor.update({ elements, products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage), backgroundColor: design.backgroundColor ?? editor.backgroundColor });
     setDesignCode(design._key);
     toast.success(`Tema ${design.title} aplicado`);
   }
@@ -480,13 +546,20 @@ export function EditorPage() {
         <Button variant="ghost" size="icon" aria-label="Fechar painel" onClick={() => setPanelOpen(false)}><X className="h-4 w-4" /></Button>
       </div>
       <div className="space-y-4 p-4">
+        {activeSection === "grid" && <>
+          <GridPicker capacity={productsPerPage} count={Math.min(productsPerPage, Math.max(0, editor.products.length - visiblePage * productsPerPage))}
+            columns={columns} mode={gridMode}
+            onCapacity={value => { setProductsPerPage(value); setColumns(Math.ceil(Math.sqrt(value))); setActivePage(0); editor.select(null); }}
+            onLayout={(nextColumns, nextMode) => { setColumns(nextColumns); setGridMode(nextMode); }} />
+          <Button variant="outline" className="w-full" onClick={arrangeProducts}>Reorganizar produtos</Button>
+        </>}
         {activeSection === "themes" && <>
           <p className="text-sm text-muted-foreground">Escolha o melhor tema para o seu encarte</p>
           <Input placeholder="Pesquisar modelo" aria-label="Buscar temas" value={themeSearch} onChange={event => setThemeSearch(event.target.value)} />
           <div className="space-y-6">
             {Array.from((designsQuery.data ?? []).reduce((groups, design) => {
-              const term = themeSearch.toLocaleLowerCase("pt-BR");
-              if (term && !`${design.title} ${THEME_GROUP_LABELS[design.theme] ?? design.theme}`.toLocaleLowerCase("pt-BR").includes(term)) return groups;
+              const term = normalizeSearch(themeSearch);
+              if (term && !normalizeSearch(`${design.title} ${THEME_GROUP_LABELS[design.theme] ?? design.theme}`).includes(term)) return groups;
               const list = groups.get(design.theme) ?? [];
               list.push(design); groups.set(design.theme, list); return groups;
             }, new Map<string, NonNullable<typeof designsQuery.data>>() )).map(([theme, designs]) => {
@@ -495,17 +568,9 @@ export function EditorPage() {
               return <section key={theme} className="space-y-2">
                 <div className="flex items-center justify-between"><h3 className="font-semibold">{THEME_GROUP_LABELS[theme] ?? theme}</h3>{designs.length > 2 && <button type="button" className="text-xs font-medium text-primary" onClick={() => setExpandedThemeGroups(current => { const next = new Set(current); if (next.has(theme)) next.delete(theme); else next.add(theme); return next; })}>{expanded ? "Ver menos" : "Ver mais"}</button>}</div>
                 <div className="grid grid-cols-2 gap-2">
-                  {visible.map((design, index) => {
-                    const accent = design.palette?.[1] ?? "#29d19c";
-                    const contrast = design.palette?.[2] ?? "#172554";
-                    const base = design.backgroundColor ?? "#ffffff";
-                    return <button key={design._key} type="button" title={design.title} onClick={() => applyDesign(design._key)} className={`group overflow-hidden rounded-lg border bg-card text-left transition hover:-translate-y-0.5 hover:border-primary hover:shadow-md ${designCode === design._key ? "ring-2 ring-primary" : ""}`}>
-                      <span className="relative block aspect-[16/10] overflow-hidden" style={{ background: `linear-gradient(160deg, ${index % 2 ? contrast : accent} 0 48%, ${base} 48%)` }}>
-                        <span className="absolute -left-4 top-1/2 h-7 w-28 -rotate-6 rounded" style={{ backgroundColor: design.palette?.[3] ?? `${accent}99` }} />
-                        <span className="absolute left-2 right-2 top-3 rounded-sm px-1 py-1 text-center text-[9px] font-black leading-tight text-white" style={{ backgroundColor: `${contrast}dd` }}>{design.title.toUpperCase()}</span>
-                        <span className="absolute bottom-2 left-2 h-8 w-8 rounded-full border-2 border-white text-center text-[8px] font-black leading-7 text-white" style={{ backgroundColor: accent }}>9,99</span>
-                        <span className="absolute bottom-2 left-12 right-2 grid grid-cols-2 gap-1"><i className="h-7 rounded bg-white/90" /><i className="h-7 rounded bg-white/90" /></span>
-                      </span>
+                  {visible.map((design) => {
+                    return <button key={design._key} type="button" title={design.title} aria-pressed={designCode === design._key} onClick={() => void applyDesign(design._key)} className={`group overflow-hidden rounded-lg border bg-card text-left transition hover:-translate-y-0.5 hover:border-primary hover:shadow-md ${designCode === design._key ? "ring-2 ring-primary" : ""}`}>
+                      <span className="block aspect-[4/5] overflow-hidden">{design.thumbnail ? <img src={design.thumbnail} alt="" loading="lazy" className="h-full w-full bg-white object-contain" /> : <CatalogPreview elements={design.elements} background={design.backgroundColor} />}</span>
                       <span className="block truncate px-2 py-1.5 text-xs font-medium">{design.title}</span>
                     </button>;
                   })}
@@ -513,7 +578,9 @@ export function EditorPage() {
               </section>;
             })}
           </div>
-          {!designsQuery.data?.length && <p className="text-sm text-muted-foreground">Carregando temas...</p>}
+          {designsQuery.isLoading && <p role="status">Carregando temas...</p>}
+          {designsQuery.isError && <Button variant="outline" onClick={() => void designsQuery.refetch()}>Tentar carregar temas novamente</Button>}
+          {designsQuery.isSuccess && !designsQuery.data.some(d => normalizeSearch(`${d.title} ${THEME_GROUP_LABELS[d.theme] ?? d.theme}`).includes(normalizeSearch(themeSearch))) && <p className="rounded-lg bg-muted p-4 text-sm">Nenhum tema encontrado. Experimente outra palavra.</p>}
         </>}
 
         {activeSection === "products" && <>
@@ -527,25 +594,34 @@ export function EditorPage() {
             <div className="rounded-lg bg-primary/10 p-3 text-xs text-primary">As fotos são buscadas automaticamente no catálogo conhecido do Encarte Fácil e no Open Food Facts. Cada imagem encontrada é salva na sua biblioteca.</div>
           </div>}
           {productTab !== "search" && <Input placeholder="Buscar produtos..." aria-label="Buscar produtos" value={productSearch} onChange={event => setProductSearch(event.target.value)} />}
-          <div className="space-y-2 rounded-lg border p-3"><div className="flex items-center justify-between text-xs"><span className="font-medium">Organização do encarte</span><Button size="sm" variant="ghost" onClick={arrangeProducts}>Reorganizar</Button></div><div className="grid grid-cols-2 gap-2"><Button size="sm" variant={gridMode === "featured" ? "default" : "outline"} onClick={() => { setGridMode("featured"); editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, "featured") }); }}>Com destaque</Button><Button size="sm" variant={gridMode === "balanced" ? "default" : "outline"} onClick={() => { setGridMode("balanced"); editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, "balanced") }); }}>Uniforme</Button></div><label className="text-xs text-muted-foreground">Colunas<Input className="mt-1 h-8" type="number" min={1} max={8} value={columns} onChange={event => { const next = Math.min(8, Math.max(1, Number(event.target.value) || 1)); setColumns(next); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, next, canvasWidth, canvasHeight, content, gridMode) }); }} /></label></div>
+          <Button variant="outline" className="w-full" onClick={() => openSection("grid")}><Grid3X3 className="h-4 w-4" />Layout da Grade ? {productsPerPage} por folha</Button>
           <div className="flex items-center justify-between text-xs text-muted-foreground"><span>{editor.products.length} no encarte</span><Link to="/products" className="text-primary">Gerenciar catálogo</Link></div>
-          {productTab === "library" && <div className="space-y-2">{productsQuery.data?.products.filter(product => product.name.toLowerCase().includes(productSearch.toLowerCase())).map(product => <div key={product._key} className="flex w-full items-center gap-2 rounded-lg border p-2 text-sm hover:border-primary hover:bg-primary/5">
-            <button type="button" disabled={findingImage === product._key} onClick={() => void addProduct(product._key)} className="flex min-w-0 flex-1 items-center gap-3 text-left disabled:opacity-60">
+          {productTab === "library" && productsQuery.isLoading && <p role="status">Carregando cat?logo...</p>}
+          {productTab === "library" && productsQuery.isError && <Button variant="outline" onClick={() => void productsQuery.refetch()}>Tentar carregar produtos novamente</Button>}
+          {productTab === "library" && productsQuery.isSuccess && !productsQuery.data.products.some(p => normalizeSearch(p.name).includes(normalizeSearch(productSearch))) && <p className="rounded-lg bg-muted p-3 text-sm">Nenhum produto encontrado no cat?logo.</p>}
+          {productTab === "library" && <div className="space-y-2">{productsQuery.data?.products.filter(product => normalizeSearch(product.name).includes(normalizeSearch(productSearch))).map(product => <div key={product._key} className="flex w-full items-center gap-2 rounded-lg border p-2 text-sm hover:border-primary hover:bg-primary/5">
+            <button type="button" disabled={findingImage !== null} onClick={() => void addProduct(product._key)} className="flex min-w-0 flex-1 items-center gap-3 text-left disabled:opacity-60">
               {product.image ? <img src={product.image} alt={product.name} className="h-14 w-14 rounded bg-white object-contain" /> : <span className="grid h-14 w-14 shrink-0 place-items-center rounded bg-muted"><Package className="h-7 w-7 text-muted-foreground" /></span>}
               <span className="min-w-0 flex-1"><span className="block truncate font-medium">{product.name}</span><span className="text-primary">{formatCurrency(product.salePrice ?? product.price)}</span><span className="block text-[10px] text-muted-foreground">Clique para adicionar</span></span>
             </button>
-            {!product.image && <Button size="sm" variant="outline" disabled={findingImage === product._key} onClick={() => void findProductImage(product._key)}>{findingImage === product._key ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImageIcon className="h-3.5 w-3.5" />}Buscar foto</Button>}
+            {!product.image && <Button size="sm" variant="outline" disabled={findingImage !== null} onClick={() => void findProductImage(product._key)}>{findingImage === product._key ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImageIcon className="h-3.5 w-3.5" />}Buscar foto</Button>}
+            <Button size="icon" variant="ghost" aria-label={`Escolher foto de ${product.name}`} onClick={() => setPhotoProduct(product)}><ImageIcon className="h-4 w-4" /></Button>
           </div>)}</div>}
-          {productTab === "flyer" && <div className="space-y-2">{editor.products.filter(product => (product.name ?? "").toLowerCase().includes(productSearch.toLowerCase())).map(product => <div key={product.id} className="flex items-center gap-2 rounded-lg border p-2"><button type="button" className="min-w-0 flex-1 text-left" onClick={() => editor.select(product.id, "product")}><span className="block truncate text-sm font-medium">{product.name}</span><span className="text-xs text-muted-foreground">{formatCurrency(product.salePrice ?? product.price ?? 0)}</span></button><Button size="sm" variant="ghost" onClick={() => editor.update({ products: editor.products.filter(item => item.id !== product.id) })}>Remover</Button></div>)}{!editor.products.length && <p className="rounded-lg bg-muted p-4 text-center text-sm text-muted-foreground">Nenhum produto no encarte.</p>}{editor.products.length > 0 && <Button variant="outline" className="w-full text-destructive" onClick={() => editor.update({ products: [] })}>Limpar todos</Button>}</div>}
+          {photoProduct && <ProductImagePicker key={photoProduct._key} product={photoProduct} onClose={() => setPhotoProduct(null)} onSaved={saved => latestEditor.current.update({ products: latestEditor.current.products.map(product => product.productId === saved._key ? { ...product, image: saved.image ?? undefined } : product) })} />}
+          {productTab === "flyer" && <div className="space-y-2">{editor.products.filter(product => normalizeSearch(product.name ?? "").includes(normalizeSearch(productSearch))).map(product => <div key={product.id} className="flex items-center gap-2 rounded-lg border p-2"><button type="button" className="min-w-0 flex-1 text-left" onClick={() => editor.select(product.id, "product")}><span className="block truncate text-sm font-medium">{product.name}</span><span className="text-xs text-muted-foreground">{formatCurrency(product.salePrice ?? product.price ?? 0)}</span></button><Button size="sm" variant="ghost" onClick={() => editor.update({ products: editor.products.filter(item => item.id !== product.id) })}>Remover</Button></div>)}{!editor.products.length && <p className="rounded-lg bg-muted p-4 text-center text-sm text-muted-foreground">Nenhum produto no encarte.</p>}{editor.products.length > 0 && <Button variant="outline" className="w-full text-destructive" onClick={() => editor.update({ products: [] })}>Limpar todos</Button>}</div>}
         </>}
 
         {activeSection === "elements" && <>
           <div className="grid grid-cols-2 gap-2"><Button variant="outline" onClick={addText}><Type className="h-4 w-4" />Texto</Button><Button variant="outline" onClick={addShape}><Square className="h-4 w-4" />Forma</Button></div>
-          <Input placeholder="Buscar elementos..." aria-label="Buscar elementos" value={elementSearch} onChange={event => setElementSearch(event.target.value)} />
-          <div className="flex gap-2 overflow-x-auto pb-1">{["all", ...Array.from(new Set(catalogElements.map(item => item.category)))].map(category => <Button key={category} size="sm" variant={elementCategory === category ? "default" : "outline"} onClick={() => setElementCategory(category)}>{ELEMENT_CATEGORY_LABELS[category] ?? category}</Button>)}</div>
-          <div className="grid grid-cols-2 gap-2">{catalogElements.filter(item => (elementCategory === "all" || item.category === elementCategory) && item.title.toLocaleLowerCase("pt-BR").includes(elementSearch.toLocaleLowerCase("pt-BR"))).map(item => <button key={item._key} type="button" onClick={() => addCatalogElement(item)} className="min-h-24 rounded-lg border bg-muted/30 p-3 text-left text-xs hover:border-primary hover:bg-primary/5"><Shapes className="mb-3 h-6 w-6 text-primary" /><span className="block font-medium">{item.title}</span><span className="text-muted-foreground">{item.category}</span></button>)}</div>
+          <div className="grid grid-cols-2 rounded-lg bg-muted p-1" role="tablist" aria-label="Biblioteca de elementos"><button type="button" role="tab" aria-selected={elementLibraryTab === "library"} onClick={() => setElementLibraryTab("library")} className={`rounded-md px-3 py-2 text-sm font-medium ${elementLibraryTab === "library" ? "bg-background text-primary shadow-sm" : "text-muted-foreground"}`}>Biblioteca</button><button type="button" role="tab" aria-selected={elementLibraryTab === "mine"} onClick={() => setElementLibraryTab("mine")} className={`rounded-md px-3 py-2 text-sm font-medium ${elementLibraryTab === "mine" ? "bg-background text-primary shadow-sm" : "text-muted-foreground"}`}>Meus</button></div>
+          {elementLibraryTab === "library" && <div className="grid grid-cols-4 gap-1 border-b pb-2">{[["seal", "Selos"], ["photos", "Fotos"], ["decorative", "Decorativo"], ["backgrounds", "Fundos"]].map(([category, label]) => <button key={category} type="button" onClick={() => setElementCategory(category)} className={`border-b-2 px-1 py-2 text-xs font-medium ${elementCategory === category ? "border-primary text-primary" : "border-transparent text-muted-foreground"}`}>{label}</button>)}</div>}
+          {elementsQuery.isLoading && <p role="status">Carregando elementos...</p>}
+          {elementsQuery.isError && <Button variant="outline" onClick={() => void elementsQuery.refetch()}>Tentar carregar elementos novamente</Button>}
+          {elementLibraryTab === "library" && <><Input placeholder="Buscar elementos..." aria-label="Buscar elementos" value={elementSearch} onChange={event => setElementSearch(event.target.value)} />
+          {elementsQuery.isSuccess && !catalogElements.some(item => normalizeSearch(item.title).includes(normalizeSearch(elementSearch))) && <p className="rounded-lg bg-muted p-3 text-sm">Nenhum elemento encontrado.</p>}
+          <div className="grid grid-cols-2 gap-2">{catalogElements.filter(item => normalizeSearch(item.title).includes(normalizeSearch(elementSearch))).map(item => <button key={item._key} type="button" onClick={() => addCatalogElement(item)} className="min-h-24 rounded-lg border bg-muted/30 p-3 text-left text-xs hover:border-primary hover:bg-primary/5"><span className="mb-3 block h-20 overflow-hidden rounded bg-slate-200"><CatalogPreview elements={[{ ...item.payload, x: 0, y: 0 }]} width={item.payload.width} height={item.payload.height} /></span><span className="block font-medium">{item.title}</span><span className="text-muted-foreground">{ELEMENT_CATEGORY_LABELS[item.category] ?? item.category}</span></button>)}</div></>}
           <Separator />
-          <div><h3 className="mb-2 text-sm font-medium">Minhas imagens</h3><MediaLibrary onSelect={insertAsset} /></div>
+          {elementLibraryTab === "mine" && <div><h3 className="mb-2 text-sm font-medium">Minhas imagens</h3><MediaLibrary onSelect={insertAsset} /></div>}
         </>}
 
         {activeSection === "tags" && <>
@@ -558,11 +634,11 @@ export function EditorPage() {
         </>}
 
         {activeSection === "formats" && <>
-          <div><p className="mb-2 text-sm font-medium">Tipo de material</p><div className="grid grid-cols-2 gap-2">{([['flyer','Encarte'],['poster','Cartaz'],['shelf_label','Etiqueta'],['video','Vídeo']] as const).map(([value, label]) => <Button key={value} size="sm" variant={content === value ? "default" : "outline"} onClick={() => { setContent(value); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, value, gridMode) }); }}>{label}</Button>)}</div></div>
+          <div><p className="mb-2 text-sm font-medium">Tipo de material</p><div className="grid grid-cols-2 gap-2">{([['flyer','Encarte'],['poster','Cartaz'],['shelf_label','Etiqueta'],['video','Vídeo']] as const).map(([value, label]) => <Button key={value} size="sm" variant={content === value ? "default" : "outline"} onClick={() => { setContent(value); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, value, gridMode, productsPerPage) }); }}>{label}</Button>)}</div></div>
           {content === "shelf_label" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Cada produto vira uma etiqueta, uma por página. No download, elas são organizadas automaticamente em folhas A4.</p>}
           {content === "poster" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Cartaz de oferta com um produto em destaque, pronto para impressão.</p>}
           {content === "video" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Crie uma peça animada para TV, Reels ou Story e exporte em MP4.</p>}
-          <div><p className="mb-2 text-sm font-medium">Formato</p><div className="grid grid-cols-2 gap-2">{formatsQuery.data?.map(item => <button key={item._key} type="button" onClick={() => { setFormatCode(item.code); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, item.width, item.height, content, gridMode) }); }} className={`rounded-xl border p-3 text-left ${formatCode === item.code ? "border-primary bg-primary/5 ring-1 ring-primary" : "hover:border-primary"}`}><span className="mb-2 block h-14 rounded border bg-muted" style={{ aspectRatio: `${item.width}/${item.height}`, maxWidth: 70 }} /><span className="block text-sm font-medium">{item.title}</span><span className="text-[11px] text-muted-foreground">{item.width} × {item.height} px</span></button>)}</div></div>
+          <div><p className="mb-2 text-sm font-medium">Formato</p><div className="grid grid-cols-2 gap-2">{formatsQuery.data?.map(item => <button key={item._key} type="button" onClick={() => { setFormatCode(item.code); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, item.width, item.height, content, gridMode, productsPerPage) }); }} className={`rounded-xl border p-3 text-left ${formatCode === item.code ? "border-primary bg-primary/5 ring-1 ring-primary" : "hover:border-primary"}`}><span className="mb-2 block h-14 rounded border bg-muted" style={{ aspectRatio: `${item.width}/${item.height}`, maxWidth: 70 }} /><span className="block text-sm font-medium">{item.title}</span><span className="text-[11px] text-muted-foreground">{item.width} × {item.height} px</span></button>)}</div></div>
           <Button variant="outline" className="w-full" onClick={() => editor.setZoom(Math.min(1, 500 / canvasWidth, 650 / canvasHeight))}>Ajustar à tela</Button>
         </>}
 
@@ -613,12 +689,12 @@ export function EditorPage() {
       <span role="status" className={`ml-auto text-xs ${saveError ? "text-red-600" : "text-muted-foreground"}`}>{saveError || (saving ? "Salvando..." : signature !== savedSignature.current ? "Alterações não salvas" : "Salvo")}</span>
     </div>
     <div className="relative flex min-h-0 flex-1 overflow-hidden bg-muted/30 pb-12 lg:pb-0">
-      <nav aria-label="Seções do editor" className="hidden w-16 shrink-0 flex-col border-r bg-background lg:flex">
-        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex h-16 flex-col items-center justify-center gap-1 border-b text-[10px] transition ${selected ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground"}`}><Icon className="h-5 w-5" /><span>{section.label}</span></button>; })}
+      <nav aria-label="Seções do editor" className="hidden w-20 shrink-0 flex-col bg-[#171717] text-white lg:flex">
+        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex h-[72px] flex-col items-center justify-center gap-1 border-b border-white/10 text-[10px] transition ${selected ? "bg-[#292929] text-[#29d19c]" : "text-white hover:bg-[#242424]"}`}><Icon className="h-5 w-5" /><span>{section.label}</span></button>; })}
       </nav>
       {panelOpen && <aside className="fixed inset-x-0 bottom-12 z-30 max-h-[65vh] overflow-y-auto rounded-t-2xl border-t bg-background shadow-2xl lg:static lg:z-auto lg:max-h-none lg:w-[396px] lg:shrink-0 lg:rounded-none lg:border-r lg:border-t-0 lg:shadow-none">{renderSectionPanel()}</aside>}
-      <section className="min-h-0 min-w-[320px] flex-1 overflow-hidden"><FlyerCanvas width={canvasWidth} height={canvasHeight} zoom={editor.zoom} backgroundColor={editor.backgroundColor}
-        elements={editor.elements} products={editor.products} footer={editor.footer} selectedId={editor.selectedId} selectedKind={editor.selectedKind}
+      <section className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden"><div className="flex shrink-0 items-center justify-center gap-3 border-b bg-background p-2"><Button size="sm" variant={activeSection === "grid" && panelOpen ? "default" : "outline"} aria-label="Configurar grade" onClick={() => openSection("grid")}><Grid3X3 className="h-4 w-4" />{productsPerPage}</Button><Button size="sm" variant="outline" disabled={visiblePage === 0} onClick={() => { editor.select(null); setActivePage(visiblePage - 1); }}>Anterior</Button><span aria-live="polite" className="text-sm">Folha {visiblePage + 1} de {pageCount}</span><Button size="sm" variant="outline" disabled={visiblePage + 1 >= pageCount} onClick={() => { editor.select(null); setActivePage(visiblePage + 1); }}>Pr&#243;xima</Button></div><FlyerCanvas width={canvasWidth} height={canvasHeight} zoom={editor.zoom} backgroundColor={editor.backgroundColor}
+        elements={editor.elements} products={editor.products.slice(visiblePage * productsPerPage, (visiblePage + 1) * productsPerPage)} footer={editor.footer} selectedId={editor.selectedId} selectedKind={editor.selectedKind}
         onSelect={editor.select} onChangeElement={handleChangeElement} onChangeProduct={handleChangeProduct} /></section>
       <aside className="hidden min-h-0 w-[280px] shrink-0 overflow-y-auto border-l bg-background xl:block">
         <InspectorPanel element={selectedElement} product={selectedProduct}
@@ -627,7 +703,7 @@ export function EditorPage() {
           onDelete={editor.removeSelected} onDuplicate={editor.duplicateSelected} onMoveLayer={editor.moveLayer} />
       </aside>
       <nav aria-label="Seções do editor" className="fixed inset-x-0 bottom-0 z-40 flex h-12 overflow-x-auto border-t bg-background lg:hidden">
-        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex min-w-[68px] flex-1 flex-col items-center justify-center gap-0.5 text-[9px] ${selected ? "bg-primary/10 text-primary" : "text-muted-foreground"}`}><Icon className="h-4 w-4" /><span>{section.label}</span></button>; })}
+        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex min-w-[68px] flex-1 flex-col items-center justify-center gap-0.5 text-[9px] ${selected ? "bg-[#292929] text-[#29d19c]" : "bg-[#171717] text-white"}`}><Icon className="h-4 w-4" /><span>{section.label}</span></button>; })}
       </nav>
     </div>
   </div>;

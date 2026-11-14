@@ -2,6 +2,7 @@ export interface RenderElement {
   id?: string;
   type?: string;
   category?: string;
+  subtype?: string;
   x?: number;
   y?: number;
   width?: number;
@@ -11,7 +12,12 @@ export interface RenderElement {
   zIndex?: number;
   text?: string;
   backgroundColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  cardShadow?: boolean;
   image?: string;
+  imageFit?: "contain" | "cover" | "fill";
   asset?: string;
   textStyle?: {
     fontFamily?: string;
@@ -41,6 +47,10 @@ export interface RenderProduct {
   tagColor?: string;
   textColor?: string;
   backgroundColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  cardShadow?: boolean;
   tagShape?: "circle" | "pill" | "ticket" | "burst" | "square";
   tagStyle?: "solid" | "outline" | "gradient" | "shadow";
 }
@@ -103,6 +113,15 @@ export function renderFlyerToSvg(flyer: RenderFlyer): string {
         : "";
     const opacity = element.opacity === undefined ? 1 : Math.max(0, Math.min(1, num(element.opacity, 1)));
 
+    if (element.backgroundColor) {
+      const attrs = `fill="${escapeXml(element.backgroundColor)}" opacity="${opacity}"${transform}`;
+      if (element.subtype === "circle") body.push(`<ellipse cx="${x + w / 2}" cy="${y + h / 2}" rx="${w / 2}" ry="${h / 2}" ${attrs}/>`);
+      else if (element.subtype === "star") {
+        const points = [[50,0],[61,35],[98,35],[68,57],[79,94],[50,72],[21,94],[32,57],[2,35],[39,35]].map(([px, py]) => `${x + px! * w / 100},${y + py! * h / 100}`).join(" ");
+        body.push(`<polygon points="${points}" ${attrs}/>`);
+      } else body.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${element.subtype === "rounded" ? Math.min(w, h) * .08 : 0}" ${attrs}/>`);
+    }
+
     if (element.type === "text" && element.text) {
       const style = element.textStyle ?? {};
       const fontSize = num(style.fontSize, Math.max(12, Math.round(h * 0.6)));
@@ -124,17 +143,11 @@ export function renderFlyerToSvg(flyer: RenderFlyer): string {
     if (element.image) {
       body.push(
         `<image href="${escapeXml(element.image)}" x="${x}" y="${y}" width="${w}" height="${h}" ` +
-          `preserveAspectRatio="xMidYMid meet" opacity="${opacity}"${transform}/>`,
+          `preserveAspectRatio="${element.imageFit === "cover" ? "xMidYMid slice" : element.imageFit === "fill" ? "none" : "xMidYMid meet"}" opacity="${opacity}"${transform}/>`,
       );
       continue;
     }
 
-    if (element.backgroundColor) {
-      body.push(
-        `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${escapeXml(element.backgroundColor)}" ` +
-          `rx="${Math.min(12, Math.round(h * 0.04))}" opacity="${opacity}"${transform}/>`,
-      );
-    }
   }
 
   for (const product of products) {
@@ -143,8 +156,9 @@ export function renderFlyerToSvg(flyer: RenderFlyer): string {
     const y = num(product.y);
     const w = num(product.width, 200);
     const h = num(product.height, 260);
-    const nameSize = Math.max(10, Math.round(w * 0.075));
-    const priceSize = Math.max(12, Math.round(w * 0.1));
+    const textScale = Math.min(w, h);
+    const nameSize = Math.min(28, textScale * .075);
+    const priceSize = textScale * .1;
     const transform =
       num(product.rotation) !== 0
         ? ` transform="rotate(${num(product.rotation)} ${x + w / 2} ${y + h / 2})"`
@@ -152,7 +166,7 @@ export function renderFlyerToSvg(flyer: RenderFlyer): string {
 
     body.push(
       `<g${transform}>`,
-      `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="${escapeXml(product.backgroundColor ?? "#ffffff")}" stroke="${escapeXml(product.isHighlighted ? accent : "#e2e8f0")}" stroke-width="${product.isHighlighted ? 4 : 1}"/>`,
+      `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${num(product.borderRadius, 10)}" fill="${escapeXml(product.backgroundColor ?? "#ffffff")}" stroke="${escapeXml(product.borderColor ?? (product.isHighlighted ? accent : "#e2e8f0"))}" stroke-width="${num(product.borderWidth, product.isHighlighted ? 4 : 1)}"/>`,
     );
 
     if (product.image) {

@@ -27,7 +27,12 @@ export interface FlyerElement {
   zIndex?: number;
   text?: string;
   backgroundColor?: string;
+  borderColor?: string;
+  borderWidth?: number;
+  borderRadius?: number;
+  cardShadow?: boolean;
   image?: string;
+  imageFit?: "contain" | "cover" | "fill";
   asset?: string;
   textStyle?: {
     fontFamily?: string;

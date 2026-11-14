@@ -101,7 +101,7 @@ flyerRouter.get(
   asyncHandler(async (req, res) => {
     const row = getFlyerRow(req.user!.id, req.params.id!);
     if (!row) throw ApiError.notFound("Encarte nao encontrado");
-    const { svg } = renderDocument(row.user_id, row.id);
+    const { svg } = await renderDocument(row.user_id, row.id);
     res.setHeader("Content-Type", "image/svg+xml; charset=utf-8");
     res.setHeader("Cache-Control", "no-store");
     res.send(svg);
@@ -194,7 +194,7 @@ publicFlyerRouter.get(
   asyncHandler(async (req, res) => {
     const row = getPublicFlyerRow(req.params.id!);
     if (!row) throw ApiError.notFound("Encarte nao encontrado");
-    const { svg } = renderDocument(row.user_id, row.id);
+    const { svg } = await renderDocument(row.user_id, row.id);
     res.setHeader("Content-Type", "image/svg+xml; charset=utf-8");
     res.send(svg);
   }),
