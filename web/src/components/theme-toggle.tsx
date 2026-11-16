@@ -6,7 +6,7 @@ export function ThemeToggle() {
   function toggle() {
     const next = !dark;
     document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("encartefacil:theme", next ? "dark" : "light");
+    localStorage.setItem("workspace:pastel-theme", next ? "dark" : "light");
     setDark(next);
   }
   return <div className="flex items-center gap-2 text-muted-foreground">

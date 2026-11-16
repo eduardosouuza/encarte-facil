@@ -38,7 +38,7 @@ export function ExportsPage() {
           </Button>
         </div>
       ) : (
-        <div className="overflow-hidden rounded-lg border bg-white dark:bg-slate-950">
+        <div className="overflow-hidden rounded-lg border bg-card">
           <table className="w-full text-left text-sm">
             <thead className="border-b bg-muted/50 text-xs uppercase text-muted-foreground">
               <tr>

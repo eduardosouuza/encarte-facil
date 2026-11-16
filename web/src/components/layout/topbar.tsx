@@ -18,7 +18,7 @@ export function Topbar({ title }: { title?: string }) {
   const navigate = useNavigate();
 
   return (
-    <header className="flex h-16 shrink-0 items-center justify-between border-b bg-white px-6 dark:bg-slate-950">
+    <header className="flex h-16 shrink-0 items-center justify-between border-b bg-card px-6">
       <div className="flex items-center gap-2">
         <DropdownMenu>
           <DropdownMenuTrigger asChild><button className="rounded p-2 hover:bg-muted md:hidden" aria-label="Abrir menu"><Menu className="h-5 w-5" /></button></DropdownMenuTrigger>

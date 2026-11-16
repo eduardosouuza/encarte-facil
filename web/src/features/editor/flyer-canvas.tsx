@@ -1,12 +1,16 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { ShapeArtwork } from "./catalog-preview";
+import { elementArtwork, productArtwork, footerArtwork, type ArtworkOptions } from "../../../../server/src/lib/artwork";
+import { useArtworkFonts } from "./use-artwork-fonts";
 import type { EditorElement, EditorProduct } from "./use-editor-state";
 
 interface CanvasProps {
+  preview?: boolean;
   width: number;
   height: number;
   zoom: number;
+  onZoomChange?: (zoom: number) => void;
+  onViewportResize?: (size: { width: number; height: number }) => void;
   backgroundColor: string;
   elements: EditorElement[];
   products: EditorProduct[];
@@ -18,7 +22,7 @@ interface CanvasProps {
   onChangeProduct: (id: string, patch: Partial<EditorProduct>, final: boolean) => void;
 }
 
-type DragMode = "move" | "resize";
+type DragMode = "move" | "resize" | "image-resize";
 
 interface DragState {
   mode: DragMode;
@@ -30,12 +34,19 @@ interface DragState {
   originY: number;
   originWidth: number;
   originHeight: number;
+  imageScale?: number;
+  cornerX?: number;
+  cornerY?: number;
+  rotation?: number;
 }
 
 export function FlyerCanvas({
+  preview = false,
   width,
   height,
   zoom,
+  onZoomChange,
+  onViewportResize,
   backgroundColor,
   elements,
   products,
@@ -46,8 +57,30 @@ export function FlyerCanvas({
   onChangeElement,
   onChangeProduct,
 }: CanvasProps) {
+  const artworkOptions: ArtworkOptions = useArtworkFonts();
   const surfaceRef = React.useRef<HTMLDivElement>(null);
+  const viewportRef = React.useRef<HTMLDivElement>(null);
   const dragRef = React.useRef<DragState | null>(null);
+  const [selectedImage, setSelectedImage] = React.useState<string | null>(null);
+  React.useEffect(() => { setSelectedImage(current => selectedKind === "product" && current === selectedId ? current : null); }, [selectedId, selectedKind]);
+  React.useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport || !onViewportResize) return;
+    const observer = new ResizeObserver(() => onViewportResize?.({ width: viewport.clientWidth, height: viewport.clientHeight }));
+    observer.observe(viewport);
+    return () => observer.disconnect();
+  }, [onViewportResize]);
+  React.useEffect(() => {
+    const viewport = viewportRef.current;
+    if (!viewport || !onZoomChange) return;
+    const wheel = (event: WheelEvent) => {
+      if (!event.ctrlKey && !event.metaKey) return;
+      event.preventDefault();
+      onZoomChange(Math.max(.1, Math.min(3, zoom * Math.exp(-event.deltaY * .002))));
+    };
+    viewport.addEventListener("wheel", wheel, { passive: false });
+    return () => viewport.removeEventListener("wheel", wheel);
+  }, [zoom, onZoomChange]);
 
   const sortedElements = React.useMemo(
     () => [...elements].sort((a, b) => a.zIndex - b.zIndex),
@@ -82,7 +115,13 @@ export function FlyerCanvas({
     const dx = (event.clientX - drag.startX) / zoom;
     const dy = (event.clientY - drag.startY) / zoom;
 
-    if (drag.mode === "move") {
+    if (drag.mode === "image-resize") {
+      const angle = (drag.rotation ?? 0) * Math.PI / 180;
+      const localX = dx * Math.cos(angle) + dy * Math.sin(angle);
+      const localY = -dx * Math.sin(angle) + dy * Math.cos(angle);
+      const change = (localX * drag.cornerX! * drag.originWidth + localY * drag.cornerY! * drag.originHeight) * 2 / (drag.originWidth ** 2 + drag.originHeight ** 2);
+      onChangeProduct(drag.id, { imageScale: Math.max(.1, Math.min(3, drag.imageScale! + change)) }, false);
+    } else if (drag.mode === "move") {
       const patch = {
         x: Math.round(Math.max(0, Math.min(width - 40, drag.originX + dx))),
         y: Math.round(Math.max(0, Math.min(height - 40, drag.originY + dy))),
@@ -108,23 +147,24 @@ export function FlyerCanvas({
   }
 
   return (
-    <div className="flex h-full w-full items-start justify-center overflow-auto bg-slate-100 p-6 scrollbar-thin dark:bg-slate-900">
+    <div ref={viewportRef} data-testid={preview ? undefined : "canvas-viewport"} className={preview ? "pointer-events-none overflow-hidden" : "flex min-h-0 w-full flex-1 items-start overflow-auto bg-muted p-6 scrollbar-thin"}>
       <div
         ref={surfaceRef}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerUp}
-        onPointerDown={() => onSelect(null)}
+        onPointerDown={() => { setSelectedImage(null); onSelect(null); }}
         style={{
           width: width * zoom,
           height: height * zoom,
           position: "relative",
           flexShrink: 0,
+          marginInline: "auto",
           touchAction: "none",
           backgroundColor,
           boxShadow: "0 10px 40px rgba(15, 23, 42, 0.25)",
         }}
-        data-testid="flyer-canvas"
+        data-testid={preview ? undefined : "flyer-canvas"}
       >
         <div
           style={{
@@ -143,7 +183,7 @@ export function FlyerCanvas({
             return (
               <div
                 key={element.id}
-                data-testid={`element-${element.id}`}
+                data-testid={preview ? undefined : `element-${element.id}`}
                 onPointerDown={(event) => {
                   onSelect(element.id, "element");
                   startDrag(event, "move", "element", element.id, element);
@@ -160,35 +200,10 @@ export function FlyerCanvas({
                   zIndex: element.zIndex,
                   opacity: element.opacity,
                   transform: element.rotation ? `rotate(${element.rotation}deg)` : undefined,
-                  backgroundColor: element.type === "shape" ? "transparent" : element.backgroundColor ?? "transparent",
-                  ...(element.type === "image" && element.image
-                    ? {
-                        backgroundImage: `url(${element.image})`,
-                        backgroundSize: element.imageFit === "fill" ? "100% 100%" : element.imageFit ?? "contain",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                      }
-                    : {}),
+
                 }}
               >
-                {element.type === "shape" && element.backgroundColor && <ShapeArtwork subtype={element.subtype} color={element.backgroundColor} />}
-                {element.type === "text" || element.text ? (
-                  <div
-                    className="flex h-full w-full items-center justify-center whitespace-pre-wrap p-1 text-center"
-                    style={{
-                      color: element.textStyle?.color ?? "#111827",
-                      fontFamily: element.textStyle?.fontFamily ?? "Roboto",
-                      fontWeight: element.textStyle?.fontWeight ?? 700,
-                      fontSize: element.textStyle?.fontSize ?? 24,
-                      textAlign: element.textStyle?.align ?? "center",
-                      justifyContent: element.textStyle?.align === "left" ? "flex-start" : element.textStyle?.align === "right" ? "flex-end" : "center",
-                      textDecoration: element.textStyle?.textDecoration,
-                      fontStyle: element.textStyle?.fontStyle,
-                    }}
-                  >
-                    {element.text ?? ""}
-                  </div>
-                ) : null}
+                <svg width={element.width} height={element.height} overflow="visible" className="pointer-events-none absolute inset-0" dangerouslySetInnerHTML={{ __html: elementArtwork(element, `${preview ? "preview" : "editor"}-${element.id}`, artworkOptions) }} />
 
                 {isSelected ? (
                   <span
@@ -205,37 +220,24 @@ export function FlyerCanvas({
 
           {products.map((product) => {
             const isSelected = selectedKind === "product" && selectedId === product.id;
-            const hasDiscount =
-              typeof product.salePrice === "number" &&
-              typeof product.price === "number" &&
-              product.salePrice < product.price;
-            const textScale = Math.min(product.width, product.height);
-            const tagColor = product.tagColor ?? "#e11d48";
-            const tagShape = product.tagShape ?? "pill";
-            const tagStyle = product.tagStyle ?? "solid";
-            const tagVisualStyle: React.CSSProperties = {
-              color: product.textColor ?? "#ffffff",
-              fontSize: textScale * .1,
-              padding: `${Math.max(3, textScale * .018)}px ${Math.max(8, textScale * .045)}px`,
-              borderRadius: tagShape === "circle" ? "50%" : tagShape === "pill" ? "9999px" : tagShape === "square" ? "3px" : "8px",
-              background: tagStyle === "gradient" ? `linear-gradient(135deg, ${tagColor}, #111827)` : tagStyle === "outline" ? "transparent" : tagColor,
-              border: tagStyle === "outline" ? `3px solid ${tagColor}` : undefined,
-              boxShadow: tagStyle === "shadow" ? `0 5px 0 color-mix(in srgb, ${tagColor}, black 35%)` : undefined,
-              clipPath: tagShape === "burst" ? "polygon(50% 0%,61% 18%,79% 7%,82% 29%,100% 35%,86% 50%,100% 65%,79% 71%,79% 93%,61% 82%,50% 100%,39% 82%,21% 93%,21% 71%,0 65%,14% 50%,0 35%,18% 29%,21% 7%,39% 18%)" : tagShape === "ticket" ? "polygon(0 0,100% 0,100% 35%,92% 50%,100% 65%,100% 100%,0 100%,0 65%,8% 50%,0 35%)" : undefined,
-            };
+            const imageSelected = isSelected && selectedImage === product.id;
+            const border = product.backgroundVisible === false ? 0 : product.borderWidth ?? 1;
+            const imageWidth = Math.max(1, product.width - border * 2 - 8);
+            const imageHeight = Math.max(1, (product.height - border * 2) * .58 - 8);
+            const imageScale = product.imageScale ?? 1;
 
             return (
               <div
                 key={product.id}
-                data-testid={`product-${product.id}`}
+                data-testid={preview ? undefined : `product-${product.id}`}
                 onPointerDown={(event) => {
+                  setSelectedImage(null);
                   onSelect(product.id, "product");
                   startDrag(event, "move", "product", product.id, product);
                 }}
                 className={cn(
-                  "absolute cursor-move select-none overflow-hidden bg-white",
-                  product.isHighlighted && "ring-2 ring-primary",
-                  isSelected && "outline outline-2 outline-primary",
+                  "absolute cursor-move select-none",
+                  isSelected && !imageSelected && "outline outline-2 outline-primary",
                 )}
                 style={{
                   left: product.x,
@@ -243,51 +245,47 @@ export function FlyerCanvas({
                   width: product.width,
                   height: product.height,
                   zIndex: 500 + products.indexOf(product),
+                  touchAction: "none",
                   transform: product.rotation ? `rotate(${product.rotation}deg)` : undefined,
-                  backgroundColor: product.backgroundColor ?? "#ffffff",
-                  border: `${product.borderWidth ?? 1}px solid ${product.borderColor ?? (product.isHighlighted ? "#29d19c" : "#e2e8f0")}`,
-                  borderRadius: product.borderRadius ?? 10,
-                  boxShadow: product.cardShadow === false ? "none" : "0 2px 8px rgba(15, 23, 42, 0.12)",
-                  color: "#111827",
+
                 }}
               >
-                {product.image ? (
-                  <img src={product.image} alt={product.name ?? "Produto"} className="h-[58%] w-full bg-white object-contain p-1" />
-                ) : <div className="grid h-[58%] place-items-center bg-slate-50 text-slate-300" style={{ fontSize: Math.max(18, textScale * .16) }}>▧</div>}
-                <div className="text-center" style={{ padding: Math.min(8, product.height * .015), lineHeight: 1.1, fontSize: Math.min(28, textScale * .075) }}>
-                  <p className="truncate font-semibold">{product.name ?? "Produto"}</p>
-                  <div className="flex flex-col items-center">
-                    {hasDiscount ? (
-                      <>
-                        <span className="line-through opacity-60" style={{ fontSize: textScale * .07 }}>
-                          R$ {(product.price ?? 0).toFixed(2)}
-                        </span>
-                        <span className="font-bold" style={tagVisualStyle}>
-                          R$ {(product.salePrice ?? 0).toFixed(2).replace(".", ",")}
-                        </span>
-                      </>
-                    ) : (
-                      <span className="font-bold" style={tagVisualStyle}>
-                        R$ {(product.price ?? 0).toFixed(2).replace(".", ",")}
-                      </span>
-                    )}
-                  </div>
-                  {product.unit ? <span className="opacity-70" style={{ fontSize: textScale * .06 }}>{product.unit}</span> : null}
-                </div>
+                <svg width={product.width} height={product.height} overflow="visible" className="pointer-events-none absolute inset-0" dangerouslySetInnerHTML={{ __html: productArtwork(product, `${preview ? "preview" : "editor"}-${product.id}`, artworkOptions) }} />
+                {!preview && product.image && <div
+                  role="button" tabIndex={0} aria-label={`Selecionar imagem de ${product.name ?? "produto"}`}
+                  onPointerDown={event => { event.stopPropagation(); onSelect(product.id, "product"); setSelectedImage(product.id); }}
+                  onKeyDown={event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); onSelect(product.id, "product"); setSelectedImage(product.id); } }}
+                  className={cn("absolute cursor-pointer", imageSelected && "outline outline-2 outline-blue-500")}
+                  style={{ left: (product.width - imageWidth * imageScale) / 2, top: border + 4 + imageHeight * (1 - imageScale) / 2, width: imageWidth * imageScale, height: imageHeight * imageScale, touchAction: "none" }}
+                >
+                  {imageSelected && ([-1, 1] as const).flatMap(cx => ([-1, 1] as const).map(cy => <span
+                    key={`${cx}-${cy}`} role="button" aria-label={`Redimensionar imagem ${cx === -1 ? "esquerda" : "direita"} ${cy === -1 ? "superior" : "inferior"}`}
+                    onPointerDown={event => {
+                      startDrag(event, "image-resize", "product", product.id, { ...product, width: imageWidth, height: imageHeight });
+                      Object.assign(dragRef.current!, { imageScale, cornerX: cx, cornerY: cy, rotation: product.rotation });
+                    }}
+                    className="absolute rounded-sm border-2 border-blue-500 bg-white"
+                    style={{ width: 16 / zoom, height: 16 / zoom, left: cx === -1 ? -8 / zoom : imageWidth * imageScale - 8 / zoom, top: cy === -1 ? -8 / zoom : imageHeight * imageScale - 8 / zoom, cursor: cx === cy ? "nwse-resize" : "nesw-resize", touchAction: "none" }}
+                  />))}
+                </div>}
 
-                {isSelected ? (
+                {isSelected && !imageSelected ? (
                   <span
                     onPointerDown={(event) => {
                       event.stopPropagation();
                       startDrag(event, "resize", "product", product.id, product);
                     }}
+                    role="button"
+                    aria-label="Redimensionar produto"
+                    title="Arraste para redimensionar o produto"
+                    style={{ width: 16 / zoom, height: 16 / zoom, right: -8 / zoom, bottom: -8 / zoom, touchAction: "none" }}
                     className="absolute -bottom-1 -right-1 h-3 w-3 cursor-nwse-resize rounded-sm border border-primary bg-white"
                   />
                 ) : null}
               </div>
             );
           })}
-          {footer?.visible && footer.elements.length > 0 && <div style={{ position: "absolute", bottom: 12, left: 12, right: 12, zIndex: 1000, textAlign: "center", fontSize: Math.max(10, height * .018), pointerEvents: "none", color: "#0f172a" }}>{footer.elements.join("  |  ")}</div>}
+          {footer?.visible && footer.elements.length > 0 && <svg width={width} height={height} className="pointer-events-none absolute inset-0" style={{ zIndex: 1000 }} dangerouslySetInnerHTML={{ __html: footerArtwork(footer, width, height, artworkOptions) }} />}
         </div>
       </div>
     </div>

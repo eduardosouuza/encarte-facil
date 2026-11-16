@@ -1,3 +1,4 @@
+import { BrandLogo } from "@/components/brand-logo";
 import * as React from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -47,7 +48,7 @@ export function LoginPage() {
     <div className="relative flex min-h-screen items-center justify-center bg-background px-4 py-10">
       <div className="absolute right-5 top-5"><ThemeToggle /></div>
       <div className="w-full max-w-md rounded-lg border bg-card px-6 py-14 sm:px-6">
-          <img src="/encartefacil-logo.png" alt="Encartefacil" className="mx-auto mb-7 h-auto w-44" />
+          <div className="mb-7 flex justify-center"><BrandLogo /></div>
           <h1 className="mb-7 text-center text-2xl font-semibold tracking-tight">Logar</h1>
 
           <form onSubmit={onSubmit} className="space-y-4" noValidate>

@@ -1,4 +1,5 @@
 import sharp from "sharp";
+import { exportArtworkOptions } from "../lib/export-fonts.js";
 import PDFDocument from "pdfkit";
 import { getDb } from "../db/connection.js";
 import { ApiError } from "../lib/http.js";
@@ -55,7 +56,7 @@ export async function renderDocument(userId: string, flyerId: string) {
   const products = await Promise.all((flyer.products as RenderProduct[]).map(async p => ({ ...p, image: await imageData(p.image) })));
   const capacity = Math.max(1, Math.min(400, Math.floor(Number(flyer.grid?.productsPerPage) || products.length || 1)));
   const pages = Array.from({ length: Math.max(1, Math.ceil(products.length / capacity)) }, (_, index) =>
-    renderFlyerToSvg({ ...flyer, width, height, elements, products: products.slice(index * capacity, (index + 1) * capacity) } as Parameters<typeof renderFlyerToSvg>[0]));
+    renderFlyerToSvg({ ...flyer, width, height, elements, products: products.slice(index * capacity, (index + 1) * capacity) } as Parameters<typeof renderFlyerToSvg>[0], { ...exportArtworkOptions, idPrefix: `page-${index}-` }));
   const svg = pages.length === 1 ? pages[0]! : `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height * pages.length}" viewBox="0 0 ${width} ${height * pages.length}">${pages.map((page, index) => page.replace("<svg ", `<svg y="${index * height}" `)).join("")}</svg>`;
   return { svg, pages, width, height, flyer };
 }
@@ -70,44 +71,47 @@ export async function createExport(userId: string, flyerId: string, format: Expo
   }
   try {
     const { pages, width, height } = await renderDocument(userId, flyerId);
-    const svg = pages[pageIndex ?? 0]!;
-    let bytes: Buffer;
+    if (pageIndex !== undefined && (!Number.isInteger(pageIndex) || pageIndex < 0 || pageIndex >= pages.length)) throw ApiError.badRequest("Página inválida.");
+    const selectedPages = pageIndex === undefined ? pages : [pages[pageIndex]!];
+    const svg = selectedPages[0]!;
     const contentType = { svg: "image/svg+xml", png: "image/png", jpeg: "image/jpeg", pdf: "application/pdf", mp4: "video/mp4" }[format];
-    if (format === "svg") bytes = Buffer.from(svg);
-    else if (format === "mp4") bytes = await renderVideo(svg, duration);
-    else {
-      const raster = sharp(Buffer.from(svg), { limitInputPixels: 25_000_000 });
-      if (format === "jpeg") bytes = await raster.flatten({ background: "#ffffff" }).jpeg({ quality: 95 }).toBuffer();
-      else {
-        const png = await raster.png().toBuffer();
-        if (format === "png") bytes = png;
-        else {
-          const images = await Promise.all(pages.map(page => sharp(Buffer.from(page), { limitInputPixels: 25_000_000 }).png().toBuffer()));
-          bytes = await new Promise<Buffer>((resolve, reject) => {
-          const doc = new PDFDocument({ size: [width * 0.75, height * 0.75], margin: 0 });
-          const chunks: Buffer[] = [];
-          doc.on("data", b => chunks.push(b));
-          doc.on("end", () => resolve(Buffer.concat(chunks)));
-          doc.on("error", reject);
-          images.forEach((image, index) => {
-            if (index > 0) doc.addPage();
-            doc.image(image, 0, 0, { width: width * 0.75, height: height * 0.75 });
-          });
-          doc.end();
+    const files: string[] = [];
+    const storeFile = (exportId: string, bytes: Buffer) => {
+      const url = `/api/exports/${exportId}/file`;
+      db.prepare("INSERT INTO export_files(export_id,content_type,data) VALUES(?,?,?) ON CONFLICT(export_id) DO UPDATE SET content_type=excluded.content_type,data=excluded.data").run(exportId, contentType, bytes);
+      db.prepare("UPDATE exports SET status='completed', progress=100, file_url=?, updated_at=? WHERE id=?").run(url, nowIso(), exportId);
+      files.push(url);
+    };
+    if (format === "mp4") storeFile(id, await renderVideo(selectedPages, duration));
+    else if (format === "pdf") {
+      const images: Buffer[] = [];
+      for (const page of selectedPages) images.push(await sharp(Buffer.from(page), { limitInputPixels: 25_000_000 }).png().toBuffer());
+      const bytes = await new Promise<Buffer>((resolve, reject) => {
+        const doc = new PDFDocument({ size: [width * .75, height * .75], margin: 0 });
+        const chunks: Buffer[] = [];
+        doc.on("data", chunk => chunks.push(chunk));
+        doc.on("end", () => resolve(Buffer.concat(chunks)));
+        doc.on("error", reject);
+        images.forEach((image, index) => {
+          if (index > 0) doc.addPage();
+          doc.image(image, 0, 0, { width: width * .75, height: height * .75 });
         });
-        }
+        doc.end();
+      });
+      storeFile(id, bytes);
+    } else {
+      // Resolve images and snapshot the document once. All pages belong to the
+      // same revision, even if another editor saves while this job is running.
+      for (const [index, page] of selectedPages.entries()) {
+        const bytes = format === "svg" ? Buffer.from(page) : format === "jpeg"
+          ? await sharp(Buffer.from(page), { limitInputPixels: 25_000_000 }).flatten({ background: "#ffffff" }).jpeg({ quality: 95, chromaSubsampling: "4:4:4" }).toBuffer()
+          : await sharp(Buffer.from(page), { limitInputPixels: 25_000_000 }).png().toBuffer();
+        const exportId = index === 0 ? id : newId();
+        if (index > 0) db.prepare("INSERT INTO exports(id,user_id,flyer_id,kind,format,status,progress,created_at,updated_at) VALUES(?,?,?,?,?,'processing',0,?,?)").run(exportId, userId, flyerId, "image", format, now, now);
+        storeFile(exportId, bytes);
       }
     }
-    const fileUrl = `/api/exports/${id}/file`;
-    db.prepare("INSERT INTO export_files(export_id,content_type,data) VALUES(?,?,?) ON CONFLICT(export_id) DO UPDATE SET content_type=excluded.content_type,data=excluded.data").run(id, contentType, bytes);
-    db.prepare("UPDATE exports SET status='completed', progress=100, file_url=?, updated_at=? WHERE id=?").run(fileUrl, nowIso(), id);
-    const files = [fileUrl];
-    if (pageIndex === undefined && format !== "pdf" && format !== "mp4") {
-      for (let index = 1; index < pages.length; index++) {
-        const page = await createExport(userId, flyerId, format, undefined, duration, index);
-        files.push(page.fileUrl);
-      }
-    }
+    const fileUrl = files[0]!;
     return { id, status: "completed", format, fileUrl, files, svg };
   } catch (error) {
     db.prepare("UPDATE exports SET status='failed',error=?,updated_at=? WHERE id=?").run(error instanceof Error ? error.message : "Falha ao renderizar", nowIso(), id);

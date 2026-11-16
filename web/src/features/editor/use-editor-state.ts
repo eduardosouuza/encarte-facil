@@ -39,6 +39,8 @@ export interface EditorElement {
 }
 
 export interface EditorProduct {
+  imageScale?: number;
+  backgroundVisible?: boolean;
   id: string;
   productId?: string;
   name?: string;

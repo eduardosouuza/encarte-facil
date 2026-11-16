@@ -1,3 +1,4 @@
+import { BrandLogo } from "@/components/brand-logo";
 import * as React from "react";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
@@ -57,14 +58,12 @@ export function RegisterPage() {
   });
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4 py-10 dark:bg-slate-950">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4 py-10">
       <div className="w-full max-w-md">
         <div className="mb-8 text-center">
-          <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary font-display text-xl font-bold text-primary-foreground">
-            E
-          </div>
+          <div className="mb-4 flex justify-center"><BrandLogo /></div>
           <h1 className="font-display text-3xl font-semibold tracking-tight">Criar conta</h1>
-          <p className="mt-2 text-sm text-muted-foreground">Comece a criar encartesprofessionais em poucos minutos.</p>
+          <p className="mt-2 text-sm text-muted-foreground">Comece a criar encartes profissionais em poucos minutos.</p>
         </div>
 
         <div className="rounded-xl border bg-card p-6 shadow-sm">

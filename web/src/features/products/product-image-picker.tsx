@@ -21,18 +21,19 @@ export function ProductImagePicker({ product, onClose, onSaved }: { product: Pro
   const controller = React.useRef<AbortController | null>(null);
   React.useEffect(() => () => controller.current?.abort(), []);
 
-  async function search() {
+  const search = React.useCallback(async (query: string) => {
     controller.current?.abort();
     const current = new AbortController();
     controller.current = current;
     setBusy(true); setError(""); setImages([]); setSearched(true);
     try {
-      const response = await apiRequest<{ images: Candidate[] }>("/products/search-images", { method: "POST", body: { term: term.trim() }, signal: current.signal });
+      const response = await apiRequest<{ images: Candidate[] }>("/products/search-images", { method: "POST", body: { term: query.trim().slice(0, 120) }, signal: current.signal });
       if (!current.signal.aborted) setImages(response.images);
     } catch (failure) {
       if (!current.signal.aborted) setError(failure instanceof Error ? failure.message : "Falha ao buscar fotos");
     } finally { if (!current.signal.aborted) setBusy(false); }
-  }
+  }, []);
+  React.useEffect(() => { if (product.name.trim().length >= 2) void search(product.name); }, [product.name, search]);
 
   async function select(image: Candidate) {
     setSaving(image.imageUrl); setError("");
@@ -49,7 +50,7 @@ export function ProductImagePicker({ product, onClose, onSaved }: { product: Pro
   return <Dialog open onOpenChange={open => { if (!open && !saving) onClose(); }}>
     <DialogContent className="max-h-[85vh] overflow-y-auto sm:max-w-3xl">
       <DialogHeader><DialogTitle>Escolher foto do produto</DialogTitle><DialogDescription>Busque pelo nome e pela marca e escolha a embalagem correta.</DialogDescription></DialogHeader>
-      <form className="flex gap-2" onSubmit={event => { event.preventDefault(); void search(); }}>
+      <form className="flex gap-2" onSubmit={event => { event.preventDefault(); void search(term); }}>
         <Input aria-label="Nome ou marca para buscar foto" value={term} onChange={event => setTerm(event.target.value)} maxLength={120} />
         <Button type="submit" disabled={busy || saving !== null || term.trim().length < 2}>{busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Search className="h-4 w-4" />}Buscar imagens</Button>
       </form>

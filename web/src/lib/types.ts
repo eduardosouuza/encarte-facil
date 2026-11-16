@@ -46,6 +46,8 @@ export interface FlyerElement {
 }
 
 export interface FlyerProduct {
+  imageScale?: number;
+  backgroundVisible?: boolean;
   id?: string;
   productId?: string;
   name?: string;

@@ -6,15 +6,23 @@ const CREDENTIALS = {
 };
 const PIXEL_IMAGE = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAEUlEQVQImWP4z8DwH4QZYAwAR8oH+Xm0fdIAAAAASUVORK5CYII=";
 
-test("reproduz a identidade visual observada na tela de login original", async ({ page }) => {
+test("aplica a paleta pastel e preserva o tema ao recarregar", async ({ page }) => {
   await page.goto("/login");
-  await expect(page.getByRole("img", { name: "Encartefacil" })).toBeVisible();
+  await expect(page.getByLabel("Encart\u00ea", { exact: true })).toBeVisible();
   await expect(page.getByRole("heading", { name: "Logar" })).toBeVisible();
-  await expect(page.getByLabel("E-mail *")).toHaveAttribute("placeholder", "seu@email.com");
-  const submit = page.getByRole("button", { name: "Entrar" });
+  const submit = page.getByRole("button", { name: "Entrar", exact: true });
   await expect(submit).toHaveCSS("border-radius", "9999px");
-  await expect(submit).toHaveCSS("background-color", "rgb(41, 209, 156)");
+  await expect(submit).toHaveCSS("background-color", "rgb(255, 198, 163)");
+  await expect(page.locator("body")).toHaveCSS("font-family", /Nunito Sans/);
+  await page.screenshot({ path: "test-results/pastel-light.png", fullPage: true });
+  await page.getByRole("switch", { name: "Alternar tema" }).click();
   await expect(page.locator("html")).toHaveClass(/dark/);
+  await expect(submit).toHaveCSS("background-color", "rgb(245, 188, 153)");
+  await page.screenshot({ path: "test-results/pastel-dark.png", fullPage: true });
+  await page.reload();
+  await expect(page.getByRole("switch", { name: "Alternar tema" })).toBeChecked();
+  await page.getByRole("switch", { name: "Alternar tema" }).click();
+  await expect(page.locator("html")).not.toHaveClass(/dark/);
 });
 
 async function login(page: import("@playwright/test").Page) {

@@ -19,6 +19,11 @@ export const elementSchema = z.object({
   backgroundColor: z.string().max(32).optional(),
   image: z.string().max(2000).optional(),
   asset: z.string().max(2000).optional(),
+  imageFit: z.enum(["contain", "cover", "fill"]).optional(),
+  borderColor: z.string().max(32).optional(),
+  borderWidth: z.number().finite().min(0).optional(),
+  borderRadius: z.number().finite().min(0).optional(),
+  cardShadow: z.boolean().optional(),
   textStyle: z
     .object({
       fontFamily: z.string().max(120).optional(),
@@ -35,6 +40,8 @@ export const elementSchema = z.object({
 export const flyerProductSchema = z.object({
   id: z.string().max(120).optional(),
   productId: z.string().max(120).optional(),
+  imageScale: z.number().finite().min(0.1).max(3).optional(),
+  backgroundVisible: z.boolean().optional(),
   name: z.string().max(160).optional(),
   image: z.string().max(2000).optional(),
   price: z.number().finite().nonnegative().optional(),
@@ -50,6 +57,10 @@ export const flyerProductSchema = z.object({
   tagColor: z.string().max(32).optional(),
   textColor: z.string().max(32).optional(),
   backgroundColor: z.string().max(32).optional(),
+  borderColor: z.string().max(32).optional(),
+  borderWidth: z.number().finite().min(0).optional(),
+  borderRadius: z.number().finite().min(0).optional(),
+  cardShadow: z.boolean().optional(),
   tagShape: z.enum(["circle", "pill", "ticket", "burst", "square"]).optional(),
   tagStyle: z.enum(["solid", "outline", "gradient", "shadow"]).optional(),
 });

@@ -57,11 +57,11 @@ export function GridPicker({ capacity, count, columns, mode, onCapacity, onLayou
     <div className="border-t pt-4">
       <h3 className="font-semibold">Layout da Grade</h3>
       <p className="text-xs text-muted-foreground">{count} produtos nesta página</p>
-      <div className={`mt-3 rounded-xl border p-2 ${mode === "balanced" ? "border-amber-600" : "border-transparent"}`}>
+      <div className={`mt-3 rounded-xl border p-2 ${mode === "balanced" ? "border-primary" : "border-transparent"}`}>
         <p className="mb-2 text-[11px] font-semibold text-muted-foreground">REGULAR</p>
         <div className="grid grid-cols-3 gap-1">{regular.map(value => preview(value, "balanced"))}</div>
       </div>
-      {capacity > 1 && <div className={`mt-3 rounded-xl border p-2 ${mode !== "balanced" ? "border-amber-600" : "border-transparent"}`}>
+      {capacity > 1 && <div className={`mt-3 rounded-xl border p-2 ${mode !== "balanced" ? "border-primary" : "border-transparent"}`}>
         <p className="mb-2 text-[11px] font-semibold text-muted-foreground">COM DESTAQUE</p>
         <div className="grid grid-cols-3 gap-2">{options.filter((option, index) => options.findIndex(other => other.columns === option.columns && other.mode === option.mode) === index).map(option => preview(option.columns, option.mode))}</div>
       </div>}

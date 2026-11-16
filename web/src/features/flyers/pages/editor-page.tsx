@@ -1,3 +1,4 @@
+import { EditorProductsPanel } from "../../editor/editor-products-panel";
 import * as React from "react";
 import { Link, useParams } from "react-router-dom";
 import {
@@ -22,6 +23,11 @@ import {
   X,
   ZoomIn,
   ZoomOut,
+  PanelLeftClose,
+  PanelLeftOpen,
+  PanelRightClose,
+  PanelRightOpen,
+  Maximize2,
 } from "lucide-react";
 import { toast } from "sonner";
 import { useQueryClient } from "@tanstack/react-query";
@@ -47,14 +53,22 @@ import { InspectorPanel } from "../../editor/inspector-panel";
 import { useEditorState, type EditorElement, type EditorProduct } from "../../editor/use-editor-state";
 import { GridPicker } from "../../editor/grid-picker";
 import { layoutProductGrid, type ProductGridMode } from "../../editor/product-grid";
-import { formatCurrency } from "@/lib/utils";
 import type { Flyer, Product } from "@/lib/types";
 import { ProductImagePicker } from "@/features/products/product-image-picker";
 
 const DEFAULT_WIDTH = 1080;
 const DEFAULT_HEIGHT = 1350;
 
-type EditorSection = "grid" | "themes" | "products" | "elements" | "tags" | "formats" | "brand" | "flyers";
+type EditorSection = "grid" | "themes" | "products" | "elements" | "tags" | "formats" | "brand" | "flyers" | "fonts" | "text" | "colors" | "proportions" | "dates";
+
+const QUICK_TOOLS = [
+  { id: "formats", label: "Formato", icon: LayoutTemplate },
+  { id: "fonts", label: "Fontes", icon: Type },
+  { id: "text", label: "Texto", icon: Square },
+  { id: "colors", label: "Cores", icon: Palette },
+  { id: "proportions", label: "Proporções", icon: Maximize2 },
+  { id: "dates", label: "Validade", icon: Newspaper },
+] as const;
 
 const EDITOR_SECTIONS = [
   { id: "themes", label: "Temas", icon: Palette },
@@ -106,6 +120,7 @@ interface CatalogElement {
 }
 
 const BACKGROUND_CATEGORIES = new Set(["background", "backgrounds"]);
+const isBackgroundCategory = (category?: string) => Boolean(category && BACKGROUND_CATEGORIES.has(category));
 
 export function EditorPage() {
   const { id } = useParams<{ id: string }>();
@@ -122,19 +137,20 @@ export function EditorPage() {
   const [designCode, setDesignCode] = React.useState<string | null>(null);
   const [activeSection, setActiveSection] = React.useState<EditorSection>("themes");
   const [panelOpen, setPanelOpen] = React.useState(true);
+  const [inspectorOpen, setInspectorOpen] = React.useState(true);
+  const [fitView, setFitView] = React.useState(true);
+  const [viewportSize, setViewportSize] = React.useState({ width: 0, height: 0 });
   const [startAt, setStartAt] = React.useState("");
   const [endAt, setEndAt] = React.useState("");
   const [columns, setColumns] = React.useState(4);
   const [productsPerPage, setProductsPerPage] = React.useState(16);
   const [activePage, setActivePage] = React.useState(0);
   const [gridMode, setGridMode] = React.useState<ProductGridMode>("balanced");
-  const [productSearch, setProductSearch] = React.useState("");
   const [elementSearch, setElementSearch] = React.useState("");
   const [elementCategory, setElementCategory] = React.useState("all");
   const [elementLibraryTab, setElementLibraryTab] = React.useState<"library" | "mine">("library");
   const [themeSearch, setThemeSearch] = React.useState("");
   const [tagTab, setTagTab] = React.useState<"shapes" | "style" | "colors">("shapes");
-  const [productTab, setProductTab] = React.useState<"search" | "library" | "flyer">("search");
   const [bulkProductText, setBulkProductText] = React.useState("");
   const [bulkImporting, setBulkImporting] = React.useState(false);
   const [bulkProgress, setBulkProgress] = React.useState("");
@@ -166,7 +182,7 @@ export function EditorPage() {
   const flyer = flyerQuery.data;
 
   React.useEffect(() => {
-    if (!flyer || hydrated) return;
+    if (!flyer || hydrated || formatsQuery.isLoading) return;
     setName(flyer.name);
     setFormatCode(flyer.format ?? "");
     setContent(flyer.content ?? "flyer");
@@ -176,8 +192,22 @@ export function EditorPage() {
     setGridMode((["balanced", "featured", "featured-center", "featured-right", "wide-left", "wide-center", "wide-right"].includes(String(flyer.grid?.mode)) ? flyer.grid?.mode : "balanced") as ProductGridMode);
     setStartAt(flyer.startAt?.slice(0, 10) ?? "");
     setEndAt(flyer.endAt?.slice(0, 10) ?? "");
+    const savedElements = (flyer.elements ?? []) as unknown as EditorElement[];
+    const savedFormat = (formatsQuery.data ?? []).find(item => item.code === (flyer.format ?? "") || item._key === (flyer.format ?? ""));
+    const savedWidth = savedFormat?.width ?? DEFAULT_WIDTH;
+    const savedHeight = savedFormat?.height ?? DEFAULT_HEIGHT;
     editor.reset({
-      elements: (flyer.elements ?? []) as unknown as EditorElement[],
+      elements: savedElements.map(element => isBackgroundCategory(element.category) ? {
+        ...element,
+        category: "background",
+        type: element.type === "shape" ? "shape" : "image",
+        x: 0,
+        y: 0,
+        width: savedWidth,
+        height: savedHeight,
+        imageFit: element.type === "image" ? "cover" : element.imageFit,
+        zIndex: Math.min(element.zIndex ?? -1000, -1000),
+      } : element),
       products: (flyer.products ?? []) as unknown as EditorProduct[],
       backgroundColor: flyer.backgroundColor ?? "#ffffff",
       footer: {
@@ -187,7 +217,7 @@ export function EditorPage() {
     });
     setHydrated(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [flyer, hydrated]);
+  }, [flyer, hydrated, formatsQuery.data]);
 
   const format = React.useMemo(() => {
     const list = formatsQuery.data ?? [];
@@ -196,6 +226,15 @@ export function EditorPage() {
 
   const canvasWidth = format?.width ?? DEFAULT_WIDTH;
   const canvasHeight = format?.height ?? DEFAULT_HEIGHT;
+  const changeZoom = React.useCallback((value: number) => {
+    setFitView(false);
+    latestEditor.current.setZoom(Math.max(.1, Math.min(3, value)));
+  }, []);
+  React.useEffect(() => {
+    if (fitView && viewportSize.width > 48 && viewportSize.height > 48) {
+      editor.setZoom(Math.max(.1, Math.min(1, (viewportSize.width - 48) / canvasWidth, (viewportSize.height - 48) / canvasHeight)));
+    }
+  }, [fitView, viewportSize, canvasWidth, canvasHeight, editor.setZoom]);
 
   const paginationInitialized = React.useRef(false);
   const productOrder = editor.products.map(product => product.id).join(",");
@@ -424,17 +463,6 @@ export function EditorPage() {
     editor.select(added.id, "product");
   }
 
-  async function findProductImage(productId: string) {
-    setFindingImage(productId);
-    try {
-      const result = await api.post<{ product: { image: string }; asset: Asset }>(`/products/${productId}/find-image`, {});
-      latestEditor.current.update({ products: latestEditor.current.products.map(product => product.productId === productId ? { ...product, image: result.product.image } : product) });
-      await queryClient.invalidateQueries({ queryKey: ["products"] });
-      toast.success("Foto encontrada e salva na biblioteca");
-    } catch (error) { toast.error(error instanceof Error ? error.message : "Não foi possível buscar a foto"); }
-    finally { setFindingImage(null); }
-  }
-
   async function importProductList() {
     if (!bulkProductText.trim() || bulkImporting) return;
     setBulkImporting(true);
@@ -467,7 +495,6 @@ export function EditorPage() {
       latestEditor.current.update({ products: layoutProductGrid([...latestEditor.current.products, ...added], columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage) });
       await queryClient.invalidateQueries({ queryKey: ["products"] });
       setBulkProductText("");
-      setProductTab("flyer");
       toast.success(`${added.length} produtos adicionados${result.ignored.length ? `; ${result.ignored.length} linhas sem preço foram ignoradas` : ""}`);
       const missingPhotos = withImages.filter(product => !product.image).length;
       if (missingPhotos) toast.info(`${missingPhotos} produto(s) sem foto. Use Buscar foto no catálogo ou envie uma imagem pela biblioteca.`);
@@ -489,24 +516,27 @@ export function EditorPage() {
     const sourceHeight = 1350;
     const scaleX = canvasWidth / sourceWidth;
     const scaleY = canvasHeight / sourceHeight;
-    const elements = design.elements.map((item, index) => ({
+    const elements = design.elements.map((item, index) => {
+      const background = isBackgroundCategory(item.category);
+      return {
       id: `theme_${Date.now()}_${index}`,
-      category: item.category ?? "decorative",
+      category: background ? "background" : item.category ?? "decorative",
       type: item.type ?? "shape",
       subtype: item.subtype,
-      x: item.category === "background" ? 0 : Math.round((item.x ?? 0) * scaleX),
-      y: item.category === "background" ? 0 : Math.round((item.y ?? 0) * scaleY),
-      width: item.category === "background" ? canvasWidth : Math.round((item.width ?? 240) * scaleX),
-      height: item.category === "background" ? canvasHeight : Math.round((item.height ?? 80) * scaleY),
+      x: background ? 0 : Math.round((item.x ?? 0) * scaleX),
+      y: background ? 0 : Math.round((item.y ?? 0) * scaleY),
+      width: background ? canvasWidth : Math.round((item.width ?? 240) * scaleX),
+      height: background ? canvasHeight : Math.round((item.height ?? 80) * scaleY),
       rotation: item.rotation ?? 0,
       opacity: item.opacity ?? 1,
       zIndex: item.zIndex ?? index,
       text: item.text,
       backgroundColor: item.backgroundColor,
       image: item.image,
-      imageFit: item.category === "background" ? "fill" : item.imageFit,
+      imageFit: background ? "cover" : item.imageFit,
       textStyle: item.textStyle ? { ...item.textStyle, fontSize: item.textStyle.fontSize ? Math.round(item.textStyle.fontSize * Math.min(scaleX, scaleY)) : undefined } : undefined,
-    }));
+      };
+    });
     editor.update({ elements, products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, content, gridMode, productsPerPage), backgroundColor: design.backgroundColor ?? editor.backgroundColor });
     setDesignCode(design._key);
     toast.success(`Tema ${design.title} aplicado`);
@@ -538,14 +568,44 @@ export function EditorPage() {
     else { setActiveSection(section); setPanelOpen(true); }
   }
 
+  async function changeProductPhoto(product: EditorProduct) {
+    editor.select(product.id, "product");
+    try {
+      const result = product.productId
+        ? await api.get<{ product: Product }>(`/products/${product.productId}`)
+        : await api.post<{ product: Product }>("/products", { name: product.name || "Produto", price: product.price ?? 0, image: product.image });
+      if (!product.productId) latestEditor.current.update({ products: latestEditor.current.products.map(item => item.id === product.id ? { ...item, productId: result.product._key } : item) });
+      setPhotoProduct({ ...result.product, name: product.name || result.product.name });
+    } catch (error) { toast.error(error instanceof Error ? error.message : "Falha ao abrir fotos do produto"); }
+  }
+
   function renderSectionPanel() {
-    const title = EDITOR_SECTIONS.find(section => section.id === activeSection)?.label ?? "Editor";
+    const title = QUICK_TOOLS.find(section => section.id === activeSection)?.label ?? EDITOR_SECTIONS.find(section => section.id === activeSection)?.label ?? "Editor";
     return <>
       <div className="sticky top-0 z-10 flex items-center justify-between border-b bg-background px-5 py-4">
-        <div><h2 className="text-lg font-semibold">{title}</h2><p className="text-xs text-muted-foreground">Edite o encarte sem sair da tela</p></div>
+        <div className="flex items-center gap-2"><h2 className="text-base font-semibold">{title}</h2>{activeSection === "products" && <span className="rounded-full bg-muted px-2 py-1 text-xs text-muted-foreground">{editor.products.length}</span>}</div>
         <Button variant="ghost" size="icon" aria-label="Fechar painel" onClick={() => setPanelOpen(false)}><X className="h-4 w-4" /></Button>
       </div>
       <div className="space-y-4 p-4">
+        {(activeSection === "fonts" || activeSection === "text") && <>
+          <Button className="w-full" onClick={addText}><Type className="h-4 w-4" />Adicionar texto</Button>
+          <p className="text-xs text-muted-foreground">Selecione um texto para editar. Os textos do encarte aparecem em todas as páginas.</p>
+          <div className="space-y-2">{editor.elements.filter(element => element.type === "text").map(element => <button key={element.id} type="button" onClick={() => editor.select(element.id, "element")} className={`block w-full truncate rounded-lg border p-3 text-left ${selectedElement?.id === element.id ? "border-primary bg-primary/10" : "hover:bg-muted"}`} style={{ fontFamily: element.textStyle?.fontFamily }}>{element.text || "Texto vazio"}</button>)}</div>
+          {selectedElement?.type === "text" && <InspectorPanel element={selectedElement}
+            onChangeElement={(patch, final) => handleChangeElement(selectedElement.id, patch, final)} onChangeProduct={() => {}}
+            onDelete={editor.removeSelected} onDuplicate={editor.duplicateSelected} onMoveLayer={editor.moveLayer} />}
+        </>}
+        {activeSection === "colors" && <>
+          <label className="block text-sm">Fundo da página<Input type="color" className="mt-2 h-12 p-1" value={editor.backgroundColor} onChange={event => editor.update({ backgroundColor: event.target.value }, { commit: false })} onBlur={() => editor.update({}, { commit: true })} /></label>
+          <div className="grid grid-cols-4 gap-2">{TAG_COLORS.map(([color, , label]) => <button key={color} type="button" aria-label={`Fundo ${label}`} onClick={() => editor.update({ backgroundColor: color })} className="h-10 rounded-lg border" style={{ backgroundColor: color }} />)}</div>
+          {selectedElement?.type === "text" && <label className="block text-sm">Cor do texto selecionado<Input type="color" value={selectedElement.textStyle?.color ?? "#111827"} onChange={event => handleChangeElement(selectedElement.id, { textStyle: { ...selectedElement.textStyle, color: event.target.value } }, false)} onBlur={() => handleChangeElement(selectedElement.id, {}, true)} /></label>}
+          {selectedElement?.type === "shape" && <label className="block text-sm">Cor da forma selecionada<Input type="color" value={selectedElement.backgroundColor ?? "#f97316"} onChange={event => handleChangeElement(selectedElement.id, { backgroundColor: event.target.value }, false)} onBlur={() => handleChangeElement(selectedElement.id, {}, true)} /></label>}
+          <Button variant="outline" onClick={() => openSection("tags")}>Editar cores das etiquetas de preço</Button>
+        </>}
+        {activeSection === "dates" && <>
+          <label className="block text-sm">Início da validade<Input type="date" value={startAt} onChange={event => setStartAt(event.target.value)} /></label>
+          <label className="block text-sm">Fim da validade<Input type="date" min={startAt} value={endAt} onChange={event => setEndAt(event.target.value)} /></label>
+        </>}
         {activeSection === "grid" && <>
           <GridPicker capacity={productsPerPage} count={Math.min(productsPerPage, Math.max(0, editor.products.length - visiblePage * productsPerPage))}
             columns={columns} mode={gridMode}
@@ -584,31 +644,12 @@ export function EditorPage() {
         </>}
 
         {activeSection === "products" && <>
-          <div className="grid grid-cols-3 border-b"><button type="button" onClick={() => setProductTab("search")} className={`border-b-2 px-2 py-2 text-xs font-medium ${productTab === "search" ? "border-primary text-primary" : "border-transparent text-muted-foreground"}`}>Buscar</button><button type="button" onClick={() => setProductTab("library")} className={`border-b-2 px-2 py-2 text-xs font-medium ${productTab === "library" ? "border-primary text-primary" : "border-transparent text-muted-foreground"}`}>Catálogo</button><button type="button" onClick={() => setProductTab("flyer")} className={`border-b-2 px-2 py-2 text-xs font-medium ${productTab === "flyer" ? "border-primary text-primary" : "border-transparent text-muted-foreground"}`}>No encarte ({editor.products.length})</button></div>
-          {productTab === "search" && <div className="space-y-3">
-            <div className="overflow-hidden rounded-xl border bg-card focus-within:ring-2 focus-within:ring-primary/40">
-              <Textarea className="min-h-44 resize-none border-0 text-sm shadow-none focus-visible:ring-0" aria-label="Lista de produtos" placeholder={"Cole sua lista de produtos aqui...\n\nExemplo:\nPão francês 9,90 kg\nPão de queijo 21,90 kg"} value={bulkProductText} onChange={event => setBulkProductText(event.target.value)} onKeyDown={event => { if ((event.ctrlKey || event.metaKey) && event.key === "Enter") { event.preventDefault(); void importProductList(); } if (event.key === "Escape") setBulkProductText(""); }} />
-              <div className="flex items-center justify-between border-t px-3 py-2"><span className="text-[11px] text-muted-foreground">Digite ou cole produtos</span><Button size="sm" disabled={bulkImporting || !bulkProductText.trim()} onClick={() => void importProductList()}>{bulkImporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <ImageIcon className="h-4 w-4" />}{bulkImporting ? bulkProgress || "Buscando..." : "Buscar fotos"}</Button></div>
-            </div>
-            <p className="text-center text-[11px] text-muted-foreground">Ctrl+Enter para buscar • Esc para limpar • até 50 produtos</p>
-            <div className="rounded-lg bg-primary/10 p-3 text-xs text-primary">As fotos são buscadas automaticamente no catálogo conhecido do Encarte Fácil e no Open Food Facts. Cada imagem encontrada é salva na sua biblioteca.</div>
-          </div>}
-          {productTab !== "search" && <Input placeholder="Buscar produtos..." aria-label="Buscar produtos" value={productSearch} onChange={event => setProductSearch(event.target.value)} />}
-          <Button variant="outline" className="w-full" onClick={() => openSection("grid")}><Grid3X3 className="h-4 w-4" />Layout da Grade ? {productsPerPage} por folha</Button>
-          <div className="flex items-center justify-between text-xs text-muted-foreground"><span>{editor.products.length} no encarte</span><Link to="/products" className="text-primary">Gerenciar catálogo</Link></div>
-          {productTab === "library" && productsQuery.isLoading && <p role="status">Carregando cat?logo...</p>}
-          {productTab === "library" && productsQuery.isError && <Button variant="outline" onClick={() => void productsQuery.refetch()}>Tentar carregar produtos novamente</Button>}
-          {productTab === "library" && productsQuery.isSuccess && !productsQuery.data.products.some(p => normalizeSearch(p.name).includes(normalizeSearch(productSearch))) && <p className="rounded-lg bg-muted p-3 text-sm">Nenhum produto encontrado no cat?logo.</p>}
-          {productTab === "library" && <div className="space-y-2">{productsQuery.data?.products.filter(product => normalizeSearch(product.name).includes(normalizeSearch(productSearch))).map(product => <div key={product._key} className="flex w-full items-center gap-2 rounded-lg border p-2 text-sm hover:border-primary hover:bg-primary/5">
-            <button type="button" disabled={findingImage !== null} onClick={() => void addProduct(product._key)} className="flex min-w-0 flex-1 items-center gap-3 text-left disabled:opacity-60">
-              {product.image ? <img src={product.image} alt={product.name} className="h-14 w-14 rounded bg-white object-contain" /> : <span className="grid h-14 w-14 shrink-0 place-items-center rounded bg-muted"><Package className="h-7 w-7 text-muted-foreground" /></span>}
-              <span className="min-w-0 flex-1"><span className="block truncate font-medium">{product.name}</span><span className="text-primary">{formatCurrency(product.salePrice ?? product.price)}</span><span className="block text-[10px] text-muted-foreground">Clique para adicionar</span></span>
-            </button>
-            {!product.image && <Button size="sm" variant="outline" disabled={findingImage !== null} onClick={() => void findProductImage(product._key)}>{findingImage === product._key ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <ImageIcon className="h-3.5 w-3.5" />}Buscar foto</Button>}
-            <Button size="icon" variant="ghost" aria-label={`Escolher foto de ${product.name}`} onClick={() => setPhotoProduct(product)}><ImageIcon className="h-4 w-4" /></Button>
-          </div>)}</div>}
+          <EditorProductsPanel products={editor.products} catalog={productsQuery.data?.products ?? []} selectedId={editor.selectedId}
+            text={bulkProductText} onText={setBulkProductText} busy={bulkImporting} progress={bulkProgress} onImport={() => void importProductList()}
+            onUpdate={products => editor.update({ products })} onSelect={id => { editor.select(id, "product"); setInspectorOpen(true); }}
+            onAdd={id => { if (!findingImage) void addProduct(id); }} onPhoto={product => void changeProductPhoto(product)} />
+          {productsQuery.isError && <Button variant="outline" onClick={() => void productsQuery.refetch()}>Tentar carregar hist?rico novamente</Button>}
           {photoProduct && <ProductImagePicker key={photoProduct._key} product={photoProduct} onClose={() => setPhotoProduct(null)} onSaved={saved => latestEditor.current.update({ products: latestEditor.current.products.map(product => product.productId === saved._key ? { ...product, image: saved.image ?? undefined } : product) })} />}
-          {productTab === "flyer" && <div className="space-y-2">{editor.products.filter(product => normalizeSearch(product.name ?? "").includes(normalizeSearch(productSearch))).map(product => <div key={product.id} className="flex items-center gap-2 rounded-lg border p-2"><button type="button" className="min-w-0 flex-1 text-left" onClick={() => editor.select(product.id, "product")}><span className="block truncate text-sm font-medium">{product.name}</span><span className="text-xs text-muted-foreground">{formatCurrency(product.salePrice ?? product.price ?? 0)}</span></button><Button size="sm" variant="ghost" onClick={() => editor.update({ products: editor.products.filter(item => item.id !== product.id) })}>Remover</Button></div>)}{!editor.products.length && <p className="rounded-lg bg-muted p-4 text-center text-sm text-muted-foreground">Nenhum produto no encarte.</p>}{editor.products.length > 0 && <Button variant="outline" className="w-full text-destructive" onClick={() => editor.update({ products: [] })}>Limpar todos</Button>}</div>}
         </>}
 
         {activeSection === "elements" && <>
@@ -633,13 +674,13 @@ export function EditorPage() {
           {!editor.products.length && <p className="rounded-lg bg-muted p-3 text-sm">Adicione produtos para aplicar uma tag.</p>}
         </>}
 
-        {activeSection === "formats" && <>
+        {(activeSection === "formats" || activeSection === "proportions") && <>
           <div><p className="mb-2 text-sm font-medium">Tipo de material</p><div className="grid grid-cols-2 gap-2">{([['flyer','Encarte'],['poster','Cartaz'],['shelf_label','Etiqueta'],['video','Vídeo']] as const).map(([value, label]) => <Button key={value} size="sm" variant={content === value ? "default" : "outline"} onClick={() => { setContent(value); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, canvasWidth, canvasHeight, value, gridMode, productsPerPage) }); }}>{label}</Button>)}</div></div>
           {content === "shelf_label" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Cada produto vira uma etiqueta, uma por página. No download, elas são organizadas automaticamente em folhas A4.</p>}
           {content === "poster" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Cartaz de oferta com um produto em destaque, pronto para impressão.</p>}
           {content === "video" && <p className="rounded-lg bg-muted p-3 text-xs text-muted-foreground">Crie uma peça animada para TV, Reels ou Story e exporte em MP4.</p>}
           <div><p className="mb-2 text-sm font-medium">Formato</p><div className="grid grid-cols-2 gap-2">{formatsQuery.data?.map(item => <button key={item._key} type="button" onClick={() => { setFormatCode(item.code); if (editor.products.length) editor.update({ products: layoutProductGrid(editor.products, columns, item.width, item.height, content, gridMode, productsPerPage) }); }} className={`rounded-xl border p-3 text-left ${formatCode === item.code ? "border-primary bg-primary/5 ring-1 ring-primary" : "hover:border-primary"}`}><span className="mb-2 block h-14 rounded border bg-muted" style={{ aspectRatio: `${item.width}/${item.height}`, maxWidth: 70 }} /><span className="block text-sm font-medium">{item.title}</span><span className="text-[11px] text-muted-foreground">{item.width} × {item.height} px</span></button>)}</div></div>
-          <Button variant="outline" className="w-full" onClick={() => editor.setZoom(Math.min(1, 500 / canvasWidth, 650 / canvasHeight))}>Ajustar à tela</Button>
+          <Button variant="outline" className="w-full" onClick={() => setFitView(true)}>Ajustar à tela</Button>
         </>}
 
         {activeSection === "brand" && <>
@@ -670,40 +711,61 @@ export function EditorPage() {
   if (flyerQuery.isLoading) return <div className="flex h-full items-center justify-center"><Loader2 className="animate-spin" /></div>;
   if (!flyer || flyerQuery.isError) return <div className="p-8"><p>Encarte não encontrado</p><Link to="/flyers">Voltar para encartes</Link></div>;
 
-  return <div className="flex h-full min-h-[650px] flex-col">
-    <div className="flex flex-wrap items-center gap-2 border-b bg-white px-4 py-2 dark:bg-slate-950">
+  return <div className="flex h-full min-h-0 flex-col">
+    <div className="flex flex-wrap items-center gap-2 border-b bg-card px-4 py-2">
       <Button variant="ghost" size="icon" aria-label="Voltar" onClick={() => { void persist(false).then(() => { window.location.assign("/flyers"); }).catch(() => {}); }}><ArrowLeft className="h-4 w-4" /></Button>
       <Input className="h-9 max-w-xs" value={name} maxLength={160} onChange={e => setName(e.target.value)} aria-label="Nome do encarte" />
       <Separator orientation="vertical" className="h-6" />
       <Button variant="ghost" size="icon" onClick={editor.undo} disabled={!editor.canUndo} aria-label="Desfazer"><Undo2 className="h-4 w-4" /></Button>
       <Button variant="ghost" size="icon" onClick={editor.redo} disabled={!editor.canRedo} aria-label="Refazer"><Redo2 className="h-4 w-4" /></Button>
-      <Button variant="ghost" size="icon" onClick={() => editor.setZoom(Math.max(.1, editor.zoom - .1))} aria-label="Reduzir zoom"><ZoomOut className="h-4 w-4" /></Button>
-      <span className="w-12 text-center text-xs">{Math.round(editor.zoom * 100)}%</span>
-      <Button variant="ghost" size="icon" onClick={() => editor.setZoom(Math.min(2, editor.zoom + .1))} aria-label="Aumentar zoom"><ZoomIn className="h-4 w-4" /></Button>
+      <div className="flex items-center gap-1 rounded-lg border px-1" role="group" aria-label="Zoom do encarte">
+        <Button variant="ghost" size="icon" disabled={editor.zoom <= .1} onClick={() => changeZoom(editor.zoom - .1)} aria-label="Reduzir zoom"><ZoomOut className="h-4 w-4" /></Button>
+        <input type="range" min="10" max="300" step="5" value={Math.round(editor.zoom * 100)} onChange={event => changeZoom(Number(event.target.value) / 100)} aria-label="Nível de zoom" className="hidden w-24 accent-primary sm:block" />
+        <button type="button" className="w-12 text-center text-xs tabular-nums" title="Restaurar zoom para 100%" onClick={() => changeZoom(1)} aria-label="Zoom 100%">{Math.round(editor.zoom * 100)}%</button>
+        <Button variant="ghost" size="icon" disabled={editor.zoom >= 3} onClick={() => changeZoom(editor.zoom + .1)} aria-label="Aumentar zoom"><ZoomIn className="h-4 w-4" /></Button>
+        <Button variant={fitView ? "secondary" : "ghost"} size="sm" onClick={() => setFitView(true)} title="Ajustar encarte ao espaço disponível"><Maximize2 className="h-4 w-4" />Ajustar</Button>
+      </div>
+      <Button variant="ghost" size="icon" aria-label={panelOpen ? "Recolher biblioteca" : "Abrir biblioteca"} title={panelOpen ? "Recolher biblioteca" : "Abrir biblioteca"} aria-expanded={panelOpen} onClick={() => setPanelOpen(value => !value)}>{panelOpen ? <PanelLeftClose className="h-4 w-4" /> : <PanelLeftOpen className="h-4 w-4" />}</Button>
+      <Button className="hidden xl:inline-flex" variant="ghost" size="icon" aria-label={inspectorOpen ? "Recolher propriedades" : "Abrir propriedades"} title={inspectorOpen ? "Recolher propriedades" : "Abrir propriedades"} aria-expanded={inspectorOpen} onClick={() => setInspectorOpen(value => !value)}>{inspectorOpen ? <PanelRightClose className="h-4 w-4" /> : <PanelRightOpen className="h-4 w-4" />}</Button>
+      <Button variant="outline" size="sm" onClick={() => { const show = !panelOpen && !inspectorOpen; setPanelOpen(show); setInspectorOpen(show); }}>{!panelOpen && !inspectorOpen ? "Mostrar painéis" : "Recolher painéis"}</Button>
       <Button variant="outline" disabled={saving} onClick={() => void persist().catch(() => {})}><Save className="h-4 w-4" />Salvar</Button>
       <Button variant="outline" onClick={() => void handleShare()}>Copiar link público</Button>
       {flyer.public && <Button variant="ghost" onClick={() => void updateFlyer.mutateAsync({ id: id!, payload: { public: false } }).then(() => toast.success("Link público desativado")).catch(e => toast.error(String(e)))}>Desativar link</Button>}
       <DropdownMenu><DropdownMenuTrigger asChild><Button disabled={exporting}>{exporting ? <Loader2 className="h-4 w-4 animate-spin" /> : <Download className="h-4 w-4" />}Exportar</Button></DropdownMenuTrigger>
-        <DropdownMenuContent align="end">{(["png", "jpeg", "pdf", "svg", "mp4"] as const).map(f => <DropdownMenuItem key={f} onSelect={() => void handleExport(f)}>{f === "mp4" ? "Vídeo MP4 (6 segundos)" : f.toUpperCase()}</DropdownMenuItem>)}</DropdownMenuContent>
+        <DropdownMenuContent align="end">{(["png", "jpeg", "pdf", "svg", "mp4"] as const).map(f => <DropdownMenuItem key={f} onSelect={() => void handleExport(f)}>{f === "mp4" ? "Vídeo MP4 (6 segundos por página)" : f.toUpperCase()}</DropdownMenuItem>)}</DropdownMenuContent>
       </DropdownMenu>
       <span role="status" className={`ml-auto text-xs ${saveError ? "text-red-600" : "text-muted-foreground"}`}>{saveError || (saving ? "Salvando..." : signature !== savedSignature.current ? "Alterações não salvas" : "Salvo")}</span>
     </div>
+    <div role="toolbar" aria-label="Ferramentas do encarte" className="flex shrink-0 items-center gap-1 overflow-x-auto border-b bg-background px-3 py-2">
+      {QUICK_TOOLS.map(tool => <Button key={tool.id} variant={activeSection === tool.id && panelOpen ? "secondary" : "ghost"} className="shrink-0" aria-pressed={activeSection === tool.id && panelOpen} onClick={() => openSection(tool.id)}><tool.icon className="h-4 w-4" />{tool.label}{tool.id === "dates" && startAt && <span className="text-xs text-primary">{startAt.split("-").reverse().join("/")}{endAt && ` – ${endAt.split("-").reverse().join("/")}`}</span>}</Button>)}
+    </div>
     <div className="relative flex min-h-0 flex-1 overflow-hidden bg-muted/30 pb-12 lg:pb-0">
-      <nav aria-label="Seções do editor" className="hidden w-20 shrink-0 flex-col bg-[#171717] text-white lg:flex">
-        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex h-[72px] flex-col items-center justify-center gap-1 border-b border-white/10 text-[10px] transition ${selected ? "bg-[#292929] text-[#29d19c]" : "text-white hover:bg-[#242424]"}`}><Icon className="h-5 w-5" /><span>{section.label}</span></button>; })}
+      <nav aria-label="Seções do editor" className="hidden w-20 shrink-0 flex-col bg-card text-foreground lg:flex">
+        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex h-[72px] flex-col items-center justify-center gap-1 border-b border-border text-[10px] transition ${selected ? "bg-accent text-accent-foreground" : "text-muted-foreground hover:bg-muted"}`}><Icon className="h-5 w-5" /><span>{section.label}</span></button>; })}
       </nav>
       {panelOpen && <aside className="fixed inset-x-0 bottom-12 z-30 max-h-[65vh] overflow-y-auto rounded-t-2xl border-t bg-background shadow-2xl lg:static lg:z-auto lg:max-h-none lg:w-[396px] lg:shrink-0 lg:rounded-none lg:border-r lg:border-t-0 lg:shadow-none">{renderSectionPanel()}</aside>}
       <section className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden"><div className="flex shrink-0 items-center justify-center gap-3 border-b bg-background p-2"><Button size="sm" variant={activeSection === "grid" && panelOpen ? "default" : "outline"} aria-label="Configurar grade" onClick={() => openSection("grid")}><Grid3X3 className="h-4 w-4" />{productsPerPage}</Button><Button size="sm" variant="outline" disabled={visiblePage === 0} onClick={() => { editor.select(null); setActivePage(visiblePage - 1); }}>Anterior</Button><span aria-live="polite" className="text-sm">Folha {visiblePage + 1} de {pageCount}</span><Button size="sm" variant="outline" disabled={visiblePage + 1 >= pageCount} onClick={() => { editor.select(null); setActivePage(visiblePage + 1); }}>Pr&#243;xima</Button></div><FlyerCanvas width={canvasWidth} height={canvasHeight} zoom={editor.zoom} backgroundColor={editor.backgroundColor}
         elements={editor.elements} products={editor.products.slice(visiblePage * productsPerPage, (visiblePage + 1) * productsPerPage)} footer={editor.footer} selectedId={editor.selectedId} selectedKind={editor.selectedKind}
-        onSelect={editor.select} onChangeElement={handleChangeElement} onChangeProduct={handleChangeProduct} /></section>
-      <aside className="hidden min-h-0 w-[280px] shrink-0 overflow-y-auto border-l bg-background xl:block">
+        onZoomChange={changeZoom} onViewportResize={setViewportSize}
+        onSelect={(id, kind) => { editor.select(id, kind); if (id) { if (kind === "product") { setActiveSection("products"); setPanelOpen(true); } setInspectorOpen(true); } }} onChangeElement={handleChangeElement} onChangeProduct={handleChangeProduct} /></section>
+      <aside aria-label="Páginas do encarte" className="flex w-[76px] shrink-0 flex-col gap-3 overflow-y-auto border-l bg-background p-2 sm:w-[116px]">
+        <h2 className="text-center text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">Páginas</h2>
+        {Array.from({ length: pageCount }, (_, index) => <button key={index} type="button" aria-label={`Visualizar página ${index + 1}`} aria-current={visiblePage === index ? "page" : undefined} onClick={() => { editor.select(null); setActivePage(index); }} className={`shrink-0 overflow-hidden rounded-lg border-2 p-1 transition ${visiblePage === index ? "border-primary bg-primary/10 ring-1 ring-primary" : "border-transparent hover:border-muted-foreground"}`}>
+          <div aria-hidden="true" className="pointer-events-none overflow-hidden rounded" style={{ aspectRatio: `${canvasWidth}/${canvasHeight}` }}>
+            <div className="origin-top-left scale-[0.5] sm:scale-100" style={{ width: 88 }}><FlyerCanvas preview width={canvasWidth} height={canvasHeight} zoom={88 / canvasWidth} backgroundColor={editor.backgroundColor} elements={editor.elements} products={editor.products.slice(index * productsPerPage, (index + 1) * productsPerPage)} footer={editor.footer} selectedId={null} selectedKind={null} onSelect={() => {}} onChangeElement={() => {}} onChangeProduct={() => {}} /></div>
+          </div>
+          <span className="mt-1 block text-[10px]">{index + 1}</span>
+        </button>)}
+      </aside>
+      {inspectorOpen ? <aside aria-label="Propriedades do objeto" className={`fixed inset-x-0 bottom-12 z-40 max-h-[50vh] overflow-y-auto border-t bg-background shadow-xl xl:static xl:max-h-none xl:min-h-0 xl:w-[280px] xl:shrink-0 xl:border-l xl:border-t-0 xl:shadow-none ${selectedElement || selectedProduct ? "block" : "hidden xl:block"}`}>
+        <div className="flex items-center justify-between border-b px-3 py-2"><span className="text-sm font-medium">Propriedades</span><Button variant="ghost" size="icon" aria-label="Fechar propriedades" onClick={() => setInspectorOpen(false)}><PanelRightClose className="h-4 w-4" /></Button></div>
         <InspectorPanel element={selectedElement} product={selectedProduct}
           onChangeElement={(patch, final) => selectedElement && handleChangeElement(selectedElement.id, patch, final)}
           onChangeProduct={(patch, final) => selectedProduct && handleChangeProduct(selectedProduct.id, patch, final)}
           onDelete={editor.removeSelected} onDuplicate={editor.duplicateSelected} onMoveLayer={editor.moveLayer} />
-      </aside>
+      </aside> : <div className="hidden w-10 shrink-0 border-l bg-background xl:block"><Button size="icon" variant="ghost" aria-label="Expandir propriedades" title="Expandir propriedades" onClick={() => setInspectorOpen(true)}><PanelRightOpen className="h-4 w-4" /></Button></div>}
       <nav aria-label="Seções do editor" className="fixed inset-x-0 bottom-0 z-40 flex h-12 overflow-x-auto border-t bg-background lg:hidden">
-        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex min-w-[68px] flex-1 flex-col items-center justify-center gap-0.5 text-[9px] ${selected ? "bg-[#292929] text-[#29d19c]" : "bg-[#171717] text-white"}`}><Icon className="h-4 w-4" /><span>{section.label}</span></button>; })}
+        {EDITOR_SECTIONS.map(section => { const Icon = section.icon; const selected = activeSection === section.id && panelOpen; return <button key={section.id} type="button" onClick={() => openSection(section.id)} aria-pressed={selected} className={`flex min-w-[68px] flex-1 flex-col items-center justify-center gap-0.5 text-[9px] ${selected ? "bg-accent text-accent-foreground" : "bg-card text-foreground"}`}><Icon className="h-4 w-4" /><span>{section.label}</span></button>; })}
       </nav>
     </div>
   </div>;

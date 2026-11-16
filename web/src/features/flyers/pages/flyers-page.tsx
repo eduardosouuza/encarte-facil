@@ -244,7 +244,7 @@ export function FlyersPage() {
           {flyers.map((flyer) => (
             <Card key={flyer._key} className="overflow-hidden">
               <Link to={`/editor/${flyer._key}`} className="block">
-                <div className="flex h-40 items-center justify-center bg-slate-100 p-3 dark:bg-slate-900">
+                <div className="flex h-40 items-center justify-center bg-muted p-3">
                   {flyer.preview ? (
                     <img
                       src={flyer.preview}

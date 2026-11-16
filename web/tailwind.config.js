@@ -23,6 +23,10 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
@@ -50,8 +54,8 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["Roboto", "ui-sans-serif", "system-ui", "sans-serif"],
-        display: ["Oswald", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Nunito Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Nunito Sans", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       keyframes: {
         "fade-in": {

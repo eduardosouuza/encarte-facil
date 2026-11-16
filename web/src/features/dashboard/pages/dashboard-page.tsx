@@ -33,10 +33,10 @@ export function DashboardPage() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {stats.map((stat) => (
+        {stats.map((stat, index) => (
           <Card key={stat.label}>
             <CardContent className="flex items-center gap-4 p-5">
-              <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <span className={`flex h-11 w-11 items-center justify-center rounded-lg ${index % 2 ? "bg-secondary text-secondary-foreground" : "bg-accent text-accent-foreground"}`}>
                 <stat.icon className="h-5 w-5" />
               </span>
               <div>

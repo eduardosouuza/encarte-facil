@@ -8,7 +8,7 @@ import sharp from "sharp";
 const require = createRequire(import.meta.url);
 const ffmpeg = require("ffmpeg-static") as string | null;
 
-export async function renderVideo(svg: string, duration = 6): Promise<Buffer> {
+export async function renderVideo(source: string | string[], duration = 6): Promise<Buffer> {
   if (!ffmpeg) throw new Error("FFmpeg não está disponível nesta plataforma.");
   const directory = await mkdtemp(path.join(os.tmpdir(), "encarte-video-"));
   const resolved = path.resolve(directory);
@@ -16,16 +16,21 @@ export async function renderVideo(svg: string, duration = 6): Promise<Buffer> {
     throw new Error("Diretório temporário inesperado");
   }
   try {
-    const input = path.join(directory, "frame.png"), output = path.join(directory, "video.mp4");
-    await writeFile(input, await sharp(Buffer.from(svg)).resize(1080, 1920, { fit: "inside", withoutEnlargement: true }).flatten({ background: "#ffffff" }).png().toBuffer());
+    const pages = Array.isArray(source) ? source : [source];
+    if (!pages.length) throw new Error("O vídeo precisa de pelo menos uma página.");
+    const output = path.join(directory, "video.mp4");
+    for (const [index, svg] of pages.entries()) {
+      const frame = await sharp(Buffer.from(svg), { limitInputPixels: 25_000_000 }).resize(3840, 3840, { fit: "inside", withoutEnlargement: true }).flatten({ background: "#ffffff" }).png().toBuffer();
+      await writeFile(path.join(directory, `frame-${String(index).padStart(4, "0")}.png`), frame);
+    }
     await new Promise<void>((resolve, reject) => {
-      const child = spawn(ffmpeg, ["-hide_banner", "-loglevel", "error", "-loop", "1", "-i", input,
-        "-t", String(duration), "-r", "24", "-vf", `pad=ceil(iw/2)*2:ceil(ih/2)*2,fade=t=in:st=0:d=0.4,fade=t=out:st=${duration - .4}:d=0.4`,
+      const child = spawn(ffmpeg, ["-hide_banner", "-loglevel", "error", "-framerate", `1/${duration}`, "-i", path.join(directory, "frame-%04d.png"),
+        "-t", String(duration * pages.length), "-vf", "fps=24,pad=ceil(iw/2)*2:ceil(ih/2)*2:color=white",
         "-c:v", "libx264", "-threads", "2", "-preset", "fast", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-y", output],
       { windowsHide: true, stdio: ["ignore", "ignore", "pipe"] });
       let stderr = "";
       child.stderr.on("data", chunk => { stderr = (stderr + chunk.toString()).slice(-2000); });
-      const timeout = setTimeout(() => { child.kill(); reject(new Error("Tempo limite da exportação em vídeo excedido.")); }, 120_000);
+      const timeout = setTimeout(() => { child.kill(); reject(new Error("Tempo limite da exportação em vídeo excedido.")); }, Math.max(120_000, pages.length * 30_000));
       child.on("error", error => { clearTimeout(timeout); reject(error); });
       child.on("close", code => { clearTimeout(timeout); if (code === 0) resolve(); else reject(new Error(`Falha ao gerar vídeo: ${stderr}`)); });
     });

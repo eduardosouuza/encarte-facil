@@ -160,7 +160,6 @@ export function ProductsPage() {
   async function handleBulkImport() {
     const lines = bulkText.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
     if (!lines.length) { toast.error("Cole ao menos um produto por linha"); return; }
-    if (lines.length > 50) { toast.error("Importe até 50 produtos por vez."); return; }
     if (bulkBusy) return;
     setBulkBusy(true);
     try {
@@ -188,7 +187,7 @@ export function ProductsPage() {
         <div className="flex gap-2">
         <Dialog open={bulkOpen} onOpenChange={setBulkOpen}>
           <DialogTrigger asChild><Button variant="outline"><Plus className="h-4 w-4" />Importar lista</Button></DialogTrigger>
-          <DialogContent><DialogHeader><DialogTitle>Importar produtos em lista</DialogTitle><DialogDescription>Use uma linha por produto, incluindo o preço. Exemplo: Café 500g R$ 24,90.</DialogDescription></DialogHeader>
+          <DialogContent><DialogHeader><DialogTitle>Importar produtos em lista</DialogTitle><DialogDescription>Importe até 500 produtos por vez. O preço pode estar na mesma linha ou na linha seguinte. Exemplo: Café 500g R$ 24,90.</DialogDescription></DialogHeader>
             <Textarea className="my-4 min-h-48" aria-label="Lista de produtos" value={bulkText} onChange={e => setBulkText(e.target.value)} placeholder={"Café 500g R$ 24,90\nLeite 1L R$ 5,79"} />
             <DialogFooter><Button variant="outline" onClick={() => setBulkOpen(false)}>Cancelar</Button><Button disabled={bulkBusy} onClick={() => void handleBulkImport()}>{bulkBusy ? <Loader2 className="animate-spin" /> : null}Importar</Button></DialogFooter>
           </DialogContent>
@@ -327,7 +326,7 @@ export function ProductsPage() {
           <p className="text-sm text-muted-foreground">Cadastre produtos para usar nos encartes.</p>
         </div>
       ) : (
-        <div className="overflow-x-auto rounded-lg border bg-white dark:bg-slate-950">
+        <div className="overflow-x-auto rounded-lg border bg-card">
           <table className="w-full text-left text-sm">
             <thead className="border-b bg-muted/50 text-xs uppercase text-muted-foreground">
               <tr>
@@ -361,7 +360,7 @@ export function ProductsPage() {
                   <td className="px-4 py-3">{formatCurrency(product.price)}</td>
                   <td className="px-4 py-3">
                     {product.salePrice !== null ? (
-                      <span className="font-medium text-emerald-700">
+                      <span className="font-medium text-success-foreground">
                         {formatCurrency(product.salePrice)}
                       </span>
                     ) : (

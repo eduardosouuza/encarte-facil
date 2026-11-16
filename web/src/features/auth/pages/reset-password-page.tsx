@@ -38,13 +38,13 @@ export function ResetPasswordPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4 dark:bg-slate-950">
+    <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="w-full max-w-md rounded-xl border bg-card p-6 shadow-sm">
         <h1 className="font-display text-2xl font-semibold">Definir nova senha</h1>
         <p className="mt-1 text-sm text-muted-foreground">Escolha uma nova senha com ao menos 6 caracteres.</p>
 
         {done ? (
-          <p role="status" className="mt-6 rounded-md bg-emerald-50 px-3 py-2 text-sm text-emerald-700">
+          <p role="status" className="mt-6 rounded-md bg-success px-3 py-2 text-sm text-success-foreground">
             Senha redefinida com sucesso. Redirecionando para o login...
           </p>
         ) : (

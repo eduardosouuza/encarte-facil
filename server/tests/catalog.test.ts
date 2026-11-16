@@ -82,9 +82,35 @@ describe("catalogo de formatos e modelos", () => {
 });
 
 describe("produtos", () => {
+  it("importa 56 produtos com cabeçalhos e preços em linhas separadas", async () => {
+    const text = [
+      "DESCRIÇÃO DO PRODUTO             PREÇO VENDA", "====", "MERCEARIA", "----",
+      ...Array.from({ length: 48 }, (_, i) => `Produto ${i + 1} 400G R$ 2,89`),
+      "Exceto aipim, brownie e pão de ló", "PET", "DESCRIÇÃO    PREÇO", "----",
+      "Ração Gaúcho Cão 5kg Adulto R$ 24,99", "Ração Kit e Kat Gato 900g Mix Carnes R$ 6,99",
+      "Ração Champ Cão 900g Filhote R$ 6,99", "AREIA HIG BENTO 4KG MANDIOCA MINERAIS", "", " R$ 24,99",
+      "Areia Mimocat 4kg R$ 5,99", "Tapete Rauf Max 60x60 C/7 R$ 9,99",
+      "Ração Pedigree Cão 900g", " R$ 14,90", "RACAO GATO WHISKAS 900G", "", " R$ 13,90",
+    ].join("\n");
+    const response = await request(app).post("/api/products/import-list").set(headers).send({ text });
+    expect(response.status).toBe(201);
+    expect(response.body.products).toHaveLength(56);
+    expect(response.body.products[51]).toMatchObject({ name: "AREIA HIG BENTO 4KG MANDIOCA MINERAIS", price: 24.99 });
+    expect(response.body.products[55]).toMatchObject({ name: "RACAO GATO WHISKAS 900G", price: 13.9 });
+    expect(response.body.ignored).toHaveLength(1);
+  });
+
+  it("aceita 500 produtos sem contar cabeçalhos no limite", async () => {
+    const response = await request(app).post("/api/products/import-list").set(headers).send({
+      text: ["MERCEARIA", "----", ...Array.from({ length: 500 }, (_, i) => `Arroz ${i} R$ 5,90`)].join("\n"),
+    });
+    expect(response.status).toBe(201);
+    expect(response.body.products).toHaveLength(500);
+  });
+
   it("rejeita listas acima do limite sem importar parcialmente", async () => {
     const before = await request(app).get("/api/products").set(headers);
-    const response = await request(app).post("/api/products/import-list").set(headers).send({ text: Array.from({ length: 51 }, () => "Arroz R$ 5,90").join("\n") });
+    const response = await request(app).post("/api/products/import-list").set(headers).send({ text: Array.from({ length: 501 }, () => "Arroz R$ 5,90").join("\n") });
     expect(response.status).toBe(400);
     const after = await request(app).get("/api/products").set(headers);
     expect(after.body.total).toBe(before.body.total);

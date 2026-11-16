@@ -7,6 +7,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider } from "@/features/auth/auth-context";
 import { queryClient } from "@/lib/query-client";
 import { AppRoutes } from "@/routes";
+import "@fontsource/nunito-sans/latin-400.css";
+import "@fontsource/nunito-sans/latin-500.css";
+import "@fontsource/nunito-sans/latin-600.css";
+import "@fontsource/nunito-sans/latin-700.css";
+import "@fontsource/nunito-sans/latin-800.css";
 import "./index.css";
 
 const container = document.getElementById("root");

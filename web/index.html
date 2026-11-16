@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="pt-BR" class="h-full dark">
+<html lang="pt-BR" class="h-full">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/encartefacil-logo.png" />
+    <link rel="icon" type="image/svg+xml" href="/encarte-icon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="description" content="Editor de encartes e tabloides de ofertas" />
-    <title>Encartefacil</title>
+    <title>Encart? ? Crie suas ofertas</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +14,7 @@
     />
   </head>
   <body class="h-full bg-background text-foreground antialiased">
-    <script>document.documentElement.classList.toggle('dark', localStorage.getItem('encartefacil:theme') !== 'light')</script>
+    <script>document.documentElement.classList.toggle('dark', localStorage.getItem('workspace:pastel-theme') === 'dark')</script>
     <div id="root" class="h-full"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

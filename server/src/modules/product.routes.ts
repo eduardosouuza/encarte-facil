@@ -201,11 +201,22 @@ productRouter.post("/search-images/persist", asyncHandler(async (req, res) => {
 }));
 
 productRouter.post("/import-list", asyncHandler(async (req, res) => {
-  const { text } = parseWith(z.object({ text: z.string().trim().min(1).max(20_000) }), "body", req.body);
+  const { text } = parseWith(z.object({ text: z.string().trim().min(1).max(100_000) }), "body", req.body);
   const lines = text.split(/\r?\n/).map(line => line.trim()).filter(Boolean);
-  if (lines.length > 50) throw ApiError.badRequest("Importe até 50 produtos por vez. Nenhum produto foi importado.");
-  const parsed = lines.map((line, index) => ({ index, line, ...parseProductLine(line) }));
+  const parsed: Array<ReturnType<typeof parseProductLine> & { line: string }> = [];
+  const priceOnly = /^(?:R\$\s*)?\d{1,6}[.,]\d{1,2}\s*(?:kg|g|mg|l|ml|un|und|cx|pct|bd|bandeja|pacote|caixa)?$/i;
+  for (let index = 0; index < lines.length; index++) {
+    let line = lines[index]!;
+    const heading = line.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    if (/^[=\-─━_]+$/.test(line) || /^(MERCEARIA|MATINAIS|BOMBONIERE|ENLATADOS|LIMPEZA|PERFUMARIA|PET)$/.test(heading) || /^DESCRICAO\b.*\bPRECO\b/.test(heading)) continue;
+    if (!priceOnly.test(line) && lines[index + 1] && priceOnly.test(lines[index + 1]!)) {
+      // Prefer the explicit next-line price over decimal package weights.
+      if (parseProductLine(line).price === null || /\d[.,]\d+\s*(?:kg|g|mg|l|ml)$/i.test(line)) line += ` ${lines[++index]}`;
+    }
+    parsed.push({ line, ...parseProductLine(line), ...(priceOnly.test(line) ? { price: null } : {}) });
+  }
   const valid = parsed.filter(item => item.name && item.price !== null);
+  if (valid.length > 500) throw ApiError.badRequest("Importe até 500 produtos por vez. Nenhum produto foi importado.");
   if (!valid.length) throw ApiError.badRequest("Nenhuma linha com nome e preço foi encontrada.");
   const db = getDb();
   const insert = db.prepare(`INSERT INTO products (id, user_id, name, image, price, sale_price, unit, notes, category, created_at, updated_at) VALUES (?, ?, ?, NULL, ?, NULL, ?, NULL, NULL, ?, ?)`);

@@ -7,8 +7,8 @@ const badgeVariants: Record<BadgeVariant, string> = {
   default: "bg-primary text-primary-foreground",
   secondary: "bg-secondary text-secondary-foreground",
   outline: "border border-border text-foreground",
-  success: "bg-emerald-100 text-emerald-800",
-  warning: "bg-amber-100 text-amber-800",
+  success: "bg-success text-success-foreground",
+  warning: "bg-secondary text-secondary-foreground",
   destructive: "bg-destructive text-destructive-foreground",
 };
 

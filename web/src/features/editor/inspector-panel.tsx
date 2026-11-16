@@ -230,10 +230,18 @@ export function InspectorPanel({
             <p className="truncate text-xs text-muted-foreground">{product.name ?? "Produto"}</p>
           </div>
           <label className="block text-sm">Nome do produto<Input value={product.name ?? ""} maxLength={160} onChange={e => onChangeProduct({ name: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
+          <div className="space-y-3 rounded-lg border p-3">
+            <p className="text-sm font-medium">Imagem do produto</p>
+            <label className="block text-sm">Tamanho da imagem: {Math.round((product.imageScale ?? 1) * 100)}%<Input aria-label="Tamanho da imagem" type="range" min={10} max={300} step={5} value={Math.round((product.imageScale ?? 1) * 100)} onChange={e => onChangeProduct({ imageScale: Number(e.target.value) / 100 }, false)} onPointerUp={() => onChangeProduct({}, true)} onKeyUp={() => onChangeProduct({}, true)} onBlur={() => onChangeProduct({}, true)} /></label>
+            <Button variant="outline" size="sm" onClick={() => onChangeProduct({ imageScale: 1 }, true)}>Restaurar tamanho da imagem</Button>
+            <p className="text-xs text-muted-foreground">Arraste o canto do cartão para redimensionar o produto inteiro. Ampliações da foto são recortadas dentro da área da imagem.</p>
+          </div>
+          <label className="flex items-center justify-between text-sm">Mostrar fundo do produto<Switch aria-label="Mostrar fundo do produto" checked={product.backgroundVisible !== false} onCheckedChange={checked => onChangeProduct({ backgroundVisible: checked }, true)} /></label>
           <label className="block text-sm">Preço<Input type="number" min={0} step="0.01" value={product.price ?? 0} onChange={e => onChangeProduct({ price: Math.max(0, Number(e.target.value)) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
           <label className="block text-sm">Preço promocional<Input type="number" min={0} step="0.01" value={product.salePrice ?? ""} onChange={e => onChangeProduct({ salePrice: e.target.value === "" ? null : Math.max(0, Number(e.target.value)) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
           <label className="block text-sm">Unidade<Input value={product.unit ?? ""} maxLength={40} onChange={e => onChangeProduct({ unit: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
-          {(["tagColor", "textColor", "backgroundColor"] as const).map((key, i) => <label key={key} className="block text-sm">{["Cor da tag", "Texto da tag", "Fundo do produto"][i]}<Input type="color" value={product[key] ?? ["#e11d48", "#ffffff", "#ffffff"][i]} onChange={e => onChangeProduct({ [key]: e.target.value }, false)} onBlur={() => onChangeProduct({}, true)} /></label>)}
+          {(["tagColor", "textColor", "backgroundColor"] as const).map((key, i) => <label key={key} className="block text-sm">{["Cor da tag", "Texto da tag", "Fundo do produto"][i]}<Input type="color" value={product[key] ?? ["#e11d48", "#ffffff", "#ffffff"][i]} onChange={e => onChangeProduct({ [key]: e.target.value, ...(key === "backgroundColor" ? { backgroundVisible: true } : {}) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>)}
+          <label className="block text-sm">Rotação do produto<Input type="number" value={product.rotation ?? 0} onChange={e => onChangeProduct({ rotation: Number(e.target.value) }, false)} onBlur={() => onChangeProduct({}, true)} /></label>
           <div className="space-y-2 rounded-lg border p-3">
             <p className="text-sm font-medium">Caixa do produto</p>
             <div className="grid grid-cols-2 gap-2">

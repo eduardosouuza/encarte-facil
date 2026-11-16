@@ -40,6 +40,25 @@ function parseJson<T>(value: string | null, fallback: T): T {
   }
 }
 
+function normalizeBackgroundElements(elements: FlyerPayload["elements"], format: string | null | undefined) {
+  const size = getDb().prepare("SELECT width, height FROM formats WHERE code = ? OR id = ?").get(format ?? "", format ?? "") as { width: number; height: number } | undefined;
+  const width = size?.width ?? 1080;
+  const height = size?.height ?? 1350;
+  return elements.map(element => {
+    if (element.category !== "background" && element.category !== "backgrounds") return element;
+    return {
+      ...element,
+      category: "background",
+      x: 0,
+      y: 0,
+      width,
+      height,
+      imageFit: element.type === "image" ? "cover" : element.imageFit,
+      zIndex: Math.min(element.zIndex ?? -1000, -1000),
+    };
+  });
+}
+
 export function toFlyerDto(row: FlyerRow) {
   return {
     _key: row.id,
@@ -120,6 +139,7 @@ export function createFlyer(userId: string, payload: FlyerPayload): FlyerDto {
   const db = getDb();
   const id = newId();
   const now = nowIso();
+  const elements = normalizeBackgroundElements(payload.elements, payload.format);
   db.prepare(
     `INSERT INTO flyers (id, user_id, name, content, status, format, design, palette, background_color, start_at, end_at,
       is_template, is_public, is_highlighted, grid, grid_highlights, settings, page_settings, elements, products, footer,
@@ -143,7 +163,7 @@ export function createFlyer(userId: string, payload: FlyerPayload): FlyerDto {
     payload.gridHighlights ? JSON.stringify(payload.gridHighlights) : null,
     JSON.stringify(payload.settings),
     JSON.stringify(payload.pageSettings),
-    JSON.stringify(payload.elements),
+    JSON.stringify(elements),
     JSON.stringify(payload.products),
     JSON.stringify(payload.footer),
     now,
@@ -158,6 +178,7 @@ export function updateFlyer(userId: string, id: string, payload: FlyerPayload): 
   const db = getDb();
   const existing = getFlyerRow(userId, id);
   if (!existing) throw ApiError.notFound("Encarte nao encontrado");
+  const elements = normalizeBackgroundElements(payload.elements, payload.format);
 
   db.prepare(
     `UPDATE flyers SET name = ?, content = ?, status = ?, format = ?, design = ?, palette = ?, background_color = ?,
@@ -180,7 +201,7 @@ export function updateFlyer(userId: string, id: string, payload: FlyerPayload): 
     payload.gridHighlights ? JSON.stringify(payload.gridHighlights) : null,
     JSON.stringify(payload.settings),
     JSON.stringify(payload.pageSettings),
-    JSON.stringify(payload.elements),
+    JSON.stringify(elements),
     JSON.stringify(payload.products),
     JSON.stringify(payload.footer),
     nowIso(),

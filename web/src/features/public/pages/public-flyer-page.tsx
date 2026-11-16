@@ -33,7 +33,7 @@ export function PublicFlyerPage({ id }: { id: string }) {
   const flyer = flyerQuery.data;
 
   return (
-    <div className="flex min-h-screen flex-col items-center bg-slate-100 py-8 dark:bg-slate-900">
+    <div className="flex min-h-screen flex-col items-center bg-muted py-8">
       <h1 className="mb-4 font-display text-2xl font-semibold">{flyer.name}</h1>
       <img
         src={`/p/${flyer._key}/render.svg`}

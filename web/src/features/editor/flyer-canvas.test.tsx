@@ -1,9 +1,11 @@
 import { describe, expect, it, vi } from "vitest";
-import { screen } from "@testing-library/react";
+import { screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { FlyerCanvas } from "@/features/editor/flyer-canvas";
 import type { EditorElement, EditorProduct } from "@/features/editor/use-editor-state";
 import { renderWithProviders } from "@/test/render";
+
+vi.mock("./use-artwork-fonts", () => ({ useArtworkFonts: () => ({}) }));
 
 const ELEMENT: EditorElement = {
   id: "el_1",
@@ -33,6 +35,23 @@ const PRODUCT: EditorProduct = {
 };
 
 describe("FlyerCanvas", () => {
+  it("redimensiona apenas a foto pelos cantos após selecionar a imagem", async () => {
+    const onChangeProduct = vi.fn();
+    renderWithProviders(<FlyerCanvas width={1080} height={1350} zoom={0.5} backgroundColor="#ffffff" elements={[]} products={[{ ...PRODUCT, image: "/photo.png" }]} selectedId={PRODUCT.id} selectedKind="product" onSelect={vi.fn()} onChangeElement={vi.fn()} onChangeProduct={onChangeProduct} />);
+    await userEvent.click(screen.getByRole("button", { name: "Selecionar imagem de Cafe torrado" }));
+    expect(screen.queryByRole("button", { name: "Redimensionar produto" })).not.toBeInTheDocument();
+    const handle = screen.getByRole("button", { name: "Redimensionar imagem direita inferior" });
+    // jsdom lacks PointerEvent coordinates; mouse events supply the same coordinate fields.
+    fireEvent(handle, new MouseEvent("pointerdown", { bubbles: true, clientX: 100, clientY: 100 }));
+    fireEvent(handle, new MouseEvent("pointermove", { bubbles: true, clientX: 120, clientY: 120 }));
+    fireEvent(handle, new MouseEvent("pointerup", { bubbles: true }));
+    expect(onChangeProduct).toHaveBeenCalledWith(PRODUCT.id, { imageScale: expect.any(Number) }, false);
+    const patch = onChangeProduct.mock.calls[0][1];
+    expect(patch.imageScale).toBeGreaterThan(1);
+    expect(patch).not.toHaveProperty("width");
+    expect(patch).not.toHaveProperty("height");
+    expect(onChangeProduct).toHaveBeenLastCalledWith(PRODUCT.id, {}, true);
+  });
   it("renderiza elementos e produtos", () => {
     renderWithProviders(
       <FlyerCanvas
@@ -51,7 +70,7 @@ describe("FlyerCanvas", () => {
     );
 
     expect(screen.getByTestId("element-el_1")).toBeInTheDocument();
-    expect(screen.getByText("Ofertas da semana")).toBeInTheDocument();
+    expect(screen.getByTestId("element-el_1")).toHaveTextContent(/Ofertas da\s*semana/);
     expect(screen.getByTestId("product-pr_1")).toBeInTheDocument();
     expect(screen.getByText("Cafe torrado")).toBeInTheDocument();
   });
